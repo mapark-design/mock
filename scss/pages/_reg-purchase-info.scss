@@ -1,0 +1,117 @@
+@use "../global/index" as var;
+
+.reg-purchase-info {
+
+  &__section {
+    padding-bottom: 2.0rem;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+
+    &--topborder {
+      border-top: 1px solid lightgray;
+    }
+  }
+
+  %__col {
+    padding: 1.5rem;
+  }
+  &__title {
+    @extend %__col;
+    background-color: #eaeaea;
+    min-width: 25.0rem;
+    max-width: 25.0rem;
+    display: flex;
+    align-items: center;
+
+    img {
+      padding-left: 0.5rem;
+    }
+  }
+  &__required {
+    display: inline-block;
+//    float: right;
+    background: var.$COLOR-CORP;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px 7px;
+    border-radius: 3px;
+    line-height: 1;
+    margin-right: 0rem;
+    margin-left: auto;
+  }
+
+  &__text {
+    @extend %__col;
+    width: 100%;
+
+    &--flex {
+      display: flex;
+//      align-items: center;
+      align-items: flex-end;
+      gap: 0rem 2.5rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  %__col--header {
+    padding: 0.25rem 1.5rem;
+    color: gray;
+  }
+  &__header-title {
+    @extend %__col--header;
+    display: flex;
+    align-items: center;
+    min-width: 25.0rem;
+    max-width: 25.0rem;
+    font-weight: normal;
+  }
+  &__header-text {
+    @extend %__col--header;
+    &--flex {
+      display: flex;
+      align-items: center;
+      gap: 0rem 1.5rem;
+    }
+  }
+  &__value-last {
+//    @extend %__col--header;
+    min-width: 30.0rem;
+    max-width: 30.0rem;
+  }
+  &__value-before {
+//    @extend %__col--header;
+    min-width: 30.0rem;
+    max-width: 30.0rem;
+  }
+
+  &__text-inner {
+    margin-bottom: 1.0rem;
+  }
+
+  &__example {
+    /** 記入例の表示 */
+    /** 基本は bootstrap.collapsed を利用するが、そのままではうまく利用できないので追加で設定を行う */
+    display: inline-block;
+    width: 100%;
+    line-height: 1.5;
+    transition: all 0.5s;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+//    border: 1px solid darkgray;
+    font-size: var.$FONT-SIZE-14;
+  }
+
+  &__card {
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
+  }
+
+  &__card-body {
+    padding: 0.5rem  0.5rem;
+    background-color: #eeeeee;
+    font-size: var.$FONT-SIZE-12;
+  }
+}

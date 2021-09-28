@@ -1,0 +1,37 @@
+@use "global" as global;
+@use "global/index" as var;
+
+.login-main {
+  position: relative;
+
+  &__wrapper {
+//    padding: var.$PADDING-CONTENT-V var.$PADDING-CONTENT-H;
+  }
+
+  &__inner {
+    @extend %mainContentWrapper;
+//    margin-bottom: 2.0rem;
+  }
+
+  %__title {
+    @extend %mainContentInner;
+  }
+  &__title-underline {
+//    @extend %__title;
+    margin-left: 1.5rem;
+
+    font-weight: bold;
+    font-size: 2.4rem;
+    border-bottom: 0.5rem solid var.$COLOR-CORP;
+//    padding-bottom: 0.5rem 0rem 0.5rem 0.5rem;
+//    margin-bottom: 1.0rem;
+  }
+  &__title-box {
+    @extend %__title;
+    padding-top: var.$PADDING-CONTENT-V;
+    padding-bottom: var.$PADDING-CONTENT-V;
+    font-weight: bold;
+    font-size: 2.4rem;
+    box-shadow: 0 0 1rem gray;
+  }
+}

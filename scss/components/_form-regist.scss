@@ -1,0 +1,72 @@
+@use "../global" as global;
+@use "../global/index" as var;
+
+.form-regist {
+  &__item {
+    display: flex;
+//    align-items: center;
+    border-bottom: 1px solid lightgray;
+
+    &:first-of-type {
+      border-top: 1px solid lightgray;
+    }
+  }
+
+  &__item-section {
+    margin-bottom: 1.0rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+  }
+  &__item-input {
+//      display: flex;
+//      align-items: center;
+    &--flex-center {
+      display: flex;
+      gap: 0rem 2.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &--flex-end {
+      display: flex;
+      gap: 0rem 2.5rem;
+      align-items: flex-end;
+    }
+  }
+  &__item-modal {
+    display: flex;
+    gap: 0.5rem 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item-modal-value {
+    display: inline-flex;
+    padding: 0.5rem 1.0rem;
+    background-color: #FFAAAA;
+    border: 1px solid red;
+    border-radius: 1.0rem;
+    line-height: 1.2;
+  }
+  &__caution {
+    font-size: var.$FONT-SIZE-12;
+  }
+  &__required {
+    display: inline-block;
+    background: var.$COLOR-CORP;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    line-height: 1;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

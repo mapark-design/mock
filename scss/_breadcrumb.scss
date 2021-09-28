@@ -1,0 +1,25 @@
+@use "global" as global;
+@use "global/index" as var;
+
+.breadcrumb {
+
+  &__nav {
+    @extend %mainContentWrapper;
+    padding-bottom: 1.0rem;
+  }
+
+  &__list {
+    @extend %mainContentInner;
+    white-space: nowrap; /* 改行（行送り）を禁止させる */
+    font-size: var.$FONT-SIZE-14;
+
+    li {
+      display: inline-block; /* インラインブロック要素にする */
+  
+      &:not(:last-child)::after {
+        content: '>';    /* 間の矢印を設定 */
+        margin: 0 0.5rem; /* 左右に余白をとる */
+      }
+    }
+  }
+}

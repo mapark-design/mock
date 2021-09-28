@@ -1,0 +1,29 @@
+@use "global" as global;
+@use "global/index" as var;
+
+.mypage-notify {
+  @extend %mainContentInner;
+
+  &__wrapper {
+    @include var.fixBottom();
+    width: 100%;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid lightgray;
+      
+    &-date {
+      width: 10.0rem;
+    }
+    &-text {
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use "../global" as global;
+@use "../global/index" as var;
+
+.layout-login {
+  display: grid;
+  width: var.$CONTENT-WIDTH;
+  grid-template-columns: var.$MENU-WIDTH calc(#{var.$CONTENT-WIDTH} - #{var.$MENU-WIDTH});
+  grid-template-rows: var.$HEADER-HEIGHT auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  header {
+    @include global.gridArea(1, 4, 1, 2);
+  }
+  nav {
+    @include global.gridArea(1, 2, 2, 3);
+  }
+  main {
+    @include global.gridArea(2, 3, 2, 3);
+  }
+}

@@ -1,0 +1,19 @@
+@use "../global/index" as var;
+
+.regist-user {
+  &__section-inner {
+    width: var.$SITETOP_NALLOW-WIDTH;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  &__item-title {
+    min-width: 28rem;
+    max-width: 28rem;
+    padding: 1.5rem;
+  }
+  &__item-input {
+    padding: 1.5rem;
+  }
+}

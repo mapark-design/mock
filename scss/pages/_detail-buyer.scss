@@ -1,0 +1,106 @@
+@use "../global/index" as var;
+
+.detail-buyer {
+  &__section {
+    margin-bottom: 2.0rem;
+  }
+
+  &__header-inner {
+//    border: 1px solid gray;
+  }
+  &__header {
+//    background-color: #FFCCCC;
+    padding: 0.5rem 1.0rem;
+
+    &-company {
+      padding: 0.5rem 1rem;
+      font-size: 1.8rem;
+    }
+    &-detail {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    &-owner {
+      padding: 0.5rem 1rem;
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: normal;
+      line-height: 1.5;
+      background-color: white;    
+    }
+    &-title {
+      font-weight: bold;
+      padding-left: 1.0rem;
+    }
+    &-date {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__item-list {
+
+  }
+  &__item {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+
+    &--topborder {
+      border-top: 1px solid lightgray;
+    }
+  }
+  &__item-title {
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+    min-width: 25.0rem;
+    max-width: 25.0rem;
+    padding: 1.5rem;
+  }
+  &__item-value {
+    padding: 1.5rem;
+  }
+
+  &__purpose-list,
+  &__feature-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.0rem;
+  }
+  &__purpose-item,
+  &__feature-item {
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  /** 提案部分 */
+  &__suggest {
+    &-title {
+      background-color: var.$COLOR-CORP;
+      padding: 0.5rem 1.0rem;
+      margin-bottom: 1.0rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: white;
+    }
+    &-item-list {
+      padding-left: 1.0rem;
+    }
+    &-item {
+      margin-bottom: 1.0rem;
+    }
+    &-item-title {
+      padding: 0.5rem 0;
+    }
+    &-item-value {
+      padding: 0.5rem 0 0.5rem 1.0rem;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use "../global/index" as var;
+
+.search-seller {
+
+  &__list {
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+  }
+
+  &__title {
+    padding: 0.5rem 1.5rem;
+    min-width: 25.0rem;
+    max-width: 25.0rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      gap: 0rem 1.5rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  /** 明細部 */
+  &__result-item {
+    border: 1px solid darkgray;
+    margin-bottom: 2.0rem;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+      padding: 1.0rem 1.0rem;
+    }
+    &-purchase-info {
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+      margin-left: auto;
+    }
+    &-owner {
+      box-sizing: border-box;
+      padding: 0.5rem 1.0rem;
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: normal;
+      line-height: 1.5;
+  }
+    &-purchase {
+      box-sizing: border-box;
+      padding: 0.5rem 1.0rem;
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: normal;
+      line-height: 1.5;
+      margin-right: 0.0rem;
+      margin-left: 1.0rem;
+  }
+    &-date {
+      font-size: 1.4rem;
+      padding: 0 0 0.5rem 1.0rem;
+    }
+    &-detail {
+      table {
+        table-layout: fixed;
+        width: 100%;
+
+        %__column {
+          padding: 1.0rem 1.0rem;
+          border-top: 1px solid darkgray;
+          border-right: 1px solid darkgray;
+        }
+
+        tr {
+          th {
+            @extend %__column;
+            background-color: lightgray;
+            width: 16.0rem;
+          }
+          td {
+            @extend %__column;
+
+            &:last-of-type {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+    &-detail-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.0rem;
+
+      &-item {
+        box-sizing: border-box;
+        padding: 0.5rem 1.0rem;
+        border: 1px solid gray;
+        border-radius: 0.5rem;
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}

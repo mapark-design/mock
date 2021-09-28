@@ -1,0 +1,76 @@
+@use "../global" as global;
+@use "../global/index" as var;
+
+.login-nav {
+  background-color: var.$COLOR-CORP;
+
+  &__inner {
+    height: calc(100vh - #{var.$HEADER-HEIGHT});
+    min-height: 768px;
+    padding: var.$PADDING-CONTENT-V var.$PADDING-CONTENT-H;
+    overflow: auto;
+  }
+
+  &__button {
+    display: block;
+    margin: 0.0rem 3.0rem 1.0rem 3.0rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2.0rem;
+
+    button {
+      @include var.createButton(var.$FONT-SIZE-16, black, white, black, white);
+      padding: 1.0rem 2.0rem;
+    }
+  }
+
+  &__classification {
+    padding-top: 1.5rem;
+    border-top: 0.3rem solid white;
+
+    &-title {
+      color: white;
+      font-size: 2.4rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: var.$PADDING-CONTENT-V;
+    }
+  }
+
+  &__ul {
+//    padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__li {
+    margin-bottom: 1.0rem;
+    display: flex;
+    align-items: center;
+
+    &-common {
+      margin-bottom: var.$PADDING-CONTENT-V;
+    }
+
+    %__text {
+      color: white;
+    }
+    &--category {
+      @extend %__text;
+      font-weight: bold;
+      font-size: var.$FONT-SIZE-18;
+      margin-left: 0.5rem;
+    }
+    &--text {
+      @extend %__text;
+      margin-left: 3.5rem;
+    }
+
+    img {
+      width: 3.0rem;
+    }
+
+    a {
+      @extend %link-hover-underline;
+    }
+  }
+}

@@ -2,8 +2,15 @@
 
 .contract {
 
+  &__text {
+    margin-bottom: 2.0rem;
+  }
+
+  &__list {
+    margin-bottom: 2.0rem;
+  }
+
   &__item {
-    align-items: center;
   }
 
   &__item-title {
@@ -14,5 +21,6 @@
 
   &__item-input {
     padding: 1.5rem;    
+    align-items: center;
   }
 }

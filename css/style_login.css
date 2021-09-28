@@ -129,6 +129,128 @@ button.btn-sub:hover {
   gap: 0.5rem 2.5rem;
 }
 
+/** アンカー共通処理 */
+.login-nav__li a, .login-header__nav-anchor {
+  color: white;
+}
+.login-nav__li a:hover, .login-header__nav-anchor:hover {
+  color: white;
+}
+.login-nav__li a:not([class*=btn]), .login-header__nav-anchor:not([class*=btn]) {
+  position: relative;
+  display: inline-block;
+}
+.login-nav__li a:not([class*=btn])::after, .login-header__nav-anchor:not([class*=btn])::after {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.login-nav__li a:not([class*=btn]):hover::after, .login-header__nav-anchor:not([class*=btn]):hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+/** メインコンテンツ */
+.login-main__inner, .breadcrumb__nav {
+  padding-top: 1rem;
+}
+
+.mypage-notify, .login-alert, .login-main .login-main__title-box, .breadcrumb__list {
+  padding-left: 1.5rem;
+}
+
+.form-regist__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+.form-regist__item:first-of-type {
+  border-top: 1px solid lightgray;
+}
+.form-regist__item-section {
+  margin-bottom: 1rem;
+}
+.form-regist__item-section:last-of-type {
+  margin-bottom: 0;
+}
+.form-regist__item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eaeaea;
+}
+.form-regist__item-input--flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form-regist__item-input--flex-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0rem 2.5rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.form-regist__item-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.form-regist__item-modal-value {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  background-color: #FFAAAA;
+  border: 1px solid red;
+  border-radius: 1rem;
+  line-height: 1.2;
+}
+.form-regist__caution {
+  font-size: 1.2rem;
+}
+.form-regist__required {
+  display: inline-block;
+  background: #c8161d;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.3rem;
+  line-height: 1;
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .nego {
   /** 交渉一覧リスト */
 }
@@ -223,48 +345,6 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
-}
-
-/** アンカー共通処理 */
-.login-nav__li a, .login-header__nav-anchor {
-  color: white;
-}
-.login-nav__li a:hover, .login-header__nav-anchor:hover {
-  color: white;
-}
-.login-nav__li a:not([class*=btn]), .login-header__nav-anchor:not([class*=btn]) {
-  position: relative;
-  display: inline-block;
-}
-.login-nav__li a:not([class*=btn])::after, .login-header__nav-anchor:not([class*=btn])::after {
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-.login-nav__li a:not([class*=btn]):hover::after, .login-header__nav-anchor:not([class*=btn]):hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-}
-
-/** メインコンテンツ */
-.login-main__inner, .breadcrumb__nav {
-  padding-top: 1rem;
-}
-
-.mypage-notify, .login-alert, .login-main .login-main__title-box, .breadcrumb__list {
-  padding-left: 1.5rem;
 }
 
 .layout-login {
@@ -1066,5 +1146,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 .detail-buyer__suggest-item-value {
   padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.contract__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contract__item-title {
+  padding: 1.5rem;
+  min-width: 25rem;
+  max-width: 25rem;
+}
+.contract__item-input {
+  padding: 1.5rem;
 }
 /*# sourceMappingURL=style_login.css.map */

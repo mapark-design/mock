@@ -1,0 +1,18 @@
+@use "../global/index" as var;
+
+.contract {
+
+  &__item {
+    align-items: center;
+  }
+
+  &__item-title {
+    padding: 1.5rem;
+    min-width: 25.0rem;
+    max-width: 25.0rem;
+  }
+
+  &__item-input {
+    padding: 1.5rem;    
+  }
+}

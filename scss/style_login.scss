@@ -1,5 +1,6 @@
 @use "components/button";
 @use "components/form-search";
+@use "components/form-regist";
 @use "components/nego";
 @use "global/index";
 @use "core/all";
@@ -17,3 +18,4 @@
 @use "pages/search-seller";
 @use "pages/search-buyer";
 @use "pages/detail-buyer";
+@use "pages/contract";

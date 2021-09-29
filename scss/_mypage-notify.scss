@@ -2,7 +2,7 @@
 @use "global/index" as var;
 
 .mypage-notify {
-  @extend %mainContentInner;
+//  @extend %mainContentInner;
 
   &__wrapper {
     @include var.fixBottom();

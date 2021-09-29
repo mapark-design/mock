@@ -1,0 +1,47 @@
+.signin {
+
+  &__section-inner {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__tab-content {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+  }
+
+  &__content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.0rem;
+
+  }
+  &__content-text {
+    margin-bottom: 3.0rem;
+    text-align: center;
+  }
+  &__form {
+   margin-bottom: 3.0rem;
+  }
+
+  &__item-list {
+    margin-bottom: 3.0rem;
+  }
+  &__item-input {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  &__item-title {
+    width: 16rem;
+    padding: 1.5rem;
+  }
+  &__item-input {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+  }
+}

@@ -167,7 +167,7 @@ button.btn-sub:hover {
   padding-top: 1rem;
 }
 
-.mypage-notify, .login-alert, .login-main .login-main__title-box, .breadcrumb__list {
+.login-alert, .login-main .login-main__title-box, .breadcrumb__list {
   padding-left: 1.5rem;
 }
 
@@ -249,6 +249,14 @@ button.btn-sub:hover {
   line-height: 1;
   margin-right: 0;
   margin-left: auto;
+}
+
+.message-table {
+  /** 交渉一覧リスト */
+}
+.message-table tr th,
+.message-table tr td {
+  padding: 1rem;
 }
 
 .nego {
@@ -522,16 +530,18 @@ h1, h2, h3, h4, h5, h6 {
 .login-nav__li-common {
   margin-bottom: 1rem;
 }
-.login-nav__li .login-nav__li--text, .login-nav__li .login-nav__li--category {
-  color: white;
-}
 .login-nav__li--category {
+  color: white;
   font-weight: bold;
   font-size: 1.8rem;
   margin-left: 0.5rem;
 }
 .login-nav__li--text {
+  color: white;
   margin-left: 3.5rem;
+}
+.login-nav__li-nopay {
+  color: darkgray;
 }
 .login-nav__li img {
   width: 3rem;
@@ -627,51 +637,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mypage__content-lp {
   padding-left: 1.5rem;
-}
-
-.mypage-top__newmessage {
-  height: 44.5rem;
-  overflow: auto;
-}
-.mypage-top__newmessage table {
-  width: 100%;
-  margin: 0;
-  border: none;
-  background-color: #FFF;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-left: 1px solid #fff;
-  /* ensure first header cell sits atop everything else when scrolling right */
-  /* make first column sticky when scrolling right */
-}
-.mypage-top__newmessage table th {
-  background: #777;
-  border-right: 1px solid #fff;
-  color: #FFF;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  /* ensure header row sits atop everything else when scrolling down */
-  z-index: 1;
-}
-.mypage-top__newmessage table th:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-}
-.mypage-top__newmessage table td {
-  background: #fff;
-  border-right: 1px solid #fff;
-  border-bottom: 1px dotted #999;
-  padding: 1rem;
-  vertical-align: middle;
-}
-.mypage-top__newmessage table td:first-child {
-  position: sticky;
-  left: 0;
-  border-right-color: #fff;
-  width: 21%;
-  text-align: center;
 }
 
 .mypage-notify__wrapper {

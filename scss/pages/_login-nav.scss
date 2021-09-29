@@ -50,19 +50,20 @@
     &-common {
       margin-bottom: var.$PADDING-CONTENT-V;
     }
-
     %__text {
-      color: white;
     }
     &--category {
-      @extend %__text;
+      color: white;
       font-weight: bold;
       font-size: var.$FONT-SIZE-18;
       margin-left: 0.5rem;
     }
     &--text {
-      @extend %__text;
+      color: white;
       margin-left: 3.5rem;
+    }
+    &-nopay {
+      color: darkgray;
     }
 
     img {

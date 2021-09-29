@@ -826,4 +826,53 @@ button.btn-sub:hover {
       flex-wrap: wrap;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
+
+.signin__section-inner {
+  width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.signin__tab-content {
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.signin__content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+.signin__content-text {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.signin__form {
+  margin-bottom: 3rem;
+}
+.signin__item-list {
+  margin-bottom: 3rem;
+}
+.signin__item-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+}
+.signin__item-title {
+  width: 16rem;
+  padding: 1.5rem;
+}
+.signin__item-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem;
+}
 /*# sourceMappingURL=style.css.map */

@@ -668,7 +668,7 @@ button.btn-sub:hover {
   font-weight: normal;
   background-color: #e6e6e6;
   padding: 1rem;
-  background-image: url("../../img/icon/icon-question.svg");
+  background-image: url("../img/icon/icon-question.svg");
   background-repeat: no-repeat;
   background-position-x: 1rem;
   background-position-y: 1rem;
@@ -688,7 +688,7 @@ button.btn-sub:hover {
   font-weight: normal;
   background-color: #f2f2f2;
   padding: 1rem;
-  background-image: url("../../img/icon/icon-answer.svg");
+  background-image: url("../img/icon/icon-answer.svg");
   background-repeat: no-repeat;
   background-position-x: 1rem;
   background-position-y: 1rem;

@@ -1,0 +1,49 @@
+/** 仮登録画面用SCSS */
+.tmp-regist {
+  width: 786px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    text-align: center;
+    padding: 2.0rem;
+  }
+
+  &__type-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 4.0rem;
+  }
+
+  &__type {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 20.0rem;
+    padding: 3.0rem 1rem;
+    border-radius: 1.0rem;
+  }
+
+  &__input-content {
+    padding-right: 2.0rem;
+    padding-bottom: 1.0rem;
+    padding-left: 2.0rem;
+  }
+
+  &__item-title {
+    min-width: 21.0rem;
+    max-width: 21.0rem;
+    padding: 1.5rem;
+  }
+
+  &__section-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__section-button {
+    gap: 10.0rem;
+  }
+}

@@ -23,6 +23,9 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 @import "../../bootstrap/scss/tables";
 @import "../../bootstrap/scss/forms";
 @import "../../bootstrap/scss/buttons";
+@import "../../bootstrap/scss/nav";
+@import "../../bootstrap/scss/card";
+@import "../../bootstrap/scss/close";
 @import "../../bootstrap/scss/modal";
 @import "../../bootstrap/scss/carousel";
 

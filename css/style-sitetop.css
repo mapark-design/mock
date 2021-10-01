@@ -75,70 +75,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-.btn,
-a.btn,
-button.btn {
-  font-weight: bold;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
-  border-radius: 0.5rem;
-  border: 1px solid #991c21;
-  font-size: 1.6rem;
-  color: white;
-  background-color: #c8161d;
-}
-.btn:hover,
-a.btn:hover,
-button.btn:hover {
-  color: white;
-  background-color: #dd0000;
-}
-
-.btn-sub,
-a.btn-sub,
-button.btn-sub {
-  font-weight: bold;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
-  border-radius: 0.5rem;
-  border: 1px solid #991c21;
-  font-size: 1.2rem;
-  color: black;
-  background-color: #ffdede;
-}
-.btn-sub:hover,
-a.btn-sub:hover,
-button.btn-sub:hover {
-  color: black;
-  background-color: #ffcece;
-}
-
 /** アンカー共通処理 */
 .sitetop-footer__dd a, .sitetop-header__nav-anchor {
   color: white;
@@ -752,11 +688,12 @@ button.btn-sub:hover {
   margin-bottom: 2rem;
 }
 .sitetop-footer__dt {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.8rem;
 }
 .sitetop-footer__dd {
   margin-bottom: 0.5rem;
+  margin-left: 1rem;
 }
 .sitetop-footer__copyright {
   text-align: center;
@@ -962,4 +899,4 @@ button.btn-sub:hover {
 .tmp-regist__section-button {
   gap: 10rem;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-sitetop.css.map */

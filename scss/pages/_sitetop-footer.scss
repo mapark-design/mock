@@ -27,13 +27,13 @@
   }
 
   &__dt {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     font-size: 1.8rem;
   }
       
   &__dd {
     margin-bottom: 0.5rem;
-    margin-left: 1rem;
+//    margin-left: 1rem;
 
     a {
       @extend %link-hover-underline;

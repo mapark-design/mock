@@ -14,6 +14,24 @@ $custom-theme-colors: (
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 @import "../../bootstrap/scss/utilities";
+
+// 幅を増やす
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (10: 10%),
+        ),
+      ),
+    ),
+  )
+);
+
 @import "../../bootstrap/scss/root";
 @import "../../bootstrap/scss/reboot";
 @import "../../bootstrap/scss/type";

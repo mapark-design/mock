@@ -1,5 +1,6 @@
-@use "../global" as global;
-@use "../global/index" as var;
+@use "../global/variables" as var;
+@use "../global/extends" as ex;
+@use "../global/mixins" as mixin;
 
 .login-nav {
   background-color: var.$COLOR-CORP;
@@ -19,7 +20,7 @@
     font-size: 2.0rem;
 
     button {
-      @include var.createButton(var.$FONT-SIZE-16, black, white, black, white);
+      @include mixin.createButton(var.$FONT-SIZE-16, black, white, black, white);
       padding: 1.0rem 2.0rem;
     }
   }

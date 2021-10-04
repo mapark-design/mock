@@ -129,48 +129,6 @@ button.btn-sub:hover {
   gap: 0.5rem 2.5rem;
 }
 
-/** アンカー共通処理 */
-.login-nav__li a, .login-header__nav-anchor {
-  color: white;
-}
-.login-nav__li a:hover, .login-header__nav-anchor:hover {
-  color: white;
-}
-.login-nav__li a:not([class*=btn]), .login-header__nav-anchor:not([class*=btn]) {
-  position: relative;
-  display: inline-block;
-}
-.login-nav__li a:not([class*=btn])::after, .login-header__nav-anchor:not([class*=btn])::after {
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-.login-nav__li a:not([class*=btn]):hover::after, .login-header__nav-anchor:not([class*=btn]):hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
-}
-
-/** メインコンテンツ */
-.login-main__inner, .breadcrumb__nav {
-  padding-top: 1rem;
-}
-
-.login-alert, .login-main .login-main__title-box, .breadcrumb__list {
-  padding-left: 1.5rem;
-}
-
 .form-regist__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,6 +338,48 @@ h1, h2, h3, h4, h5, h6 {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+
+/** アンカー共通処理 */
+.login-nav__li a, .login-header__nav-anchor {
+  color: white;
+}
+.login-nav__li a:hover, .login-header__nav-anchor:hover {
+  color: white;
+}
+.login-nav__li a:not([class*=btn]), .login-header__nav-anchor:not([class*=btn]) {
+  position: relative;
+  display: inline-block;
+}
+.login-nav__li a:not([class*=btn])::after, .login-header__nav-anchor:not([class*=btn])::after {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.login-nav__li a:not([class*=btn]):hover::after, .login-header__nav-anchor:not([class*=btn]):hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+/** メインコンテンツ */
+.login-main__inner, .breadcrumb__nav {
+  padding-top: 1rem;
+}
+
+.login-alert, .login-main .login-main__title-box, .breadcrumb__list {
+  padding-left: 1.5rem;
 }
 
 .login-header__inner {

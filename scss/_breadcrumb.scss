@@ -1,5 +1,5 @@
-@use "global" as global;
-@use "global/index" as var;
+@use "./global/variables" as var;
+@use "./global/extends" as ex;
 
 .breadcrumb {
 

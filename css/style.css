@@ -31,6 +31,40 @@
   width: 60rem;
 }
 
+/** アンカー共通処理 */
+.sitetop-footer__dd a, .sitetop-header__nav-anchor {
+  color: white;
+}
+.sitetop-footer__dd a:hover, .sitetop-header__nav-anchor:hover {
+  color: white;
+}
+.sitetop-footer__dd a:not([class*=btn]), .sitetop-header__nav-anchor:not([class*=btn]) {
+  position: relative;
+  display: inline-block;
+}
+.sitetop-footer__dd a:not([class*=btn])::after, .sitetop-header__nav-anchor:not([class*=btn])::after {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.sitetop-footer__dd a:not([class*=btn]):hover::after, .sitetop-header__nav-anchor:not([class*=btn]):hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+/** メインコンテンツ */
 html {
   font-size: 62.5%;
 }
@@ -139,40 +173,40 @@ button.btn-sub:hover {
   background-color: #ffcece;
 }
 
-/** アンカー共通処理 */
-.sitetop-footer__dd a, .sitetop-header__nav-anchor {
-  color: white;
+.form-search__item-list {
+  margin-bottom: 1rem;
 }
-.sitetop-footer__dd a:hover, .sitetop-header__nav-anchor:hover {
-  color: white;
+.form-search__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.sitetop-footer__dd a:not([class*=btn]), .sitetop-header__nav-anchor:not([class*=btn]) {
-  position: relative;
-  display: inline-block;
+.form-search__item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 25rem;
+  min-width: 25rem;
+  padding: 0.5rem 1.5rem;
 }
-.sitetop-footer__dd a:not([class*=btn])::after, .sitetop-header__nav-anchor:not([class*=btn])::after {
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+.form-search__item-value {
+  padding: 0.5rem 1.5rem;
 }
-.sitetop-footer__dd a:not([class*=btn]):hover::after, .sitetop-header__nav-anchor:not([class*=btn]):hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+.form-search__item-value--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem 2.5rem;
 }
 
-/** メインコンテンツ */
 .form-regist__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,38 +287,12 @@ button.btn-sub:hover {
   margin-left: auto;
 }
 
-.form-search__item-list {
-  margin-bottom: 1rem;
+.message-table {
+  /** 交渉一覧リスト */
 }
-.form-search__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.form-search__item-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 25rem;
-  min-width: 25rem;
-  padding: 0.5rem 1.5rem;
-}
-.form-search__item-value {
-  padding: 0.5rem 1.5rem;
-}
-.form-search__item-value--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.5rem 2.5rem;
+.message-table tr th,
+.message-table tr td {
+  padding: 1rem;
 }
 
 .nego {
@@ -502,13 +510,8 @@ button.btn-sub:hover {
   top: 10rem;
 }
 .sitetop-keyvisual__button {
-  display: block;
-  background-color: #c8161d;
-  border-radius: 1rem;
-  text-align: center;
-  color: #fff;
+  border-radius: 0.5rem;
   font-size: 2.4rem;
-  font-weight: bold;
   padding: 0.8rem 3rem;
   position: absolute;
   top: 25rem;
@@ -915,6 +918,7 @@ button.btn-sub:hover {
 .tmp-regist__title {
   text-align: center;
   padding: 2rem;
+  font-size: 2.4rem;
 }
 .tmp-regist__type-list {
   display: -webkit-box;
@@ -937,6 +941,7 @@ button.btn-sub:hover {
   width: 20rem;
   padding: 3rem 1rem;
   border-radius: 1rem;
+  font-size: 2rem;
 }
 .tmp-regist__input-content {
   padding-right: 2rem;
@@ -959,7 +964,19 @@ button.btn-sub:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.tmp-regist__section-button {
+.tmp-regist__section-buttons {
   gap: 10rem;
+}
+.tmp-regist__section-button-regist {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.tmp-regist__section-button-back {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 /*# sourceMappingURL=style.css.map */

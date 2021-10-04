@@ -1,5 +1,5 @@
-@use "../global" as global;
-@use "../global/index" as var;
+@use "../global/variables" as var;
+@use "../global/mixins" as mixin;
 
 .layout-login {
   display: grid;
@@ -10,12 +10,12 @@
   margin-right: auto;
 
   header {
-    @include global.gridArea(1, 4, 1, 2);
+    @include mixin.gridArea(1, 4, 1, 2);
   }
   nav {
-    @include global.gridArea(1, 2, 2, 3);
+    @include mixin.gridArea(1, 2, 2, 3);
   }
   main {
-    @include global.gridArea(2, 3, 2, 3);
+    @include mixin.gridArea(2, 3, 2, 3);
   }
 }

@@ -1,10 +1,12 @@
-@use "global/index";
+@use "global";
+// @use "global/index";
 //@use "vendor/bootstrap";
 @use "core/all";
 //@use "components/index" as components;
-@use "components/form-regist";
-@use "components/form-search";
-@use "components/nego";
+// @use "components/form-regist";
+// @use "components/form-search";
+// @use "components/nego";
+@use "components";
 @use "pages/sitetop-header";
 @use "pages/sitetop-main";
 @use "pages/sitetop-keyvisual";

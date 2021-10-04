@@ -1,5 +1,6 @@
-@use "../global" as global;
-@use "../global/index" as var;
+@use "../global/variables" as var;
+@use "../global/extends" as ex;
+@use "../global/mixins" as mixin;
 
 .login-header {
 //  background-color: var.$CORP-COLOR;
@@ -54,7 +55,7 @@
     @extend %link-hover-underline;
   }
   &__nav-button {
-    @include var.createButton(var.$FONT-SIZE-14, var.$COLOR-CORP, white, white, var.$COLOR-CORP);
+    @include mixin.createButton(var.$FONT-SIZE-14, var.$COLOR-CORP, white, white, var.$COLOR-CORP);
     padding: 1.0rem 2.0rem;
   }
 }

@@ -1,5 +1,5 @@
-@use "../global" as global;
-@use "../global/index" as var;
+@use "../global/variables" as var;
+@use "../global/mixins" as mixin;
 
 .sitetop-newarrival {
   &__list {
@@ -19,7 +19,7 @@
   }
 
   &__image {
-    @include global.gridArea(1, 2, 1, 4);
+    @include mixin.gridArea(1, 2, 1, 4);
   }
   %__text {
     margin-bottom: 0.5rem;
@@ -27,24 +27,24 @@
   }
   &__title {
     @extend %__text;
-    @include global.gridArea(2, 4, 1, 2);
+    @include mixin.gridArea(2, 4, 1, 2);
     font-weight: bold;
     font-size: 2.4rem;
   }
   &__price-label {
     @extend %__text;
-    @include global.gridArea(2, 3, 2, 3);
+    @include mixin.gridArea(2, 3, 2, 3);
   }
   &__price-value {
     @extend %__text;
-    @include global.gridArea(3, 4, 2, 3);
+    @include mixin.gridArea(3, 4, 2, 3);
   }
   &__area-label {
     @extend %__text;
-    @include global.gridArea(2, 3, 3, 4);
+    @include mixin.gridArea(2, 3, 3, 4);
   }
   &__area-value {
     @extend %__text;
-    @include global.gridArea(3, 4, 3, 4);
+    @include mixin.gridArea(3, 4, 3, 4);
   }
 }

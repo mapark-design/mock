@@ -1,11 +1,10 @@
-@use "global" as global;
-@use "global/index" as var;
+@use "./global/mixins" as mixin;
 
 .mypage-notify {
 //  @extend %mainContentInner;
 
   &__wrapper {
-    @include var.fixBottom();
+    @include mixin.fixBottom();
     width: 100%;
   }
 

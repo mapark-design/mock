@@ -1,5 +1,6 @@
-@use "../global" as global;
-@use "../global/index" as var;
+@use "../global/variables" as var;
+@use "../global/mixins" as mixin;
+@use "../global/extends" as ex;
 
 .sitetop-header {
   background-color: var.$COLOR-CORP;
@@ -13,7 +14,6 @@
     margin-right: auto;
     padding: 0 1.5rem;
   }
-
 
   &__title {
     max-width: 8rem;
@@ -54,7 +54,7 @@
     @extend %link-hover-underline;
   }
   &__nav-button {
-    @include var.createButton(var.$FONT-SIZE-14, black, white, var.$COLOR-CORP, white);
+    @include mixin.createButton(var.$FONT-SIZE-14, black, white, var.$COLOR-CORP, white);
     padding: 1.0rem 1.5rem;
   }
 }

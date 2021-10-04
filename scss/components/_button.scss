@@ -1,13 +1,14 @@
-@use "../global/index" as var;
+@use "../global/variables" as var;
+@use "../global/mixins" as mixin;
 
 .btn,
 a.btn,
 button.btn {
-  @include var.createButton(var.$FONT-SIZE-16, white, var.$COLOR-CORP, white, #dd0000);
+  @include mixin.createButton(var.$FONT-SIZE-16, white, var.$COLOR-CORP, white, #dd0000);
 }
 
 .btn-sub,
 a.btn-sub,
 button.btn-sub {
-  @include var.createButton(var.$FONT-SIZE-12, black, #ffdede, black, #ffcece);
+  @include mixin.createButton(var.$FONT-SIZE-12, black, #ffdede, black, #ffcece);
 }

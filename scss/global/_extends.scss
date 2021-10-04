@@ -1,0 +1,53 @@
+@use "./variables" as var;
+
+%backgroundCorpColor {
+  background-color: var.$COLOR-CORP;
+}
+
+%contentWidth {
+  width: var.$CONTENT-WIDTH;
+}
+
+%flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+/** アンカー共通処理 */
+%link-hover-underline {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+
+  &:not([class*="btn"]) {
+    position: relative;
+    display: inline-block;
+  }
+  &:not([class*="btn"])::after {
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+  }
+  &:not([class*="btn"]):hover::after {
+    transform: scale(1, 1);
+  }
+}
+
+/** メインコンテンツ */
+%mainContentWrapper {
+  padding-top: var.$PADDING-CONTENT-V;
+//  padding-left: var.$PADDING-CONTENT-H;
+}
+%mainContentInner {
+//  padding-top: var.$PADDING-CONTENT-V;
+  padding-left: var.$PADDING-CONTENT-H;
+}

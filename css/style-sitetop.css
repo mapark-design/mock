@@ -31,6 +31,40 @@
   width: 60rem;
 }
 
+/** アンカー共通処理 */
+.sitetop-footer__dd a, .sitetop-header__nav-anchor {
+  color: white;
+}
+.sitetop-footer__dd a:hover, .sitetop-header__nav-anchor:hover {
+  color: white;
+}
+.sitetop-footer__dd a:not([class*=btn]), .sitetop-header__nav-anchor:not([class*=btn]) {
+  position: relative;
+  display: inline-block;
+}
+.sitetop-footer__dd a:not([class*=btn])::after, .sitetop-header__nav-anchor:not([class*=btn])::after {
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.sitetop-footer__dd a:not([class*=btn]):hover::after, .sitetop-header__nav-anchor:not([class*=btn]):hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+/** メインコンテンツ */
 html {
   font-size: 62.5%;
 }
@@ -75,40 +109,74 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/** アンカー共通処理 */
-.sitetop-footer__dd a, .sitetop-header__nav-anchor {
-  color: white;
-}
-.sitetop-footer__dd a:hover, .sitetop-header__nav-anchor:hover {
-  color: white;
-}
-.sitetop-footer__dd a:not([class*=btn]), .sitetop-header__nav-anchor:not([class*=btn]) {
-  position: relative;
-  display: inline-block;
-}
-.sitetop-footer__dd a:not([class*=btn])::after, .sitetop-header__nav-anchor:not([class*=btn])::after {
-  position: absolute;
-  bottom: -0.2rem;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-.sitetop-footer__dd a:not([class*=btn]):hover::after, .sitetop-header__nav-anchor:not([class*=btn]):hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+/**
+ * ボタンコンポーネント。
+ * Bootstrap の、btn/btn-xxxxx を組んだ上で、下記スタイルを追加で適用することで
+ * ボタン幅とフォントサイズを固定する。
+ * .ma-btn-forward：肯定的操作
+ * .ma-btn-back：否定的操作
+ * .ma-btn-submit：ログイン・パスワード変更画面で利用
+ * .ma-modal-btn-forward：(モーダル画面)肯定的操作
+ * .ma-modal-btn-back：(モーダル画面)否定的操作
+ */
+.ma-btn-fw {
+  font-size: 1.8rem;
+  padding: 0.75rem 3rem;
 }
 
-/** メインコンテンツ */
+.ma-btn-back {
+  font-size: 1.6rem;
+  padding: 0.5rem 3rem;
+}
+
+.ma-btn-submit {
+  font-size: 2rem;
+}
+
+.ma-modal-btn-fw {
+  font-size: 1.6rem;
+  padding: 0.5rem 3rem;
+}
+
+.ma-modal-btn-back {
+  font-size: 1.4rem;
+  padding: 0.5rem 2rem;
+}
+
+.form-search__item-list {
+  margin-bottom: 1rem;
+}
+.form-search__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-search__item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 25rem;
+  min-width: 25rem;
+  padding: 0.5rem 1.5rem;
+}
+.form-search__item-value {
+  padding: 0.5rem 1.5rem;
+}
+.form-search__item-value--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem 2.5rem;
+}
+
 .form-regist__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,38 +257,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
 }
 
-.form-search__item-list {
-  margin-bottom: 1rem;
+.message-table {
+  /** 交渉一覧リスト */
 }
-.form-search__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.form-search__item-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 25rem;
-  min-width: 25rem;
-  padding: 0.5rem 1.5rem;
-}
-.form-search__item-value {
-  padding: 0.5rem 1.5rem;
-}
-.form-search__item-value--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 0.5rem 2.5rem;
+.message-table tr th,
+.message-table tr td {
+  padding: 1rem;
 }
 
 .nego {

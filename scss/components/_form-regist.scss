@@ -1,5 +1,4 @@
-@use "../global" as global;
-@use "../global/index" as var;
+@use "../global/variables" as var;
 
 .form-regist {
   &__item {

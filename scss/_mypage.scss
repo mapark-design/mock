@@ -41,6 +41,21 @@
     /** 必要に応じて、div.text-center/div.text-end でボタンを寄せる */
     padding-bottom: 1.0rem;
   }
+  &__button-search {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding: 0.5rem 2.0rem;
+  }
+  &__button-positive {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 0.5rem 2.0rem;
+  }
+  &__button-negative {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding: 0.5rem 1.0rem;
+  }
 
   %__content {
     margin-bottom: 1.0rem;

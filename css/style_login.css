@@ -632,6 +632,21 @@ h1, h2, h3, h4, h5, h6 {
   /** 必要に応じて、div.text-center/div.text-end でボタンを寄せる */
   padding-bottom: 1rem;
 }
+.mypage__button-search {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  padding: 0.5rem 2rem;
+}
+.mypage__button-positive {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  padding: 0.5rem 2rem;
+}
+.mypage__button-negative {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  padding: 0.5rem 1rem;
+}
 .mypage .mypage__content-lp, .mypage .mypage__content {
   margin-bottom: 1rem;
 }

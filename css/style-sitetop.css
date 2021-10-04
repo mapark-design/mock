@@ -438,13 +438,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 10rem;
 }
 .sitetop-keyvisual__button {
-  display: block;
-  background-color: #c8161d;
-  border-radius: 1rem;
-  text-align: center;
-  color: #fff;
+  border-radius: 0.5rem;
   font-size: 2.4rem;
-  font-weight: bold;
   padding: 0.8rem 3rem;
   position: absolute;
   top: 25rem;
@@ -688,12 +683,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 .sitetop-footer__dt {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.8rem;
 }
 .sitetop-footer__dd {
   margin-bottom: 0.5rem;
-  margin-left: 1rem;
 }
 .sitetop-footer__copyright {
   text-align: center;
@@ -852,6 +846,7 @@ h1, h2, h3, h4, h5, h6 {
 .tmp-regist__title {
   text-align: center;
   padding: 2rem;
+  font-size: 2.4rem;
 }
 .tmp-regist__type-list {
   display: -webkit-box;
@@ -874,6 +869,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 20rem;
   padding: 3rem 1rem;
   border-radius: 1rem;
+  font-size: 2rem;
 }
 .tmp-regist__input-content {
   padding-right: 2rem;
@@ -896,7 +892,19 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.tmp-regist__section-button {
+.tmp-regist__section-buttons {
   gap: 10rem;
+}
+.tmp-regist__section-button-regist {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.tmp-regist__section-button-back {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 /*# sourceMappingURL=style-sitetop.css.map */

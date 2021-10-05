@@ -1,12 +1,17 @@
 @use "global";
-//@use "vendor/bootstrap";
-@use "core/all";
-//@use "components/index" as components;
-//@use "components/form-regist";
-//@use "components/form-search";
-//@use "components/nego";
+@use "core";
 @use "components";
-@use "pages/sitetop-header";
+@use "layout/layout-login";
+//@use "pages/login-header";
+@use "pages/login-nav";
+@use "breadcrumb";
+@use "login-main";
+@use "login-alert";
+@use "mypage";
+@use "mypage-top";
+@use "mypage-notify";
+
+//@use "pages/sitetop-header";
 @use "pages/sitetop-main";
 @use "pages/sitetop-keyvisual";
 @use "pages/sitetop-feature";
@@ -15,6 +20,13 @@
 @use "pages/sitetop-question";
 @use "pages/sitetop-notify";
 @use "pages/sitetop-footer";
+
+@use "pages/reg-purchase-info";
+@use "pages/search-seller";
+@use "pages/search-buyer";
+@use "pages/detail-buyer";
+@use "pages/contract";
+
 @use "pages/regist-user";
 @use "pages/ma-modal";
 @use "pages/signin";

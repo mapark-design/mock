@@ -1,5 +1,4 @@
-@use "global" as global;
-@use "global/index" as var;
+@use "./global/extends" as ex;
 
 .login-alert {
   @extend %mainContentInner;

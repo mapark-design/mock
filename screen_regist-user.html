@@ -7,8 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     --><link rel="stylesheet" href="./css/bootstrap-customize.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style-sitetop.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"><!--
@@ -19,19 +18,23 @@
   </head>
   <body>
     <!-- header.sitetop-header -->
-    <header class="sitetop-header">
-      <div class="sitetop-header__inner">
-        <h1 class="sitetop-header__title"><img src="./img/sitetop-logo.png" alt=""></h1><!--
-        <nav class="sitetop-header__nav">
-          <ul class="sitetop-header__nav-list-left">
-            <li class="sitetop-header__nav-item-left"><a class="sitetop-header__nav-anchor" href="">サービスについて</a></li>
-            <li class="sitetop-header__nav-item-left"><a class="sitetop-header__nav-anchor" href="">よくあるご質問</a></li>
-            <li class="sitetop-header__nav-item-left"><a class="sitetop-header__nav-anchor" href="">お問い合わせ</a></li>
-          </ul>
-          <ul class="sitetop-header__nav-list-right">
-            <li class="sitetop-header__nav-item-right"><a class="sitetop-header__nav-anchor" href="">会員登録</a></li>
-            <li class="sitetop-header__nav-item-right"><a class="sitetop-header__nav-button" href="" class="sitetop-header__button">ログイン</a></li>
-          </ul>
+    <header class="ma-header ma-header--top">
+      <div class="ma-header__inner">
+        <h1 class="ma-header__title"><img class="ma-header__logo" src="./img/sitetop-logo.png"></h1><!--
+        <nav class="ma-header__nav">
+          <div class="ma-header__global-nav">
+            <ul class="ma-header__nav-list ma-header__nav-list--global-nav">
+              <li><a href="" class="">サービスについて</a></li>
+              <li><a href="" class="">よくあるご質問</a></li>
+              <li><a href="" class="">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div class="ma-header__user-nav">
+            <ul class="ma-header__nav-list ma-header__nav-list--user-nav">
+              <li><a href="" class="">会員登録</a></li>
+              <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+            </ul>
+          </div>
         </nav>
       --></div>
     </header>

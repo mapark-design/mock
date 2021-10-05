@@ -40,6 +40,13 @@
     /** 画面で利用するボタンは、基本的にこの配下に設置 */
     /** 必要に応じて、div.text-center/div.text-end でボタンを寄せる */
     padding-bottom: 1.0rem;
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.0rem;
+    }
   }
   &__button-search {
     font-size: 1.6rem;

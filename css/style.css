@@ -608,6 +608,18 @@ h1, h2, h3, h4, h5, h6 {
   /** 必要に応じて、div.text-center/div.text-end でボタンを寄せる */
   padding-bottom: 1rem;
 }
+.mypage__action-area--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
 .mypage__button-search {
   font-size: 1.6rem;
   line-height: 1.6;
@@ -1663,7 +1675,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: center;
 }
 .tmp-regist__section-buttons {
-  gap: 10rem;
+  gap: 3rem;
 }
 .tmp-regist__section-button-regist {
   padding: 0.5rem 1rem;

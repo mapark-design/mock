@@ -442,8 +442,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #c8161d;
 }
 .login-nav__inner {
+  height: calc(100vh - 72px);
   min-height: 768px;
   padding: 1rem 1.5rem;
+  overflow: auto;
 }
 .login-nav__button {
   display: block;
@@ -1659,8 +1661,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 2rem;
 }
 .tmp-regist__item-title {
-  min-width: 21rem;
-  max-width: 21rem;
+  min-width: 25rem;
+  max-width: 25rem;
   padding: 1.5rem;
 }
 .tmp-regist__section-agreement {

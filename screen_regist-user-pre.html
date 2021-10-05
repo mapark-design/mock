@@ -86,8 +86,19 @@
                             <dt class="form-regist__item-title tmp-regist__item-title">会員区分
                               <div class="form-regist__required">必須</div>
                             </dt>
-                            <dd class="form-regist__item-input regist-user__item-input">
-                              <input type="text" class="form-control font-size-14 width-15" placeholder="例：00123456789" required>
+                            <dd class="form-regist__item-input--flex-center regist-user__item-input">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  法人
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  個人事業主
+                                </label>
+                              </div>
                             </dd>
                           </div>
                           <div class="form-regist__item regist-user__item">
@@ -105,15 +116,25 @@
                             <dd class="form-regist__item-input regist-user__item-input">
                               <select class="form-select font-size-14 width-30" required>
                                 <option selected disabled value="">＋選択してください</option>
-                              </select>          
+                              </select>
                             </dd>
                           </div>
                           <div class="form-regist__item regist-user__item">
                             <dt class="form-regist__item-title tmp-regist__item-title">氏名
                               <div class="form-regist__required">必須</div>
                             </dt>
-                            <dd class="form-regist__item-input regist-user__item-input">
-                              <input type="text" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください" required>
+                            <dd class="form-regist__item-input--flex-center regist-user__item-input">
+                              <input type="text" class="form-control font-size-14 width-15" placeholder="姓" required>
+                              <input type="text" class="form-control font-size-14 width-15" placeholder="名" required>
+                            </dd>
+                          </div>
+                          <div class="form-regist__item regist-user__item">
+                            <dt class="form-regist__item-title tmp-regist__item-title">カナ
+                              <div class="form-regist__required">必須</div>
+                            </dt>
+                            <dd class="form-regist__item-input--flex-center regist-user__item-input">
+                              <input type="text" class="form-control font-size-14 width-15" placeholder="セイ" required>
+                              <input type="text" class="form-control font-size-14 width-15" placeholder="メイ" required>
                             </dd>
                           </div>
                           <div class="form-regist__item regist-user__item">
@@ -137,7 +158,15 @@
                               <div class="form-regist__required">必須</div>
                             </dt>
                             <dd class="form-regist__item-input regist-user__item-input">
-                              <input type="email" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください" required>
+                              <input type="password" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください" required>
+                            </dd>
+                          </div>
+                          <div class="form-regist__item regist-user__item">
+                            <dt class="form-regist__item-title tmp-regist__item-title">パスワード(再確認)
+                              <div class="form-regist__required">必須</div>
+                            </dt>
+                            <dd class="form-regist__item-input regist-user__item-input">
+                              <input type="password" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください" required>
                             </dd>
                           </div>
                           <div class="form-regist__item regist-user__item">
@@ -154,7 +183,7 @@
                       <div class="tmp-regist__section-agreement mb-4">
                         <div class="form-check">
                           <input class="form-check-input" id="form-regist-agree" type="checkbox" value="1">
-                          <label class="form-check-label" for="form-regist-agree"><a href="" target="_blank">利用規約</a>、<a href="" target="_blank">プライバシーポリシー</a>に同意する</label>
+                          <label class="form-check-label" for="form-regist-agree"><a href="./screen_agreement.html" target="_blank">利用規約</a>、<a href="./screen_privacy-policy.html" target="_blank">個人情報保護方針</a>に同意する</label>
                         </div>
                       </div>
                       <div class="sitetop-main__section-button tmp-regist__section-buttons mb-4">

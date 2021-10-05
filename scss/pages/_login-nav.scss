@@ -6,10 +6,10 @@
   background-color: var.$COLOR-CORP;
 
   &__inner {
-//    height: calc(100vh - #{var.$HEADER-HEIGHT});
+    height: calc(100vh - #{var.$HEADER-HEIGHT});
     min-height: 768px;
     padding: var.$PADDING-CONTENT-V var.$PADDING-CONTENT-H;
- //   overflow: auto;
+    overflow: auto;
   }
 
   &__button {

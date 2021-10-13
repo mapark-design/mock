@@ -1,0 +1,85 @@
+@use "../../abstracts/variables" as var;
+
+.search-seller-result {
+  border: 1px solid lightgray;
+  margin-bottom: 2.0rem;
+
+  &:last-of-type {
+    margin-bottom: 1.0rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 1.0rem;
+  }
+  &__purchase-info {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  &__item {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 1px solid darkgray;
+  }
+  @at-root {
+    %__item {
+      display: flex;
+      align-items: center;
+      padding: 1.0rem;
+    }
+    &__item-title {
+      @extend %__item;
+      background-color: #eaeaea;
+      font-weight: normal;
+      min-width: 18.0rem;
+      max-width: 18.0rem;
+    }
+    &__item-value {
+      @extend %__item;
+    }  
+  }
+  &__check-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  &-title {
+  }
+  @at-root {
+    %__purchase-info {
+      padding: 0.3rem 0.5rem;
+      border: 1px solid lightgray;
+      border-radius: 0.5rem;
+      font-weight: normal;
+    }
+    &__owner {
+      @extend %__purchase-info;
+    }
+    &__purchase {
+      @extend %__purchase-info;
+      margin-right: 0rem;
+      margin-left: 1rem;
+    }
+    &__check {
+      @extend %__purchase-info;
+      font-size: var.$FONT-SIZE-16;
+    }
+  }
+  &__date {
+    font-size: var.$FONT-SIZE-16;
+    padding: 0 0 0.5rem 1.0rem;
+  }
+  &__industory {
+  }
+  &__price {
+  }
+  &__sales {
+  }
+  &__appeal {
+  }
+}

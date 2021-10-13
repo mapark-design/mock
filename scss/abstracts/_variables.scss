@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/**
+ * 変数定義
+ *
+ * SCSSで利用する変数を定義する。
+ */
+
+//-----------------------------------------------------------------------------
+// 色関連
+//-----------------------------------------------------------------------------
+$COLOR-CORP: #c8161d; // 企業色
+$COLOR-CORP-MIDDLE: #dabbbb;
+$COLOR-CORP-DARK: #991c21;
+
+$COLOR-GRAY-DARK: #e6e6e6;
+$COLOR-GRAY-THIN: #f2f2f2;
+
+
+//-----------------------------------------------------------------------------
+// 幅/高さ
+//-----------------------------------------------------------------------------
+$WIDTH-DEFAULT: 1366px;
+$WIDTH-1024: 1024px;
+$WIDTH-800: 800px;
+$WIDTH-768: 768px;
+$WIDTH-NAV: 280px;
+$HEIGHT-HEADER: 72px;
+
+
+//-----------------------------------------------------------------------------
+// フォントサイズ
+//-----------------------------------------------------------------------------
+$FONT-SIZE-12: 1.2rem;
+$FONT-SIZE-14: 1.4rem;
+$FONT-SIZE-16: 1.6rem;
+$FONT-SIZE-18: 1.8rem;
+$FONT-SIZE-20: 2.0rem;
+$FONT-SIZE-24: 2.4rem;
+$FONT-SIZE-28: 2.8rem;
+
+
+
+
+// $COLOR-GRAY-DARK: #e6e6e6;
+// $COLOR-GRAY-THIN: #f2f2f2;
+
+// $CONTENT-WIDTH: 1366px;
+// $SITETOP_NALLOW-WIDTH: 1024px;
+// //$SITETOP_NALLOW-WIDTH: 768px;
+// $MENU-WIDTH: 280px;
+// $HEADER-HEIGHT: 72px;
+
+// $FONT-ROBOTO: 'Roboto', sans-serif;
+
+// $RADIUS-DEFAULT: 1.2rem;
+
+// $PADDING-CONTENT-V: 1.0rem;
+// $PADDING-CONTENT-H: 1.5rem;
+
+// %menu-height {
+//   height: calc(100vh - $HEADER-HEIGHT);
+// }
+
+// $FONT-SIZE-16: 1.6rem;
+// $FONT-SIZE-18: 1.8rem;
+// $FONT-SIZE-14: 1.4rem;
+// $FONT-SIZE-12: 1.2rem;
+
+// .font-size-16 {
+//   font-size: $FONT-SIZE-16;
+// }
+// .font-size-14 {
+//   font-size: $FONT-SIZE-14;
+// }
+// .font-size-12 {
+//   font-size: $FONT-SIZE-12;
+// }
+
+// .width-10 {
+//   width: 10.0rem;
+// }
+// .width-15 {
+//   width: 15.0rem;
+// }
+// .width-30 {
+//   width: 30.0rem;
+// }
+// .width-45 {
+//   width: 45.0rem;
+// }
+// .width-60 {
+//   width: 60.0rem;
+// }

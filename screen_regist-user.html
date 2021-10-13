@@ -1,394 +1,363 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    --><link rel="stylesheet" href="./css/bootstrap-customize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <title>会員情報登録</title>
-  </head>
-  <body>
-    <!-- header.sitetop-header -->
-    <header class="ma-header ma-header--top">
-      <div class="ma-header__inner">
-        <h1 class="ma-header__title"><img class="ma-header__logo" src="./img/sitetop-logo.png"></h1><!--
-        <nav class="ma-header__nav">
-          <div class="ma-header__global-nav">
-            <ul class="ma-header__nav-list ma-header__nav-list--global-nav">
-              <li><a href="" class="">サービスについて</a></li>
-              <li><a href="" class="">よくあるご質問</a></li>
-              <li><a href="" class="">お問い合わせ</a></li>
-            </ul>
-          </div>
-          <div class="ma-header__user-nav">
-            <ul class="ma-header__nav-list ma-header__nav-list--user-nav">
-              <li><a href="" class="">会員登録</a></li>
-              <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
-            </ul>
-          </div>
-        </nav>
-      --></div>
-    </header>
-    <!-- //header.sitetop-header -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>ユーザ登録</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1><!--
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="" class="">サービスについて</a></li>
+            <li><a href="" class="">よくあるご質問</a></li>
+            <li><a href="" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><a href="./screen_regist-user-pre.html" class="">会員登録</a></li>
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+          </ul>
+        </div>
+      </nav>
+    --></div>
+  </header>
+  <!-- //header.header -->
 
-    <main class="sitetop-main regist-user">
-      <section class="sitetop-main__section--noodd">
-        <div class="sitetop-main__section-inner regist-user__section-inner">
-          <h1 class="sitetop-main__section-title">会員情報登録(買いたい方)</h1>
-          <div class="mb-3">
+  <main>
+    <!-- section.section-nolog -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner regist-user__inner">
+        <h2 class="section-nolog__title">会員情報登録(買いたい方)</h2>
+        <div class="section-nolog__content">
+          <div class="regist-user__explanation">
             会員情報は、正確な情報をご登録ください。<br>
             登録内容の確認のため、後日事務局からご連絡させていただく場合がございます旨、ご了承ください。
           </div>
           <form class="needs-validation" novalidate>
-            <div class="mb-4">
-              <dl>
-                <div class="form-regist__item regist-user__item">
-                  <dt class="form-regist__item-title regist-user__item-title regist-user__item-title">法人番号
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-15" placeholder="例：00123456789" required>
-                    <div class="form-regist__caution">海外法人や組合等、法人番号をお持ちでない場合は、固定値として "9999999999999" を入力ください。</div>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">郵便番号
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-15" placeholder="例：000-0000" required>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">都道府県
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <select class="form-select font-size-14 width-30 form-prefecture" required>
-                      <option selected disabled value="">＋選択してください</option>
-                    </select>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">市区町村
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください" required>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">番地
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください" required>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">建物名</dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください">
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">所属部署</dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください">
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">対応可能な専門業務領域</dt>
-                  <dd class="form-regist__item-input--flex-center regist-user__item-input specialty"></dd>
+            <dl>
+              <div class="form__item form__item--border form__item--top-border regist-user__item">
+                <dt class="form__item-title regist-user__item-title">法人番号
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-25" placeholder="例：00123456789" required>
+                  <div class="form__caution">海外法人や組合等、法人番号をお持ちでない場合は、固定値として "9999999999999" を入力ください。</div>
+                </dd>
               </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">M&A経験年数
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <select class="form-select font-size-14 width-30" required>
-                      <option selected disabled value="">＋選択してください</option>
-                    </select>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">M&A実績件数
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <select class="form-select font-size-14 width-30" required>
-                      <option selected disabled value="">＋選択してください</option>
-                    </select>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">自社サイトURL</dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-45" placeholder="30文字以内で入力してください">
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">資本金</dt>
-                  <dd class="form-regist__item-input--flex-center regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-15" placeholder="例：2000万">円
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">設立年</dt>
-                  <dd class="form-regist__item-input--flex-center regist-user__item-input">
-                    <input type="text" class="form-control font-size-14 width-15" placeholder="例：2000">年
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">業種(複数選択可)
-                    <div class="form-regist__required">必須</div>
-                  </dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <div class="form-regist__item-modal regist-user__item-input--sectors">
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">郵便番号
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-25" placeholder="例：000-0000" required>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">都道府県
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <select class="form-select w-25 form-prefecture" required>
+                    <option selected disabled value="">＋選択してください</option>
+                  </select>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">市区町村
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください" required>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">番地
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください" required>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">建物名</dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください">
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">所属部署</dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください">
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">対応可能な専門業務領域</dt>
+                <dd class="form__item-input--flex-wrap regist-user__item-input specialty"></dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">M&A経験年数
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <select class="form-select w-25" required>
+                    <option selected disabled value="">＋選択してください</option>
+                  </select>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">M&A実績件数
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <select class="form-select w-25" required>
+                    <option selected disabled value="">＋選択してください</option>
+                  </select>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">自社サイトURL</dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください">
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">資本金</dt>
+                <dd class="form__item-input form__item-input--flex-center regist-user__item-input">
+                  <input type="text" class="form-control w-25" placeholder="例：2000万">円
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">設立年</dt>
+                <dd class="form__item-input form__item-input--flex-center regist-user__item-input">
+                  <input type="text" class="form-control w-25" placeholder="例：2000">年
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">業種(複数選択可)
+                  <div class="form__required">必須</div>
+                </dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <div class="form__item-modal regist-user__item-input--sectors">
+                  <ul id="form-sector" class="check-list check-list--wrap mb-3" style="display: none;">
+                  </ul>
+                  <a class="btn selectSector ma-btn-modal">＋選択してください</a>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">上場区分</dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <select class="form-select w-25">
+                    <option selected disabled value="">＋選択してください</option>
+                  </select>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">前年度売上高</dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <select class="form-select w-25">
+                    <option selected disabled value="">＋選択してください</option>
+                  </select>
+                </dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">専門家への相談依頼</dt>
+                <dd class="form__item-input--flex-wrap regist-user__item-input consultation-specialty"></dd>
+              </div>
+              <div class="form__item form__item--border">
+                <dt class="form__item-title regist-user__item-title">本人証明書提出書類</dt>
+                <dd class="form__item-input regist-user__item-input">
+                  <div class="form__item-section">
+                    個人事業主の方はご本人確認のため、下記2種類の書類をアップロードしてください。
+                  </div>
+                  <div class="form__item-section">
+                    <label for="formFile1" class="form-label">開業届</label>
+                    <input class="form-control width-60" type="file" id="formFile1" required>
+                  </div>
+                  <div class="form__item-section">
+                    <label for="formFile2" class="form-label">健康証またはパスポート</label>
+                    <input class="form-control width-60" type="file" id="formFile2" required>
+                  </div>
+                </dd>
+              </div>
+            </dl>
+            <div class="form__action form__action--center">
+              <button class="btn btn-corp ma-btn-section">登録する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- //section.section-nolog -->
 
-                    </div><!--
-                    <a href="javascript:void(0);" class="font-size-14" data-bs-toggle="modal" data-bs-target="#exampleModal">＋業種を選択する</a>
-                    --><a href="javascript:void(0);" class="font-size-14" id="selectSector">＋業種を選択する</a>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">上場区分</dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <select class="form-select font-size-14 width-30">
-                      <option selected disabled value="">＋選択してください</option>
-                    </select>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">前年度売上高</dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <select class="form-select font-size-14 width-30">
-                      <option selected disabled value="">＋選択してください</option>
-                    </select>
-                  </dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">専門家への相談依頼</dt>
-                  <dd class="form-regist__item-input--flex-center regist-user__item-input consultation-specialty"></dd>
-                </div>
-                <div class="form-regist__item">
-                  <dt class="form-regist__item-title regist-user__item-title">本人証明書提出書類</dt>
-                  <dd class="form-regist__item-input regist-user__item-input">
-                    <div class="form-regist__item-section">
-                      個人事業主の方はご本人確認のため、下記2種類の書類をアップロードしてください。
-                    </div>
-                    <div class="form-regist__item-section">
-                      <label for="formFile1" class="form-label">開業届</label>
-                      <input class="form-control font-size-14 width-60" type="file" id="formFile1" required>
-                    </div>
-                    <div class="form-regist__item-section">
-                      <label for="formFile2" class="form-label">健康証またはパスポート</label>
-                      <input class="form-control font-size-14 width-60" type="file" id="formFile2" required>
-                    </div>
-                  </dd>
-                </div>
-              </dl>
-            </div>
-            <div class="sitetop-main__section-button">
-              <button class="btn btn-corp ma-btn-fw" type="submit">登録する</button>
-            </div>
+    <!-- modal.sector -->
+    <div class="modal fade" id="modal-select-sector" tabindex="-1" aria-labelledby="modalSelectSector" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable ma-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #c8161d">
+            <h5 class="modal-title font-size-16" id="modalSelectSector" style="color: white;">業種選択</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-        </form>
-      </section>
-
-      <!-- modal.sector -->
-      <div class="modal fade" id="modal-select-sector" tabindex="-1" aria-labelledby="modalSelectSector" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable ma-modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header" style="background-color: #c8161d">
-              <h5 class="modal-title font-size-16" id="modalSelectSector" style="color: white;">業種選択</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <dl id="modal-list">
-              </dl>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">閉じる</button>
-              <button type="button" class="btn btn-corp ma-modal-btn-fw" id="sector-selected">選択する</button>
-            </div>
+          <div class="modal-body">
+            <dl id="modal-list">
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-corp ma-modal-btn-fw" id="sector-selected">選択する</button>
           </div>
         </div>
       </div>
-      <!-- //modal.sector -->
-    </main>
-  </body>
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
+    </div>
+    <!-- //modal.sector -->
+  </main>
+</body>
+<script>
+  var ma = new Ma();
 
-      // var forms = document.querySelectorAll('.needs-validation');
-      // Array.prototype.slice.call(forms).forEach(function(form) {
-      //   form.addEventListener('submit', function(event) {
-      //     form.classList.remove('was-validated');
-      //     if (!form.checkValidity()) {
-      //       event.preventDefault();
-      //       event.stopPropagation();
-      //     }
-      //     form.classList.add('was-validated');
-      //   }, false);
-      // });
+  /**
+   * チェックボックスとラベルのエレメント作成
+   */
+  createCheckboxDiv = function (element, prefix) {
+    var input = document.createElement('input');
+    input.classList.add('form-check-input');
+    input.id = prefix + element.value;
+    input.setAttribute('type', 'checkbox')
+    input.setAttribute('value', element.value);
 
-      /**
-       * チェックボックスとラベルのエレメント作成
-       */
-      createCheckboxDiv = function (element, prefix) {
-        var input = document.createElement('input');
-        input.classList.add('form-check-input');
-        input.id = prefix + element.value;
-        input.setAttribute('type', 'checkbox')
-        input.setAttribute('value', element.value);
-        var label = document.createElement('label');
-        label.classList.add('form-check-label');
-        label.setAttribute('for', prefix + element.value);
-        label.innerHTML = element.name;
-        var div = document.createElement('div');
-        div.classList.add('form-check');
-        div.appendChild(input);
-        div.appendChild(label);
-        return div;
-      }
+    var label = document.createElement('label');
+    label.classList.add('form-check-label');
+    label.setAttribute('for', prefix + element.value);
+    label.innerHTML = element.name;
 
-      /**
-       * チェックボックス設定
-       */
-      setCheckbox = function(path, querySelector, prefix) {
-        fetch(path)
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(data) {
-          Array.from(document.querySelectorAll(querySelector), function(el, index) {
-            data.forEach(element => {
-              el.appendChild(createCheckboxDiv(element, prefix));
-            });
+    var div = document.createElement('div');
+    div.classList.add('form-check');
+    div.appendChild(input);
+    div.appendChild(label);
+    return div;
+  }
+
+  /**
+   *  業界業種モーダル設定
+   */
+  fetch('./json/master-section.json')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data) {
+    Array.from(document.querySelectorAll('#modal-list'), function(el, index) {
+      data.forEach(element => {
+        var divIndustory = createCheckboxDiv(element, 'form-industory');
+        var industory = divIndustory.children[0];
+        industory.classList.add("checkbox-industory");
+        industory.addEventListener('click', function() {
+          isChecked = this.checked;
+          Array.from(this.parentNode.parentNode.parentNode.children[1].getElementsByClassName('form-check-input'), function(elSectionCheck, index) {
+            elSectionCheck.checked = isChecked;
           });
         });
-      }
-
-      /**
-       * オプション設定
-       */
-      setOptions = function(path, querySelector) {
-        fetch(path)
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(data) {
-          Array.from(document.querySelectorAll(querySelector), function(el, index) {
-            data.forEach(element => {
-              var opt = document.createElement('option');
-              opt.value = element.value;
-              opt.text = element.name;
-              el.appendChild(opt);
-            });
-          });
-        });
-      }
-
-      /**
-       *  業界業種モーダル設定
-       */
-      fetch('./json/master-section.json')
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(data) {
-          Array.from(document.querySelectorAll('#modal-list'), function(el, index) {
-            data.forEach(element => {
-              var divIndustory = createCheckboxDiv(element, 'form-industory');
-              var industory = divIndustory.children[0];
-              industory.classList.add("checkbox-industory");
-              industory.addEventListener('click', function() {
-                isChecked = this.checked;
-                Array.from(this.parentNode.parentNode.parentNode.children[1].getElementsByClassName('form-check-input'), function(elSectionCheck, index) {
-                  elSectionCheck.checked = isChecked;
-                });
-              });
-              var fragment = document.createDocumentFragment();
-              (element.option).forEach(opel => {
-                fragment.appendChild(createCheckboxDiv(opel, 'form-sector'));
-              });
-              var dt = document.createElement('dt');
-              dt.classList.add('ma-modal-dialog__title');
-              dt.appendChild(divIndustory);
-              var dd = document.createElement('dd');
-              dd.classList.add('ma-modal-dialog__input');
-              dd.appendChild(fragment);
-              var div = document.createElement('div');
-              div.classList.add('ma-modal-dialog__item');
-              div.appendChild(dt);
-              div.appendChild(dd);
-              el.appendChild(div);
-            });
-          });
-        });
-
-      // Optionの作成
-      setOptions('./json/master-prefecture.json', '.form-prefecture');
-      setCheckbox('./json/master-specialty.json', '.consultation-specialty', 'form-consultation-specialty')
-      setCheckbox('./json/master-specialty.json', '.specialty', 'form-specialty')
-
-      /**
-       * モーダル関連
-       */
-      var modalEl = document.getElementById('modal-select-sector');
-      document.getElementById('selectSector').addEventListener('click', function() {
-        bootstrap.Modal.getOrCreateInstance(modalEl).show();
-      });
-
-      /**
-       * modal項目選択時に、hidden値を生成する
-       */
-      createHiddenEl = function(name, value) {
-        var el = document.createElement('input');
-        el.setAttribute('type', 'hidden');
-        el.setAttribute('name', name);
-        el.setAttribute('value', value);
-        return el;
-      }
-
-      /**
-       * 業種を選択するリンク押下時処理
-       */
-      document.getElementById('sector-selected').addEventListener('click', function() {
         var fragment = document.createDocumentFragment();
-        var modalInputTarget = modalEl.querySelectorAll('.ma-modal-dialog__input .form-check-input');
-        Array.from(modalInputTarget, function(el, idx) {
-          if (el.checked) {
-            var value = el.value;
-            var text = el.parentNode.children[1].innerHTML;
-            
-            var div = document.createElement('div');
-            var span = document.createElement('span');
-            span.classList.add('form-regist__item-modal-value');
-            span.innerHTML = text;
-            var selectedLabel = createHiddenEl('sectorLabel', text);
-            var selectedValue = createHiddenEl('sectorValue', value);
-            div.appendChild(span);
-            div.appendChild(selectedLabel);
-            div.appendChild(selectedValue);
-            fragment.appendChild(div);
-          }
+        (element.option).forEach(opel => {
+          fragment.appendChild(createCheckboxDiv(opel, 'form-sector'));
         });
-      
-        var target = document.getElementsByClassName('regist-user__item-input--sectors')[0];
-        target.innerHTML = '';
-        target.appendChild(fragment);
-
-        bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+        var dt = document.createElement('dt');
+        dt.classList.add('ma-modal-dialog__title');
+        dt.appendChild(divIndustory);
+        var dd = document.createElement('dd');
+        dd.classList.add('ma-modal-dialog__input');
+        dd.appendChild(fragment);
+        var div = document.createElement('div');
+        div.classList.add('ma-modal-dialog__item');
+        div.appendChild(dt);
+        div.appendChild(dd);
+        el.appendChild(div);
       });
     });
-  </script>
+  });
+
+  /**
+   * modal項目選択時に、hidden値を生成する
+   */
+  createHiddenEl = function(name, value) {
+    var el = document.createElement('input');
+    el.setAttribute('type', 'hidden');
+    el.setAttribute('name', name);
+    el.setAttribute('value', value);
+    return el;
+  }
+
+  $(function() {
+    // サンプル画面のため、json からデータを展開する。
+    // 都道府県
+    ma.setOptions('./json/master-prefecture.json', '.form-prefecture');
+    // チア王可能な専門業務領域、専門家への相談依頼
+    ma.setCheckbox('./json/master-specialty.json', '.consultation-specialty', 'form-consultation-specialty');
+    ma.setCheckbox('./json/master-specialty.json', '.specialty', 'form-specialty');
+
+    /**
+     * モーダル関連
+     */
+    var modalEl = document.getElementById('modal-select-sector');
+    document.querySelector('.selectSector').addEventListener('click', function() {
+      bootstrap.Modal.getOrCreateInstance(modalEl).show();
+    });
+
+    /**
+     * 業種を選択するリンク押下時処理
+     */
+    document.getElementById('sector-selected').addEventListener('click', function() {
+      var fragment = document.createDocumentFragment();
+      var modalInputTarget = modalEl.querySelectorAll('.ma-modal-dialog__input .form-check-input');
+      var isChecked = false;
+      Array.from(modalInputTarget, function(el, idx) {
+        if (el.checked) {
+          var value = el.value;
+          var text = el.parentNode.children[1].innerHTML;
+
+          var li = document.createElement('li');
+          li.classList.add('check-list__item');
+          li.innerHTML = text;
+
+          var div = document.createElement('div');
+          var selectedLabel = createHiddenEl('sectorLabel', text);
+          var selectedValue = createHiddenEl('sectorValue', value);
+          fragment.appendChild(li);
+          fragment.appendChild(selectedLabel);
+          fragment.appendChild(selectedValue);
+
+          isChecked = true;
+        }
+      });
+
+      var target = document.getElementById('form-sector');
+      target.innerHTML = '';
+      target.appendChild(fragment);
+
+      if (isChecked) {
+        target.style.display ="flex";
+      } else {
+        target.style.display ="none";
+      }
+
+      bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+    });
+  });
+</script>
 </html>

@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as var;
+
+// 基準フォントを1.6remに
+$font-size-base: 1.6rem;
+// グラデーションをONに
+$enable-gradients: true;
+
+@import "./bootstrap/scss/functions";
+@import "./bootstrap/scss/variables";
+@import "./bootstrap/scss/mixins";
+
+// 独自のマップを生成
+$custom-theme-colors: (
+  "corp": var.$COLOR-CORP
+);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+@import "./bootstrap/scss/utilities";
+
+// 幅を増やす
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (10: 10%),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "./bootstrap/scss/root";
+@import "./bootstrap/scss/reboot";
+@import "./bootstrap/scss/type";
+@import "./bootstrap/scss/images";
+@import "./bootstrap/scss/containers";
+@import "./bootstrap/scss/grid";
+@import "./bootstrap/scss/tables";
+@import "./bootstrap/scss/forms";
+@import "./bootstrap/scss/buttons";
+@import "./bootstrap/scss/transitions";
+@import "./bootstrap/scss/nav";
+@import "./bootstrap/scss/card";
+@import "./bootstrap/scss/pagination";
+@import "./bootstrap/scss/close";
+@import "./bootstrap/scss/modal";
+@import "./bootstrap/scss/carousel";
+
+@import "./bootstrap/scss/helpers";
+@import "./bootstrap/scss/utilities/api";

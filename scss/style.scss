@@ -1,33 +1,10 @@
-@use "global";
+@use "abstract";
+@use "./vendor/bootstrap";
 @use "core";
 @use "components";
-@use "layout/layout-login";
-//@use "pages/login-header";
-@use "pages/login-nav";
-@use "breadcrumb";
-@use "login-main";
-@use "login-alert";
-@use "mypage";
-@use "mypage-top";
-@use "mypage-notify";
+@use "layout";
+@use "pages";
 
-//@use "pages/sitetop-header";
-@use "pages/sitetop-main";
-@use "pages/sitetop-keyvisual";
-@use "pages/sitetop-feature";
-@use "pages/sitetop-newarrival";
-@use "pages/sitetop-flowtouse";
-@use "pages/sitetop-question";
-@use "pages/sitetop-notify";
-@use "pages/sitetop-footer";
-
-@use "pages/reg-purchase-info";
-@use "pages/search-seller";
-@use "pages/search-buyer";
-@use "pages/detail-buyer";
-@use "pages/contract";
-
-@use "pages/regist-user";
-@use "pages/ma-modal";
-@use "pages/signin";
-@use "pages/tmp-regist";
+.material-icons-outlined.md-48 {
+  font-size: 4.8rem;
+}

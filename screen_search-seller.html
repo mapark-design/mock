@@ -1,183 +1,216 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    --><link rel="stylesheet" href="./css/bootstrap-customize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <title>譲渡案件一覧</title>
-  </head>
-  <body>
-    <div class="layout-login">
-      <!-- header.ma-header -->
-      <header class="ma-header">
-        <div class="ma-header__inner ma-header__inner--login">
-          <h1 class="ma-header__title"><img class="ma-header__logo" src="./img/login-logo.svg"></h1>
-          <nav class="ma-header__nav"><!--
-            <div class="ma-header__global-nav">
-              <ul class="ma-header__nav-list ma-header__nav-list--global-nav">
-                <li><a href="" class="">サービスについて</a></li>
-                <li><a href="" class="">よくあるご質問</a></li>
-                <li><a href="" class="">お問い合わせ</a></li>
-              </ul>
-            </div>
-            --><div class="ma-header__user-nav">
-              <ul class="ma-header__nav-list ma-header__nav-list--user-nav"><!--
-                <li><a href="" class="">会員登録</a></li>
-                --><li><button class="btn btn-outline-corp ma-btn-logout">ログアウト</button></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <!-- //header.ma-header -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>譲渡案件一覧</title>
+</head>
+<body>
+  <div class="layout">
+    <!-- header.header -->
+    <header class="header">
+      <div class="header__inner header__inner--login">
+        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg"></h1>
+        <nav class="header__nav"><!--
+          <div class="header__global-nav">
+            <ul class="header__nav-list header__nav-list--global-nav">
+              <li><a href="" class="">サービスについて</a></li>
+              <li><a href="" class="">よくあるご質問</a></li>
+              <li><a href="" class="">お問い合わせ</a></li>
+            </ul>
+          </div>
+          --><div class="header__user-nav">
+            <ul class="header__nav-list header__nav-list--user-nav"><!--
+              <li><a href="" class="">会員登録</a></li>
+              --><li><button class="btn btn-outline-corp ma-btn-logout">ログアウト</button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- //header.header -->
 
-      <!-- nav.login-nav -->
-      <nav class="login-nav">
-        <div class="login-nav__inner">
-          <div class="login-nav__button">
-            <button type="button" class="btn btn-lg btn-outline-light font-16 button-default">マイページTOP</button>
-          </div><!--
-          <div class="login-nav__classification">
-            <ul class="login-nav__ul">
-              <li class="login-nav__classification-title">売り手メニュー</li>
-              <li class="login-nav__li">
-                <img src="./img/icon/icon-search.svg">
-                <span class="login-nav__li--category">買い手を探す</span>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">買い手を検索</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">提案中の買い手一覧</a>
-              </li>
-            </ul>
-            <ul class="login-nav__ul">
-              <li class="login-nav__li">
-                <img src="./img/icon/icon-building.svg">
-                <span class="login-nav__li--category">譲渡案件管理</span>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">譲渡案件を登録</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">登録済の譲渡案件一覧</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">交渉中の譲渡案件一覧</a>
-              </li>
-            </ul>
-          </div>
-          --><div class="login-nav__classification">
-            <ul class="login-nav__ul"><!--
-              <li class="login-nav__classification-title">買い手メニュー</li>
-              --><li class="login-nav__li">
-                <img src="./img/icon/icon-search.svg">
-                <span class="login-nav__li--category">譲渡案件を探す</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">新着案件</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">譲渡案件を検索</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">交渉中の譲渡案件一覧</a>
-              </li>
-            </ul>
-            <ul class="login-nav__ul">
-              <li class="login-nav__li">
-                <img src="./img/icon/icon-building.svg">
-                <span class="login-nav__li--category">買収ニーズ管理</span>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">買収ニーズを登録</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">登録済の買収ニーズ一覧</a>
-              </li>
-              <li class="login-nav__li">
-                <a href="" class="login-nav__li--text">交渉中の買収ニーズ一覧</a>
-              </li>
-            </ul>
-          </div>
-          <div class="login-nav__classification">
-            <ul class="login-nav__ul">
-              <li class="login-nav__li login-nav__li-common">
-                <img src="./img/icon/icon-userinfo.svg">
-                <a href="" class="login-nav__li--category">会員情報</a>
-              </li><!--
-              <li class="login-nav__li">
-                <img src="./img/icon/icon-plan.svg">
-                <a href="" class="login-nav__li--category">契約プラン</a>
-              </li>
-            --></ul>
-            <div class="login-nav__classification">
-              <ul class="login-nav__ul">
-                <li class="login-nav__li login-nav__li-common">
-                  <img src="./img/icon/icon-manual.svg">
-                  <a href="" class="login-nav__li--category">ご利用方法</a>
-                </li>
-                <li class="login-nav__li login-nav__li-common">
-                  <img src="./img/icon/icon-compass.svg">
-                  <a href="" class="login-nav__li--category">お役立ち資料</a>
-                </li>
-                <li class="login-nav__li login-nav__li-common">
-                  <img src="./img/icon/icon-consult.svg">
-                  <a href="" class="login-nav__li--category">専門家に相談する</a>
-                </li>
-                <li class="login-nav__li login-nav__li-common">
-                  <img src="./img/icon/icon-finale.svg">
-                  <a href="" class="login-nav__li--category">成約報告</a>
-                </li>
-                <li class="login-nav__li login-nav__li-common">
-                  <img src="./img/icon/icon-qa.svg">
-                  <a href="" class="login-nav__li--category">よくあるご質問</a>
-                </li>
-                <li class="login-nav__li login-nav__li-common">
-                  <img src="./img/icon/icon-qaform.svg">
-                  <a href="" class="login-nav__li--category">お問い合わせ</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <!-- nav.ma-nav -->
+    <nav class="ma-nav">
+      <div class="ma-nav__inner">
+        <div class="ma-nav__button">
+          <button class="btn btn-light ma-btn-nav">マイページTOP</button>
         </div>
-      </nav>
-      <!-- //nav.login-nav -->
-
-      <main class="mypage">
-        <!-- breadcrumb__nav -->
-        <div class="breadcrumb__nav">
-          <ul class="breadcrumb__list">
-            <li><a href="">マイページ</a></li>
-            <li>譲渡案件を検索</li>
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">売り手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">買い手を探す</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買い手を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">提案中の買い手一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">譲渡案件管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の譲渡案件一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
           </ul>
         </div>
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification"><!--
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          --><ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-userinfo.svg">
+              <a href="" class="ma-nav__item-category">会員情報</a>
+            </li>
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-plan.svg">
+              <a href="" class="ma-nav__item-category">契約プラン</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-manual.svg">
+              <a href="" class="ma-nav__item-category">ご利用方法</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-compass.svg">
+              <a href="" class="ma-nav__item-category">お役立ち資料</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-consult.svg">
+              <a href="" class="ma-nav__item-category">専門家に相談する</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-finale.svg">
+              <a href="" class="ma-nav__item-category">成約報告</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qa.svg">
+              <a href="" class="ma-nav__item-category">よくあるご質問</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qaform.svg">
+              <a href="" class="ma-nav__item-category">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- //nav.ma-nav -->
+
+    <main class="main" >
+      <div class="main__inner">
+        <!-- breadcrumb__nav -->
+        <nav class="breadcrumb__nav">
+          <ul class="breadcrumb__list">
+            <li><a href="">マイページ</a></li>
+            <li><a href="">譲渡案件を検索</a></li>
+            <li>案件詳細</li>
+          </ul>
+        </nav>
         <!-- //breadcrumb__nav -->
 
-        <!-- section.mypage__section -->
-        <section class="mypage__section">
-          <form>
-            <h1 class="mypage__title-ul">譲渡案件一覧</h1>
-          </form>
-          <!-- div.mypage__content -->
-          <div class="mypage__content">
-            <!-- div.card -->
-            <div class="card">
-              <div class="card-header">検索条件</div>
-              <div class="card-body">
-                <dl class="search-seller__list">
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title">譲渡形式</dt>
-                    <dd class="search-seller__text">
-                      <div class="reg-purchase-info__text--flex">
+        <section class="section">
+          <div class="section__inner regist-seller">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件一覧</h2>
+            <div class="section__content">
+              <!-- 検索条件 -->
+              <form class="form form--search" action="">
+                <dl class="row m-0">
+                  <div class="col-md-6 form__item form__item--border form__item--top-border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">譲渡形式</dt>
+                    <dd class="form__item-input search-form__item-input">
+                      <div class="form__item-input--flex-wrap">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                           <label class="form-check-label" for="inlineCheckbox1">株式譲渡</label>
@@ -186,12 +219,12 @@
                           <label class="form-check-label" for="inlineCheckbox2">事業譲渡</label>
                         </div>
                       </div>
-                    </dd>
+                  </dd>
                   </div>
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title">案件掲載者</dt>
-                    <dd class="search-seller__text">
-                      <div class="reg-purchase-info__text--flex">
+                  <div class="col-md-6 form__item form__item--border form__item--top-border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">案件掲載者</dt>
+                    <dd class="form__item-input search-form__item-input search-seller-form__item-input">
+                      <div class="form__item-input--flex-wrap">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                           <label class="form-check-label" for="inlineCheckbox1">オーナー直接</label>
@@ -200,74 +233,158 @@
                           <label class="form-check-label" for="inlineCheckbox2">アドバイザー</label>
                         </div>
                       </div>
+                  </dd>
+                  </div>
+                  <div class="col-12 form__item form__item--border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">業種</dt>
+                    <dd class="form__item-input search-form__item-input search-seller-form__item-input" style="font-size: 1.4rem;">
+                      <ul id="form-sector" class="check-list check-list--wrap mb-3" style="display: none;">
+                      </ul>
+                      <a class="btn selectSector ma-btn-modal search-form__modal">＋選択してください</a>
                     </dd>
                   </div>
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title">業種</dt>
-                    <dd class="search-seller__text">
-                      <div class=" search-seller__text--flex">
-                        <div>
-                          <select class="form-select font-size-14 width-30 form-industory">
-                            <option selected>＋大区分を選ぶ</option>
-                          </select>
-                        </div>
-                        <div>
-                          <select class="form-select font-size-14 width-30">
-                            <option selected>＋小区分を選ぶ</option>
-                          </select>
-                        </div>
-                      </div>
-                    </dd>
-                  </div>
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title">地域</dt>
-                    <dd class="search-seller__text"></dd>
-                  </div>
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title">譲渡希望価格</dt>
-                    <dd class="search-seller__text">
-                      <select class="form-select font-size-14 width-30">
+                  <div class="col-12 form__item form__item--border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">地域</dt>
+                    <dd class="form__item-input search-form__item-input search-seller-form__item-input">
+                      <select class="form-select w-25 form-area">
                         <option selected>＋選択してください</option>
                       </select>
                     </dd>
                   </div>
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title">売上高</dt>
-                    <dd class="search-seller__text">
-                      <select class="form-select font-size-14 width-30">
+                  <div class="col-md-6 form__item form__item--border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">譲渡希望価格</dt>
+                    <dd class="form__item-input search-form__item-input">
+                      <select class="form-select">
                         <option selected>＋選択してください</option>
                       </select>
                     </dd>
                   </div>
-                  <div class="search-seller__item">
-                    <dt class="search-seller__title"><label class="form-check-label" for="inlineCheckbox31">新着案件のみ表示する</label></dt>
-                    <dd class="search-seller__text">
-                      <div class="reg-purchase-info__text--flex">
+                  <div class="col-md-6 form__item form__item--border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">売上高</dt>
+                    <dd class="form__item-input search-form__item-input search-seller-form__item-input">
+                      <select class="form-select">
+                        <option selected>＋選択してください</option>
+                      </select>
+                    </dd>
+                  </div>
+                  <div class="col-12 form__item form__item--border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-seller-form__item-title">新着案件のみ表示</dt>
+                    <dd class="form__item-input search-form__item-input search-seller-form__item-input">
+                      <div class="form__item-input--flex-wrap">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="inlineCheckbox31" value="option1">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1"></label>
                         </div>
                       </div>
-                    </dd>
+                  </dd>
                   </div>
                 </dl>
-                <div class="mypage__action-area text-center">
+                <div class="form__action form__action--center form__action-search">
                   <button class="btn btn-corp ma-btn-search">検索</button>
+                </div>
+
+              </form>
+              <!-- //検索条件 -->
+            </div>
+
+            <!-- ソート順 -->
+            <div class="section__content mt-3">
+              <div class="d-flex align-items-center">
+                <div class="">
+                  <select class="form-select w-100">
+                    <option selected>公開日　降順</option>
+                  </select>
+                </div>
+                <!-- nav.pagination -->
+                <div class="me-0 ms-auto">
+                  <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <!-- //nav.pagination -->
+              </div>
+            </div>
+
+            <div class="section__content mt-3">
+              <div class="search-result search-seller-result">
+                <div class="search-seller-result__header">
+                  <h3 class="search-seller-result__title">タイトル</h3>
+                  <div class="search-seller-result__purchase-info">
+                    <ul class="check-list">
+                      <li class="check-list__item check-list__item--fa">アドバイザー</li>
+                      <li class="check-list__item">株式譲渡</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="search-seller-result__date">更新日：0000/01/01</div>
+                <div class="search-seller-result__detail">
+                  <dl class="row m-0">
+                    <div class="col-md-6 search-seller-result__item">
+                      <dt class="search-seller-result__item-title">業種</dt>
+                      <dd class="search-seller-result__item-value">
+                        <ul class="check-list check-list--wrap">
+                          <li class="check-list__item">EC</li>
+                          <li class="check-list__item">アパレル</li>
+                          <li class="check-list__item">雑貨</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="col-md-6 search-seller-result__item">
+                      <dt class="search-seller-result__item-title">地域</dt>
+                      <dd class="search-seller-result__item-value">
+                        <ul class="check-list check-list--wrap">
+                          <li class="check-list__item">関東地方</li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div class="col-md-6 search-seller-result__item">
+                      <dt class="search-seller-result__item-title">譲渡希望価格</dt>
+                      <dd class="search-seller-result__item-value search-seller-result-price">5000万～1億</dd>
+                    </div>
+                    <div class="col-md-6 search-seller-result__item">
+                      <dt class="search-seller-result__item-title">売上高</dt>
+                      <dd class="search-seller-result__item-value search-seller-result-sales">5000万～1億</dd>
+                    </div>
+                    <div class="col-12 search-seller-result__item">
+                      <dt class="search-seller-result__item-title">アピールポイント</dt>
+                      <dd class="search-seller-result__item-value search-seller-result-appeal">
+                        <ul class="check-list check-list--wrap">
+                          <li class="check-list__item">営業黒字</li>
+                          <li class="check-list__item">純資産プラス</li>
+                          <li class="check-list__item">実質無借金</li>
+                          <li class="check-list__item">短期回収可能</li>
+                          <li class="check-list__item">業績上昇中</li>
+                          <li class="check-list__item">自走可能</li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- //div.card -->
-          </div>
-          <!-- //div.mypage__content -->
 
-          <!-- div.mypage__content -->
-          <div class="mypage__content">
-            <div class="d-flex align-items-center">
-              <div>
-                <select class="form-select font-size-14 width-30">
-                  <option selected>公開日　降順</option>
-                </select>
-              </div>
-              <div class="me-0 ms-auto">
+              <!-- 検索結果 -->
+              <div class="section__content mt-3">
+                </div>
+
+              <!-- ページネーション -->
+              <div class="section__content mt-3">
                 <!-- nav.pagination -->
                 <nav aria-label="Page navigation">
                   <ul class="pagination justify-content-end">
@@ -290,159 +407,159 @@
                 </nav>
                 <!-- //nav.pagination -->
               </div>
+
             </div>
           </div>
-          <!-- //div.mypage__content -->
-
-          <!-- div.mypage__content -->
-          <div class="mypage__content search-seller">
-            <!-- template#result-item -->
-            <template id="result-item">
-              <div class="search-seller__result-item">
-                <div class="search-seller__result-item-title">
-                  <div class="search-seller__result-item-purchase-info">
-                    <span class="search-seller__result-item-owner"></span>
-                    <span class="search-seller__result-item-purchase"></span>
-                  </div>
-                </div>
-                <div class="search-seller__result-item-date"></div>
-                <div class="search-seller__result-item-detail">
-                  <table>
-                    <tr>
-                      <th>業種</th>
-                      <td>
-                        <ul class="search-seller__result-item-detail-list search-seller__result-item-detail-industory">
-                          <template id="result-list-item">
-                            <li class="search-seller__result-item-detail-list-item"></li>
-                          </template>
-                        </ul>
-                      </td>
-                      <th>地域</th>
-                      <td>
-                        <ul class="search-seller__result-item-detail-list search-seller__result-item-detail-area"></ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>譲渡希望価格</th>
-                      <td class="search-seller__result-item-price"></td>
-                      <th>売上高</th>
-                      <td class="search-seller__result-item-sales"></td>
-                    </tr>
-                    <tr>
-                      <th>アピールポイント</th>
-                      <td colspan="3">
-                        <ul class="search-seller__result-item-detail-list search-seller__result-item-detail-point"></ul>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </template>
-            <!-- //template#result-item -->
-          </div>
-          <!-- //div.mypage__content -->
-
-          <!-- div.mypage__content -->
-          <div class="mypage__content">
-            <div class="text-end">
-              <!-- nav.pagination -->
-              <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-end">
-                  <li class="page-item disabled">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                  <li class="page-item"><a class="page-link" href="#">5</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <!-- //nav.pagination -->
-            </div>
-          </div>
-          <!-- //div.mypage__content -->
-
         </section>
-        <!-- //section.mypage__section -->
-
-      </main>
+      </div>
+    </main>
+    <!-- modal.sector -->
+    <div class="modal fade" id="modal-select-sector" tabindex="-1" aria-labelledby="modalSelectSector" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable ma-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #c8161d">
+            <h5 class="modal-title font-size-16" id="modalSelectSector" style="color: white;">業種選択</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <dl id="modal-list">
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-corp ma-modal-btn-fw" id="sector-selected">選択する</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
+    <!-- //modal.sector -->
 
-      /**
-       * 業種大区分展開
-       */
-      fetch('./json/master-industory.json')
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(data) {
-         Array.from(document.querySelectorAll('.form-industory'), function(el, index) {
-            data.forEach(element => {
-              var opt = document.createElement('option');
-              opt.value = element.value;
-              opt.text = element.name;
-              el.appendChild(opt);
-            });
+  </div>
+</body>
+<script>
+  var ma = new Ma();
+  $(function() {
+    // エリア設定
+    ma.setOptions('./json/master-area.json', '.form-area');
+
+  /**
+   * modal項目選択時に、hidden値を生成する
+   */
+   createHiddenEl = function(name, value) {
+    var el = document.createElement('input');
+    el.setAttribute('type', 'hidden');
+    el.setAttribute('name', name);
+    el.setAttribute('value', value);
+    return el;
+  }
+  /**
+   * チェックボックスとラベルのエレメント作成
+   */
+   createCheckboxDiv = function (element, prefix) {
+    var input = document.createElement('input');
+    input.classList.add('form-check-input');
+    input.id = prefix + element.value;
+    input.setAttribute('type', 'checkbox')
+    input.setAttribute('value', element.value);
+
+    var label = document.createElement('label');
+    label.classList.add('form-check-label');
+    label.setAttribute('for', prefix + element.value);
+    label.innerHTML = element.name;
+
+    var div = document.createElement('div');
+    div.classList.add('form-check');
+    div.appendChild(input);
+    div.appendChild(label);
+    return div;
+  }
+  /**
+   *  業界業種モーダル設定
+   */
+   fetch('./json/master-section.json')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data) {
+    Array.from(document.querySelectorAll('#modal-list'), function(el, index) {
+      data.forEach(element => {
+        var divIndustory = createCheckboxDiv(element, 'form-industory');
+        var industory = divIndustory.children[0];
+        industory.classList.add("checkbox-industory");
+        industory.addEventListener('click', function() {
+          isChecked = this.checked;
+          Array.from(this.parentNode.parentNode.parentNode.children[1].getElementsByClassName('form-check-input'), function(elSectionCheck, index) {
+            elSectionCheck.checked = isChecked;
           });
         });
-
-      /**
-       * 案件の明細展開関数
-       */
-      resultItemDetailList = function(el, template, itemClass) {
         var fragment = document.createDocumentFragment();
-        el.split('^').forEach(function (value, index) {
-          var item = document.importNode(template.content, true);
-          item.querySelector(itemClass).textContent = value;
-          fragment.appendChild(item);
+        (element.option).forEach(opel => {
+          fragment.appendChild(createCheckboxDiv(opel, 'form-sector'));
         });
-        return fragment;
+        var dt = document.createElement('dt');
+        dt.classList.add('ma-modal-dialog__title');
+        dt.appendChild(divIndustory);
+        var dd = document.createElement('dd');
+        dd.classList.add('ma-modal-dialog__input');
+        dd.appendChild(fragment);
+        var div = document.createElement('div');
+        div.classList.add('ma-modal-dialog__item');
+        div.appendChild(dt);
+        div.appendChild(dd);
+        el.appendChild(div);
+      });
+    });
+  });
+
+    /**
+     * モーダル関連
+     */
+     var modalEl = document.getElementById('modal-select-sector');
+    document.querySelector('.selectSector').addEventListener('click', function() {
+      bootstrap.Modal.getOrCreateInstance(modalEl).show();
+    });
+
+    /**
+     * 業種を選択するリンク押下時処理
+     */
+     document.getElementById('sector-selected').addEventListener('click', function() {
+      var fragment = document.createDocumentFragment();
+      var modalInputTarget = modalEl.querySelectorAll('.ma-modal-dialog__input .form-check-input');
+      var isChecked = false;
+      Array.from(modalInputTarget, function(el, idx) {
+        if (el.checked) {
+          var value = el.value;
+          var text = el.parentNode.children[1].innerHTML;
+
+          var li = document.createElement('li');
+          li.classList.add('check-list__item');
+          li.classList.add('check-list__item--search');
+          li.innerHTML = text;
+
+          var div = document.createElement('div');
+          var selectedLabel = createHiddenEl('sectorLabel', text);
+          var selectedValue = createHiddenEl('sectorValue', value);
+          fragment.appendChild(li);
+          fragment.appendChild(selectedLabel);
+          fragment.appendChild(selectedValue);
+
+          isChecked = true;
+        }
+      });
+
+      var target = document.getElementById('form-sector');
+      target.innerHTML = '';
+      target.appendChild(fragment);
+
+      if (isChecked) {
+        target.style.display ="flex";
+      } else {
+        target.style.display ="none";
       }
 
-      /**
-       * 検索結果展開
-       */
-      fetch('./json/search-seller-info.json')
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(data) {
+      bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+    });
+  });
 
-          // テンプレートの取得
-          var template = document.querySelector('#result-item');
-          var listItemTemplate = template.content.querySelector('#result-list-item');
-
-          data.forEach(function(element, index) {
-            // テンプレートの複製
-            var grid = document.importNode(template.content, true);
-            grid.querySelector('.search-seller__result-item-title').firstChild.textContent = element.title;
-            grid.querySelector('.search-seller__result-item-owner').textContent = element.seller;
-            grid.querySelector('.search-seller__result-item-purchase').textContent = element.purchase;
-            grid.querySelector('.search-seller__result-item-date').textContent = element.date;
-            grid.querySelector('.search-seller__result-item-price').textContent = element.price;
-            grid.querySelector('.search-seller__result-item-sales').textContent = element.sales;
-
-            grid.querySelector('.search-seller__result-item-detail-industory').appendChild(
-              resultItemDetailList(element.industory, listItemTemplate, '.search-seller__result-item-detail-list-item'));
-              grid.querySelector('.search-seller__result-item-detail-area').appendChild(
-              resultItemDetailList(element.area, listItemTemplate, '.search-seller__result-item-detail-list-item'));
-            grid.querySelector('.search-seller__result-item-detail-point').appendChild(
-              resultItemDetailList(element.point, listItemTemplate, '.search-seller__result-item-detail-list-item'));
-
-            document.querySelector('.search-seller').appendChild(grid);
-          });
-        });
-      });
 </script>
 </html>

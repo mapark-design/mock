@@ -1,117 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    --><link rel="stylesheet" href="./css/bootstrap-customize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <title>サイトトップ</title>
-  </head>
-  <body>
-    <!-- header.sitetop-header -->
-    <header class="ma-header ma-header--top">
-      <div class="ma-header__inner">
-        <h1 class="ma-header__title"><img class="ma-header__logo" src="./img/sitetop-logo.png"></h1>
-        <nav class="ma-header__nav">
-          <div class="ma-header__global-nav">
-            <ul class="ma-header__nav-list ma-header__nav-list--global-nav">
-              <li><a href="" class="">サービスについて</a></li>
-              <li><a href="" class="">よくあるご質問</a></li>
-              <li><a href="" class="">お問い合わせ</a></li>
-            </ul>
-          </div>
-          <div class="ma-header__user-nav">
-            <ul class="ma-header__nav-list ma-header__nav-list--user-nav">
-              <li><a href="./screen_regist-user-pre.html" class="">会員登録</a></li>
-              <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- //header.sitetop-header -->
-
-    <!-- main.sitetop-main -->
-    <main class="sitetop-main">
-      <div class="sitetop-main__section-inner sitetop-keyvisual">
-        <div id="carouselOption1" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <!-- インジケータの設定 --><!--
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselOption1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="スライド 1"></button>
-            <button type="button" data-bs-target="#carouselOption1" data-bs-slide-to="1" aria-label="スライド 2"></button>
-            <button type="button" data-bs-target="#carouselOption1" data-bs-slide-to="2" aria-label="スライド 3"></button>
-          </div>
-          --><!-- スライドさせる画像の設定 -->
-          <div class="carousel-inner">
-            <div class="carousel-item">
-              <img class="d-block w-100" src="./img/kv01.jpg" alt="第1スライド"><!--
-              <div class="carousel-caption d-none d-md-block">
-                <h5>第1スライド ラベル</h5>
-                <p>1番目のスライドの代表的なプレースホルダコンテンツ。</p>
-              </div>
-            --></div>
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="./img/kv02.jpg" alt="第2スライド"><!--
-              <div class="carousel-caption d-none d-md-block">
-                <h5>第2スライド ラベル</h5>
-                <p>2番目のスライドの代表的なプレースホルダコンテンツ。</p>
-              </div>
-            --></div><!--
-            <div class="carousel-item">
-              <img class="d-block w-100" src="..." alt="第3スライド">
-              <div class="carousel-caption d-none d-md-block">
-                <h5>第3スライド ラベル</h5>
-                <p>3番目のスライドの代表的なプレースホルダコンテンツ。</p>
-              </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>サイトトップ</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1>
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="" class="">サービスについて</a></li>
+            <li><a href="" class="">よくあるご質問</a></li>
+            <li><a href="" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><a href="./screen_tmp-regist.html" class="">会員登録</a></li>
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- //header.header -->
+  <main>
+    <!-- key-visual -->
+    <div class="sitetop-keyvisual">
+      <div id="carouselOption1" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- インジケータの設定 --><!--
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselOption1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="スライド 1"></button>
+          <button type="button" data-bs-target="#carouselOption1" data-bs-slide-to="1" aria-label="スライド 2"></button>
+          <button type="button" data-bs-target="#carouselOption1" data-bs-slide-to="2" aria-label="スライド 3"></button>
+        </div>
+        --><!-- スライドさせる画像の設定 -->
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./img/kv01.jpg" alt="第1スライド"><!--
+            <div class="carousel-caption d-none d-md-block">
+              <h5>第1スライド ラベル</h5>
+              <p>1番目のスライドの代表的なプレースホルダコンテンツ。</p>
             </div>
           --></div>
-          <div class="sitetop-keyvisual__content">
-            <p class="sitetop-keyvisual__copy">
-              世界中から未来を見つけるなら<br>
-              会員制オンラインマッチングサービス<br>
-            </p>
-            <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
-            <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./img/kv02.jpg" alt="第2スライド"><!--
+            <div class="carousel-caption d-none d-md-block">
+              <h5>第2スライド ラベル</h5>
+              <p>2番目のスライドの代表的なプレースホルダコンテンツ。</p>
+            </div>
+          --></div><!--
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="第3スライド">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>第3スライド ラベル</h5>
+              <p>3番目のスライドの代表的なプレースホルダコンテンツ。</p>
+            </div>
           </div>
-  
-          <!-- スライドコントロールの設定 --><!--
-          <button type="button" class="carousel-control-prev" data-bs-target="#carouselOption1" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">前へ</span>
-          </button>
-          <button type="button" class="carousel-control-next" data-bs-target="#carouselOption1" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">次へ</span>
-          </button>
         --></div>
-      </div>
-  
-  
-
-      <!-- key-visual --><!--
-      <div class="sitetop-keyvisual">
-        <div class="kv-content">
+        <div class="sitetop-keyvisual__content">
           <p class="sitetop-keyvisual__copy">
             世界中から未来を見つけるなら<br>
             会員制オンラインマッチングサービス<br>
-            M&A PARK<br>
           </p>
-          <a href="" class="sitetop-keyvisual__button">無料で始める</a>
+          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
+          <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
         </div>
-      </div>-->
-      <!-- //key-visual -->
 
-      <!-- 特長 -->
-      <section class="sitetop-main__section">
-        <div class="sitetop-main__section-inner sitetop-feature">
-          <h2 class="sitetop-main__section-title">特徴</h2>
+        <!-- スライドコントロールの設定 --><!--
+        <button type="button" class="carousel-control-prev" data-bs-target="#carouselOption1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">前へ</span>
+        </button>
+        <button type="button" class="carousel-control-next" data-bs-target="#carouselOption1" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">次へ</span>
+        </button>
+      --></div>
+    </div>
+    <!-- //key-visual -->
+
+    <!-- 特長 -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner">
+        <h2 class="section-nolog__title">特徴</h2>
+        <div class="section-nolog__content sitetop-feature">
           <ul class="sitetop-feature__list">
             <li class="sitetop-feature__item">
               <h3 class="sitetop-feature__title">業界最安値の<br>利用料金<br></h3>
@@ -129,14 +118,19 @@
               <p class="sitetop-feature__text">M&Aの成約をサポートする<br>M&Aの成功を実現する<br>専門家をご紹介<br></p>
             </li>
           </ul>
+          <div class="section-nolog__button">
+            <button class="btn btn-corp ma-btn-section">すべてを見る</button>
+          </div>
         </div>
-      </section>
-      <!-- //特長 -->
+      </div>
+    </section>
+    <!-- //特長 -->
 
-      <!-- 新着案件 -->
-      <section class="sitetop-main__section">
-        <div class="sitetop-main__section-inner sitetop-newarrival">
-          <h2 class="sitetop-main__section-title">新着案件</h2>
+    <!-- 新着案件 -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner">
+        <h2 class="section-nolog__title">新着案件</h2>
+        <div class="section-nolog__content sitetop-newarrival">
           <ul class="sitetop-newarrival__list">
             <li class="sitetop-newarrival__item">
               <div class="sitetop-newarrival__image"><img src="" alt="" width="100px" height="100px"></div>
@@ -164,46 +158,50 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- //新着案件 -->
+      </div>
+    </section>
+    <!-- //新着案件 -->
 
-      <!-- ご利用までの流れ -->
-      <section class="sitetop-main__section">
-        <div class="sitetop-main__section-inner sitetop-flowtouse">
-          <h2 class="sitetop-main__section-title">ご利用までの流れ</h2>
+    <!-- ご利用までの流れ -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner">
+        <h2 class="section-nolog__title">ご利用までの流れ</h2>
+        <div class="section-nolog__content sitetop-flowtouse">
           <ul class="sitetop-flowtouse__list">
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__item-step">STEP1</div>
-              <div class="sitetop-flowtouse__item-text">いえす</div>
+              <div class="sitetop-flowtouse__step">STEP&#9312;</div>
+              <div class="sitetop-flowtouse__text">会員登録をクリック</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__item-step">STEP1</div>
-              <div class="sitetop-flowtouse__item-text">いえす</div>
+              <div class="sitetop-flowtouse__step">STEP&#9313;</div>
+              <div class="sitetop-flowtouse__text">お名前、メールアドレスなどを入力</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__item-step">STEP1</div>
-              <div class="sitetop-flowtouse__item-text">いえす</div>
+              <div class="sitetop-flowtouse__step">STEP&#9314;</div>
+              <div class="sitetop-flowtouse__text">利用規約、個人情報保護方針を確認し、登録</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__item-step">STEP1</div>
-              <div class="sitetop-flowtouse__item-text">いえす</div>
+              <div class="sitetop-flowtouse__step">STEP&#9315;</div>
+              <div class="sitetop-flowtouse__text">M&A PARKから届くメールを確認、URLをクリック</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__item-step">STEP1</div>
-              <div class="sitetop-flowtouse__item-text">いえす</div>
+              <div class="sitetop-flowtouse__step">STEP&#9316;</div>
+              <div class="sitetop-flowtouse__text">自社情報や事業内容を入力</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__item-text">おしまい</div>
+              <div class="sitetop-flowtouse__text">会員登録完了</div>
             </li>
           </ul>
         </div>
-      </section>
-      <!-- //ご利用までの流れ -->
+      </div>
+    </section>
+    <!-- //ご利用までの流れ -->
 
-      <!-- よくあるご質問 -->
-      <section class="sitetop-main__section">
-        <div class="sitetop-main__section-inner sitetop-question">
-          <h2 class="sitetop-main__section-title">よくあるご質問</h2>
+    <!-- よくあるご質問 -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner">
+        <h2 class="section-nolog__title">よくあるご質問</h2>
+        <div class="section-nolog__content sitetop-question">
           <dl class="sitetop-question__list">
             <dt>M&A PARKとはどんなサービスですか？</dt>
             <dd>M&A PARKは、経営者のための完全審査・会員制M&Aプラットフォームです。<br>売り手企業は、自社もしくはその代理人であるFA (ファイナンシャル・アドバイザー) が売却情報を登録することで、買い手企業からのオファーを直接受けることができます。<br>インターネットの力で業種や地域を超えた、新たなM&Aマッチングを提供いたします。<br></dd>
@@ -212,74 +210,92 @@
             <dt>M&A PARKとはどんなサービスですか？</dt>
             <dd>M&A PARKは、経営者のための完全審査・会員制M&Aプラットフォームです。<br>売り手企業は、自社もしくはその代理人であるFA (ファイナンシャル・アドバイザー) が売却情報を登録することで、買い手企業からのオファーを直接受けることができます。<br>インターネットの力で業種や地域を超えた、新たなM&Aマッチングを提供いたします。<br></dd>
           </dl>
-        </div>
-      </section>
-      <!-- //よくあるご質問 -->
-
-      <!-- お知らせ -->
-      <section class="sitetop-main__section">
-        <div class="sitetop-main__section-inner sitetop-notification">
-          <h2 class="sitetop-main__section-title">お知らせ</h2>
-          <ul class="sitetop-notification__list">
-            <li class="sitetop-notification__item">
-              <div class="sitetop-notification__item-date">21/07/27</div>
-              <div class="sitetop-notification__item-text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
-            </li>
-            <li class="sitetop-notification__item">
-              <div class="sitetop-notification__item-date">21/07/27</div>
-              <div class="sitetop-notification__item-text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
-            </li>
-            <li class="sitetop-notification__item">
-              <div class="sitetop-notification__item-date">21/07/27</div>
-              <div class="sitetop-notification__item-text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
-            </li>
-            <li class="sitetop-notification__item">
-              <div class="sitetop-notification__item-date">21/07/27</div>
-              <div class="sitetop-notification__item-text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
-            </li>
-            <li class="sitetop-notification__item">
-              <div class="sitetop-notification__item-date">21/07/27</div>
-              <div class="sitetop-notification__item-text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
-            </li>
-          </ul>
-          <div class="sitetop-main__section-button">
-            <a href="">もっと見る</a>
+          <div class="section-nolog__button">
+            <button class="btn btn-corp ma-btn-section">すべてを見る</button>
           </div>
         </div>
-      </section>
-      <!-- //お知らせ -->
-    </main>
-    <!-- //main.sitetop-main -->
-
-    <!-- footer.sitetop-footer -->
-    <footer class="sitetop-footer">
-      <div class="sitetop-footer__inner">
-        <nav class="sitetop-footer__nav">
-          <dl class="sitetop-footer__dl">
-            <dt class="sitetop-footer__dt">M&Aパークガイド</dt>
-            <dd class="sitetop-footer__dd"><a href="./screen_abount-service.html">サービス概要</a></dd>
-            <dd class="sitetop-footer__dd"><a href="./screen_price.html">利用料金</a></dd>
-            <dd class="sitetop-footer__dd"><a href="">よくある質問</a></dd>
-            <dd class="sitetop-footer__dd"><a href="">お問い合わせ</a></dd>
-          </dl>
-          <dl class="sitetop-footer__dl">
-            <dt class="sitetop-footer__dt">お知らせ</dt>
-            <dd class="sitetop-footer__dd"><a href="">お知らせ一覧</a></dd>
-          </dl>
-          <dl class="sitetop-footer__dl">
-            <dt class="sitetop-footer__dt">M&Aパークについて</dt>
-            <dd class="sitetop-footer__dd"><a href="./screen_corporate.html">運営会社情報</a></dd>
-            <dd class="sitetop-footer__dd"><a href="./screen_agreement.html">利用規約</a></dd>
-            <dd class="sitetop-footer__dd"><a href="./screen_privacy-policy.html">個人情報保護方針</a></dd>
-            <dd class="sitetop-footer__dd"><a href="./screen_transactions.html">特定商取引法に基づく表示</a></dd>
-          </dl>
-        </nav>
-        <h2 class="sitetop-footer__copyright">
-          <img src="./img/sitetop-footer.png" alt="" class="sitetop-footer__copyright-logo">
-          <small class="sitetop-footer__copyright-text">Copyright 2021 M&A PARK Inc. All rights reserved.</small>
-        </h2>
       </div>
-    </footer>
-    <!-- //footer.sitetop-footer -->
-  </body>
+    </section>
+    <!-- //よくあるご質問 -->
+
+    <!-- お知らせ -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner">
+        <h2 class="section-nolog__title">お知らせ</h2>
+        <div class="section-nolog__content sitetop-notify">
+          <ul class="sitetop-notify__list">
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">21/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">21/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">21/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">21/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">21/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+          </ul>
+          <div class="section-nolog__button">
+            <button class="btn btn-corp ma-btn-section">すべてを見る</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //お知らせ -->
+  </main>
+
+  <!-- footer.footer -->
+  <footer class="footer footer--top">
+    <div class="footer__inner">
+      <div class="footer__nav">
+        <dl class="footer__nav-list">
+          <dt class="footer__nav-category">M&Aパークガイド</dt>
+          <dd class="footer__nav-item"><a class="" href="">サービス概要</a></dt>
+          <dd class="footer__nav-item"><a class="" href="">利用料金</a></dt>
+          <dd class="footer__nav-item"><a class="" href="">よくある質問</a></dt>
+          <dd class="footer__nav-item"><a class="" href="">お問い合わせ</a></dt>
+        </dl>
+        <dl class="footer__nav-list">
+          <dt class="footer__nav-category">お知らせ</dt>
+          <dd class="footer__nav-item"><a class="" href="">お知らせ一覧</a></dt>
+        </dl>
+        <dl class="footer__nav-list">
+          <dt class="footer__nav-category">M&Aパークについて</dt>
+          <dd class="footer__nav-item"><a class="" href="">運営会社情報</a></dt>
+          <dd class="footer__nav-item"><a class="" href="">利用規約</a></dt>
+          <dd class="footer__nav-item"><a class="" href="">個人情報保護方針</a></dt>
+          <dd class="footer__nav-item"><a class="" href="">特定商取引法に基づく表示</a></dt>
+        </dl>
+      </div>
+      <div class="footer__logo">
+        <img src="./img/logo/footer-logo.png" alt="">
+        <small class="footer__copyright">
+          Copyright 2021 M&A PARK Inc. All rights reserved.
+        </small>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer.footer -->
+
+  <!-- 無料登録アイコン -->
+  <div id="icon-regist" class="sitetop-fixed-icon">
+    <a href="./screen_tmp-regist.html"><img src="./img/icon/icon-free2regist.svg"></a>
+  </div>
+</body>
+<script>
+  $(function() {
+    var ma = new Ma();
+    $(window).scroll(ma.scrollIcon);
+  });
+</script>
 </html>

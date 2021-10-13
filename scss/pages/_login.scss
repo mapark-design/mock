@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as var;
+
+.login {
+
+  &__inner {
+    width: var.$WIDTH-768;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6.0rem;
+    padding-right: 6.0rem;
+  }
+
+  &__item {
+    &-title {
+      width: 24.0rem;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+    }
+    &-input {
+      padding: 1.5rem;
+    }
+  }
+
+  &__content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.0rem;
+
+  }
+  &__content-text {
+    margin-bottom: 3.0rem;
+    text-align: center;
+  }
+  &__form {
+   margin-bottom: 3.0rem;
+   text-align: center;
+  }
+
+  &__item-list {
+    margin-bottom: 3.0rem;
+  }
+
+  &__target {
+    display: block;
+    width: auto;
+    margin: 1.0rem 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &__else {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 0.1rem;
+      position: absolute;
+      top: 50%;
+      width: 768px;
+      background-color: darkgray;
+      margin-right: 1.5rem;
+      right: 100%;
+    }
+    &::after {
+      content: '';
+      height: 0.1rem;
+      position: absolute;
+      top: 50%;
+      width: 768px;
+      background-color: darkgray;
+      left: 100%;
+      margin-left: 1.5rem;      
+    }
+  }
+}

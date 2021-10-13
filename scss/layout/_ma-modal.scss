@@ -1,0 +1,34 @@
+@use "../abstracts/variables" as var;
+
+/**
+ * モーダルコンポーネント。
+ * 今のところ共通としている。
+ */
+.ma-modal-dialog {
+
+  max-width: var.$WIDTH-768;
+  min-width: var.$WIDTH-768;
+
+  &__item {
+    display: flex;
+    border-bottom: 0.1rem solid gray;
+    &:first-of-type {
+      border-top: 0.1rem solid gray;
+    }
+  }
+  &__title {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    min-width: 18.0rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.0rem;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    grid-column-gap: 2.0rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0.5rem 0.5rem 1.0rem;
+  }
+}

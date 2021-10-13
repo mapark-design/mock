@@ -1,0 +1,24 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mixin;
+
+.sitetop-question {
+
+  &__list {
+    width: var.$WIDTH-1024;
+    margin: 0 auto;
+//    margin-bottom: 2.0rem;
+  }
+
+  dt {
+    @include mixin.questionItemEl(var.$COLOR-GRAY-DARK, "icon-question.svg");
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  dd {
+    @include mixin.questionItemEl(var.$COLOR-GRAY-THIN, "icon-answer.svg");
+    margin-bottom: 2.0rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}

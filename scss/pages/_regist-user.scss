@@ -1,19 +1,24 @@
-@use "../global/variables" as var;
+@use "../abstracts/variables" as var;
 
 .regist-user {
-  &__section-inner {
-    width: var.$SITETOP_NALLOW-WIDTH;
-    margin-left: auto;
-    margin-right: auto;
+
+  &__inner {
+    width: var.$WIDTH-1024;
   }
 
-
-  &__item-title {
-    min-width: 28rem;
-    max-width: 28rem;
-    padding: 1.5rem;
+  &__explanation {
+    margin-bottom: 1.0rem;
   }
-  &__item-input {
-    padding: 1.5rem;
+
+  &__item {
+    &-title {
+      min-width: 28.0rem;
+      max-width: 28.0rem;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+    }
+    &-input {
+      padding: 1.5rem;
+    }
   }
 }

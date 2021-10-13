@@ -1,0 +1,58 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins" as mixin;
+
+.sitetop-flowtouse {
+
+  &__list {
+    width: var.$WIDTH-1024;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.0rem;
+    border-radius: 0.5rem;
+    background-color: var.$COLOR-GRAY-DARK;
+
+    &:last-child {
+      background-color: var.$COLOR-CORP;
+      justify-content: center;
+    }
+  }
+
+  &__step {
+    position: relative;
+    width: 15.0rem;
+    padding: 1.0rem 5.0rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: var.$COLOR-CORP;
+    color: white;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -15px;
+      left: 5.0rem;
+      border-style: solid;
+      border-color: var.$COLOR-CORP transparent transparent transparent;
+      border-width: 25px 25px 0 25px;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    padding: 1.0rem 2.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    &:nth-child(1) {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+}

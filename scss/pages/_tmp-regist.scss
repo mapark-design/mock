@@ -1,8 +1,14 @@
+@use "../abstracts/variables" as var;
+
 /** 仮登録画面用SCSS */
 .tmp-regist {
-  width: 786px;
-  margin-left: auto;
-  margin-right: auto;
+
+  &__inner {
+    width: var.$WIDTH-1024;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var.$FONT-SIZE-18;
+  }
 
   &__title {
     text-align: center;
@@ -10,22 +16,26 @@
     font-size: 2.4rem;
   }
 
-  &__type-list {
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 4.0rem;
-  }
-
   &__type {
-    display: flex;
-    justify-content: center;
-  }
+    &-list {
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 4.0rem;
+    }
+    &-item {
+      display: flex;
+      justify-content: center;
+    }
+    &-btn {
+      width: 24.0rem;
+      padding: 5.0rem 0.5rem;
+      border-radius: 0.5rem;
+      font-size: var.$FONT-SIZE-20;
+    }
 
-  &__button {
-    width: 20.0rem;
-    padding: 3.0rem 1rem;
-    border-radius: 1.0rem;
-    font-size: 2.0rem;
+    &-explain {
+      font-size: var.$FONT-SIZE-16;
+    }
   }
 
   &__input-content {
@@ -37,6 +47,7 @@
   &__item-title {
     min-width: 25.0rem;
     max-width: 25.0rem;
+    background-color: #eaeaea;
     padding: 1.5rem;
   }
 

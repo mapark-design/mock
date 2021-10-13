@@ -1,0 +1,40 @@
+@use "../../abstracts/variables" as var;
+
+.sitetop-keyvisual {
+
+  width: var.$WIDTH-DEFAULT;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    position: absolute;
+    top: 15.0rem;
+    left: 9.5rem;
+    z-index: 1;
+  }
+
+  &__copy {
+    font-size: 2.5rem;
+//    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var.$COLOR-CORP;
+    margin-bottom: 2.0rem;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 10rem;
+  }
+
+  &__button {
+    border-radius: 0.5rem;
+    font-size: 2.4rem;
+    padding: 0.8rem 3.0rem;
+    position: absolute;
+    top: 25.0rem;
+  }
+}

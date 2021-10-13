@@ -1,0 +1,32 @@
+@use "../../abstracts/variables" as var;
+
+.sitetop-notify {
+
+  &__list {
+    width: var.$WIDTH-1024;
+    // display: flex;
+    // align-items: center;
+    margin: 0 auto;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2.0rem;
+    border-radius: 0.5rem;
+    background-color: var.$COLOR-GRAY-THIN;
+  }
+
+  &__date {
+    width: 15.0rem;
+    padding: 1.0rem 5.0rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: var.$COLOR-GRAY-DARK;
+  }
+
+  &__text {
+    padding: 1.0rem 2.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}

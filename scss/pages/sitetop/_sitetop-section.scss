@@ -1,0 +1,27 @@
+@use "../../abstracts/variables" as var;
+
+.section-nolog {
+
+  &:nth-of-type(even) {
+    background-color: var.$COLOR-CORP-MIDDLE;
+  }
+
+  &__inner {
+    width: var.$WIDTH-DEFAULT;
+    margin: 0 auto;
+    padding: 5.0rem 0;
+    font-size: var.$FONT-SIZE-18;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 3.0rem;
+    text-align: center;
+  }
+
+  &__button {
+    margin-top: 3.0rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixin;
+
+/**
+ * ヘッダコンポーネント。
+ * システム共通とし、独自に必要なものは Modifier を利用して設定している。
+ */
+.header {
+  $header: &;
+
+  font-size: var.$FONT-SIZE-18;
+
+  &--top {
+    /** サイトトップ用 */
+    background-color: var.$COLOR-CORP;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+    width: var.$WIDTH-DEFAULT;
+    height: var.$HEIGHT-HEADER;
+
+    &--login {
+      /** ログイン後 */
+      box-shadow: 0 0 1rem gray;
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    margin-right: 3.0rem;
+  }
+  &__logo {
+    max-width: 8rem;
+    min-width: 8rem;
+  }
+
+  &__nav {
+    /** ヘッダーナビ部 */
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    #{$header}__global-nav {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    #{$header}__user-nav {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+
+    &--global-nav,
+    &--user-nav {
+      gap: 2.0rem;
+    }
+
+    a {
+      @include mixin.createAnchor();
+    }
+  }
+}

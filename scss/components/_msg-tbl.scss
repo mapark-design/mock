@@ -15,6 +15,11 @@
 
     &.icon {
       padding: 0.5rem;
+
+      img {
+        min-width: 3.5rem;
+        max-width: 3.5rem;
+      }
     }
   }
 }

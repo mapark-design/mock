@@ -10547,6 +10547,78 @@ h1, h2, h3, h4, h5, h6 {
 .msg-tbl td.icon {
   padding: 0.5rem;
 }
+.msg-tbl td.icon img {
+  min-width: 3.5rem;
+  max-width: 3.5rem;
+}
+
+.loading {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.8;
+  display: none;
+}
+.loading__msg {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.loading__msg .spinner {
+  margin: 10rem auto;
+  width: 5rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.loading__msg .spinner div {
+  background-color: #c8161d;
+  height: 100%;
+  width: 0.6rem;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+          animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+.loading__msg .spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+}
+.loading__msg .spinner .rect3 {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+.loading__msg .spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+.loading__msg .spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4);
+            transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
 
 /**
  * ヘッダコンポーネント。
@@ -10864,6 +10936,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 3rem;
 }
 
+/**
+ * セクションコンポーネント。
+ */
 .section__title {
   /** タイトル関係 */
   font-weight: bold;
@@ -11614,6 +11689,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 1.5rem;
 }
 
+/**
+ * マイページ：通知部分
+ */
 .mypage-alert {
   margin-bottom: 2rem;
 }
@@ -11650,14 +11728,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #c8161d;
 }
 
+/**
+ * メッセージ部分
+ */
 .mypage-msg__item-date {
   width: 20rem;
+}
+.mypage-msg__item-icon {
+  width: 5rem;
 }
 .mypage-msg__icon-chat {
   min-width: 0.9rem;
   min-width: 0.9rem;
 }
 
+/**
+ * マイページ：お知らせ部分
+ */
 .mypage-notify__inner {
   margin-top: 5rem;
 }
@@ -11818,6 +11905,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 .detail-seller__item-input--header {
   padding: 0.5rem 1.5rem;
+}
+
+/**
+ * 交渉検索。
+ */
+.search-negos-form__item-title {
+  max-width: 21rem;
+  min-width: 21rem;
+}
+
+/**
+ * 交渉結果。
+ */
+.search-negos-result {
+  margin-bottom: 5rem;
+}
+.search-negos-result__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.search-negos-result__title {
+  border-left: 0.5rem solid #c8161d;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-right: 1rem;
+  font-size: 2.4rem;
+}
+.search-negos-result__status {
+  color: black;
+  border: 1px solid #c8161d;
+}
+.search-negos-result__status--finished {
+  color: white;
+  border: 1px solid #606060;
+  background-color: #606060;
+}
+.search-negos-result__tbl .column__start-date {
+  width: 15rem;
+}
+.search-negos-result__tbl .column__progress {
+  width: 18.5rem;
+}
+.search-negos-result__tbl .column__user {
+  width: calc((1086px - 38.5rem) / 3 * 1);
+}
+.search-negos-result__tbl .column__icon {
+  width: 5rem;
+}
+
+.contract__item-title {
+  min-width: 30rem;
+  max-width: 30rem;
+  background-color: #eaeaea;
+  padding: 1.5rem;
+}
+.contract__item-input {
+  padding: 1.5rem;
 }
 
 .material-icons-outlined.md-48 {

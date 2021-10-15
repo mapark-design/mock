@@ -113,23 +113,30 @@
                 <dd class="form__item-input--flex-wrap regist-user__item-input specialty"></dd>
               </div>
               <div class="form__item form__item--border">
-                <dt class="form__item-title regist-user__item-title">M&A経験年数
+                <dt class="form__item-title regist-user__item-title">M&Aの経験
                   <div class="form__required">必須</div>
                 </dt>
-                <dd class="form__item-input regist-user__item-input">
-                  <select class="form-select w-25" required>
-                    <option selected disabled value="">＋選択してください</option>
-                  </select>
+                <dd class="form__item-input--flex-wrap regist-user__item-input">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      経験あり
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      経験なし
+                    </label>
+                  </div>
                 </dd>
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">M&A実績件数
                   <div class="form__required">必須</div>
                 </dt>
-                <dd class="form__item-input regist-user__item-input">
-                  <select class="form-select w-25" required>
-                    <option selected disabled value="">＋選択してください</option>
-                  </select>
+                <dd class="form__item-input--flex-center regist-user__item-input">
+                  <input type="number" class="form-control w-25" placeholder="例：3">件
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -145,7 +152,9 @@
                 </dd>
               </div>
               <div class="form__item form__item--border">
-                <dt class="form__item-title regist-user__item-title">設立年</dt>
+                <dt class="form__item-title regist-user__item-title">設立年
+                  <div class="form__required">必須</div>
+                </dt>
                 <dd class="form__item-input form__item-input--flex-center regist-user__item-input">
                   <input type="text" class="form-control w-25" placeholder="例：2000">年
                 </dd>
@@ -162,7 +171,9 @@
                 </dd>
               </div>
               <div class="form__item form__item--border">
-                <dt class="form__item-title regist-user__item-title">上場区分</dt>
+                <dt class="form__item-title regist-user__item-title">上場区分
+                  <div class="form__required">必須</div>
+                </dt>
                 <dd class="form__item-input regist-user__item-input">
                   <select class="form-select w-25">
                     <option selected disabled value="">＋選択してください</option>
@@ -179,12 +190,17 @@
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">専門家への相談依頼</dt>
-                <dd class="form__item-input--flex-wrap regist-user__item-input consultation-specialty"></dd>
+                <dd class="form__item-input--flex-wrap regist-user__item-input">
+                  <div class="form-check">
+                    <input class="form-check-input" id="form-is-consult" type="checkbox" value="1">
+                    <label class="form-check-label" for="form-is-consult">専門家に相談する</label>
+                  </div>
+                </dd>
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">本人証明書提出書類</dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <div class="form__item-section">
+                  <div class="form__item-section mb-3">
                     個人事業主の方はご本人確認のため、下記2種類の書類をアップロードしてください。
                   </div>
                   <div class="form__item-section">
@@ -192,7 +208,7 @@
                     <input class="form-control width-60" type="file" id="formFile1" required>
                   </div>
                   <div class="form__item-section">
-                    <label for="formFile2" class="form-label">健康証またはパスポート</label>
+                    <label for="formFile2" class="form-label">保険証またはパスポート</label>
                     <input class="form-control width-60" type="file" id="formFile2" required>
                   </div>
                 </dd>

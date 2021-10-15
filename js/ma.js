@@ -35,6 +35,72 @@ class Ma {
     }
   }
 
+  // ajax呼び出し共通
+ ajaxAction = function(data) {
+  var deferred = new $.Deferred();    // ※1
+  $.ajax(data).then(
+      //成功処理
+      function (data) {
+        deferred.resolve();     // こうすると呼び出し側で個別の処理ができる
+        console.log('ajax成功：共通部分');  // 成功時の共通処理とか書く
+      },
+      //失敗処理
+      function (data) {
+        deferred.rejected();    // こうすると呼び出し側で個別の処理ができる
+        console.log('ajax失敗：共通部分');  // 失敗時の共通処理とか書く
+      }
+  );
+  return deferred;
+}
+
+  sendAjaxRequest = function($args) {
+    let d = $.Deferred();
+    $.ajax($args)
+    .done(function(data) {
+      console.info('ma-done');
+      d.resolve(true);
+    }).fail(function(xhr,err) {
+      console.info('ma-error');
+      d.resolve(false);
+    }).always(function() {
+      console.info('ma-always');
+      $("#loader").fadeOut(300);
+    });
+    return d.promise();
+  };
+
+  myAjax = function(arg) {
+    var opt = $.extend({}, $.ajaxSettings, arg);
+    var jqXHR = $.ajax(opt);
+
+    var defer = $.Deferred();
+
+    jqXHR.done(function(data, statusText, jqXHR) {
+        console.log('done(=success)時の共通処理 ...');
+
+        // defer.resovle ではなくて defer.resolveWith で
+        // myAjax(...).done() 内でのthisのコンテキストを
+        // 明示的に指定する
+        defer.resolveWith(this, arguments);
+    });
+
+    jqXHR.fail(function(jqXHR, statusText, errorThrown) {
+        console.log('fail(=error)時の共通処理 ...');
+
+        // defer.reject ではなくて defer.rejectWith で
+        // myAjax(...).fail() 内でのthisのコンテキストを
+        // 明示的に指定する
+        defer.rejectWith(this, arguments);
+    });
+
+    jqXHR.always(function() {
+        console.log('always(=complete)時の共通処理 ...');
+        $("#loader").fadeOut(300);
+      });
+
+    return $.extend({}, jqXHR, defer.promise());
+}
+
   ajax = function(args, done, fail, always) {
     $.ajax({
       type: args.type,
@@ -43,17 +109,21 @@ class Ma {
       cache: false
     })
     .done(function(data, textStatus, jqXHR) {
-      done(data, textStatus, jqXHR);
-      console.info(data);
+      setTimeout(function() {
+        console.info('infoX');
+        done(data, textStatus, jqXHR);
+      }, 2000);
+      console.info('info');
     })
     .fail(function( jqXHR, textStatus, errorThrown ) {
-      console.error(jqXHR);
+      console.error('error');
     })
     .always(function( jqXHR, textStatus ) {
       if (always) {
         always(jqXHR, textStatus);
       }
-      console.info(jqXHR);
+      console.info('always');
+      $("#loader").fadeOut(300);
     });
   }
 
@@ -73,8 +143,8 @@ class Ma {
             text: el.name
           })
         );
-        $(selector).append($options);
       });
+      $(selector).append($options);
     });
   }
 
@@ -88,6 +158,30 @@ class Ma {
         var input = $("<input>", {
           id: prefix + el.value,
           type: 'checkbox',
+          value: el.value
+        }).addClass('form-check-input');
+        var label = $("<label>", {
+          for: prefix + el.value,
+        }).addClass('form-check-label').text(el.name);
+        var div = $("<div>").addClass('form-check').append(input, label);
+        options.push(div);
+      });
+
+      $(querySelector).append(options);
+    });
+  }
+
+  setRadio = function(path, querySelector, prefix) {
+    this.ajax({
+      type: 'get',
+      url: path
+    }, function(data, textStatus, jqXHR) {
+      var options = [];
+      data.forEach(function(el, idx) {
+        var input = $("<input>", {
+          id: prefix + el.value,
+          name: prefix,
+          type: 'radio',
           value: el.value
         }).addClass('form-check-input');
         var label = $("<label>", {

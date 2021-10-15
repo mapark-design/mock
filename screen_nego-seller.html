@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
-  <title>マイページ（売り手）</title>
+  <title>交渉案件一覧</title>
 </head>
 <body>
   <div class="layout">
@@ -191,7 +191,7 @@
     <!-- main.main -->
     <main class="main" >
       <div class="main__inner">
-        <!-- breadcrumb__nav --><!--
+        <!-- breadcrumb__nav -->
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
@@ -199,75 +199,186 @@
             <li>案件詳細</li>
           </ul>
         </nav>
-        --><!-- //breadcrumb__nav -->
+        <!-- //breadcrumb__nav -->
 
-        <!-- 新着メッセージ -->
-        <section class="section mypage-msg">
-          <div class="section__inner mypage-msg__inner">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">新着メッセージ</h2>
-            <div class="section__content">
-              <table class="table table-striped msg-tbl">
-                <thead>
-                  <tr>
-                    <th class="fixed mypage-msg__item-date">受信日時</th>
-                    <th class="fixed mypage-msg__item-sender">送信者</th>
-                    <th class="fixed mypage-msg__item-title">タイトル</th>
-                    <th class="fixed mypage-msg__item-icon">&nbsp;</th>
-                  </tr>
-                </thead>
-                <tbody class="">
-                  <tr>
-                    <td class="mypage-msg__item-date">2021/11/10 14:05</td>
-                    <td>社名未公開</td>
-                    <td>ECサイトを譲渡します。</td>
-                    <td class="icon"><a href=""><img class="mypage-msg__icon-chat" src="./img/icon/icon-message.svg" alt="message" title="メッセージを表示する"></a></td>
-                  </tr>
-                  <tr>
-                    <td class="mypage-msg__item-date">2021/11/10 10:57</td>
-                    <td class="">山田　健一郎</td>
-                    <td>WEB制作会社を募集</td>
-                    <td class="icon"><a href=""><img class="mypage-msg__icon-chat" src="./img/icon/icon-message.svg" alt="message" title="メッセージを表示する"></a></td>
-                  </tr>
-                  <tr>
-                    <td class="mypage-msg__item-date">2021/10/30 09:00</td>
-                    <td class="">田中　花子</td>
-                    <td>千葉県のシステム会社募集</td>
-                    <td class="icon"><a href=""><img class="mypage-msg__icon-chat" src="./img/icon/icon-message.svg" alt="message" title="メッセージを表示する"></a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-        <!-- //新着メッセージ -->
-
-        <!-- お知らせ -->
         <section class="section">
-          <div class="section__inner mypage-notify__inner">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">M&A PARK からのお知らせ</h2>
+          <div class="section__inner">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">交渉中の譲渡案件一覧</h2>
             <div class="section__content">
-              <ul class="mypage-notify__list ms-3">
-                <li class="mypage-notify__item">
-                  <div class="mypage-notify__item-date">2021/07/26</div>
-                  <div class="mypage-notify__item-text"><a href="">利用規約改定</a></div>
-                </li>
-                <li class="mypage-notify__item">
-                  <div class="mypage-notify__item-date">2021/07/01</div>
-                  <div class="mypage-notify__item-text"><a href="">協業パートナー募集</a></div>
-                </li>
-                <li class="mypage-notify__item">
-                  <div class="mypage-notify__item-date">2000/01/01</div>
-                  <div class="mypage-notify__item-text"><a href="">誕生祭</a></div>
-                </li>
-              </ul>
+              <!-- 検索条件 -->
+              <form class="form form--search" action="">
+                <dl class="row m-0">
+                  <div class="col-12 form__item form__item--border form__item--top-border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-negos-form__item-title">ステータス</dt>
+                    <dd class="form__item-input search-form__item-input search-negos-form__item-input">
+                      <div class="form__item-input--flex-wrap">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">受付中</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox2">新規受付停止中</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox3">独占交渉中</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox4">案件終了</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox5">掲載終了</label>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="col-12 form__item form__item--border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-negos-form__item-title">スター付きのみ表示する</dt>
+                    <dd class="form__item-input search-form__item-input search-negos-form__item-input">
+                      <div class="form__item-input--flex-wrap">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1"></label>
+                        </div>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+                <div class="form__action form__action--center form__action-search">
+                  <button class="btn btn-corp ma-btn-search">検索</button>
+                </div>
+
+              </form>
+              <!-- //検索条件 -->
             </div>
+
+            <!-- 表記 -->
+            <section class="section__content mt-3">
+              <div class="section__inner">
+
+                <!-- div.search-negos-result -->
+                <div class="search-negos-result">
+                  <!-- div.search-negos-result__header -->
+                  <div class="search-negos-result__header">
+                    <h3 class="search-negos-result__title">ECサイトを譲渡します。</h3>
+                    <ul class="check-list">
+                      <li class="check-list__item search-negos-result__status">受付中</li>
+                    </ul>
+                  </div>
+                  <!-- //div.search-negos-result__header -->
+                  <div class="">
+                    <table class="table table-striped msg-tbl search-negos-result__tbl">
+                      <thead>
+                        <tr>
+                          <th class="column__target">交渉相手先</th>
+                          <th class="column__start-date">交渉開始</th>
+                          <th class="column__progress">進捗</th>
+                          <th class="column__user">対応者</th>
+                          <th class="column__icon">&nbsp;</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>社名未開示</td>
+                          <td>2021/07/21</td>
+                          <td>交渉申込受信</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>株式会社AAA　買手三郎</td>
+                          <td>2021/06/07</td>
+                          <td>買い手社名開示</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>BBB株式会社　FA三郎</td>
+                          <td>2021/06/01</td>
+                          <td>NDA締結</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- //div.search-negos-result -->
+
+                <!-- div.search-negos-result -->
+                <div class="search-negos-result">
+                  <!-- div.search-negos-result__header -->
+                  <div class="search-negos-result__header">
+                    <h3 class="search-negos-result__title">飲食店３店舗を譲渡します。</h3>
+                    <ul class="check-list">
+                      <li class="check-list__item search-negos-result__status search-negos-result__status--finished">掲載終了</li>
+                    </ul>
+                  </div>
+                  <!-- //div.search-negos-result__header -->
+                  <div class="">
+                    <table class="table table-striped msg-tbl search-negos-result__tbl">
+                      <thead>
+                        <tr>
+                          <th class="column__target">交渉相手先</th>
+                          <th class="column__start-date">交渉開始</th>
+                          <th class="column__progress">進捗</th>
+                          <th class="column__user">対応者</th>
+                          <th class="column__icon">&nbsp;</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>社名未開示</td>
+                          <td>2021/01/30</td>
+                          <td>交渉申込受信</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>DDD株式会社　　買手 道子</td>
+                          <td>2021/12/27</td>
+                          <td>TOP面談済</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>買取 花子</td>
+                          <td>2021/12/29</td>
+                          <td>交渉終了</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>株式会社KKKKKKKK　買取 五郎</td>
+                          <td>2021/10/05</td>
+                          <td>契約締結済</td>
+                          <td>ユーザ名</td>
+                          <td class="icon">
+                            <a href="" class=""><img src="./img/icon/icon-message.svg"></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>      
+                  </div>
+                </div>
+                <!-- //div.search-negos-result -->
+              </div>
+            </section>
           </div>
         </section>
-        <!-- //お知らせ -->
-      </div>
+        </div>
     </main>
-    <!-- //main.main -->
-
   </div>
 </body>
 </html>

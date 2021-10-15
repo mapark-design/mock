@@ -1,4 +1,7 @@
-.mypage-msg {
+/**
+ * メッセージ部分
+ */
+ .mypage-msg {
 
   &__inner {
   }
@@ -6,6 +9,9 @@
   &__item {
     &-date {
       width: 20.0rem;
+    }
+    &-icon {
+      width: 5.0rem;
     }
   }
 

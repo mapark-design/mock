@@ -247,7 +247,7 @@
                   </div>
                 </dl>
                 <div class="form__action form__action--center">
-                  <button class="btn btn-corp ma-btn-section">報告する</button>
+                  <button id="btn-regist" class="btn btn-corp ma-btn-section">報告する</button>
                 </div>
               </form>
             </div>
@@ -265,6 +265,10 @@
       dateFormat: 'Y/m/d',
       allowInput: true,
       defaultDate: new Date()
+    });
+
+    $('#btn-regist').click(function() {
+      $(this).parents('form').attr('method', 'GET').attr('action', './screen_contract_confirm.html').submit();
     });
   });
 </script>

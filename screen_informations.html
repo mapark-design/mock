@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
-  <title>パスワード再設定依頼</title>
+  <title>お知らせ</title>
 </head>
 <body>
   <!-- header.header -->
@@ -45,36 +45,12 @@
     <!-- section.section-nolog -->
     <section class="section-nolog">
       <div class="section-nolog__inner login__inner">
-        <h2 class="section-nolog__title">パスワード再設定依頼</h2>
+        <h2 class="section-nolog__title">お知らせ</h2>
         <div class="section-nolog__content">
-          <div class="mb-3">
-            ご登録いただいたメールアドレスを入力してください。<br>
-            パスワード変更用のURLをお送りします。<br>
-          </div>
-          <form class="needs-validation" novalidate>
-            <dl>
-              <div class="form__item form__item--border form__item--top-border login__item">
-                <dt class="form__item-title login__item-title">メールアドレス</dt>
-                <dd class="form__item-input login__item-input">
-                  <input type="text" class="form-control" name="login" id="login_value" placeholder="Email" tabindex="1">
-                </dd>
-              </div>
-            </dl>
-            <div class="form__action form__action--center">
-              <button id="btn-submit" class="w-75 btn btn-corp ma-btn-submit">送信する</button>
-            </div>
-          </form>
         </div>
       </div>
     </section>
     <!-- //section.section-nolog -->
   </main>
 </body>
-<script>
-  $(function() {
-    $('#btn-submit').click(function() {
-      $(this).parents('form').attr('method', 'GET').attr('action', './screen_password_complete.html').submit();
-    });
-  });
-</script>
 </html>

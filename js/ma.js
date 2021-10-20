@@ -127,6 +127,37 @@ class Ma {
     });
   }
 
+  /**
+   * ファイルモーダル表示処理。
+   * @param {*} args パラメータ
+   * @param {*} selector 対象リンクのセレクタ
+   */
+  createModal = function(args, selector) {
+    $(selector).modaal(args);
+  }
+
+  /**
+   * PDFファイルモーダル表示処理。
+   * @param {*} selector 対象リンクのセレクタ
+   */
+  createModalPdf = function(selector) {
+    this.createModal({
+      type: 'iframe',
+      fullscreen: true
+    }, selector);
+  }
+
+  /**
+   * 画像ファイルモーダル表示処理。
+   * @param {*} selector 対象リンクのセレクタ
+   */
+  createModalImage = function(selector) {
+    this.createModal({
+      type: 'image',
+      fullscreen: false
+    }, selector);
+  }
+
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   // 以下本番時には削除予定
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -11261,6 +11261,9 @@ h1, h2, h3, h4, h5, h6 {
 .section-nolog:nth-of-type(even) {
   background-color: #dabbbb;
 }
+.section-nolog--reset-bgcolor {
+  background-color: white !important;
+}
 .section-nolog__inner {
   width: 1366px;
   margin: 0 auto;
@@ -11272,6 +11275,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-bottom: 3rem;
   text-align: center;
+}
+.section-nolog__title-h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.section-nolog__title-h2--ul {
+  border-bottom: 0.5rem solid #c8161d;
+}
+.section-nolog__title-h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+.section-nolog__title-h4 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .section-nolog__button {
   margin-top: 3rem;
@@ -11624,6 +11642,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem;
 }
 
+.regist-user-seller__inner {
+  width: 1024px;
+}
+.regist-user-seller__inner--no-padding-top {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .login__inner {
   width: 768px;
   margin-left: auto;
@@ -11687,6 +11713,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: darkgray;
   left: 100%;
   margin-left: 1.5rem;
+}
+
+.pwd-reset__item-title {
+  min-width: 20rem;
+  max-width: 20rem;
+  background-color: #eaeaea;
+  padding: 1.5rem;
+}
+.pwd-reset__item-input {
+  padding: 1.5rem;
 }
 
 /**
@@ -11966,6 +12002,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contract__item-input {
   padding: 1.5rem;
+}
+
+.complete__caution {
+  width: 768px;
+  color: red;
+  text-align: center;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.complete__caution-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.complete__caution-text {
+  font-size: 1.6rem;
 }
 
 .material-icons-outlined.md-48 {

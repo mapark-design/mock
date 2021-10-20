@@ -1,0 +1,13 @@
+.pwd-reset {
+  &__item {
+    &-title {
+      min-width: 20.0rem;
+      max-width: 20.0rem;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+    }
+    &-input {
+      padding: 1.5rem;
+    }
+  }
+}

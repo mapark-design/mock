@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as var;
+
+.regist-user-seller {
+
+  &__inner {
+    width: var.$WIDTH-1024;
+
+    &--no-padding-top {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

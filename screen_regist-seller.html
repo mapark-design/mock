@@ -743,14 +743,12 @@ $(function() {
         }
 
         $.map(el.option, function(arrOptionItem, index) {
-//          for(var i = 0; i < 10000; i++) {
           $options.push(
             $("<option>", {
               value: arrOptionItem.value,
               text: arrOptionItem.name
             })
           );
-//        }
         });
       });
       $sectorEl.append($options);

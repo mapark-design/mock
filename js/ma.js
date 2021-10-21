@@ -3,7 +3,12 @@
  * 無料登録アイコンをスクロールに合わせて処理。
  */
 const CONST = {
-  HEADER_HEIGHT: 72
+  // ヘッダの高さ
+  HEADER_HEIGHT: 72,
+  // リクエストタイムアウト
+  REQ_TIME_OUT: 10000,
+  // キャッシュ
+  REQ_CASHE: false
 };
 
 class Ma {
@@ -35,41 +40,52 @@ class Ma {
     }
   }
 
-  // ajax呼び出し共通
- ajaxAction = function(data) {
-  var deferred = new $.Deferred();    // ※1
-  $.ajax(data).then(
-      //成功処理
-      function (data) {
-        deferred.resolve();     // こうすると呼び出し側で個別の処理ができる
-        console.log('ajax成功：共通部分');  // 成功時の共通処理とか書く
-      },
-      //失敗処理
-      function (data) {
-        deferred.rejected();    // こうすると呼び出し側で個別の処理ができる
-        console.log('ajax失敗：共通部分');  // 失敗時の共通処理とか書く
-      }
-  );
-  return deferred;
-}
+  /**
+   * リクエストに必要な引数の設定処理。
+   * 
+   * @param {*} maArgs システム側が指定したリクエストプロパティ
+   * @param {*} args  ユーザが指定したリクエストプロパティ
+   * @returns 引数
+   */
+  createArgs = function(maArgs, args) {
+    return $.extend({}, {
+      timeout: CONST.REQ_TIME_OUT,
+      cashe: CONST.REQ_CASHE
+    }, maArgs, args);
+  }
 
-  sendAjaxRequest = function($args) {
-    let d = $.Deferred();
-    $.ajax($args)
-    .done(function(data) {
-      console.info('ma-done');
-      d.resolve(true);
-    }).fail(function(xhr,err) {
-      console.info('ma-error');
-      d.resolve(false);
-    }).always(function() {
-      console.info('ma-always');
-      $("#loader").fadeOut(300);
-    });
-    return d.promise();
-  };
+  /**
+   * POSTリクエストに必要な引数の設定処理。
+   * 
+   * @param {*} args  ユーザが指定したリクエストプロパティ
+   * @returns 引数
+   */
+   createPostArgs = function(args) {
+    return this.createArgs({
+      type: 'POST'
+    }, args);
+  }
 
-  myAjax = function(arg) {
+  /**
+   * GETリクエストに必要な引数の設定処理。
+   * 
+   * @param {*} args  ユーザが指定したリクエストプロパティ
+   * @returns 引数
+   */
+   createGetArgs = function(args) {
+    return this.createArgs({
+      type: 'GET'
+    }, args);
+  }
+
+  /**
+   * リクエスト処理。
+   * 非同期処理を前提としている。
+   * 
+   * @param {*} arg  引数
+   * @returns リクエスト結果
+   */
+  sendRequest = function(arg) {
     var opt = $.extend({}, $.ajaxSettings, arg);
     var jqXHR = $.ajax(opt);
 
@@ -99,32 +115,6 @@ class Ma {
       });
 
     return $.extend({}, jqXHR, defer.promise());
-}
-
-  ajax = function(args, done, fail, always) {
-    $.ajax({
-      type: args.type,
-      url: args.url,
-      data: args.data,
-      cache: false
-    })
-    .done(function(data, textStatus, jqXHR) {
-      setTimeout(function() {
-        console.info('infoX');
-        done(data, textStatus, jqXHR);
-      }, 2000);
-      console.info('info');
-    })
-    .fail(function( jqXHR, textStatus, errorThrown ) {
-      console.error('error');
-    })
-    .always(function( jqXHR, textStatus ) {
-      if (always) {
-        always(jqXHR, textStatus);
-      }
-      console.info('always');
-      $("#loader").fadeOut(300);
-    });
   }
 
   /**
@@ -161,11 +151,15 @@ class Ma {
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   // 以下本番時には削除予定
   //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  /**
+   * セレクトオプション設定処理。
+   * @param {*} path JSONファイルパス
+   * @param {*} selector セレクトオプション設定先セレクタ
+   */
   setOptions = function(path, selector) {
-    this.ajax({
-      type: 'get',
+    this.sendRequest(this.createGetArgs({
       url: path
-    }, function(data, textStatus, jqXHR) {
+    })).done(function(data, statusText, jqXHR) {
       var $options = [];
       data.forEach(function(el, idx) {
         $options.push(
@@ -179,11 +173,16 @@ class Ma {
     });
   }
 
+  /**
+   * チェックボックス設定処理。
+   * @param {*} path JSONファイルパス
+   * @param {*} querySelector チェックボックス設定先セレクタ
+   * @param {*} prefix 接頭辞
+   */
   setCheckbox = function(path, querySelector, prefix) {
-    this.ajax({
-      type: 'get',
+    this.sendRequest(this.createGetArgs({
       url: path
-    }, function(data, textStatus, jqXHR) {
+    })).done(function(data, statusText, jqXHR) {
       var options = [];
       data.forEach(function(el, idx) {
         var input = $("<input>", {
@@ -202,11 +201,16 @@ class Ma {
     });
   }
 
-  setRadio = function(path, querySelector, prefix) {
-    this.ajax({
-      type: 'get',
+  /**
+   * ラジオボタン設定処理。
+   * @param {*} path JSONファイルパス
+   * @param {*} querySelector ラジオボタン設定先セレクタ
+   * @param {*} prefix 接頭辞
+   */
+   setRadio = function(path, querySelector, prefix) {
+    this.sendRequest(this.createGetArgs({
       url: path
-    }, function(data, textStatus, jqXHR) {
+    })).done(function(data, statusText, jqXHR) {
       var options = [];
       data.forEach(function(el, idx) {
         var input = $("<input>", {
@@ -228,6 +232,7 @@ class Ma {
 }
 
 $(function () {
+  // メニュー背景色の拡大縮小の調整
   $(window).resize(function() {
     let timer = false;
     if (!timer) {
@@ -252,6 +257,13 @@ $(function () {
       }
     }, 200);
   });
-
   $(window).trigger('resize')
+
+  $('#maform input').keydown(function(e) {
+    if (e.which === 13) {
+      $(this).blur();
+      $(this).focus();
+      return false;
+    }
+  });
 });

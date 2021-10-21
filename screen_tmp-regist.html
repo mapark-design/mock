@@ -182,8 +182,8 @@
                 </div>
               </div>
               <div class="form__action form__action--center mb-4">
-                <button id="btn-back" class="btn btn-secondary ma-btn-back" type="submit">戻る</button>
-                <button id="btn-regist" class="btn btn-corp ma-btn-fw" type="submit" disabled>登録する</button>
+                <button id="btn-back" class="btn btn-secondary ma-btn-back">戻る</button>
+                <button id="btn-regist" class="btn btn-corp ma-btn-fw" disabled>登録する</button>
               </div>
             </form>
           </div>
@@ -192,16 +192,13 @@
     </section>
   </main>
   <!-- //main.sitetop-main -->
-
 </body>
 <script>
-  Array.from(document.getElementsByClassName('tmp-regist__type-btn'), function(el, idx) {
-    el.addEventListener('click', function() {
-      new bootstrap.Tab(document.getElementById("tmp-regist__input-tab")).show();
-    });
+  $('.tmp-regist__type-btn').click(function() {
+    new bootstrap.Tab(document.getElementById("tmp-regist__input-tab")).show();
   });
 
-  document.getElementById('btn-back').addEventListener('click', function() {
+  $('#btn-back').click(function() {
     new bootstrap.Tab(document.getElementById("tmp-regist__type-tab")).show();
   });
 

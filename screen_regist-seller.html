@@ -204,7 +204,7 @@
           <div class="section__inner regist-seller">
             <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件登録</h2>
             <div class="section__content">
-              <form class="needs-validation" novalidate>
+              <form id="maform" class="needs-validation" novalidate>
 
                 <!-- 案件情報 -->
                 <section class="section">
@@ -719,22 +719,26 @@ $(function() {
 
   // 大区分変更時の処理を追加
   $('.form-industory').change(function() {
+    // 処理の頭でfadeInを入れてください。
+    // Insert this at start of function.
     $("#loader").fadeIn(300).css('display', 'table');
 
     let $industoryEl = $(this);
     let value = $industoryEl.val();
     let $sectorEl = $industoryEl.parent().parent().find('.form-sector');
+    // 子要素のクリア
     $($sectorEl).find('option').filter(function() {
       return $(this).val() != ''
     }).remove();
 
-    ma.myAjax({
-      type: 'get',
+    // If you want to use ajax to recieve data, use ma#ma#sendAjaxRequest.
+    // Please write success function to done, fail function to fail, function run any result to always.
+    // ajaxで通信、レスポンスを受け取る場合は ma#sendAjaxRequest を利用してください。
+    // doneで正常処理、failで失敗処理、正常/異常に関係なく処理したいものはalwaysを利用してください。
+    ma.sendRequest(ma.createGetArgs({
       url: './json/master-section.json',
-      data: {},
-      cache: false,
-      timeout:10000
-    }).done(function(data, statusText, jqXHR) {
+      data: {}
+    })).done(function(data, statusText, jqXHR) {
       var $options = [];
       data.forEach(function(el, idx) {
         if (el.value !== value) {
@@ -752,228 +756,7 @@ $(function() {
         });
       });
       $sectorEl.append($options);
-      console.log('xxx1');
-    }).fail(function(jqXHR, statusText, errorThrown) {
-        console.log('FAIL!');
-    }).always(function() {
-        console.log('ALWAYS!');
     });
-
-    // ma.sendAjaxRequest({
-    //   type: 'get',
-    //   url: './json/master-section.json',
-    //   data: {},
-    //   cache: false
-    // }).done(function(data) {
-    //   var $options = [];
-    //   data.forEach(function(el, idx) {
-    //     if (el.value !== value) {
-    //       // javascript.continue
-    //       return true;
-    //     }
-
-    //     $.map(el.option, function(arrOptionItem, index) {
-    //       for(var i = 0; i < 10000; i++) {
-    //       $options.push(
-    //         $("<option>", {
-    //           value: arrOptionItem.value,
-    //           text: arrOptionItem.name
-    //         })
-    //       );
-    //     }
-    //     });
-    //   });
-    //   $sectorEl.append($options);
-    //   console.log('xxx1');
-    // }).fail(function() {
-    //   console.log('regist-seller-fail');
-    // });
-
-    // $.when(ma.sendAjaxRequest({
-    //   type: 'get',
-    //   url: './json/master-section.json',
-    //   data: {},
-    //   cache: false
-    // })).then(function() {
-    //   setTimeout(function() {
-    //     console.log('regist-seller-done');
-    //   },1000)
-    // },
-    //   function() {
-    //   console.log('regist-seller-fail');
-    // }
-    // ).then(function() {
-    //   console.log('last');
-    // });
-
-    // var def = ma.ajaxAction({
-    //   type: 'get',
-    //   url: './json/master-section.json',
-    //   data: {},
-    //   cache: false
-    // });
-    // def.done(function() {
-    //   setTimeout(function() {
-    //     console.log('regist-seller-done');
-    //   },1000)
-    // });
-    // def.fail(function() {
-    //   console.log('regist-seller-fail')    });
-
-    // ma.ajaxAction({
-    //   type: 'get',
-    //   url: './json/master-section.json',
-    //   data: {},
-    //   cache: false
-    // }).then(function() {
-    //   setTimeout(function() {
-    //     console.log('regist-seller-ok');
-    //   },1000);
-    // }, function() {
-    //   console.log('regist-seller-ng');
-    // }).then(function() {
-    //   console.log('regist-seller-finally');
-    // });
-    // def.done(function() {
-    //   setTimeout(function() {
-    //     console.log('regist-seller-done');
-    //   },1000)
-    // });
-    // def.fail(function() {
-    //   console.log('regist-seller-fail')    });
-
-
-
-
-//     var API = {
-//     search: function(url) {
-//         var defer = $.Deferred();
-//         // 送信
-//         $.ajax({
-//             url: url,
-//             type: 'GET',
-// //            data: data,
-//             dataType: 'json',
-//             timeout: 10000,  // 単位はミリ秒
-//             success: defer.resolve,
-//             error: defer.reject
-//         });
-//         return defer.promise();
-//     }
-// };
-
-// //$('#main-form').submit(function (event) {
-//         // HTMLでの送信をキャンセル
-// //        event.preventDefault();
-
-//         // // 操作対象のフォーム要素を取得
-//         // var $form = $(this);
-
-//         // //ボタンを無効化
-//         // var $button = $form.find('#search-button');
-//         // $button.prop('disabled', true);
-
-//         API.search('./json/master-section.json')
-//         .done(
-//             (result, textStatus, xhr) => {
-//                 //なんかする
-//                 return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       console.log('regist-seller-done');
-//     }, 500)
-//   });
-//     //             setTimeout(function() {
-//     //   console.log('regist-seller-done');
-//     // },1000);
-//   }
-//         )
-//         .always(
-//             (xhr, textStatus) => {
-//                 // ボタンを有効化し、再送信を許可
-//                 console.log('regist-seller-alaways');
-//             },
-//         )
-//         .fail(
-//             () =>{
-//                 //エラー処理
-//                 console.log("失敗");
-//             }
-//         )
-// //    });
-
-  // $.ajax({
-  //   url: './json/master-section.json',
-  //   type: 'get'
-  // }).done(function(data) {
-  //   var $options = [];
-  //     data.forEach(function(el, idx) {
-  //       if (el.value !== value) {
-  //         // javascript.continue
-  //         return true;
-  //       }
-
-  //       $.map(el.option, function(arrOptionItem, index) {
-  //         for(var i = 0; i < 10000; i++) {
-  //         $options.push(
-  //           $("<option>", {
-  //             value: arrOptionItem.value,
-  //             text: arrOptionItem.name
-  //           })
-  //         );
-  //       }
-  //       });
-  //     });
-  //     $sectorEl.append($options);
-  //     console.log('xxx1');
-  // }).fail(function() {
-  //   console.log('xxx2')
-  // }).always(function() {
-  //   console.log('xxx3')
-  // });
-
-
-    // $.when(ma.sendAjaxRequest({
-    //   type: 'get',
-    //   url: './json/master-section.json',
-    //   data: {},
-    //   cache: false
-    // })).then(function() {
-    //   setTimeout(function() {
-    //     console.log('regist-seller-done');
-    //   },1000)
-    // },
-    //   function() {
-    //   console.log('regist-seller-fail');
-    // }
-    // ).then(function() {
-    //   console.log('last');
-    // });
-
-
-    // ma.ajax({
-    //   type: 'get',
-    //   url: './json/master-section.json'
-    // }, function(data, textStatus, jqXHR) {
-    //   var $options = [];
-    //   data.forEach(function(el, idx) {
-    //     if (el.value !== value) {
-    //       // javascript.continue
-    //       return true;
-    //     }
-
-    //     $.map(el.option, function(arrOptionItem, index) {
-    //       $options.push(
-    //         $("<option>", {
-    //           value: arrOptionItem.value,
-    //           text: arrOptionItem.name
-    //         })
-    //       );
-    //     });
-    //   });
-    //   setTimeout(function() {
-    //     $sectorEl.append($options);
-    //   }, 1000);
-    // });
   });
 });
 </script>

@@ -10551,6 +10551,11 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 3.5rem;
   max-width: 3.5rem;
 }
+.msg-tbl td.icon .badge-unread {
+  padding: 0.7rem;
+  top: -0.4rem;
+  left: 95%;
+}
 
 .loading {
   display: table;
@@ -11258,6 +11263,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
+.matter-list tr {
+  font-size: 1.8rem;
+}
+.matter-list th {
+  vertical-align: middle;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+.matter-list td {
+  vertical-align: middle;
+  padding: 1rem 0.5rem;
+}
+.matter-list td.icon {
+  padding: 0.5rem;
+}
+
 .section-nolog:nth-of-type(even) {
   background-color: #dabbbb;
 }
@@ -11889,6 +11909,25 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.6rem;
   padding: 0 0 0.5rem 1rem;
 }
+/**
+ * 譲渡案件一覧
+ */
+.list-transfar__item-title {
+  background-color: white;
+}
+.list-transfar__item-last-update {
+  width: 12%;
+}
+.list-transfar__item-status {
+  width: 18%;
+}
+.list-transfar__item-regist-user-name {
+  width: 19%;
+}
+.list-transfar__item-detail {
+  width: 6%;
+}
+
 .regist-seller__content {
   margin-bottom: 2rem;
 }
@@ -11992,6 +12031,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .search-negos-result__tbl .column__icon {
   width: 5rem;
+}
+.search-negos-result__item-target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
 }
 
 .contract__item-title {

@@ -11,14 +11,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_red.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
-  <title>成約報告</title>
+  <title>登録済の譲渡案件一覧</title>
 </head>
 <body>
   <div class="layout">
@@ -191,84 +188,121 @@
     </nav>
     <!-- //nav.ma-nav -->
 
-    <!-- main.main -->
     <main class="main" >
       <div class="main__inner">
         <!-- breadcrumb__nav -->
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li>成約報告</li>
+            <li>登録済の譲渡案件一覧</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
 
         <section class="section">
-          <div class="section__inner contract__inner">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">成約報告</h2>
+          <div class="section__inner">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">登録済の譲渡案件一覧</h2>
             <div class="section__content">
-              <p class="mb-3">
-              ご成約おめでとうございます。<br>
-              ご成約内容についてお教えください。
-              </p>
-              <form id="maform" id="maform" action="" class="needs-validation" novalidate>
-                <dl>
-                  <div class="form__item form__item--border form__item--top-border">
-                    <dt class="form__item-title contract__item-title">譲渡案件タイトル<!--
-                      <div class="form__required">必須</div>
-                    --></dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">譲渡案件タイトル名<!--
-                      <input type="text" class="form-control w-75" placeholder="例：00123456789" required>
-                    --></dd>
-                  </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">相手先の社名、お名前<!--
-                      <div class="form__required">必須</div>
-                    --></dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">株式会社エムアンドエーパーク　平野<!--
-                      <input type="text" class="form-control w-75" placeholder="例：00123456789" required>
-                    --></dd>
-                  </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">御取引金額(税抜)<!--
-                      <div class="form__required">必須</div>
-                    --></dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">123,456,789円<!--
-                      <input type="number" class="form-control w-25" placeholder="例：00123456789" required>円
-                    --></dd>
-                  </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">契約締結日<!--
-                      <div class="form__required">必須</div>
-                    --></dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">2022/01/01<!--
-                      <input id="contractDate" type="text" class="form-control w-25" placeholder="例 : yyyy/mm/dd">
-                    --></dd>
+              <!-- 検索条件 -->
+              <form class="form form--search" action="">
+                <dl class="row m-0">
+                  <div class="col-12 form__item form__item--border form__item--top-border search-form__item">
+                    <dt class="form__item-title search-form__item-title search-negos-form__item-title">ステータス</dt>
+                    <dd class="form__item-input search-form__item-input search-negos-form__item-input">
+                      <div class="form__item-input--flex-wrap">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">受付中</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox2">新規受付停止中</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox3">独占交渉中</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox4">案件終了</label>
+                        </div><div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox5">掲載終了</label>
+                        </div>
+                      </div>
+                    </dd>
                   </div>
                 </dl>
-                <div class="form__action form__action--center">
-                  上記内容で報告します。よろしいですか？
-                </div>
-                <div class="form__action form__action--center">
-                  <button id="btn-back" class="btn btn-secondary ma-btn-back">戻る</button>
-                  <button id="btn-regist" class="btn btn-corp ma-btn-section">報告する</button>
+                <div class="form__action form__action--center form__action-search">
+                  <button class="btn btn-corp ma-btn-search">検索</button>
                 </div>
               </form>
+              <!-- //検索条件 -->
             </div>
+            
+            <!-- div.section__content -->
+            <div class="section__content mt-5">
+              <div class="">
+                <form action="">
+                  <table class="table table-striped matter-list list-transfar">
+                    <thead>
+                      <tr class="">
+                        <th class="fixed list-transfar__item-title">タイトル</th>
+                        <th class="fixed list-transfar__item-last-update">最終更新日</th>
+                        <th class="fixed list-transfar__item-status">新着</th>
+                        <th class="fixed list-transfar__item-regist-user-name">登録者</th>
+                        <th class="fixed list-transfar__item-detail">&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody class="">
+                      <!--template-->
+                      <template id="template">
+                      <tr>
+                        <td class="list-transfar__item-title">${title}</td>
+                        <td class="list-transfar__item-last-update"></td>
+                        <td class="list-transfar__item-status">
+                          <select class="form-select">
+                            <option selected disabled value="">＋選択してください</option>
+                            <option value="1">受付中</option>
+                            <option value="2">新規受付停止中</option>
+                            <option value="3">独占交渉中</option>
+                            <option value="4">案件終了</option>
+                            <option value="5">掲載終了</option>
+                          </select>
+                        </td>
+                        <td class="list-transfar__item-regist-user-name">ユーザ名</td>
+                        <td class="list-transfar__item-detail">
+                          <button class="btn btn-dark">詳細</button>                          
+                        </td>
+                      </tr>
+                    </template>
+                    </tbody>
+                  </table>
+                </form>
+              </div>
+            </div>
+            <!-- //div.section__content -->
+
           </div>
         </section>
       </div>
     </main>
-    <!-- //main.main -->
   </div>
 </body>
 <script>
+  var ma = new Ma();
   $(function() {
-    $('#btn-back').click(function() {
-      $(this).parents("form").attr('method', 'GET').attr('action', './screen_contract.html').submit();
-    });
-    $('#btn-regist').click(function() {
-      $(this).parents("form").attr('method', 'GET').attr('action', './screen_contract_complete.html').submit();
+    ma.sendRequest(ma.createGetArgs({
+      url: './json/list-transfer.json'
+    })).done(function(data, statusText, jqXHR) {
+      var $template = $('#template');
+      var appendChild = [];
+      $(data).each(function(index, elem) {
+        var $content = $($template.clone().html());
+        $content.find('.list-transfar__item-title').text(elem.title);
+        $content.find('.list-transfar__item-last-update').text(elem.lastUpdate);
+        $content.find('.list-transfar__item-status .form-select').val(elem.status);
+        $content.find('.list-transfar__item-regist-user-name').text(elem.registUserName);
+        appendChild.push($content);
+      });
+      $template.parents('tbody').append(appendChild);
     });
   });
 </script>

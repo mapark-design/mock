@@ -61,4 +61,12 @@ $COLUMN-WIDTH-ICON: 5.0rem;
       width: $COLUMN-WIDTH-ICON;
     }
   }
+
+  &__item {
+    &-target {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+  }
 }

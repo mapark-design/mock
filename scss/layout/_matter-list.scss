@@ -1,4 +1,4 @@
-.msg-tbl {
+.matter-list {
 
   tr {
     font-size: 1.8rem;
@@ -15,17 +15,6 @@
 
     &.icon {
       padding: 0.5rem;
-
-      img {
-        min-width: 3.5rem;
-        max-width: 3.5rem;
-      }
-
-      .badge-unread {
-        padding: 0.7rem;
-        top: -0.4rem;
-        left: 95%;
-      }
     }
   }
 }

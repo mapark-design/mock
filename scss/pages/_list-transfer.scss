@@ -1,0 +1,22 @@
+/**
+ * 譲渡案件一覧
+ */
+.list-transfar {
+  &__item {
+    &-title {
+      background-color: white;
+    }
+    &-last-update {
+      width: 12%;
+    }
+    &-status {
+      width: 18%;
+    }
+    &-regist-user-name {
+      width: 19%;
+    }
+    &-detail {
+      width: 6%;
+    }
+  }
+}

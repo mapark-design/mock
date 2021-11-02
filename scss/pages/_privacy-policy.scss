@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as var;
+
+.privacy-policy {
+
+  &__inner {
+    width: var.$WIDTH-DEFAULT;
+  }
+
+  &__item {
+    margin-bottom: 2.0rem;
+
+    &-title {
+      background-color: #eaeaea;
+      padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+      font-size: var.$FONT-SIZE-20;
+    }
+    &-value {
+      padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+      text-align: justify;
+      text-justify: inter-ideograph;
+
+      .collect-and-use {
+        &__item {
+          margin-bottom: 0.75rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          dd {
+            padding-left: 1.5rem;
+          }
+        }
+      }
+
+      .list-type__decimal {
+        padding-left: 2.0rem;
+
+        li {
+          margin-bottom: 0.75rem;
+          
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        .list-type__hyphen {
+          padding-left: 1.0rem;
+        }
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.6;      
+  }
+}

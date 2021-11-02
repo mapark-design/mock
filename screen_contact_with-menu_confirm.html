@@ -194,7 +194,8 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li>お問い合わせ</li>
+            <li><a href="">お問い合わせ</a></li>
+            <li>お問い合わせ&nbsp;確認</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
@@ -210,17 +211,21 @@
                     <dt class="form__item-title contact__item-title">お問い合わせ内容
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input contact__item-input">
+                    <dd class="form__item-input contact__item-input">登録しようとするとエラーが発生する。<br><br>なぜだ！<!--
                       <textarea class="form-control" placeholder="具体的な内容をお書きください。" rows="5"></textarea>
-                    </dd>
+                    --></dd>
                   </div>
                 </dl>
+                <div class="form__action form__action--center">
+                  上記内容で送信します。よろしいですか？
+                </div>
                 <div class="form__action form__action--center">
                   <input type="hidden" name="name">
                   <input type="hidden" name="mail">
                   <input type="hidden" name="tel">
+                  <button id="btn-back" class="btn btn-secondary ma-btn-back">戻る</button>
                   <button id="btn-submit" class="btn btn-corp ma-btn-section">送信する</button>
-                </div>
+                    </div>
               </form>
               <!-- //検索条件 -->
             </div>
@@ -234,8 +239,11 @@
 <script>
   var ma = new Ma();
   $(function() {
+    $('#btn-back').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_contact_with-menu.html').submit();
+    });
     $('#btn-submit').click(function() {
-      $(this).parents('form').attr('method', 'GET').attr('action', './screen_contact_with-menu_confirm.html').submit();
+      $(this).parents('form').attr('method', 'GET').attr('action', './screen_contact_with-menu_complete.html').submit();
     });
   });
 </script>

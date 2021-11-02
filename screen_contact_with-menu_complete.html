@@ -194,7 +194,8 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li>お問い合わせ</li>
+            <li><a href="">お問い合わせ</a></li>
+            <li>お問い合わせ&nbsp;確認</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
@@ -203,28 +204,15 @@
           <div class="section__inner">
             <h2 class="section__title section__title-h2 section__title-h2--ul">お問い合わせ</h2>
             <div class="section__content">
-              <!-- 検索条件 -->
-              <form class="form form--regist" action="">
-                <dl>
-                  <div class="form__item form__item--border form__item--top-border">
-                    <dt class="form__item-title contact__item-title">お問い合わせ内容
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input contact__item-input">
-                      <textarea class="form-control" placeholder="具体的な内容をお書きください。" rows="5"></textarea>
-                    </dd>
+              <div class="complete complete__panel">
+                <div class="complete__inner">
+                  <h2 class="section__title section__title-h2 complete__title">お問い合わせいただきありがとうございます。</h2>
+                  <div class="complete__content">
+                    この度はお問い合わせ頂き、ありがとうございます。<br>
+                    内容を確認の上、担当者よりご連絡差し上げますので、今しばらくお待ちください。<br>
                   </div>
-                </dl>
-                <div class="form__action form__action--center">
-                  <input type="hidden" name="name">
-                  <input type="hidden" name="mail">
-                  <input type="hidden" name="tel">
-                  <button id="btn-submit" class="btn btn-corp ma-btn-section">送信する</button>
                 </div>
-              </form>
-              <!-- //検索条件 -->
-            </div>
-
+              </div>
           </div>
         </section>
       </div>

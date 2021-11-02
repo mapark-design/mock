@@ -10655,6 +10655,25 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
 }
 
+.list-type__decimal {
+  list-style-type: decimal;
+}
+.list-type__decimal li {
+  list-style: decimal;
+}
+.list-type__lower-roman {
+  list-style-type: lower-roman;
+}
+.list-type__lower-roman li {
+  list-style: lower-roman;
+}
+.list-type__hyphen {
+  list-style-type: "－";
+}
+.list-type__hyphen li {
+  list-style: "－";
+}
+
 /**
  * ヘッダコンポーネント。
  * システム共通とし、独自に必要なものは Modifier を利用して設定している。
@@ -12215,6 +12234,136 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contract-details__item-input {
   padding: 1.5rem;
+}
+
+.transactions__inner {
+  width: 1024px;
+}
+.transactions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.transactions__item--border {
+  border-bottom: 1px solid lightgray;
+}
+.transactions__item--top-border {
+  border-top: 1px solid lightgray;
+}
+.transactions__item-title {
+  min-width: 28rem;
+  max-width: 28rem;
+  background-color: #eaeaea;
+  padding: 1.5rem;
+}
+.transactions__item-value {
+  padding: 1.5rem;
+}
+
+.corporate__inner {
+  width: 1024px;
+}
+.corporate__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.corporate__item--border {
+  border-bottom: 1px solid lightgray;
+}
+.corporate__item--top-border {
+  border-top: 1px solid lightgray;
+}
+.corporate__item-title {
+  min-width: 28rem;
+  max-width: 28rem;
+  background-color: #eaeaea;
+  padding: 1.5rem;
+}
+.corporate__item-value {
+  padding: 1.5rem;
+}
+
+.agreement__inner {
+  width: 1366px;
+}
+.agreement__item {
+  margin-bottom: 2rem;
+}
+.agreement__item-title {
+  background-color: #eaeaea;
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+  font-size: 2rem;
+}
+.agreement__item-value {
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.agreement__item-value .collect-and-use__item {
+  margin-bottom: 0.75rem;
+}
+.agreement__item-value .collect-and-use__item:last-of-type {
+  margin-bottom: 0;
+}
+.agreement__item-value .collect-and-use__item dd {
+  padding-left: 1.5rem;
+}
+.agreement__item-value .list-type__decimal {
+  padding-left: 2rem;
+}
+.agreement__item-value .list-type__decimal li {
+  margin-bottom: 0.75rem;
+}
+.agreement__item-value .list-type__decimal li:last-of-type {
+  margin-bottom: 0;
+}
+.agreement__item-value .list-type__decimal .list-type__hyphen {
+  padding-left: 1rem;
+}
+.agreement__text {
+  line-height: 1.6;
+}
+
+.privacy-policy__inner {
+  width: 1366px;
+}
+.privacy-policy__item {
+  margin-bottom: 2rem;
+}
+.privacy-policy__item-title {
+  background-color: #eaeaea;
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+  font-size: 2rem;
+}
+.privacy-policy__item-value {
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+.privacy-policy__item-value .collect-and-use__item {
+  margin-bottom: 0.75rem;
+}
+.privacy-policy__item-value .collect-and-use__item:last-of-type {
+  margin-bottom: 0;
+}
+.privacy-policy__item-value .collect-and-use__item dd {
+  padding-left: 1.5rem;
+}
+.privacy-policy__item-value .list-type__decimal {
+  padding-left: 2rem;
+}
+.privacy-policy__item-value .list-type__decimal li {
+  margin-bottom: 0.75rem;
+}
+.privacy-policy__item-value .list-type__decimal li:last-of-type {
+  margin-bottom: 0;
+}
+.privacy-policy__item-value .list-type__decimal .list-type__hyphen {
+  padding-left: 1rem;
+}
+.privacy-policy__text {
+  line-height: 1.6;
 }
 
 .material-icons-outlined.md-48 {

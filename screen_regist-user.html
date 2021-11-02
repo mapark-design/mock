@@ -58,7 +58,7 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-25" placeholder="例：00123456789" required>
+                  <input type="text" class="form-control w-25" placeholder="例：00000000000" required>
                   <div class="form__caution">海外法人や組合等、法人番号をお持ちでない場合は、固定値として "9999999999999" を入力ください。</div>
                 </dd>
               </div>
@@ -67,7 +67,8 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-25" placeholder="例：000-0000" required>
+                  <input type="text" class="form-control w-25" placeholder="例：1070052" required>
+                  <div class="form__caution">ハイフンなしで入力してください。</div>
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -85,7 +86,7 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください" required>
+                  <input type="text" class="form-control w-50" placeholder="例：港区赤坂" required>
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -93,19 +94,19 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください" required>
+                  <input type="text" class="form-control w-50" placeholder="例：２丁目２３−１" required>
                 </dd>
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">建物名</dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください">
+                  <input type="text" class="form-control w-50" placeholder="例：アークヒルズフロントタワー　１７Ｆ">
                 </dd>
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">所属部署</dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください">
+                  <input type="text" class="form-control w-50" placeholder="例：代表取締役社長">
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -135,20 +136,20 @@
                 <dt class="form__item-title regist-user__item-title">M&A実績件数
                   <div class="form__required">必須</div>
                 </dt>
-                <dd class="form__item-input--flex-center regist-user__item-input">
-                  <input type="number" class="form-control w-25" placeholder="例：3">件
+                <dd class="form__item-input form__item-input--flex-center regist-user__item-input">
+                  <input type="text" class="form-control w-25 format-comma" placeholder="例：3">件
                 </dd>
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">自社サイトURL</dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-50" placeholder="30文字以内で入力してください">
+                  <input type="text" class="form-control w-75" placeholder="https://m.ma-park.com/">
                 </dd>
               </div>
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">資本金</dt>
                 <dd class="form__item-input form__item-input--flex-center regist-user__item-input">
-                  <input type="text" class="form-control w-25" placeholder="例：2000万">円
+                  <input type="text" class="form-control w-25 format-comma" placeholder="例：2000000">円
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -156,7 +157,7 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input form__item-input--flex-center regist-user__item-input">
-                  <input type="text" class="form-control w-25" placeholder="例：2000">年
+                  <input type="text" class="form-control w-25" placeholder="例：2021">年
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -175,7 +176,7 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <select class="form-select w-25">
+                  <select class="form-select w-25 form-listing">
                     <option selected disabled value="">＋選択してください</option>
                   </select>
                 </dd>
@@ -183,7 +184,7 @@
               <div class="form__item form__item--border">
                 <dt class="form__item-title regist-user__item-title">前年度売上高</dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <select class="form-select w-25">
+                  <select class="form-select w-50 form-sales">
                     <option selected disabled value="">＋選択してください</option>
                   </select>
                 </dd>
@@ -198,18 +199,22 @@
                 </dd>
               </div>
               <div class="form__item form__item--border">
-                <dt class="form__item-title regist-user__item-title">本人証明書提出書類</dt>
+                <dt class="form__item-title regist-user__item-title">本人証明書提出書類
+                  <div class="form__required">必須</div>
+                </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <div class="form__item-section mb-3">
-                    個人事業主の方はご本人確認のため、下記2種類の書類をアップロードしてください。
+                  <div class="form__item-section mb-5">
+                    個人事業主の方はご本人確認のため、下記2種類の書類をアップロードしてください。<br>なお、アップロードファイルは以下に注意してください。<br>
+                    ・画像ファイル（jpg/png/bmp）またはPDFファイルのみ<br>
+                    ・それぞれ4MB以内<br>
                   </div>
                   <div class="form__item-section">
                     <label for="formFile1" class="form-label">開業届</label>
-                    <input class="form-control width-60" type="file" id="formFile1" required>
+                    <input class="form-control width-60" type="file" id="formFile1" accept=".jpg,.jpeg,.png,.bmp,.pdf" required>
                   </div>
                   <div class="form__item-section">
                     <label for="formFile2" class="form-label">保険証またはパスポート</label>
-                    <input class="form-control width-60" type="file" id="formFile2" required>
+                    <input class="form-control width-60" type="file" id="formFile2" accept=".jpg,.jpeg,.png,.bmp,.pdf" required>
                   </div>
                 </dd>
               </div>
@@ -323,7 +328,11 @@
     // サンプル画面のため、json からデータを展開する。
     // 都道府県
     ma.setOptions('./json/master-prefecture.json', '.form-prefecture');
-    // チア王可能な専門業務領域、専門家への相談依頼
+    // 上場区分
+    ma.setOptions('./json/master_listing.json', '.form-listing');
+     // 前年度売上高
+    ma.setOptions('./json/master_sales.json', '.form-sales');
+    // 対応可能な専門業務領域、専門家への相談依頼
     ma.setCheckbox('./json/master-specialty.json', '.consultation-specialty', 'form-consultation-specialty');
     ma.setCheckbox('./json/master-specialty.json', '.specialty', 'form-specialty');
 

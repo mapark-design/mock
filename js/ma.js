@@ -8,7 +8,11 @@ const CONST = {
   // リクエストタイムアウト
   REQ_TIME_OUT: 10000,
   // キャッシュ
-  REQ_CASHE: false
+  REQ_CASHE: false,
+  // アイコン文字列：visibility
+  ICON_TEXT_VISIBILITY: 'visibility',
+  // アイコン文字列：visibility
+  ICON_TEXT_VISIBILITY_OFF: 'visibility_off'
 };
 
 class Ma {
@@ -37,6 +41,30 @@ class Ma {
     } else {
       // footer が表示されていない場合、一定箇所にアイコンを固定する。
       $("#icon-regist").css('bottom', '10px');
+    }
+  }
+
+  /**
+   * 画面上部に戻る：アイコンスクロール処理
+   */
+  scrollTopIcon = function() {
+    let $icon = $("#icon-top");
+    if ($icon.length == 0) {
+    $icon = $('<div>').attr('id', 'icon-top').addClass('move-top');
+      let $button = $('<button>').addClass('move-top__icon');
+      $('<span>').addClass('material-icons-outlined').addClass('md-48').text('vertical_align_top').appendTo($button);
+      $button.appendTo($icon);
+      $icon.appendTo($('body'));
+    }
+    // スクロール値の取得
+    var scrollTop = $(this).scrollTop();
+    if (scrollTop > CONST.HEADER_HEIGHT) {
+      // スクロールがヘッダの高さを超えている場合、無料登録アイコンを表示する。
+      $icon.fadeIn(500);
+
+    } else {
+      // そうでない場合、無料登録アイコンを表示しない。
+      $icon.fadeOut(500);
     }
   }
 
@@ -148,11 +176,19 @@ class Ma {
     }, selector);
   }
 
+  /**
+   * ロード中のスクリーン表示。
+   * ※#loader必須
+   */
   loadScreen = function() {
     $("#loader").fadeIn(300).css('display', 'table');
   }
 
-  offScreen = function() {
+  /**
+   * ロード中のスクリーン非表示。
+   * ※#loader必須
+   */
+   offScreen = function() {
     $("#loader").fadeOut(300);
   }
 
@@ -265,13 +301,69 @@ $(function () {
       }
     }, 200);
   });
-  $(window).trigger('resize')
+  $(window).trigger('resize');
 
+  // スクロール処理
+  $(window).scroll(function() {
+    if ($('#icon-regist').length > 0) {
+      return false;
+    }
+    let $icon = $("#icon-top");
+    if ($icon.length == 0) {
+    $icon = $('<div>').attr('id', 'icon-top').addClass('move-top');
+      let $button = $('<button>').addClass('move-top__icon');
+      $button.click(function() {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 500);
+      });
+      $('<span>').addClass('material-icons-outlined').addClass('md-48').text('vertical_align_top').appendTo($button);
+      $button.appendTo($icon);
+      $icon.appendTo($('body'));
+    }
+    // スクロール値の取得
+    var scrollTop = $(this).scrollTop();
+    if (scrollTop > CONST.HEADER_HEIGHT) {
+      // スクロールがヘッダの高さを超えている場合、無料登録アイコンを表示する。
+      $icon.fadeIn(500);
+
+    } else {
+      // そうでない場合、無料登録アイコンを表示しない。
+      $icon.fadeOut(500);
+    }
+  });
+
+  // 利用しているjsの都合で、エンターキーを無効化
   $('#maform input').keydown(function(e) {
     if (e.which === 13) {
       $(this).blur();
       $(this).focus();
       return false;
+    }
+  });
+
+  // パスワードの目を押下して項目の表示/非表示を切り替える
+  $('.password-eye').click(function() {
+    if (CONST.ICON_TEXT_VISIBILITY === $(this).text()) {
+      $(this).parent('.form__item-input--password').children('.form-control').attr('type', 'text');
+      $(this).text(CONST.ICON_TEXT_VISIBILITY_OFF);
+      return;
+    }
+    $(this).text(CONST.ICON_TEXT_VISIBILITY);
+    $(this).parent('.form__item-input--password').children('.form-control').attr('type', 'password');
+  });
+
+  // カンマ編集を設定する
+  $('.format-comma').focus(function() {
+    let reg = new RegExp(',', 'g');
+    let val = $(this).val().replace(reg, '');
+    if (!isNaN(val)) {
+      $(this).val(val);
+      $(this).select();
+    }
+  }).blur(function() {
+    if ($(this).val().trim().length != 0 && !isNaN($(this).val())) {
+      $(this).val(Number($(this).val()).toLocaleString());
     }
   });
 });

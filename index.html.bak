@@ -76,8 +76,8 @@
           <dd><!a href="./screen_regist-buyer.html" target="_blank">買収ニーズ登録</a></dd>
           <dd><a href="./screen_search-seller.html" target="_blank">譲渡案件検索</a></dd>
           <dd><a href="./screen_detail-seller.html" target="_blank">譲渡案件詳細</a></dd>
-          <dd><!a href="./screen_detail-seller_confirm.html" target="_blank">譲渡案件詳細　確認画面(交渉申込)</a></dd>
-          <dd><!a href="./screen_detail-seller_complete.html" target="_blank">譲渡案件詳細　完了画面(交渉申込)</a></dd>
+          <dd><a href="./screen_detail-seller_confirm.html" target="_blank">譲渡案件詳細　確認画面(交渉申込)</a></dd>
+          <dd><a href="./screen_detail-seller_complete.html" target="_blank">譲渡案件詳細　完了画面(交渉申込)</a></dd>
         </dl>
       </div>
       <div class="">

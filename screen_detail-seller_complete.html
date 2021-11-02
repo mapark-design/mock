@@ -18,7 +18,7 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
-  <title>成約報告</title>
+  <title>交渉申込</title>
 </head>
 <body>
   <div class="layout">
@@ -50,10 +50,10 @@
       <div class="ma-nav__inner">
         <div class="ma-nav__button">
           <button class="btn btn-light ma-btn-nav">マイページTOP</button>
-        </div>
-        <div class="ma-nav__classification"><!--
+        </div><!--
+        <div class="ma-nav__classification">
           <div class="ma-nav__classification-title">売り手メニュー</div>
-          --><ul class="ma-nav__item-list">
+          <ul class="ma-nav__item-list">
             <li class="ma-nav__item">
               <img src="./img/icon/icon-search.svg">
               <span class="ma-nav__item-category">買い手を探す</span>
@@ -80,10 +80,10 @@
               <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
             </li>
           </ul>
-        </div><!--
-        <div class="ma-nav__classification">
+        </div>
+      --><div class="ma-nav__classification"><!--
           <div class="ma-nav__classification-title">買い手メニュー</div>
-          <ul class="ma-nav__item-list">
+          --><ul class="ma-nav__item-list">
             <li class="ma-nav__item">
               <img src="./img/icon/icon-search.svg">
               <span class="ma-nav__item-category">譲渡案件を探す</a>
@@ -113,7 +113,7 @@
               <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
             </li>
           </ul>
-        </div>
+        </div><!--
         <div class="ma-nav__classification">
           <div class="ma-nav__classification-title">買い手メニュー</div>
           <ul class="ma-nav__item-list">
@@ -152,12 +152,12 @@
             <li class="ma-nav__item ma-nav__item-common">
               <img src="./img/icon/icon-userinfo.svg">
               <a href="" class="ma-nav__item-category">会員情報</a>
-            </li><!--
+            </li>
             <li class="ma-nav__item">
               <img src="./img/icon/icon-plan.svg">
               <a href="" class="ma-nav__item-category">契約プラン</a>
             </li>
-          --></ul>
+          </ul>
         </div>
         <div class="ma-nav__classification">
           <ul class="ma-nav__item-list">
@@ -198,58 +198,26 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li>成約報告</li>
+            <li><a href="">譲渡案件詳細</a></li>
+            <li><a href="">交渉申込&nbsp;確認</a></li>
+            <li>交渉申込&nbsp;完了</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
 
         <section class="section">
           <div class="section__inner contract__inner">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">成約報告</h2>
+            <h2 class="section__title section__title-h2 section__title-h2--ul">交渉申込</h2>
             <div class="section__content">
-              <p class="mb-3">
-              ご成約おめでとうございます。<br>
-              ご成約内容についてお教えください。
-              </p>
-              <form id="maform" action="" class="needs-validation" novalidate>
-                <dl>
-                  <div class="form__item form__item--border form__item--top-border">
-                    <dt class="form__item-title contract__item-title">譲渡案件タイトル
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください" required>
-                    </dd>
+              <div class="complete complete__panel">
+                <div class="complete__inner">
+                  <h2 class="section__title section__title-h2 complete__title">交渉の提案が完了しました。</h2>
+                  <div class="complete__content">
+                    決済が完了しました。<br>
+                    お申込み内容は、マイページの「契約プラン」よりご確認いただけます。<br>
                   </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">相手先の社名、お名前
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input type="text" class="form-control w-75" placeholder="例：株式会社エムアンドエーパーク　田中様" required>
-                    </dd>
-                  </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">御取引金額(税抜)
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input type="text" class="form-control w-25 format-comma" placeholder="例：2000000" required>円
-                    </dd>
-                  </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">契約締結日
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input id="contractDate" type="text" class="form-control w-25" placeholder="例 : yyyy/mm/dd">
-                    </dd>
-                  </div>
-                </dl>
-                <div class="form__action form__action--center">
-                  <button id="btn-regist" class="btn btn-corp ma-btn-section">報告する</button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </section>
@@ -260,15 +228,11 @@
 </body>
 <script>
   $(function() {
-    flatpickr('#contractDate', {
-      locale: 'ja',
-      dateFormat: 'Y/m/d',
-      allowInput: true,
-      defaultDate: new Date()
+    $('#btn-back').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-seller.html').submit();
     });
-
     $('#btn-regist').click(function() {
-      $(this).parents('form').attr('method', 'GET').attr('action', './screen_contract_confirm.html').submit();
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-seller_complete.html').submit();
     });
   });
 </script>

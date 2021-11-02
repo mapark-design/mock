@@ -240,7 +240,7 @@
                           <dt class="form__item-title detail-seller__item-title">タイトル
                           </dt>
                           <dd class="form__item-input detail-seller__item-input">ECサイトを譲渡します。<!--
-                            <input type="text" class="form-control w-75" placeholder="30文字以内で入力してください">
+                            <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください">
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
@@ -676,7 +676,12 @@
       </div>
     </main>
     <!-- //main.main -->
-
   </div>
 </body>
+<script>
+  var ma = new Ma();
+  $(function() {
+    $(window).scroll(ma.scrollTopIcon);
+  });
+</script>
 </html>

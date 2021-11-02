@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>契約プラン</title>
+</head>
+<body>
+  <div class="layout">
+    <!-- header.header -->
+    <header class="header">
+      <div class="header__inner header__inner--login">
+        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg"></h1>
+        <nav class="header__nav"><!--
+          <div class="header__global-nav">
+            <ul class="header__nav-list header__nav-list--global-nav">
+              <li><a href="" class="">サービスについて</a></li>
+              <li><a href="" class="">よくあるご質問</a></li>
+              <li><a href="" class="">お問い合わせ</a></li>
+            </ul>
+          </div>
+          --><div class="header__user-nav">
+            <ul class="header__nav-list header__nav-list--user-nav"><!--
+              <li><a href="" class="">会員登録</a></li>
+              --><li><button class="btn btn-outline-corp ma-btn-logout">ログアウト</button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- //header.header -->
+
+    <!-- nav.ma-nav -->
+    <nav class="ma-nav">
+      <div class="ma-nav__inner">
+        <div class="ma-nav__button">
+          <button class="btn btn-light ma-btn-nav">マイページTOP</button>
+        </div><!--
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">売り手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">買い手を探す</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買い手を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">提案中の買い手一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">譲渡案件管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の譲渡案件一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>-->
+        <div class="ma-nav__classification"><!--
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          --><ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-userinfo.svg">
+              <a href="" class="ma-nav__item-category">会員情報</a>
+            </li>
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-plan.svg">
+              <a href="" class="ma-nav__item-category">契約プラン</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-manual.svg">
+              <a href="./screen_how-to-use.html" class="ma-nav__item-category" target="_blank">ご利用方法</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-compass.svg">
+              <a href="./screen_download.html" class="ma-nav__item-category" target="_blank">お役立ち資料</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-consult.svg">
+              <a href="" class="ma-nav__item-category">専門家に相談する</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-finale.svg">
+              <a href="./screen_contract.html" class="ma-nav__item-category">成約報告</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qa.svg">
+              <a href="./screen_faq_pop.html" class="ma-nav__item-category" target="_blank">よくあるご質問</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qaform.svg">
+              <a href="" class="ma-nav__item-category">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- //nav.ma-nav -->
+
+    <!-- main.main -->
+    <main class="main" >
+      <div class="main__inner">
+        <!-- breadcrumb__nav -->
+        <nav class="breadcrumb__nav">
+          <ul class="breadcrumb__list">
+            <li><a href="">マイページ</a></li>
+            <li>契約プラン</li>
+          </ul>
+        </nav>
+        <!-- //breadcrumb__nav --><!--
+
+        <div class="mypage-alert">
+          <ul class="mypage-alert__list">
+            <li class="mypage-alert__item">
+              <span class="mypage-alert__icon material-icons-outlined md-48">info</span>
+              <div class="mypage-alert__text-area">
+                <a class="mypage-alert__text" href="">ご利用プランを選択してください。</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        -->
+        <section class="section">
+          <div class="section__inner">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">契約プラン</h2>
+            <div class="section__content">
+
+              <!-- 現在の契約状態 -->
+              <div class="contract-details__current">
+                <dl>
+                  <div class="form__item form__item--border form__item--top-border contract-details__item">
+                    <dt class="form__item-title contract-details__item-title w-25">契約中のプラン</dt>
+                    <dd class="form__item-input contract-details__item-input">スタンダードプラン<!--未契約--></dd>
+                  </div>
+                  <div class="form__item form__item--border contract-details__item">
+                    <dt class="form__item-title contract-details__item-title w-25">契約期間</dt>
+                    <dd class="form__item-input contract-details__item-input">2021年12月10日 ～ 2022年12月9日<!--－--></dd>
+                  </div>
+                </dl>
+              </div>
+              <!-- // 現在の契約状態 -->
+
+              <!-- 契約プラン -->
+              <form>
+                <div class="contract-plan">
+                  <div class="contract-plan__header">M&amp;A PARKの月額プラン</div><!--
+                  <div class="contract-plan__header contract-plan__header--select">プランを選択してください。</div>
+                  --><ul class="contract-plan__list">
+                    <li class="">
+                      <div class="contract-plan__item">
+                        <div class="contract-plan__title">エントリープラン</div>
+                        <div class="contract-plan__body">
+                          <div class="contract-plan__content text-center">
+                            譲渡希望価格<br><span style="font-size: 2.4rem; font-weight: bold;">500万円以内</span><br>の
+                            案件で交渉可能
+                          </div>
+                          <div class="contract-plan__content  text-center">
+                            <div class="contract-plan__price"><span style="font-size: 2.8rem; font-weight: bold; color: red;">2,980</span>円/月</div>
+                            <div class="contract-plan__price-taxin">(税込3,278円/月)</div>
+                            <div class="contract-plan__price-year"><span style="font-size: 1.6rem;">税込39,335円/年</span></div>
+                          </div>
+                          <div class="contract-plan__content">
+                            <div class="contract-plan__detail">
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">交渉リクエスト数</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">無制限</div>
+                              </div>
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">成約時手数料</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">0円</div>
+                              </div>
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">契約期間</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">1年間</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--
+                      <div class="div text-center mt-5">
+                        <button class="btn btn-corp">このプランを選択する</button>
+                      </div>
+                    --></li>
+                    <li>
+                      <div class="contract-plan__item">
+                        <div class="contract-plan__title">スタンダードプラン</div>
+                        <div class="contract-plan__body">
+                          <div class="contract-plan__content text-center">
+                            譲渡希望価格<br><span style="font-size: 2.4rem; font-weight: bold;">3,000万円以内</span><br>の
+                            案件で交渉可能
+                          </div>
+                          <div class="contract-plan__content text-center">
+                            <div class="contract-plan__price"><span style="font-size: 2.8rem; font-weight: bold; color: red;">7,980</span>円/月</div>
+                            <div class="contract-plan__price-taxin">(税込8,778円/月)</div>
+                            <div class="contract-plan__price-year"><span style="font-size: 1.6rem;">税込105,336円/年</span></div>
+                          </div>
+                          <div class="contract-plan__content">
+                            <div class="contract-plan__detail">
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">交渉リクエスト数</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">無制限</div>
+                              </div>
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">成約時手数料</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">0円</div>
+                              </div>
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">契約期間</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">1年間</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--
+                      <div class="div text-center mt-5">
+                        <button class="btn btn-corp">このプランを選択する</button>
+                      </div>
+                    --></li>
+                    <li>
+                      <div class="contract-plan__item">
+                        <div class="contract-plan__title">プレミアムプラン</div>
+                        <div class="contract-plan__body">
+                          <div class="contract-plan__content text-center">
+                            譲渡希望価格<br><span style="font-size: 2.4rem; font-weight: bold;">すべて</span><br>の
+                            案件で交渉可能
+                          </div>
+                          <div class="contract-plan__content text-center">
+                            <div class="contract-plan__price"><span style="font-size: 2.8rem; font-weight: bold; color: red;">14,800</span>円/月</div>
+                            <div class="contract-plan__price-taxin">(税込16,280円/月)</div>
+                            <div class="contract-plan__price-year"><span style="font-size: 1.6rem;">税込195,460円/年</span></div>
+                          </div>
+                          <div class="contract-plan__content">
+                            <div class="contract-plan__detail">
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">交渉リクエスト数</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">無制限</div>
+                              </div>
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">成約時手数料</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">0円</div>
+                              </div>
+                              <div class="contract-plan__detail-row">
+                                <div class="contract-plan__detail-cell">契約期間</div>
+                                <div class="contract-plan__detail-cell contract-plan__detail-cell--value">1年間</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!--
+                      <div class="div text-center mt-5">
+                        <button class="btn btn-corp">このプランを選択する</button>
+                      </div>
+                    --></li>
+                  </ul>
+                </div>
+              </form>
+
+              <div class="mt-5 text-center">
+                プラン変更をご希望の方は、お問い合わせください。<br>
+                ※下位プランへのご変更は、更新月のみ可能です。<br>
+                <button class="btn btn-corp mt-3">プラン変更についてお問い合わせする</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+    <!-- //main.main -->
+
+  </div>
+</body>
+</html>

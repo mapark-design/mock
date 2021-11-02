@@ -34,6 +34,12 @@
         font-size: var.$FONT-SIZE-16;
       }
 
+      &--password {
+        display: flex;
+        align-items: center;
+        column-gap: 1.0rem;
+      }
+
       @at-root {
         %--flex {
           display: flex;

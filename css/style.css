@@ -10625,6 +10625,36 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.move-top {
+  display: none;
+  opacity: 0.5;
+}
+.move-top__icon {
+  width: 64px;
+  height: 64px;
+  bottom: 14px;
+  right: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  border: 0;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 2px 0 #3c4043, 0 2px 6px 2px rgba(60, 64, 67, 0.5);
+          box-shadow: 0 1px 2px 0 #3c4043, 0 2px 6px 2px rgba(60, 64, 67, 0.5);
+  position: fixed;
+  cursor: pointer;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  z-index: 99;
+}
+
 /**
  * ヘッダコンポーネント。
  * システム共通とし、独自に必要なものは Modifier を利用して設定している。
@@ -11024,6 +11054,17 @@ h1, h2, h3, h4, h5, h6 {
 .form__item-input .form-select {
   font-size: 1.6rem;
 }
+.form__item-input--password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+}
 .form__item-input--flex-wrap, .form__item-input--flex-end, .form__item-input--flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11278,6 +11319,87 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem;
 }
 
+.contract-plan {
+  margin-top: 3rem;
+}
+.contract-plan__header {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+.contract-plan__header--select {
+  margin-bottom: 3rem;
+  color: #c8161d;
+}
+.contract-plan__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
+}
+.contract-plan__list li {
+  width: 30rem;
+}
+.contract-plan__item {
+  border: 1px solid gray;
+  max-width: 30rem;
+}
+.contract-plan__title {
+  background-color: #c8161d;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.contract-plan__body {
+  padding: 0 1rem;
+}
+.contract-plan__content {
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+}
+.contract-plan__content:last-of-type {
+  border-bottom: none;
+}
+.contract-plan__detail {
+  display: table;
+  width: 100%;
+}
+.contract-plan__detail-row {
+  display: table-row;
+}
+.contract-plan__detail-cell {
+  display: table-cell;
+}
+.contract-plan__detail-cell--value {
+  width: 6rem;
+}
+
+.complete__panel {
+  padding-top: 3.2rem;
+}
+.complete__inner {
+  margin: 0.5rem 1rem;
+}
+.complete__title {
+  text-align: center;
+}
+.complete__content {
+  margin-top: 3.2rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.complete__buttons {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+
 .section-nolog:nth-of-type(even) {
   background-color: #dabbbb;
 }
@@ -11381,59 +11503,46 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+.sitetop-newarrival__subject, .sitetop-newarrival__item-value, .sitetop-newarrival__item-title {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
 .sitetop-newarrival__list {
   width: 1024px;
   margin: 0 auto;
 }
 .sitetop-newarrival__item {
   background-color: white;
-  display: grid;
-  grid-template-columns: 12rem 12rem auto;
-  grid-template-rows: repeat(3, auto);
-  padding: 1rem;
+  padding: 0.5rem 1.5rem;
   margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
 }
-.sitetop-newarrival__image {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 4;
+.sitetop-newarrival__item-title {
+  font-weight: normal;
+  min-width: 13rem;
 }
-.sitetop-newarrival .sitetop-newarrival__area-value, .sitetop-newarrival .sitetop-newarrival__area-label, .sitetop-newarrival .sitetop-newarrival__price-value, .sitetop-newarrival .sitetop-newarrival__price-label, .sitetop-newarrival .sitetop-newarrival__title {
-  margin-bottom: 0.5rem;
-  text-align: left;
+.sitetop-newarrival__item-title--sales {
+  min-width: 8rem;
 }
-.sitetop-newarrival__title {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+.sitetop-newarrival__item-value-value--checklist {
+  line-height: 1.2;
+}
+.sitetop-newarrival__item .row {
+  padding-top: 1rem;
+}
+.sitetop-newarrival__item .row:first-of-type {
+  padding-top: 0;
+}
+.sitetop-newarrival__item .row:nth-child(2) {
+  border-top: 1px solid darkgray;
+}
+.sitetop-newarrival__item .row--first {
+  padding-top: 0;
+}
+.sitetop-newarrival__subject {
   font-weight: bold;
   font-size: 2.4rem;
-}
-.sitetop-newarrival__price-label {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.sitetop-newarrival__price-value {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.sitetop-newarrival__area-label {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-.sitetop-newarrival__area-value {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
 }
 
 .sitetop-flowtouse__list {
@@ -11668,6 +11777,18 @@ h1, h2, h3, h4, h5, h6 {
 .regist-user-seller__inner--no-padding-top {
   padding-top: 0;
   padding-bottom: 0;
+}
+.regist-user-seller__item--header {
+  min-width: 25rem;
+  max-width: 25rem;
+  background-color: white;
+  padding: 0.5rem 1.5rem;
+}
+.regist-user-seller-input {
+  padding: 1.5rem;
+}
+.regist-user-seller-input--header {
+  padding: 0.5rem 1.5rem;
 }
 
 .login__inner {
@@ -12044,6 +12165,22 @@ h1, h2, h3, h4, h5, h6 {
           column-gap: 0.5rem;
 }
 
+/**
+ * 問い合わせ画面
+ */
+.contact__inner {
+  width: 1024px;
+}
+.contact__item-title {
+  min-width: 25rem;
+  max-width: 25rem;
+  background-color: #eaeaea;
+  padding: 1.5rem;
+}
+.contact__item-input {
+  padding: 1.5rem;
+}
+
 .contract__item-title {
   min-width: 30rem;
   max-width: 30rem;
@@ -12068,6 +12205,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .complete__caution-text {
   font-size: 1.6rem;
+}
+
+.contract-details__item-title {
+  min-width: 25rem;
+  max-width: 25rem;
+  background-color: #eaeaea;
+  padding: 1.5rem;
+}
+.contract-details__item-input {
+  padding: 1.5rem;
 }
 
 .material-icons-outlined.md-48 {

@@ -1,0 +1,30 @@
+[
+  {
+    "planName": "エントリープラン",
+    "negoLimit": "500万以内",
+    "price": "2,980",
+    "priceTaxIn": "3,278",
+    "priceYear": "39,336",
+    "limitRequest": "無制限",
+    "commission": "0円",
+    "term": "1年間"    
+  },{
+    "planName": "スタンダードプラン",
+    "negoLimit": "3,000万以内",
+    "price": "7,980",
+    "priceTaxIn": "8,778",
+    "priceYear": "105,336",
+    "limitRequest": "無制限",
+    "commission": "0円",
+    "term": "1年間"
+  },{
+    "planName": "プレミアムプラン",
+    "negoLimit": "全て",
+    "price": "14,800",
+    "priceTaxIn": "16,280",
+    "priceYear": "195,360",
+    "limitRequest": "無制限",
+    "commission": "0円",
+    "term": "1年間"
+  }
+]

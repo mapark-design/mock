@@ -189,7 +189,7 @@
     <!-- //nav.ma-nav -->
 
     <!-- main.main -->
-    <main class="main" >
+    <main class="main">
       <div class="main__inner">
         <!-- breadcrumb__nav -->
         <nav class="breadcrumb__nav">
@@ -205,26 +205,26 @@
           <div class="section__inner detail-seller__inner">
             <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件詳細</h2>
             <div class="section__content">
-              <!-- 一覧画面に戻るボタン -->
-              <div class="text-end">
-                <button class="btn btn-secondary ma-btn-back">買い手一覧に戻る</button>
-              </div>
-
-              <!-- 詳細情報ヘッダ部 -->
-              <div class="detail-seller__header">
-                <ul class="check-list">
-                  <li class="check-list__item check-list__item--owner">オーナー</li>
-                  <li class="check-list__item">株式譲渡</li>
-                </ul>
-                <h3 class="detail-seller__header-title">ECサイトを譲渡します。</h3>
-                <div class="detail-seller__header-date">2021/12/30公開</div>
-              </div>
-
-              <div class="form__action form__action--center">
-                <button class="btn btn-corp ma-btn-fw">交渉申込をする</button>
-              </div>
-
               <form class="needs-validation" novalidate>
+                <!-- 一覧画面に戻るボタン -->
+                <div class="text-end">
+                  <button class="btn btn-secondary ma-btn-back">譲渡案件一覧に戻る</button>
+                </div>
+
+                <!-- 詳細情報ヘッダ部 -->
+                <div class="detail-seller__header">
+                  <ul class="check-list">
+                    <li class="check-list__item check-list__item--owner">オーナー</li>
+                    <li class="check-list__item">株式譲渡</li>
+                  </ul>
+                  <h3 class="detail-seller__header-title">ECサイトを譲渡します。</h3>
+                  <div class="detail-seller__header-date">2021/12/30公開</div>
+                </div>
+
+                <div class="form__action form__action--center">
+                  <button id="btn-suggest" class="btn btn-corp ma-btn-fw">交渉申込をする</button>
+                </div>
+
                 <!-- 案件情報 -->
                 <section class="section">
                   <div class="section__inner detail-seller__inner">
@@ -255,7 +255,7 @@
                           <dt class="form__item-title detail-seller__item-title">タイトル
                           </dt>
                           <dd class="form__item-input detail-seller__item-input">
-                            <input type="text" class="form-control w-75" placeholder="30文字以内で入力してください">
+                            <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください">
                           </dd>
                         </div>
                         --><div class="form__item form__item--border">
@@ -686,36 +686,74 @@
                 -->
 
                 <!-- div.suggest-form -->
-                <div class="form suggest-form">
-                  <h3 class="suggest-form__heading">もっと詳しく知りたい場合は、交渉申込を行いましょう</h3>
-                  <dl>
-                    <dt class="suggest-form__item-title">提案する譲渡案件</dt>
-                    <dd class="suggest-form__item-input">
-                      <select class="form-select">
-                        <option selected>＋選択してください</option>
-                      </select>
-                    </dd>
-                    <dt class="suggest-form__item-title">買い手候補者へのメッセージ</dt>
-                    <dd class="form__item-input suggest-form__item-input">
-                      <p class="mb-3">
-                        買い手候補者へのメッセージをご記入ください。<br>
-                        あなたの社名などの情報は、買い手候補者には非公開となる為、<br>
-                        メールアドレスや電話番号などは記載できません。<br>
-                      </p>
-                      <textarea class="form-control font-size-14" rows="6">記入例：
+                <div id="suggest-form">
+                  <div class="form suggest-form">
+                    <h3 class="suggest-form__heading">もっと詳しく知りたい場合は、交渉申込を行いましょう</h3>
+                    <dl>
+                      <dt class="suggest-form__item-title">売り手企業様へのメッセージ</dt>
+                      <dd class="form__item-input suggest-form__item-input">
+                        <p class="mb-3">
+                          売り手企業様へのメッセージをご記入ください。<br>
+                          初回のメッセージでは、まずは自己紹介から始めましょう。<br>
+                        </p>
+                        <textarea class="form-control font-size-14" rows="6">記入例：
+ご担当者様
+
+貴殿の案件情報を拝見し、限られた情報からですが、弊社の事業と親和性があるのでは
+ないかとお見受けしご連絡いたしました。ご興味をお持ちいただけましたら
+ご返信いただけますと幸いです。ご検討の程、よろしくお願いいたします。</textarea>
+                      </dd>
+                      <dt class="suggest-form__item-title">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox2">自社名を開示して交渉申込をする</label>
+                        </div>
+                      </dt>
+                      <dd class="form__item-input suggest-form__item-input">
+                        <p class="mb-3">自社名を開示せずに交渉申込を行いたい場合は、チェックを外してください。</p>
+                      </dd>
+                    </dl>
+                    <div class="form__action form__action--center suggest-form__action">
+                      <button class="btn btn-secondary ma-btn-back">譲渡案件一覧検索に戻る</button>
+                      <button id="btn-regist" class="btn btn-corp ma-btn-fw">交渉申込をする</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- //div.suggest-form --><!--
+                  以下は売り手向けのコードなので、本当は不要だが
+                  念のためコメントアウトしておく。
+                <div id="suggest-form">
+                  <div class="form suggest-form">
+                    <h3 class="suggest-form__heading">もっと詳しく知りたい場合は、交渉申込を行いましょう</h3>
+                    <dl>
+                      <dt class="suggest-form__item-title">提案する譲渡案件</dt>
+                      <dd class="suggest-form__item-input">
+                        <select class="form-select">
+                          <option selected>＋選択してください</option>
+                        </select>
+                      </dd>
+                      <dt class="suggest-form__item-title">買い手候補者へのメッセージ</dt>
+                      <dd class="form__item-input suggest-form__item-input">
+                        <p class="mb-3">
+                          買い手候補者へのメッセージをご記入ください。<br>
+                          あなたの社名などの情報は、買い手候補者には非公開となる為、<br>
+                          メールアドレスや電話番号などは記載できません。<br>
+                        </p>
+                        <textarea class="form-control font-size-14" rows="6">記入例：
 ご担当者様
 
 貴殿の企業情報を拝見し、限られた情報からですが、弊社の事業と親和性があるのでは
 ないかとお見受けしご連絡いたしました。ご興味をお持ちいただけましたら、ご返信
 いただけますと幸いです。ご検討の程、よろしくお願いいたします。</textarea>
-                    </dd>
-                  </dl>
-                  <div class="form__action form__action--center suggest-form__action">
-                    <button class="btn btn-secondary ma-btn-back">譲渡案件一覧検索に戻る</button>
-                    <button class="btn btn-corp ma-btn-fw">譲渡案件を提案する</button>
+                      </dd>
+                    </dl>
+                    <div class="form__action form__action--center suggest-form__action">
+                      <button class="btn btn-secondary ma-btn-back">譲渡案件一覧検索に戻る</button>
+                      <button id="btn-regist" class="btn btn-corp ma-btn-fw">譲渡案件を提案する</button>
+                    </div>
                   </div>
                 </div>
-                <!-- //div.suggest-form -->
+                -->
               </form>
             </div>
           </div>
@@ -723,7 +761,27 @@
       </div>
     </main>
     <!-- //main.main -->
-
   </div>
 </body>
+<script>
+  let ma = new Ma();
+  $(function() {
+    $(window).scroll(ma.scrollTopIcon);
+    
+    $('.btn-secondary').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_search-seller.html').submit();
+    });
+    $('#btn-regist').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-seller_confirm.html').submit();
+    });
+    $('#btn-suggest').click(function() {
+      let speed = 200;
+      let position = $('#suggest-form').offset().top;
+      $('body, html').animate({
+        scrollTop: position
+      }, speed, 'swing');
+      return false;
+    });
+  });
+</script>
 </html>

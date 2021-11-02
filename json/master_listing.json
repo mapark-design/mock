@@ -1,0 +1,13 @@
+[
+  {"value":"07010","name":"非上場"},
+  {"value":"07020","name":"東証1部"},
+  {"value":"07030","name":"東証2部"},
+  {"value":"07040","name":"マザーズ"},
+  {"value":"07050","name":"JASDAQ"},
+  {"value":"07060","name":"大証"},
+  {"value":"07070","name":"名証"},
+  {"value":"07080","name":"福証"},
+  {"value":"07090","name":"札証"},
+  {"value":"07100","name":"TOKYO PRO Market"},
+  {"value":"07110","name":"その他上場"}  
+]

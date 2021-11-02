@@ -11,14 +11,11 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_red.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
-  <title>成約報告</title>
+  <title>譲渡案件登録</title>
 </head>
 <body>
   <div class="layout">
@@ -198,58 +195,31 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li>成約報告</li>
+            <li><a href="">譲渡案件登録</a></li>
+            <li><a href="">譲渡案件登録確認</a></li>
+            <li>譲渡案件登録完了</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
 
         <section class="section">
-          <div class="section__inner contract__inner">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">成約報告</h2>
+          <div class="section__inner">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件登録</h2>
             <div class="section__content">
-              <p class="mb-3">
-              ご成約おめでとうございます。<br>
-              ご成約内容についてお教えください。
-              </p>
-              <form id="maform" action="" class="needs-validation" novalidate>
-                <dl>
-                  <div class="form__item form__item--border form__item--top-border">
-                    <dt class="form__item-title contract__item-title">譲渡案件タイトル
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください" required>
-                    </dd>
+              <div class="complete complete__panel">
+                <div class="complete__inner">
+                  <h2 class="section__title section__title-h2 complete__title">登録が完了しました。</h2>
+                  <div class="complete__content">
+                    譲渡案件を登録しました。<br>
+                    ※ご入力いただいた内容について、事務局よりご連絡する場合がございます。<br>
                   </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">相手先の社名、お名前
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input type="text" class="form-control w-75" placeholder="例：株式会社エムアンドエーパーク　田中様" required>
-                    </dd>
+                  <div class="complete__buttons">
+                    <form>
+                      <button id="btn-regist" class="btn btn-corp ma-btn-section">登録済の譲渡案件一覧を確認する</button>
+                    </form>
                   </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">御取引金額(税抜)
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input type="text" class="form-control w-25 format-comma" placeholder="例：2000000" required>円
-                    </dd>
-                  </div>
-                  <div class="form__item form__item--border">
-                    <dt class="form__item-title contract__item-title">契約締結日
-                      <div class="form__required">必須</div>
-                    </dt>
-                    <dd class="form__item-input form__item-input--flex-center contract__item-input">
-                      <input id="contractDate" type="text" class="form-control w-25" placeholder="例 : yyyy/mm/dd">
-                    </dd>
-                  </div>
-                </dl>
-                <div class="form__action form__action--center">
-                  <button id="btn-regist" class="btn btn-corp ma-btn-section">報告する</button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </section>
@@ -257,19 +227,106 @@
     </main>
     <!-- //main.main -->
   </div>
+  <!-- div.loader -->
+  <div id="loader" class="loading">
+    <div class="loading__msg">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- //div.loader -->
 </body>
 <script>
-  $(function() {
-    flatpickr('#contractDate', {
-      locale: 'ja',
-      dateFormat: 'Y/m/d',
-      allowInput: true,
-      defaultDate: new Date()
-    });
+var ma = new Ma();
+$(function() {
+  // 既存値の設定
+  // ma.setOptions('./json/master-industory.json', '.form-industory'); // 業種（大項目）
+  // ma.setOptions('./json/master_sales.json', '.sales'); // 前年度売上高、売上高
+  // ma.setOptions('./json/master-prefecture.json', '.form-prefecture'); // 地域
+  // ma.setOptions('./json/master_number-of-employees.json', '.form_number-of-employees'); // 従業員数
+  // ma.setOptions('./json/master_term2contract.json', '.form_term2contract'); // 譲渡希望時期
+  // ma.setOptions('./json/master_transfar-price.json', '.form_transfar-price'); // 譲渡希望価格
+  // ma.setOptions('./json/master_cash-funds.json', '.cash-funds'); // 現金預金
+  // ma.setOptions('./json/master_asset.json', '.asset'); // 総資産
+  // ma.setOptions('./json/master_interest-bearing-liability.json', '.interest-bearing-liability'); // 有利子負債
+  // ma.setOptions('./json/master_liability.json', '.liability'); // 総負債
+  // ma.setOptions('./json/master_net-worth.json', '.net-worth'); // 純資産
+  // ma.setOptions('./json/master_profit.json', '.profit'); // 営業利益、経常利益、当期純利益、DBITDA
+  // ma.setOptions('./json/master_depreciation.json', '.depreciation'); // 原価償却費
+  // ma.setOptions('./json/master_officer-fee.json', '.officer-fee'); // 役員報酬
 
-    $('#btn-regist').click(function() {
-      $(this).parents('form').attr('method', 'GET').attr('action', './screen_contract_confirm.html').submit();
+  // ma.setRadio('./json/master_transfar-form.json', '.form_transfar-form', 'transfar-form');  // 譲渡形式
+  // ma.setRadio('./json/master_mgmt-part.json', '.form_mgmt-part', 'mgmt-part');  // 経営参画
+
+  // ma.setCheckbox('./json/master_transfar-class.json', '.form_transfar-class', 'transfar-class'); // 譲渡形式種別
+  // ma.setCheckbox('./json/master_transfar-reason.json', '.form_transfar-reason', 'transfar-reason'); // 譲渡理由
+  // ma.setCheckbox('./json/master_value-point.json', '.form_value-point', 'value-point');  // 譲渡で重視するポイント
+  // ma.setCheckbox('./json/master_strengths.json', '.form_strengths', 'strengths');  // アピールポイント
+  // ma.setCheckbox('./json/master_target.json', '.form_target', 'target');  // 交渉希望相手
+  // ma.setCheckbox('./json/master_stockholders.json', '.form_stockholders', 'stockholders');  // 株主状況
+
+  // 大区分変更時の処理を追加
+  $('.form-industory').change(function() {
+    // 処理の頭でfadeInを入れてください。
+    // Insert this at start of function.
+    $("#loader").fadeIn(300).css('display', 'table');
+
+    let $industoryEl = $(this);
+    let value = $industoryEl.val();
+    let $sectorEl = $industoryEl.parent().parent().find('.form-sector');
+    // 子要素のクリア
+    $($sectorEl).find('option').filter(function() {
+      return $(this).val() != ''
+    }).remove();
+
+    // If you want to use ajax to recieve data, use ma#ma#sendAjaxRequest.
+    // Please write success function to done, fail function to fail, function run any result to always.
+    // ajaxで通信、レスポンスを受け取る場合は ma#sendAjaxRequest を利用してください。
+    // doneで正常処理、failで失敗処理、正常/異常に関係なく処理したいものはalwaysを利用してください。
+    ma.sendRequest(ma.createGetArgs({
+      url: './json/master-section.json',
+      data: {}
+    })).done(function(data, statusText, jqXHR) {
+      var $options = [];
+      data.forEach(function(el, idx) {
+        if (el.value !== value) {
+          // javascript.continue
+          return true;
+        }
+
+        $.map(el.option, function(arrOptionItem, index) {
+          $options.push(
+            $("<option>", {
+              value: arrOptionItem.value,
+              text: arrOptionItem.name
+            })
+          );
+        });
+      });
+      $sectorEl.append($options);
     });
   });
+
+  $('#btn-regist').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_list-transfer.html').submit();
+  });
+  $('#btn-back').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_regist-seller.html').submit();
+  });
+  // 確認画面用に、各項目を非表示に
+  $('.form__required').css('display', 'none');
+  $('.form-select').css('display', 'none');
+  $('textarea').css('display', 'none');
+//  $('input:not(.form-check-input)').css('display', 'none');
+  $('.form-check-input').click(function() {
+    console.log('click');
+    return false;
+  });
+});
 </script>
 </html>

@@ -11,18 +11,25 @@
     }
   }
   &__item {
-    &--header {
+    &-title {
       min-width: 25.0rem;
       max-width: 25.0rem;
-      background-color: white;
-      padding: 0.5rem 1.5rem;
-    }
-  }
-  &-input {
-    padding: 1.5rem;
+      background-color: #eaeaea;
+      padding: 1.5rem;
 
-    &--header {
-      padding: 0.5rem 1.5rem;
+      &--header {
+        min-width: 25.0rem;
+        max-width: 25.0rem;
+        background-color: white;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+    &-input {
+      padding: 1.5rem;
+  
+      &--header {
+        padding: 0.5rem 1.5rem;
+      }
     }
   }
 }

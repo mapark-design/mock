@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as var;
+
 .contract {
 
   &__item {
@@ -11,6 +13,30 @@
 
     &-input {
       padding: 1.5rem;
+    }
+  }
+
+  &__card {
+    border-radius: 0.5rem;
+    margin: 50px 20px 0 20px;
+    box-shadow: 0 0 1.0rem gray;
+  }
+  &__background {
+    background-image: url('../img/page/contract.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: lighten;
+  }
+  &__message {
+    padding: 1.5rem;
+    color: var.$COLOR-CORP;
+    font-size: var.$FONT-SIZE-24;
+
+    &-title {
+      font-size: var.$FONT-SIZE-36;
+      font-weight: bold;
     }
   }
 }

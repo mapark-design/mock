@@ -26,7 +26,7 @@
         <nav class="header__nav"><!--
           <div class="header__global-nav">
             <ul class="header__nav-list header__nav-list--global-nav">
-              <li><a href="" class="">サービスについて</a></li>
+              <li><a href="" class="">サービス概要</a></li>
               <li><a href="" class="">よくあるご質問</a></li>
               <li><a href="" class="">お問い合わせ</a></li>
             </ul>
@@ -194,15 +194,15 @@
         <!-- breadcrumb__nav -->
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
-            <li><a href="">マイページ</a></li>
-            <li><a href="">譲渡案件を検索</a></li>
+            <li>マイページ</li>
+            <li>譲渡案件を検索</li>
             <li>案件詳細</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
 
         <section class="section">
-          <div class="section__inner detail-seller__inner">
+          <div class="section__inner detail-transfar__inner">
             <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件詳細</h2>
             <div class="section__content">
               <div class="form__action form__action--right">
@@ -212,14 +212,32 @@
               <form class="needs-validation" novalidate>
                 <!-- 案件情報 -->
                 <section class="section">
-                  <div class="section__inner detail-seller__inner">
+                  <h3 class="section__title section__title-h3"></h3>
+                  <div class="section__content">
+                    <table class="detail-transfar__header-table">
+                      <tr class="detail-transfar__header-table-row">
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">案件情報ステータス</th>
+                        <td class="detail-transfar__header-table-col" colspan="3">公開中
+                        </td>
+                      </tr>
+                      <tr class="detail-transfar__header-table-row">
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">登録日</th>
+                        <td class="detail-transfar__header-table-col">2021/11/13</td>
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">更新日</th>
+                        <td class="detail-transfar__header-table-col">2021/11/13</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </section>
+                <section class="section">
+                  <div class="section__inner detail-transfar__inner">
                     <h3 class="section__title section__title-h3">案件情報</h3>
                     <div class="section__content">
                       <dl class="">
                         <div class="form__item form__item--border form__item--top-border">
-                          <dt class="form__item-title detail-seller__item-title">株式譲渡種別
+                          <dt class="form__item-title detail-transfar__item-title">株式譲渡種別
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">
+                          <dd class="form__item-input detail-transfar__item-input">
                             <div class="form__item-input--flex-wrap">
                               全部譲渡<!--
                               <div class="form-check">
@@ -237,15 +255,15 @@
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">タイトル
+                          <dt class="form__item-title detail-transfar__item-title">タイトル
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">ECサイトを譲渡します。<!--
+                          <dd class="form__item-input detail-transfar__item-input">ECサイトを譲渡します。<!--
                             <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください">
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">業種</dt>
-                          <dd class="form__item-input detail-seller__item-input">情報通信業、ソフトウエア<!--
+                          <dt class="form__item-title detail-transfar__item-title">業種</dt>
+                          <dd class="form__item-input detail-transfar__item-input">情報通信業、ソフトウエア<!--
                             <ul>
                               <li class="form__item-input--flex-center mb-3">
                                 <div class="w-50">
@@ -287,9 +305,9 @@
                           </dd>
                         --></div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">前年度売上高
+                          <dt class="form__item-title detail-transfar__item-title">前年度売上高
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">3,000万円～5,000万円<!--
+                          <dd class="form__item-input detail-transfar__item-input">3,000万円～5,000万円<!--
                             <select class="form-select w-25">
                               <option selected>＋選択してください</option>
                               <option value="">1,000万円以下</option>
@@ -306,77 +324,77 @@
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">地域
+                          <dt class="form__item-title detail-transfar__item-title">地域
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">関東地方</dd>
+                          <dd class="form__item-input detail-transfar__item-input">関東地方</dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">従業員数</dt>
-                          <dd class="form__item-input detail-seller__item-input"><!--
+                          <dt class="form__item-title detail-transfar__item-title">従業員数</dt>
+                          <dd class="form__item-input detail-transfar__item-input"><!--
                             <select class="form-select w-25">
                               <option selected>＋選択してください</option>
                             </select>
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">譲渡理由
+                          <dt class="form__item-title detail-transfar__item-title">譲渡理由
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">後継者不足<!--
+                          <dd class="form__item-input detail-transfar__item-input">後継者不足<!--
                             <select class="form-select w-25">
                               <option selected>＋選択してください</option>
                             </select>
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">事業概要
+                          <dt class="form__item-title detail-transfar__item-title">事業概要
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">会計システムのパッケージ販売をしております。<br>
+                          <dd class="form__item-input detail-transfar__item-input">会計システムのパッケージ販売をしております。<br>
                             取引先は大手企業が中心で・・・・・・・・・・<br>
                             ・・・・・・・・・・・・・・・・・・・・・・・<br><!--
                             <textarea class="form-control font-size-14" rows="5"></textarea>
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">譲渡希望時期</dt>
-                          <dd class="form__item-input detail-seller__item-input"><!--
+                          <dt class="form__item-title detail-transfar__item-title">譲渡希望時期</dt>
+                          <dd class="form__item-input detail-transfar__item-input"><!--
                             <select class="form-select w-25">
                               <option selected>＋選択してください</option>
                             </select>
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">譲渡で重視するポイント</dt>
-                          <dd class="form__item-input detail-seller__item-input">譲渡金額、タイミング
+                          <dt class="form__item-title detail-transfar__item-title">譲渡で重視するポイント</dt>
+                          <dd class="form__item-input detail-transfar__item-input">譲渡金額、タイミング
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">経営参画</dt>
-                          <dd class="form__item-input detail-seller__item-input">
+                          <dt class="form__item-title detail-transfar__item-title">経営参画</dt>
+                          <dd class="form__item-input detail-transfar__item-input">
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">譲渡希望価格
+                          <dt class="form__item-title detail-transfar__item-title">譲渡希望価格
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">3,000万円～5,000万円<!--
+                          <dd class="form__item-input detail-transfar__item-input">3,000万円～5,000万円<!--
                             <select class="form-select w-25">
                               <option selected>＋選択してください</option>
                             </select>
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">アピールポイント</dt>
-                          <dd class="form__item-input detail-seller__item-input">
+                          <dt class="form__item-title detail-transfar__item-title">アピールポイント</dt>
+                          <dd class="form__item-input detail-transfar__item-input">
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">アピールポイント詳細</dt>
-                          <dd class="form__item-input detail-seller__item-input">
+                          <dt class="form__item-title detail-transfar__item-title">アピールポイント詳細</dt>
+                          <dd class="form__item-input detail-transfar__item-input">
                           </dd>
                         </div><!--
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">交渉希望相手
+                          <dt class="form__item-title detail-transfar__item-title">交渉希望相手
                           </dt>
-                          <dd class="form__item-input detail-seller__item-input">
+                          <dd class="form__item-input detail-transfar__item-input">
                             <div class="form__item-input--flex-wrap">
                               <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -392,8 +410,8 @@
                           </dd>
                         </div>
                         --><div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">株主状況</dt>
-                          <dd class="form__item-input detail-seller__item-input">個人投資家あり<!--
+                          <dt class="form__item-title detail-transfar__item-title">株主状況</dt>
+                          <dd class="form__item-input detail-transfar__item-input">個人投資家あり<!--
                             <div class="form__item-input--flex-wrap">
                               <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -415,8 +433,8 @@
                           --></dd>
                         </div>
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title detail-seller__item-title">仲介手数料</dt>
-                          <dd class="form__item-input detail-seller__item-input"><!--
+                          <dt class="form__item-title detail-transfar__item-title">仲介手数料</dt>
+                          <dd class="form__item-input detail-transfar__item-input"><!--
                             <textarea class="form-control font-size-14" rows="3"></textarea>
                           --></dd>
                         </div>
@@ -429,19 +447,19 @@
                 <!-- // 案件情報 -->
 
                 <section class="section">
-                  <div class="section__inner detail-seller__inner">
+                  <div class="section__inner detail-transfar__inner">
                     <h3 class="section__title section__title-h3">財務情報</h3>
                     <section class="section__content ms-3">
 
                       <!-- 賃貸貸借表 -->
                       <section class="section">
-                        <div class="section__inner detail-seller__inner mb-5">
+                        <div class="section__inner detail-transfar__inner mb-5">
                           <h4 class="section__title section__title-h4">賃貸貸借表</h4>
                           <div class="section__content">
                             <dl class="">
                               <div class="form__item form__item--header form__item--border">
-                                <dt class="form__item-title detail-seller__item-title detail-seller__item-title--header">&nbsp;</dt>
-                                <dd class="form__item-input detail-seller__item-input detail-seller__item-input--header">
+                                <dt class="form__item-title detail-transfar__item-title detail-transfar__item-title--header">&nbsp;</dt>
+                                <dd class="form__item-input detail-transfar__item-input detail-transfar__item-input--header">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">直前期</div>
                                     <div class="w-50">&nbsp;</div>
@@ -449,8 +467,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">現金預金</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">現金預金</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">未入力<!--
                                       <select class="form-select">
@@ -461,10 +479,10 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">総資産<!--
+                                <dt class="form__item-title detail-transfar__item-title">総資産<!--
                                   <img src="./img/icon/icon-question-circle.svg">
                                 --></dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">1,000万円以下<!--
                                       <select class="form-select">
@@ -476,9 +494,9 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">有利子負債
+                                <dt class="form__item-title detail-transfar__item-title">有利子負債
                                       </dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">1,000万円以下<!--
                                       <select class="form-select">
@@ -490,8 +508,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">総負債</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">総負債</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">未入力<!--
                                       <select class="form-select">
@@ -503,9 +521,9 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">純資産
+                                <dt class="form__item-title detail-transfar__item-title">純資産
                                       </dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">1,000万円以下<!--
                                       <select class="form-select">
@@ -529,8 +547,8 @@
                           <div class="section__content">
                             <dl class="">
                               <div class="form__item form__item--header form__item--border">
-                                <dt class="form__item-title detail-seller__item-title detail-seller__item-title--header">&nbsp;</dt>
-                                <dd class="form__item-input detail-seller__item-input detail-seller__item-input--header">
+                                <dt class="form__item-title detail-transfar__item-title detail-transfar__item-title--header">&nbsp;</dt>
+                                <dd class="form__item-input detail-transfar__item-input detail-transfar__item-input--header">
                                   <div class="form__item-input--flex-center">
                                     <div class="w-50">直前期</div>
                                     <div class="w-50">前々期</div>
@@ -538,8 +556,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">売上高</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">売上高</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50">3,000万円～5,000万円<!--
                                       <select class="form-select">
@@ -555,8 +573,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">営業利益</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">営業利益</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50  w-50">3,000万円～5,000万円<!--
                                       <select class="form-select">
@@ -572,8 +590,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">経常利益</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">経常利益</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50">未入力<!--
                                       <select class="form-select">
@@ -589,8 +607,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">当期純利益</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">当期純利益</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50">3,000万円～5,000万円<!--
                                       <select class="form-select">
@@ -606,8 +624,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">EBITDA</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">EBITDA</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50">未入力<!--
                                       <select class="form-select">
@@ -623,8 +641,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">減価償却費</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">減価償却費</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50">未入力<!--
                                       <select class="form-select">
@@ -640,8 +658,8 @@
                                 </dd>
                               </div>
                               <div class="form__item form__item--border">
-                                <dt class="form__item-title detail-seller__item-title">役員報酬</dt>
-                                <dd class="form__item-input detail-seller__item-input">
+                                <dt class="form__item-title detail-transfar__item-title">役員報酬</dt>
+                                <dd class="form__item-input detail-transfar__item-input">
                                   <div class="form__item-input--flex-end">
                                     <div class="w-50">1,000万円以下<!--
                                       <select class="form-select">

@@ -12,7 +12,11 @@ const CONST = {
   // アイコン文字列：visibility
   ICON_TEXT_VISIBILITY: 'visibility',
   // アイコン文字列：visibility
-  ICON_TEXT_VISIBILITY_OFF: 'visibility_off'
+  ICON_TEXT_VISIBILITY_OFF: 'visibility_off',
+  // 譲渡形式：株式譲渡コード
+  TRANSFAR_FORMAT_STOCK: '09010',
+  // 譲渡形式：事業譲渡コード
+  TRANSFAR_FORMAT_ASSET: '09020'
 };
 
 class Ma {

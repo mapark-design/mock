@@ -291,7 +291,13 @@
                       </dt>
                       <dd class="form__item-input user-info__item-input">
                         <div class="form__item-modal user-info__item-input--sectors">
-                        <ul id="form-sector" class="check-list check-list--wrap mb-3" style="display: none;">
+                        <ul id="form-sector" class="check-list check-list--wrap mb-3">
+                          <li class="check-list__item">ソフトウェア</li><input type="hidden" name="sectorLabel" value="ソフトウェア"><input type="hidden" name="sectorValue" value="08020">
+                          <li class="check-list__item">ハードウェア</li><input type="hidden" name="sectorLabel" value="ハードウェア"><input type="hidden" name="sectorValue" value="08030">
+                          <li class="check-list__item">IT技術サービス(SES)</li><input type="hidden" name="sectorLabel" value="IT技術サービス(SES)"><input type="hidden" name="sectorValue" value="08040">
+                          <li class="check-list__item">受託開発・制作</li><input type="hidden" name="sectorLabel" value="受託開発・制作"><input type="hidden" name="sectorValue" value="08050">
+                          <li class="check-list__item">WEBサイト・アプリ</li><input type="hidden" name="sectorLabel" value="WEBサイト・アプリ"><input type="hidden" name="sectorValue" value="08060">
+                          <li class="check-list__item">システム運用・保守</li><input type="hidden" name="sectorLabel" value="システム運用・保守"><input type="hidden" name="sectorValue" value="08090">
                         </ul>
                         <a class="btn selectSector ma-btn-modal">＋選択してください</a>
                       </dd>
@@ -307,7 +313,7 @@
                     <div class="form__item form__item--border">
                       <dt class="form__item-title user-info__item-title">資本金</dt>
                       <dd class="form__item-input form__item-input--flex-center user-info__item-input">
-                        <input type="text" class="form-control w-25 format-comma" placeholder="例：2000000" value="2000000">円
+                        <input type="text" class="form-control w-25 format-comma" placeholder="例：2000000" value="2,000,000">円
                       </dd>
                     </div>
                     <div class="form__item form__item--border">
@@ -337,7 +343,7 @@
                         <div class="form__required">必須</div>
                       </dt>
                       <dd class="form__item-input user-info__item-input">
-                        <select class="form-select form-post w-50" required>
+                        <select class="form-select form-post w-25" required>
                           <option selected disabled value="">＋選択してください</option>
                         </select>
                       </dd>
@@ -368,10 +374,10 @@
                     </div>
                     <div class="form__item form__item--border user-info__item">
                       <dt class="form__item-title user-info__item-title">メールアドレス
-                        <div class="form__required">必須</div>
                       </dt>
-                      <dd class="form__item-input user-info__item-input">
+                      <dd class="form__item-input user-info__item-input">mapark@ma-park.com<!--
                         <input type="email" class="form-control w-50" placeholder="mapark@ma-park.com" required value="mapark@ma-park.com">
+                        --><div class="form__caution mt-3">メールアドレスを変更したい場合は、弊社までお問い合わせください。</div>
                       </dd>
                     </div>
                     <div class="form__item form__item--border user-info__item">
@@ -401,33 +407,21 @@
                         <div class="form__required">必須</div>
                       --></dt>
                       <dd class="form__item-input user-info__item-input">
-                        <div class="form__item-section mb-3">
-                          本人証明書提出書類を更新する場合は、更新するファイルをそれぞれアップロードしてください。<br>なお、アップロードファイルは以下に注意してください。<br>
-                          ・画像ファイル（jpg/png/bmp）またはPDFファイルのみ<br>
-                          ・それぞれ4MB以内<br>
-                        </div>
-                        <div class="form__item-section">
-                          <dl>
-                            <div class="mb-3">
-                              <dt>開業届</dt>
-                              <dd>
-                                <a href="./img/sample.pdf" class="pdf" data-modaal-scope="modaal_16365997987135d54fc4b92c0a">改行届.pdf</a>
-                                <div class="form__item-section">
-                                  <input class="form-control width-60" type="file" id="formFile1" accept=".jpg,.jpeg,.png,.bmp,.pdf" required>
-                                </div>
-                              </dd>
-                            </div>
-                            <div>
-                              <dt>保険証またはパスポート</dt>
-                              <dd>
-                                <a href="./img/kv02.jpg" class="image" data-modaal-scope="modaal_1636599798714488dfedad1147">20210101_保険証.jpg</a>
-                                <div class="form__item-section">
-                                  <input class="form-control width-60" type="file" id="formFile2" accept=".jpg,.jpeg,.png,.bmp,.pdf" required>
-                                </div>
-                              </dd>
-                            </div>
-                          </dl>
-                        </div>
+                        <dl>
+                          <div>
+                            <dt>開業届</dt>
+                            <dd>
+                              <a href="./img/sample.pdf" class="pdf" data-modaal-scope="modaal_16365997987135d54fc4b92c0a">改行届.pdf</a>
+                            </dd>
+                          </div>
+                          <div>
+                            <dt>保険証またはパスポート</dt>
+                            <dd>
+                              <a href="./img/kv02.jpg" class="image" data-modaal-scope="modaal_1636599798714488dfedad1147">20210101_保険証.jpg</a>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="form__caution mt-3">本人証明書提出書類を変更したい場合は、弊社までお問い合わせください。</div>
                       </dd>
                     </div>
                     <div class="form__item form__item--border user-info__item">
@@ -494,14 +488,71 @@
       </div>
     </main>
     <!-- //main.main -->
+
+    <!-- modal.sector -->
+    <div class="modal fade" id="modal-select-sector" tabindex="-1" aria-labelledby="modalSelectSector" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable ma-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #c8161d">
+            <h5 class="modal-title font-size-16" id="modalSelectSector" style="color: white;">業種選択</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <dl id="modal-list">
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-corp ma-modal-btn-fw" id="sector-selected">選択する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal.sector -->
   </div>
 </body>
 <script>
   var ma = new Ma();
+
+  /**
+   * チェックボックスとラベルのエレメント作成
+   */
+   createCheckboxDiv = function (element, prefix) {
+    var input = document.createElement('input');
+    input.classList.add('form-check-input');
+    input.id = prefix + element.value;
+    input.setAttribute('type', 'checkbox')
+    input.setAttribute('value', element.value);
+
+    var label = document.createElement('label');
+    label.classList.add('form-check-label');
+    label.setAttribute('for', prefix + element.value);
+    label.innerHTML = element.name;
+
+    var div = document.createElement('div');
+    div.classList.add('form-check');
+    div.appendChild(input);
+    div.appendChild(label);
+    return div;
+  }
+
+  /**
+   * modal項目選択時に、hidden値を生成する
+   */
+   createHiddenEl = function(name, value) {
+    var el = document.createElement('input');
+    el.setAttribute('type', 'hidden');
+    el.setAttribute('name', name);
+    el.setAttribute('value', value);
+    return el;
+  }
+
   $(function() {
     $(window).scroll(ma.scrollTopIcon);
 
     // サンプル画面のため、json からデータを展開する。
+    // 役職
+    ma.setOptions('./json/master-post.json', '.form-post');
     // 都道府県
     ma.setOptions('./json/master-prefecture.json', '.form-prefecture');
     // 上場区分
@@ -511,6 +562,97 @@
     // 対応可能な専門業務領域、専門家への相談依頼
     ma.setCheckbox('./json/master-specialty.json', '.consultation-specialty', 'form-consultation-specialty');
     ma.setCheckbox('./json/master-specialty.json', '.specialty', 'form-specialty');
+
+    /**
+     *  業界業種モーダル設定
+     */
+    fetch('./json/master-section.json')
+    .then(function(response){
+      return response.json();
+    })
+    .then(function(data) {
+      Array.from(document.querySelectorAll('#modal-list'), function(el, index) {
+        data.forEach(element => {
+          var divIndustory = createCheckboxDiv(element, 'form-industory');
+          var industory = divIndustory.children[0];
+          industory.classList.add("checkbox-industory");
+          industory.addEventListener('click', function() {
+            isChecked = this.checked;
+            Array.from(this.parentNode.parentNode.parentNode.children[1].getElementsByClassName('form-check-input'), function(elSectionCheck, index) {
+              elSectionCheck.checked = isChecked;
+            });
+          });
+          var fragment = document.createDocumentFragment();
+          (element.option).forEach(opel => {
+            fragment.appendChild(createCheckboxDiv(opel, 'form-sector'));
+          });
+          var dt = document.createElement('dt');
+          dt.classList.add('ma-modal-dialog__title');
+          dt.appendChild(divIndustory);
+          var dd = document.createElement('dd');
+          dd.classList.add('ma-modal-dialog__input');
+          dd.appendChild(fragment);
+          var div = document.createElement('div');
+          div.classList.add('ma-modal-dialog__item');
+          div.appendChild(dt);
+          div.appendChild(dd);
+          el.appendChild(div);
+        });
+      });
+    });
+
+    /**
+     * モーダル関連
+     */
+    var modalEl = document.getElementById('modal-select-sector');
+    document.querySelector('.selectSector').addEventListener('click', function() {
+      bootstrap.Modal.getOrCreateInstance(modalEl).show();
+    });
+
+    /**
+     * 業種を選択するリンク押下時処理
+     */
+    document.getElementById('sector-selected').addEventListener('click', function() {
+      var fragment = document.createDocumentFragment();
+      var modalInputTarget = modalEl.querySelectorAll('.ma-modal-dialog__input .form-check-input');
+      var isChecked = false;
+      Array.from(modalInputTarget, function(el, idx) {
+        if (el.checked) {
+          var value = el.value;
+          var text = el.parentNode.children[1].innerHTML;
+
+          var li = document.createElement('li');
+          li.classList.add('check-list__item');
+          li.innerHTML = text;
+
+          var div = document.createElement('div');
+          var selectedLabel = createHiddenEl('sectorLabel', text);
+          var selectedValue = createHiddenEl('sectorValue', value);
+          fragment.appendChild(li);
+          fragment.appendChild(selectedLabel);
+          fragment.appendChild(selectedValue);
+
+          isChecked = true;
+        }
+      });
+
+      var target = document.getElementById('form-sector');
+      target.innerHTML = '';
+      target.appendChild(fragment);
+
+      if (isChecked) {
+        target.style.display ="flex";
+      } else {
+        target.style.display ="none";
+      }
+
+      bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+    });
+
+    // PDF表示用モーダル処理
+    ma.createModalPdf('.pdf');
+    // Image表示用モーダル処理
+    ma.createModalImage('.image');
 
     $('#btn-back').click(function() {
       $(this).parents("form").attr('method', 'GET').attr('action', './screen_user-info.html').submit();

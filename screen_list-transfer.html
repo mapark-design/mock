@@ -245,9 +245,9 @@
                     <thead>
                       <tr class="">
                         <th class="fixed list-transfar__item-title">タイトル</th>
-                        <th class="fixed list-transfar__item-last-update">最終更新日</th>
+                        <th class="fixed list-transfar__item-release-date">公開日</th>
+                        <th class="fixed list-transfar__item-last-update">更新日</th>
                         <th class="fixed list-transfar__item-status">ステータス</th>
-                        <th class="fixed list-transfar__item-regist-user-name">登録者</th>
                         <th class="fixed list-transfar__item-detail">&nbsp;</th>
                       </tr>
                     </thead>
@@ -256,9 +256,9 @@
                       <template id="template">
                         <tr>
                           <td class="list-transfar__item-title">${title}</td>
+                          <td class="list-transfar__item-release-date"></td>
                           <td class="list-transfar__item-last-update"></td>
                           <td class="list-transfar__item-status"></td>
-                          <td class="list-transfar__item-regist-user-name">ユーザ名</td>
                           <td class="list-transfar__item-detail">
                             <button class="btn btn-dark">詳細</button>                          
                           </td>
@@ -288,9 +288,10 @@
       $(data).each(function(index, elem) {
         var $content = $($template.clone().html());
         $content.find('.list-transfar__item-title').text(elem.title);
+        $content.find('.list-transfar__item-release-date').text(elem.releaseDate);
         $content.find('.list-transfar__item-last-update').text(elem.lastUpdate);
         $content.find('.list-transfar__item-status').text(elem.status);
-        $content.find('.list-transfar__item-regist-user-name').text(elem.registUserName);
+//        $content.find('.list-transfar__item-regist-user-name').text(elem.registUserName);
         appendChild.push($content);
       });
       $template.parents('tbody').append(appendChild);

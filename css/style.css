@@ -12061,6 +12061,9 @@ h1, h2, h3, h4, h5, h6 {
 .list-transfar__item-title {
   background-color: white;
 }
+.list-transfar__item-release-date {
+  width: 12%;
+}
 .list-transfar__item-last-update {
   width: 12%;
 }

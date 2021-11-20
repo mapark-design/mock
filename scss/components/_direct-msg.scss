@@ -2,16 +2,20 @@
 
 .direct-message {
 
-  width: 75%;
   margin-bottom: 1.0rem;
 
   &--others {
+    width: 75%;
     margin-left: 0;
     margin-right: auto;
   }
   &--self {
+    width: 75%;
+    margin-top: 3.0rem;
     margin-left: auto;
     margin-right: 0;
+  }
+  &--system {
   }
 
   &__name {
@@ -31,6 +35,9 @@
     }
     &--self {
       justify-content: flex-end;
+    }
+    &--system {
+      justify-content: center;
     }
   }
 
@@ -53,6 +60,34 @@
       background-color: #eaeaea;
       border-radius: 0.5rem;
       padding: 1.0rem;
+
+      &--system {
+        background-color: rgba(200, 22, 29, 0.3);
+        padding: 1.0rem 3.0rem;
+      }
+    }
+
+    &--system {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__attachment {
+    &-body {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    &-inner {
+      border: 1px solid #eaeaea;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    }
+
+    &--others {
+      text-align: left;
+    }
+    &--self {
+      text-align: right;
     }
   }
 }

@@ -209,8 +209,23 @@
                 <button class="btn btn-secondary ma-btn-ps ma-btn-back">交渉中の譲渡案件一覧に戻る</button>
               </div>
 
-              <div class="message-area nego-message__message-area " style="overflow: hidden; overflow-y: scroll; border: 1px solid lightgray; margin-top: 1.0rem;">
-                <div class="message-area__inner" style="padding-top: 1.0rem; padding-right: 1.0rem; padding-left: 1.0rem;">
+              <div class="message-area nego-message__message-area">
+                <div class="message-area__inner nego-message__message-area-inner">
+                  <!-- システムが出力するメッセージ -->
+                  <div class="direct-message direct-message--system">
+                    <div class="direct-message__body direct-message__body--system">
+                      <div class="direct-message__content direct-message__content--system">
+                        <div class="direct-message__content-inner direct-message__content-inner--system">
+                          <div class="d-flex justify-content-center">
+                            <span class="material-icons-outlined md-28">info</span>
+                            <div class="ms-1">交渉が開始しました。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //システムが出力するメッセージ -->
+
                   <!-- 相手のメッセージ -->
                   <div class="direct-message direct-message--others">
                     <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
@@ -231,10 +246,77 @@
                     </div>
                   </div>
                   <!-- //相手のメッセージ -->
+
                   <!-- 自分のメッセージ -->
-                  <div class="direct-message direct-message--self">
+                  <div class="direct-message direct-message--self"><!--
                     <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
-                    <div class="direct-message__body direct-message__body--self">
+                    --><div class="direct-message__body direct-message__body--self">
+                      <div class="direct-message__status direct-message__status--self">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 自分の添付ファイル -->
+                    <div class="direct-message__attachment direct-message__attachment--self">
+                      <div class="direct-message__attachment-body">
+                        <div class="direct-message__attachment-inner">
+                          <a class="d-flex align-items-center" href="">
+                            <span class="material-icons-outlined md-28">attach_file</span>
+                            <span>添付ファイル名</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //自分の添付ファイル -->
+                  </div>  
+                  <!-- //自分のメッセージ -->
+
+                  <!-- 相手のメッセージ -->
+                  <div class="direct-message direct-message--others">
+                    <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
+                    <div class="direct-message__body direct-message__body--others">
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="direct-message__status direct-message__status--others">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                    </div>
+                    <!-- 相手の添付ファイル -->
+                    <div class="direct-message__attachment  direct-message__attachment--others">
+                      <div class="direct-message__attachment-body">
+                        <div class="direct-message__attachment-inner">
+                          <a class="d-flex align-items-center" href="">
+                            <span class="material-icons-outlined md-28">attach_file</span>
+                            <span>添付ファイル名</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //相手の添付ファイル -->
+                  </div>
+                  <!-- //相手のメッセージ -->
+
+                  <!-- 自分のメッセージ -->
+                  <div class="direct-message direct-message--self"><!--
+                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
+                    --><div class="direct-message__body direct-message__body--self">
                       <div class="direct-message__status direct-message__status--self">
                         <div>既読</div>
                         <div>11/12 13:59</div>
@@ -251,6 +333,7 @@
                     </div>
                   </div>  
                   <!-- //自分のメッセージ -->
+
                   <!-- 相手のメッセージ -->
                   <div class="direct-message direct-message--others">
                     <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
@@ -272,49 +355,9 @@
                   </div>
                   <!-- //相手のメッセージ -->
                   <!-- 自分のメッセージ -->
-                  <div class="direct-message direct-message--self">
+                  <div class="direct-message direct-message--self"><!--
                     <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
-                    <div class="direct-message__body direct-message__body--self">
-                      <div class="direct-message__status direct-message__status--self">
-                        <div>既読</div>
-                        <div>11/12 13:59</div>
-                      </div>
-                      <div class="direct-message__content">
-                        <div class="direct-message__content-inner">
-                          <p>
-                            ご担当者様<br>
-                            <br>
-                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>  
-                  <!-- //自分のメッセージ -->
-                  <!-- 相手のメッセージ -->
-                  <div class="direct-message direct-message--others">
-                    <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
-                    <div class="direct-message__body direct-message__body--others">
-                      <div class="direct-message__content">
-                        <div class="direct-message__content-inner">
-                          <p>
-                            ご担当者様<br>
-                            <br>
-                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="direct-message__status direct-message__status--others">
-                        <div>既読</div>
-                        <div>11/12 13:59</div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- //相手のメッセージ -->
-                  <!-- 自分のメッセージ -->
-                  <div class="direct-message direct-message--self">
-                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
-                    <div class="direct-message__body direct-message__body--self">
+                    --><div class="direct-message__body direct-message__body--self">
                       <div class="direct-message__status direct-message__status--self">
                         <div>既読</div>
                         <div>11/12 13:59</div>
@@ -334,7 +377,7 @@
                 </div>
               </div>
 
-              <div class="send" style="padding-top: 1.0rem; height: 24.0rem;">
+              <div class="send" style="padding-top: 1.0rem; height: 20.0rem;">
                 <div class="send__inner" style="padding-right: 1.0rem;">
                   <div class="form" style="">
                     <textarea class="form-control" placeholder="メッセージを記載してください。なお、一メッセージにつき、一添付ファイルのみ可能です。" rows="5"></textarea>
@@ -346,12 +389,12 @@
                     <div class="" style="min-width: 12.0rem;text-align: right;">
                       <button class="btn btn-corp ma-btn-section">送信</button>
                     </div>
-                  </div>
+                  </div><!--
                   <div class="" style="display: flex; justify-content: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 1.0rem;">
                     <button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button>
                     <button class="btn btn-warning ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal">社名・氏名を公開する</button>
                   </div>
-                </div>
+                --></div>
               </div>
             </div>
           </div>
@@ -423,6 +466,9 @@
 <script>
 var ma = new Ma();
 $(function() {
+  $('.message-area').animate({
+    scrollTop: $('.message-area').get(0).scrollHeight
+  }, 'fast', 'swing');
 });
 </script>
 </html>

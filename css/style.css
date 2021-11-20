@@ -10684,14 +10684,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .direct-message {
-  width: 75%;
   margin-bottom: 1rem;
 }
 .direct-message--others {
+  width: 75%;
   margin-left: 0;
   margin-right: auto;
 }
 .direct-message--self {
+  width: 75%;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: 0;
 }
@@ -10719,6 +10721,11 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+.direct-message__body--system {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .direct-message__status {
   -ms-flex-item-align: end;
       align-self: end;
@@ -10737,6 +10744,29 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #eaeaea;
   border-radius: 0.5rem;
   padding: 1rem;
+}
+.direct-message__content-inner--system {
+  background-color: rgba(200, 22, 29, 0.3);
+  padding: 1rem 3rem;
+}
+.direct-message__content--system {
+  margin-left: auto;
+  margin-right: auto;
+}
+.direct-message__attachment-body {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.direct-message__attachment-inner {
+  border: 1px solid #eaeaea;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+}
+.direct-message__attachment--others {
+  text-align: left;
+}
+.direct-message__attachment--self {
+  text-align: right;
 }
 
 /**
@@ -12517,10 +12547,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nego-message__message-area {
-  height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 240px);
+  height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 200px);
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid lightgray;
+  margin-top: 1rem;
+}
+.nego-message__message-area-inner {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .material-icons-outlined.md-48 {
   font-size: 4.8rem;
+}
+
+.material-icons-outlined.md-28 {
+  font-size: 2.8rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -683,10 +683,9 @@
                   </div>
                 </section>
                 <div class="form__action form__action--center">
-                  <button class="btn btn-warning ma-btn-section-back">登録済の譲渡案件一覧に戻る</button>
-                  <button class="btn btn-corp ma-btn-section">編集する</button>
+                  <button id="btn-back" class="btn btn-warning ma-btn-section-back">登録済の譲渡案件一覧に戻る</button>
+                  <button id="btn-regist" class="btn btn-corp ma-btn-section">編集する</button>
                 </div>
-
               </form>
             </div>
           </div>
@@ -699,6 +698,13 @@
 <script>
   var ma = new Ma();
   $(function() {
+    $('#btn-regist').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-transfer_update.html').submit();
+    });
+    $('#btn-back').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_list-transfer.html').submit();
+    });
+
     $(window).scroll(ma.scrollTopIcon);
   });
 </script>

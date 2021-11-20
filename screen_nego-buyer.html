@@ -195,8 +195,7 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li>マイページ</li>
-            <li>譲渡案件を検索</li>
-            <li>案件詳細</li>
+            <li>交渉中の譲渡案件一覧</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
@@ -278,12 +277,22 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="search-negos-result__item-target">
+                          <td>
                             <span class="material-icons" role="button">star_outline</span>
                             社名未開示
                           </td>
                           <td>2021/07/21</td>
-                          <td>交渉申込受信</td>
+                          <td>
+                            <select class="form-select">
+                              <option selected disabled value="">＋選択してください</option>
+                              <option value="1" selected>交渉申込受信</option>
+                              <option value="2">買い手社名開示</option>
+                              <option value="3">NDA締結</option>
+                              <option value="4">TOP面談済</option>
+                              <option value="5">契約締結済</option>
+                              <option value="6">交渉終了</option>
+                            </select>
+                          </td>
                           <td>ユーザ名</td>
                           <td class="icon">
                             <a href="" class="position-relative">
@@ -323,9 +332,21 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="search-negos-result__item-target"><span class="material-icons" role="button">star_outline</span>売手　桃子</td>
+                          <td>
+                            <span class="material-icons" role="button">star_outline</span>売手　桃子
+                          </td>
                           <td>2021/01/30</td>
-                          <td>NDA締結済</td>
+                          <td>
+                            <select class="form-select">
+                              <option selected disabled value="">＋選択してください</option>
+                              <option value="1" selected>交渉申込受信</option>
+                              <option value="2">買い手社名開示</option>
+                              <option value="3">NDA締結</option>
+                              <option value="4">TOP面談済</option>
+                              <option value="5">契約締結済</option>
+                              <option value="6">交渉終了</option>
+                            </select>
+                          </td>
                           <td>ユーザ名</td>
                           <td class="icon">
                             <a href="" class="position-relative">
@@ -365,12 +386,22 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td class="search-negos-result__item-target">
+                          <td>
                             <span class="material-icons" role="button">star_outline</span>
                             DDD株式会社　　売手　道子
                           </td>
                           <td>2021/12/27</td>
-                          <td>TOP面談済</td>
+                          <td>
+                            <select class="form-select">
+                              <option selected disabled value="">＋選択してください</option>
+                              <option value="1" selected>交渉申込受信</option>
+                              <option value="2">買い手社名開示</option>
+                              <option value="3">NDA締結</option>
+                              <option value="4">TOP面談済</option>
+                              <option value="5">契約締結済</option>
+                              <option value="6">交渉終了</option>
+                            </select>
+                          </td>
                           <td>ユーザ名</td>
                           <td class="icon">
                             <a href="" class="position-relative">

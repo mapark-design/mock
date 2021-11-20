@@ -195,8 +195,7 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li>マイページ</li>
-            <li>譲渡案件を検索</li>
-            <li>案件詳細</li>
+            <li>交渉中の譲渡案件一覧</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
@@ -266,13 +265,13 @@
                   </div>
                   <!-- //div.search-negos-result__header -->
                   <div class="">
-                    <table class="table table-striped msg-tbl search-negos-result__tbl">
+                    <table class="table table-striped msg-tbl search-negos-result__tbl" style="table-layout: fixed;">
                       <thead>
                         <tr>
                           <th class="column__target">交渉相手先</th>
                           <th class="column__start-date">交渉開始</th>
                           <th class="column__progress">進捗</th>
-                          <th class="column__user">対応者</th>
+                          <th class="column__user">メモ</th>
                           <th class="column__icon">&nbsp;</th>
                         </tr>
                       </thead>
@@ -284,7 +283,7 @@
                             </div>
                           </td>
                           <td>2021/07/21</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1" selected>交渉申込受信</option>
@@ -295,7 +294,13 @@
                               <option value="6">交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">
+                            <div style="overflow: hidden;">
+                              <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" onclick="javascript:alert('はいはい')">
+                                １３文字で文字列が置き変わる
+                              </p>
+                            </div>
+                          </td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button">
@@ -312,7 +317,7 @@
                             </div>
                           </td>
                           <td>2021/06/07</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1">交渉申込受信</option>
@@ -323,7 +328,9 @@
                               <option value="6">交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">
+                            <input type="text" class="form-control form-comment" placeholder="２０文字までメモ出来、スクロールで確認。" maxlength="20" value="２０文字までメモ可、カーソルアウトで保存">
+                          </td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button"><!--
@@ -340,7 +347,7 @@
                             </div>
                           </td>
                           <td>2021/06/01</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1">交渉申込受信</option>
@@ -351,7 +358,16 @@
                               <option value="6">交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">
+                            <div class="text-memo d-flex align-items-center">
+                              <button class="btn btn-corp">閲</button>
+                              <div style="overflow: hidden;">
+                                <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-left: .5rem;">
+                                  １０文字まで閲覧可能
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button">
@@ -384,7 +400,7 @@
                           <th class="column__target">交渉相手先</th>
                           <th class="column__start-date">交渉開始</th>
                           <th class="column__progress">進捗</th>
-                          <th class="column__user">対応者</th>
+                          <th class="column__user">メモ</th>
                           <th class="column__icon">&nbsp;</th>
                         </tr>
                       </thead>
@@ -396,7 +412,7 @@
                             </div>
                           </td>
                           <td>2021/01/30</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1" selected>交渉申込受信</option>
@@ -407,7 +423,7 @@
                               <option value="6">交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">ユーザ名</td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button">
@@ -424,7 +440,7 @@
                             </div>
                           </td>
                           <td>2021/12/27</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1">交渉申込受信</option>
@@ -435,7 +451,9 @@
                               <option value="6">交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">
+                            <input type="text" class="form-control form-comment" placeholder="２０文字までメモ出来ます。" maxlength="20">
+                          </td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button"><!--
@@ -452,7 +470,7 @@
                             </div>
                           </td>
                           <td>2021/12/29</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1">交渉申込受信</option>
@@ -463,7 +481,7 @@
                               <option value="6" selected>交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">ユーザ名</td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button"><!--
@@ -480,7 +498,7 @@
                             </div>
                           </td>
                           <td>2021/10/05</td>
-                          <td>
+                          <td class="pe-3">
                             <select class="form-select">
                               <option selected disabled value="">＋選択してください</option>
                               <option value="1">交渉申込受信</option>
@@ -491,7 +509,7 @@
                               <option value="6">交渉終了</option>
                             </select>
                           </td>
-                          <td>ユーザ名</td>
+                          <td class="pe-3">ユーザ名</td>
                           <td class="icon">
                             <a href="" class="position-relative">
                               <img class="" src="./img/icon/icon-message.svg" role="button"><!--
@@ -550,6 +568,13 @@
     // 進捗ボックス変更時処理。
     // 上記同様、loadScreen を実行後、ma.sendRequest となる。
     $('.form-select').change(function() {
+      ma.loadScreen();
+      ma.offScreen();
+    });
+
+    // 進捗ボックス変更時処理。
+    // 上記同様、loadScreen を実行後、ma.sendRequest となる。
+    $('.form-comment').focusout(function() {
       ma.loadScreen();
       ma.offScreen();
     });

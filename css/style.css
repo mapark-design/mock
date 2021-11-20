@@ -10493,6 +10493,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
 }
 
+.ma-btn-fs16 {
+  font-size: 1.6rem;
+}
+
+.ma-btn-ps {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
 .ma-btn-modal {
   color: black;
   border: 1px solid #ced4da;
@@ -10672,6 +10681,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list-type__hyphen li {
   list-style: "－";
+}
+
+.direct-message {
+  width: 75%;
+  margin-bottom: 1rem;
+}
+.direct-message--others {
+  margin-left: 0;
+  margin-right: auto;
+}
+.direct-message--self {
+  margin-left: auto;
+  margin-right: 0;
+}
+.direct-message__name {
+  font-size: 1.6rem;
+}
+.direct-message__name--others {
+  text-align: left;
+}
+.direct-message__name--self {
+  text-align: right;
+}
+.direct-message__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.direct-message__body--others {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.direct-message__body--self {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.direct-message__status {
+  -ms-flex-item-align: end;
+      align-self: end;
+  font-size: 1.6rem;
+  min-width: 10rem;
+}
+.direct-message__status--others {
+  margin-left: 1rem;
+  text-align: left;
+}
+.direct-message__status--self {
+  margin-right: 1rem;
+  text-align: right;
+}
+.direct-message__content-inner {
+  background-color: #eaeaea;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 /**
@@ -12070,9 +12135,6 @@ h1, h2, h3, h4, h5, h6 {
 .list-transfar__item-status {
   width: 18%;
 }
-.list-transfar__item-regist-user-name {
-  width: 19%;
-}
 .list-transfar__item-detail {
   width: 6%;
 }
@@ -12207,13 +12269,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #606060;
 }
 .search-negos-result__tbl .column__start-date {
-  width: 15rem;
+  width: 12rem;
 }
 .search-negos-result__tbl .column__progress {
   width: 18.5rem;
 }
 .search-negos-result__tbl .column__user {
-  width: calc((1086px - 38.5rem) / 3 * 1);
+  width: calc((1086px - 35.5rem) / 3 * 1);
 }
 .search-negos-result__tbl .column__icon {
   width: 5rem;
@@ -12452,6 +12514,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .user-info__item-input--header {
   padding: 0.5rem 1.5rem;
+}
+
+.nego-message__message-area {
+  height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 240px);
 }
 
 .material-icons-outlined.md-48 {

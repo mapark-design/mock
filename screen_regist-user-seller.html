@@ -197,7 +197,7 @@
                       <dd class="form__item-input regist-seller__item-input">
                         <div class="form__item-input--flex-wrap form_value-point mb-3"></div>
                         <div>
-                          <input type="text" class="form-control w-75" placeholder="その他を選択した場合のみ入力してください。">
+                          <input type="text" class="form-control" placeholder="その他を選択した場合のみ入力してください。">
                         </div>
                       </dd>
                     </div>
@@ -246,7 +246,7 @@
                       <dd class="form__item-input regist-seller__item-input">
                         <div class="form__item-input--flex-wrap form_stockholders mb-3"></div>
                         <div>
-                          <input type="text" class="form-control w-75" placeholder="その他を選択した場合のみ入力してください。">
+                          <input type="text" class="form-control" placeholder="その他を選択した場合のみ入力してください。">
                         </div>
                       </dd>
                     </div>
@@ -583,7 +583,7 @@
             </section>
             <div class="form__action form__action--center">
               <button type="button" class="btn btn-warning ma-btn-section-back temporary-save">一時保存する</button>
-              <button class="btn btn-corp ma-btn-section">登録する</button>
+              <button id="btn-regist" class="btn btn-corp ma-btn-section">登録する</button>
             </div>
           </form>
         </div>
@@ -620,6 +620,10 @@
 <script>
 var ma = new Ma();
 $(function() {
+  $('#btn-regist').click(function() {
+    $('#maform').attr('method', 'GET').attr('action', './screen_regist-user-seller_confirm.html').submit();
+  });
+
   // 既存値の設定
   ma.setOptions('./json/master-industory.json', '.form-industory'); // 業種（大項目）
   ma.setOptions('./json/master_sales.json', '.sales'); // 前年度売上高、売上高

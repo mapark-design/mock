@@ -53,7 +53,7 @@
           </p>
           <div class="mt-5 text-center">
             <form id="maform">
-              <button class="btn btn-corp">契約プランを選択する</button>
+              <button id="btn-regist" class="btn btn-corp">契約プランを選択する</button>
             </form>
           </div>
         </div>
@@ -65,7 +65,7 @@
 </body>
 <script>
   $('#btn-regist').click(function() {
-    $(this).parents("form").attr('method', 'GET').attr('action', './screen_tmp-regist_complete.html').submit();
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_contract-details.html').submit();
   });
 
   $('#btn-back').click(function() {

@@ -1,0 +1,58 @@
+@use "../abstracts/variables" as var;
+
+.direct-message {
+
+  width: 75%;
+  margin-bottom: 1.0rem;
+
+  &--others {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  &--self {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &__name {
+    font-size: var.$FONT-SIZE-16;
+    &--others {
+      text-align: left;
+    }
+    &--self {
+      text-align: right;
+    }
+  }
+
+  &__body {
+    display: flex;
+    &--others {
+      justify-content: flex-start;
+    }
+    &--self {
+      justify-content: flex-end;
+    }
+  }
+
+  &__status {
+    align-self: end;
+    font-size: var.$FONT-SIZE-16;
+    min-width: 10.0rem;
+    &--others {
+      margin-left: 1.0rem;
+      text-align: left;
+    }
+    &--self {
+      margin-right: 1.0rem;
+      text-align: right;
+    }
+  }
+
+  &__content {
+    &-inner {
+      background-color: #eaeaea;
+      border-radius: 0.5rem;
+      padding: 1.0rem;
+    }
+  }
+}

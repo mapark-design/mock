@@ -50,6 +50,13 @@ $mabutton-modal: ".ma-modal-btn";
 #{$mabutton}-submit {
   font-size: 2.0rem;
 }
+#{$mabutton}-fs16 {
+  font-size: var.$FONT-SIZE-16;
+}
+#{$mabutton}-ps {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
 #{$mabutton}-modal {
   color: black;
   border: 1px solid #ced4da;

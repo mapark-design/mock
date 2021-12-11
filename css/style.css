@@ -10769,6 +10769,28 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
+.entry-example__disc-list li {
+  list-style-type: disc;
+  margin-left: 3rem;
+}
+.entry-example__def-list dt {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+.entry-example__def-list dt:first-of-type {
+  margin-top: 0;
+}
+.entry-example__def-list dd {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid darkgray;
+}
+.entry-example__def-list dd:last-of-type {
+  padding-bottom: 0rem;
+  border-bottom: none;
+}
+
 /**
  * ヘッダコンポーネント。
  * システム共通とし、独自に必要なものは Modifier を利用して設定している。

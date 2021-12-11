@@ -74,13 +74,14 @@
             </div>
           </div>
         --></div>
-        <div class="sitetop-keyvisual__content">
+        <div class="sitetop-keyvisual__content" style="top: 9.0rem;">
+          <p class="sitetop-keyvisual__copy" style="font-size: 35px;">会社・事業を託し受け継ぐ。</p>
           <p class="sitetop-keyvisual__copy">
             世界中から未来を見つけるなら<br>
             会員制オンラインマッチングサービス<br>
           </p>
-          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
-          <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
+          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg" style="max-width: 42.5rem; top: 16rem;">
+          <button class="btn btn-corp sitetop-keyvisual__button" style="top: 31rem">無料で始める</button>
         </div>
 
         <!-- スライドコントロールの設定 --><!--
@@ -305,15 +306,21 @@
         <h2 class="section-nolog__title">よくあるご質問</h2>
         <div class="section-nolog__content sitetop-question">
           <dl class="sitetop-question__list">
+            <dt>初めてのM&Aで不安です。どんなサポートが受けられますか？</dt>
+            <dd>
+              M&A PARKでは、初めての事業承継・M&Aをサポートするための支援体制を完備しており、M&A PARKを通じて、必要な時に必要な専門家をご紹介することができます。会員登録後の画面は、オンラインサービスを普段利用しない方でも分かりやすいシンプルな機能となっております。また、専門家監修の交渉を進める際のお役立ち資料もご用意しております。なにかご不明点や困ったことがございましたら、専門スタッフが随時サポートさせていただいております。<br>
+            </dd>
             <dt>M&A PARKとはどんなサービスですか？</dt>
-            <dd>M&A PARKは、経営者のための完全審査・会員制M&Aプラットフォームです。<br>売り手企業は、自社もしくはその代理人であるFA (ファイナンシャル・アドバイザー) が売却情報を登録することで、買い手企業からのオファーを直接受けることができます。<br>インターネットの力で業種や地域を超えた、新たなM&Aマッチングを提供いたします。<br></dd>
-            <dt>M&A PARKとはどんなサービスですか？</dt>
-            <dd>M&A PARKは、経営者のための完全審査・会員制M&Aプラットフォームです。<br>売り手企業は、自社もしくはその代理人であるFA (ファイナンシャル・アドバイザー) が売却情報を登録することで、買い手企業からのオファーを直接受けることができます。<br>インターネットの力で業種や地域を超えた、新たなM&Aマッチングを提供いたします。<br></dd>
-            <dt>M&A PARKとはどんなサービスですか？</dt>
-            <dd>M&A PARKは、経営者のための完全審査・会員制M&Aプラットフォームです。<br>売り手企業は、自社もしくはその代理人であるFA (ファイナンシャル・アドバイザー) が売却情報を登録することで、買い手企業からのオファーを直接受けることができます。<br>インターネットの力で業種や地域を超えた、新たなM&Aマッチングを提供いたします。<br></dd>
+            <dd>
+              M&A PARKは、経営者のための会員制ハイブリッド総合支援型M&Aサービスです。<br>
+              事業や会社を譲りたい企業の方は、自社もしくは代理人であるFA（ファイナンシャルアドバイザー）が、譲りたい事業情報を登録することで、譲り受けたい企業の方から直接オファーを受け取ることができます。<br>
+              インターネットならではの、国や地域、業種の垣根を超えた出会いの場を提供すると同時に、出会った企業様同時のM&Aを進める為の支援体制を備えた総合支援型のサービスです。<br>
+            </dd>
+            <dt>M&A PARKの利用料金はいくらですか？会員登録は無料ですか？手数料はいくらですか？</dt>
+            <dd>会員登録は無料です。また、売り手企業様は、完全無料でご利用いただけます。買い手企業様は月額料金のみで、ご成約時の手数料は０円です。<br></dd>
           </dl>
           <div class="section-nolog__button">
-            <button class="btn btn-corp ma-btn-section">すべてを見る</button>
+            <button class="btn btn-corp ma-btn-section faq">すべてを見る</button>
           </div>
         </div>
       </div>
@@ -395,9 +402,13 @@
   </div>
 </body>
 <script>
+  var ma = new Ma();
   $(function() {
-    var ma = new Ma();
     $(window).scroll(ma.scrollIcon);
+
+    $('.faq').click(function () {
+      location.href = './screen_faq.html';
+    });
   });
 </script>
 </html>

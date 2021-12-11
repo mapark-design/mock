@@ -20,9 +20,11 @@
 
   &__date {
     width: 15.0rem;
-    padding: 1.0rem 5.0rem;
+    padding-top: 1.0rem;
+    padding-bottom: 1.0rem;
     border-radius: 0.5rem 0 0 0.5rem;
     background-color: var.$COLOR-GRAY-DARK;
+    text-align: center;
   }
 
   &__text {

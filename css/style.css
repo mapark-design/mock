@@ -10791,6 +10791,26 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
+.list-parentheses {
+  margin-left: 3.5rem;
+  list-style-type: none;
+}
+.list-parentheses li {
+  list-style: none;
+  counter-increment: cnt;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+.list-parentheses li::before {
+  content: "(" counter(cnt) ") ";
+  margin-left: -4.5rem;
+  width: 4rem;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /**
  * ヘッダコンポーネント。
  * システム共通とし、独自に必要なものは Modifier を利用して設定している。
@@ -11591,7 +11611,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sitetop-keyvisual__content {
   position: absolute;
-  top: 15rem;
+  top: 8rem;
   left: 9.5rem;
   z-index: 1;
 }
@@ -11601,16 +11621,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #c8161d;
   margin-bottom: 2rem;
 }
+.sitetop-keyvisual__copy--title {
+  font-size: 3.6rem;
+}
 .sitetop-keyvisual__logo {
   position: absolute;
-  top: 10rem;
+  top: 17rem;
+  max-width: 42.5rem;
 }
 .sitetop-keyvisual__button {
   border-radius: 0.5rem;
   font-size: 2.4rem;
   padding: 0.8rem 3rem;
   position: absolute;
-  top: 25rem;
+  top: 32rem;
 }
 
 .sitetop-feature__list {
@@ -11637,6 +11661,19 @@ h1, h2, h3, h4, h5, h6 {
   width: 26rem;
   height: 26rem;
   margin-bottom: 1rem;
+}
+.sitetop-feature__detail {
+  margin-top: 5rem;
+  text-align: center;
+}
+.sitetop-feature__detail li {
+  margin-bottom: 3rem;
+}
+.sitetop-feature__detail li:last-of-type {
+  margin-bottom: 0;
+}
+.sitetop-feature__detail img {
+  max-width: 84rem;
 }
 
 .sitetop-newarrival__subject, .sitetop-newarrival__item-value, .sitetop-newarrival__item-title {
@@ -11795,9 +11832,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sitetop-notify__date {
   width: 15rem;
-  padding: 1rem 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-radius: 0.5rem 0 0 0.5rem;
   background-color: #e6e6e6;
+  text-align: center;
 }
 .sitetop-notify__text {
   padding: 1rem 2.5rem;
@@ -12478,6 +12517,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;
   font-size: 2rem;
 }
+.agreement__item-supplementary-provisions {
+  margin-top: 5rem;
+}
 .agreement__item-value {
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;
   text-align: justify;
@@ -12503,6 +12545,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 .agreement__item-value .list-type__decimal .list-type__hyphen {
   padding-left: 1rem;
+}
+.agreement__item-value .list-parentheses {
+  margin-top: 0.5rem;
+  margin-left: 3.5rem;
+  list-style-type: none;
+}
+.agreement__item-value .list-parentheses li {
+  list-style: none;
+  counter-increment: cnt;
+  position: relative;
+}
+.agreement__item-value .list-parentheses li::before {
+  content: "(" counter(cnt) ") ";
+  margin-left: -4.5rem;
+  width: 4rem;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .agreement__text {
   line-height: 1.6;
@@ -12579,6 +12640,32 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.information__inner {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.information__title {
+  padding-left: 0.5rem;
+  font-size: 3.2rem;
+  border-bottom: 1px solid #c8161d;
+}
+.information__date {
+  text-align: right;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+.information__text {
+  line-height: 1.6;
+  margin-top: 5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.information__back {
+  margin-top: 6rem;
+  text-align: center;
 }
 
 .material-icons-outlined.md-48 {

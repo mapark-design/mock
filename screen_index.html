@@ -74,14 +74,14 @@
             </div>
           </div>
         --></div>
-        <div class="sitetop-keyvisual__content" style="top: 9.0rem;">
-          <p class="sitetop-keyvisual__copy" style="font-size: 35px;">会社・事業を託し受け継ぐ。</p>
+        <div class="sitetop-keyvisual__content">
+          <p class="sitetop-keyvisual__copy sitetop-keyvisual__copy--title">会社・事業を託し受け継ぐ</p>
           <p class="sitetop-keyvisual__copy">
             世界中から未来を見つけるなら<br>
             会員制オンラインマッチングサービス<br>
           </p>
-          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg" style="max-width: 42.5rem; top: 16rem;">
-          <button class="btn btn-corp sitetop-keyvisual__button" style="top: 31rem">無料で始める</button>
+          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
+          <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
         </div>
 
         <!-- スライドコントロールの設定 --><!--
@@ -121,6 +121,13 @@
           </ul>
           <div class="section-nolog__button">
             <button class="btn btn-corp ma-btn-section">すべてを見る</button>
+          </div>
+          <div class="sitetop-feature__detail">
+            <ul>
+              <li><img src="./img/feature-subtitle.svg"></li>
+              <li><img src="./img/feature04.svg"></li>
+              <li><img src="./img/feature05.svg"></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -355,7 +362,7 @@
             </li>
           </ul>
           <div class="section-nolog__button">
-            <button class="btn btn-corp ma-btn-section">すべてを見る</button>
+            <button class="btn btn-corp ma-btn-section information">すべてを見る</button>
           </div>
         </div>
       </div>
@@ -408,6 +415,9 @@
 
     $('.faq').click(function () {
       location.href = './screen_faq.html';
+    });
+    $('.information').click(function () {
+      location.href = './screen_informations.html';
     });
   });
 </script>

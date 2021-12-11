@@ -26,4 +26,21 @@
     height: 26.0rem;
     margin-bottom: 1rem;
   }
+
+  &__detail {
+    margin-top: 5.0rem;
+    text-align: center;
+
+    li {
+      margin-bottom: 3.0rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 84.0rem;
+    }
+  }
 }

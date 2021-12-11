@@ -14,6 +14,9 @@
       padding: 1.5rem 0.5rem 1.5rem 1.5rem;
       font-size: var.$FONT-SIZE-20;
     }
+    &-supplementary-provisions {
+      margin-top: 5.0rem;
+    }
     &-value {
       padding: 1.5rem 0.5rem 1.5rem 1.5rem;
       text-align: justify;
@@ -46,6 +49,27 @@
 
         .list-type__hyphen {
           padding-left: 1.0rem;
+        }
+      }
+
+      .list-parentheses {
+        margin-top: 0.5rem;
+        margin-left: 3.5rem;
+        list-style-type: none;
+
+        & li {
+          list-style: none;
+          counter-increment: cnt;
+          position: relative;
+        }
+        & li::before {
+          content: "(" counter(cnt) ") ";
+          margin-left: -4.5rem;
+          width: 4.0rem;
+          text-align: right;
+          position: absolute;
+          top: 0;
+          left: 0;
         }
       }
     }

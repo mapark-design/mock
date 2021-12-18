@@ -12710,6 +12710,44 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #c8161d;
 }
 
+.download__inner {
+  width: 1024px;
+  padding-bottom: 0;
+}
+.download__inner--pd50 {
+  padding-bottom: 5rem;
+}
+.download__title {
+  color: #c8161d;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.download__subtitle span {
+  font-size: 2.4rem;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+.download__auther {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.download__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+     -moz-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
 .material-icons-outlined.md-48 {
   font-size: 4.8rem;
 }

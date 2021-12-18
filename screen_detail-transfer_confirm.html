@@ -195,24 +195,52 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li>マイページ</li>
-            <li>譲渡案件登録</li>
+            <li>譲渡案件を検索</li>
+            <li>譲渡案件詳細</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
 
         <section class="section">
           <div class="section__inner regist-seller">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件登録</h2>
+            <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件詳細</h2>
             <div class="section__content">
               <form id="maform" class="needs-validation" novalidate>
 
+                <section class="section">
+                  <div class="text-center fw-bold">
+                    まだ登録は完了していません。<br>
+                    入力内容をご確認の上、登録ボタンを押してください。<br>
+                  </div>
+
+                  <h3 class="section__title section__title-h3"></h3>
+                  <div class="section__content">
+                    <table class="detail-transfar__header-table">
+                      <tr class="detail-transfar__header-table-row">
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">案件情報ステータス</th>
+                        <td class="detail-transfar__header-table-col" colspan="3">公開中<!--
+                          <select class="form-select w-25 form_previous-year-sales transfar-status">
+                            <option selected disabled value="">＋選択してください</option>
+                          </select>
+                      --></td>
+                      </tr>
+                      <tr class="detail-transfar__header-table-row">
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">公開日</th>
+                        <td class="detail-transfar__header-table-col">2021/11/13</td>
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">更新日</th>
+                        <td class="detail-transfar__header-table-col">2021/11/13</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </section>
+
                 <!-- 案件情報 -->
                 <section class="section">
-                  <div class="section__inner">
+                  <div class="section__inner"><!--
                     <div class="form__action form__action--right">
-                      <button type="button" class="btn btn-warning ma-btn-section-back temporary-save">一時保存する</button>
+                      <button class="btn btn-warning ma-btn-section-back">一時保存する</button>
                     </div>
-                    <h3 class="section__title section__title-h3">案件情報</h3>
+                    --><h3 class="section__title section__title-h3">案件情報</h3>
                     <div class="section__content">
                       <dl class="">
                         <div class="form__item form__item--border form__item--top-border">
@@ -220,44 +248,45 @@
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-center form_transfar-form"></div>
+                            <div class="form__item-input--flex-center form_transfar-form">
+                              <div class="form-check"><input id="transfar-form09010" name="transfar-form" type="radio" value="09010" class="form-check-input" checked><label for="transfar-form09010" class="form-check-label">株式譲渡</label></div>
+                              <div class="form-check"><input id="transfar-form09020" name="transfar-form" type="radio" value="09020" class="form-check-input"><label for="transfar-form09020" class="form-check-label">事業譲渡</label></div>
+                            </div>
                           </dd>
                         </div>
-                        <div class="form__item form__item--border item__stock-purchase">
+                        <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">株式譲渡種別
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-wrap form_transfar-class"></div>
+                            <div class="form__item-input--flex-wrap form_transfar-class">
+                              <div class="form-check"><input id="transfar-class10010" type="checkbox" value="10010" class="form-check-input" checked><label for="transfar-class10010" class="form-check-label">全部譲渡</label></div>
+                              <div class="form-check"><input id="transfar-class10020" type="checkbox" value="10020" class="form-check-input"><label for="transfar-class10020" class="form-check-label">一部譲渡</label></div>
+                              <div class="form-check"><input id="transfar-class10030" type="checkbox" value="10030" class="form-check-input"><label for="transfar-class10030" class="form-check-label">応相談</label></div>
+                            </div>
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">タイトル
                             <span class="form__required">必須</span>
                           </dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">譲渡案件タイトル<!--
                             <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください">
                             <a class="form__ex" data-bs-toggle="collapse" href="#project-title" role="button" aria-expanded="false" aria-controls="project-title">
                               ＋ 記入例を見る
                             </a>
                             <div class="collapse" id="project-title">
-                              <div class="card form__ex-body">
-                                <ul class="entry-example__disc-list">
-                                  <li>【黒字】化粧品、海外雑貨を販売する自社ECサイトの譲渡</li>
-                                  <li>九州地方の有料老人ホームの売却（満床）</li>
-                                  <li>WEBマーケティング、HP制作の事業譲渡（大手企業との取引有）</li>
-                                </ul>
-                              </div>
+                              <div class="card form__ex-body">ここに記入例を提示する。<br>普通のHTMLになるので、デザインが必要かもしれない。<ul><li>リスト</li><li>リスト</li><li>リスト</li></ul></div>
                             </div>
-                          </dd>
+                        --></dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">業種</dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">簡易宿泊施設・民泊<br>家電・情報通信機器・部品<!--
                             <ul>
                               <li class="form__item-input--flex-center mb-3">
                                 <div class="w-50">
-                                  <span class="form__required">必須</span>
+                                  <span class="form__required">必須</span>宿泊業
                                   <select class="form-select form-industory">
                                     <option selected disabled value="">＋大区分を選ぶ</option>
                                   </select>
@@ -270,12 +299,12 @@
                                 </div>
                               </li>
                               <li class="form__item-input--flex-center mb-3">
-                                <div class="w-50">
+                                <div class="w-50">製造業
                                   <select class="form-select form-industory">
                                     <option selected value="">＋大区分を選ぶ</option>
                                   </select>
                                 </div>
-                                <div class="w-50">
+                                <div class="w-50">家電・情報通信機器・部品
                                   <select class="form-select form-sector">
                                     <option selected value="">＋小区分を選ぶ</option>
                                   </select>
@@ -294,13 +323,13 @@
                                 </div>
                               </li>
                             </ul>
-                          </dd>
+                          --></dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">前年度売上高
                             <span class="form__required">必須</span>
                           </dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">2億5,000万円～5億円
                             <select class="form-select w-25 form_previous-year-sales sales">
                               <option selected disabled value="">＋選択してください</option>
                             </select>
@@ -310,7 +339,7 @@
                           <dt class="form__item-title regist-seller__item-title">地域
                             <span class="form__required">必須</span>
                           </dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">東京都
                             <select class="form-select w-50 form-prefecture" required>
                               <option selected disabled value="">＋選択してください</option>
                             </select>
@@ -318,7 +347,7 @@
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">従業員数</dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">101名以上
                             <select class="form-select w-25 form_number-of-employees">
                               <option selected>＋選択してください</option>
                             </select>
@@ -329,41 +358,34 @@
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-wrap form_transfar-reason"></div>
+                            <div class="form__item-input--flex-wrap form_transfar-reason">
+                              <div class="form-check"><input id="transfar-reason13010" type="checkbox" value="13010" class="form-check-input"><label for="transfar-reason13010" class="form-check-label">事業成長</label></div>
+                              <div class="form-check"><input id="transfar-reason13020" type="checkbox" value="13020" class="form-check-input"><label for="transfar-reason13020" class="form-check-label">大手企業傘下に入りたい</label></div>
+                              <div class="form-check"><input id="transfar-reason13030" type="checkbox" value="13030" class="form-check-input"><label for="transfar-reason13030" class="form-check-label">自社事業の選択と集中</label></div>
+                              <div class="form-check"><input id="transfar-reason13040" type="checkbox" value="13040" class="form-check-input"><label for="transfar-reason13040" class="form-check-label">資金の確保</label></div>
+                              <div class="form-check"><input id="transfar-reason13050" type="checkbox" value="13050" class="form-check-input"><label for="transfar-reason13050" class="form-check-label">業績不振（先行き不安）</label></div>
+                              <div class="form-check"><input id="transfar-reason13060" type="checkbox" value="13060" class="form-check-input"><label for="transfar-reason13060" class="form-check-label">後継者不在</label></div>
+                              <div class="form-check"><input id="transfar-reason13070" type="checkbox" value="13070" class="form-check-input" checked><label for="transfar-reason13070" class="form-check-label">代表者引退</label></div>
+                            </div>
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">事業概要
                             <span class="form__required">必須</span>
                           </dt>
-                          <dd class="form__item-input regist-seller__item-input">
-                            <textarea class="form-control" placeholder="具体的な事業の内容、特徴をご入力してください。" rows="5"></textarea>
+                          <dd class="form__item-input regist-seller__item-input">具体的な事業内容は以下の通りです。<br>・○○○○○<br>・×××××<br>・△△△△△<br>
+                            <textarea class="form-control" placeholder="具体的な事業の内容、特徴をご入力してください。" rows="5"></textarea><!--
                             <a class="form__ex" data-bs-toggle="collapse" href="#project-note" role="button" aria-expanded="false" aria-controls="project-note">
                               ＋ 記入例を見る
                             </a>
                             <div class="collapse" id="project-note">
-                              <div class="card form__ex-body">
-                                <dl class="entry-example__def-list">
-                                  <dt>記入例１</dt>
-                                  <dd>九州地方で５か所の有料老人ホームと、３か所のデイサービスを運営しております。<br>
-                                    有料老人ホームは、５か所すべて満床です。<br>
-                                    ケアマネジャー６名、ヘルパー３０名、看護師８名、ドライバー４名が所属しております。<br>
-                                    土地・建物、送迎車などすべて自社で保有しており、譲渡可能です。<br>
-                                  </dd>
-                                  <dt>記入例２</dt>
-                                  <dd>
-                                    自社WEBメディアの運営と企業のHP制作が事業の中心です。<br>
-                                    HPの作成や運用・保守、コンテンツ作成、デジタルマーケティングと、クライアント企業の要望に合わせて幅広く対応しております。<br>
-                                    自社メディアがSEOにより上位表示されており、そのWEBメディア運営で培ったノウハウを活かし、コンサルティングの事業も一部行っております。<br>
-                                  </dd>
-                                </dl>
-                              </div>
+                              <div class="card form__ex-body">ここに記入例を提示する。<br>普通のHTMLになるので、デザインが必要かもしれない。<ul><li>リスト</li><li>リスト</li><li>リスト</li></ul></div>
                             </div>
                           </dd>
-                        </div>
+                        --></div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">譲渡希望時期</dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">半年以内
                             <select class="form-select w-25 form_term2contract">
                               <option selected>＋選択してください</option>
                             </select>
@@ -372,13 +394,22 @@
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">譲渡で重視するポイント</dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-wrap form_value-point mb-3"></div>
+                            <div class="form__item-input--flex-wrap form_value-point mb-3">
+                              <div class="form-check"><input id="value-point14010" type="checkbox" value="14010" class="form-check-input"><label for="value-point14010" class="form-check-label">譲渡金額</label></div>
+                              <div class="form-check"><input id="value-point14020" type="checkbox" value="14020" class="form-check-input"><label for="value-point14020" class="form-check-label">企業文化</label></div>
+                              <div class="form-check"><input id="value-point14030" type="checkbox" value="14030" class="form-check-input" checked><label for="value-point14030" class="form-check-label">従業員の雇用</label></div>
+                              <div class="form-check"><input id="value-point14040" type="checkbox" value="14040" class="form-check-input"><label for="value-point14040" class="form-check-label">事業成長</label></div>
+                              <div class="form-check"><input id="value-point14050" type="checkbox" value="14050" class="form-check-input"><label for="value-point14050" class="form-check-label">タイミング</label></div>
+                              <div class="form-check"><input id="value-point14060" type="checkbox" value="14060" class="form-check-input"><label for="value-point14060" class="form-check-label">技術の継承</label></div>
+                              <div class="form-check"><input id="value-point14070" type="checkbox" value="14070" class="form-check-input" checked><label for="value-point14070" class="form-check-label">取引先との関係</label></div>
+                              <div class="form-check"><input id="value-point14080" type="checkbox" value="14080" class="form-check-input"><label for="value-point14080" class="form-check-label">その他</label></div>
+                            </div><!--
                             <div>
-                              <input type="text" class="form-control" placeholder="その他を選択した場合のみ入力してください。">
+                              <input type="text" class="form-control w-75" placeholder="その他を選択した場合のみ入力してください。">
                             </div>
-                          </dd>
+                          --></dd>
                         </div>
-                        <div class="form__item form__item--border item__stock-purchase">
+                        <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">経営参画</dt>
                           <dd class="form__item-input--flex-wrap regist-seller__item-input form_mgmt-part"></dd>
                         </div>
@@ -386,7 +417,7 @@
                           <dt class="form__item-title regist-seller__item-title">譲渡希望価格
                             <span class="form__required">必須</span>
                           </dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">5億円以上
                             <select class="form-select w-25 form_transfar-price">
                               <option selected>＋選択してください</option>
                             </select>
@@ -395,56 +426,68 @@
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">アピールポイント</dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-wrap form_strengths"></div>
+                            <div class="form__item-input--flex-wrap form_strengths">
+                              <div class="form-check"><input id="strengths16010" type="checkbox" value="16010" class="form-check-input" checked><label for="strengths16010" class="form-check-label">営業黒字</label></div>
+                              <div class="form-check"><input id="strengths16020" type="checkbox" value="16020" class="form-check-input"><label for="strengths16020" class="form-check-label">純資産プラス</label></div>
+                              <div class="form-check"><input id="strengths16030" type="checkbox" value="16030" class="form-check-input"><label for="strengths16030" class="form-check-label">実質無借金</label></div>
+                              <div class="form-check"><input id="strengths16040" type="checkbox" value="16040" class="form-check-input"><label for="strengths16040" class="form-check-label">短期回収可能</label></div>
+                              <div class="form-check"><input id="strengths16050" type="checkbox" value="16050" class="form-check-input"><label for="strengths16050" class="form-check-label">業績上昇中</label></div>
+                              <div class="form-check"><input id="strengths16060" type="checkbox" value="16060" class="form-check-input" checked><label for="strengths16060" class="form-check-label">自走可能</label></div>
+                              <div class="form-check"><input id="strengths16070" type="checkbox" value="16070" class="form-check-input"><label for="strengths16070" class="form-check-label">独自性の高い商材</label></div>
+                              <div class="form-check"><input id="strengths16080" type="checkbox" value="16080" class="form-check-input" checked><label for="strengths16080" class="form-check-label">大手企業との取引</label></div>
+                              <div class="form-check"><input id="strengths16090" type="checkbox" value="16090" class="form-check-input"><label for="strengths16090" class="form-check-label">知的財産権</label></div>
+                            </div>
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">アピールポイント詳細</dt>
-                          <dd class="form__item-input regist-seller__item-input">
-                            <textarea class="form-control" placeholder="事業で優れている点や注目されやすい点を具体的にご入力してください。" rows="5"></textarea>
+                          <dd class="form__item-input regist-seller__item-input">アピールポイント内容は以下の通りです。<br>・○○○○○<br>・×××××<br>・△△△△△<br>
+                            <textarea class="form-control" placeholder="事業で優れている点や注目されやすい点を具体的にご入力してください。" rows="5"></textarea><!--
                             <a class="form__ex" data-bs-toggle="collapse" href="#project-appeal" role="button" aria-expanded="false" aria-controls="project-appeal">
                               ＋ 記入例を見る
                             </a>
                             <div class="collapse" id="project-appeal">
-                              <div class="card form__ex-body">
-                                <ul class="entry-example__disc-list">
-                                  <li>１０年以上のサービス運営実績があり、大手企業との取引があります</li>
-                                  <li>ご利用企業数　3,500社以上</li>
-                                  <li>創業以来、黒字経営</li>
-                                  <li>北海道、仙台、東京、大阪、名古屋、アメリカに拠点があります</li>
-                                  <li>特許取得済</li>
-                                </ul>
-                              </div>
+                              <div class="card form__ex-body">ここに記入例を提示する。<br>普通のHTMLになるので、デザインが必要かもしれない。<ul><li>リスト</li><li>リスト</li><li>リスト</li></ul></div>
                             </div>
-                          </dd>
+                          --></dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">交渉希望相手
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-wrap form_target"></div>
+                            <div class="form__item-input--flex-wrap form_target">
+                              <div class="form-check"><input id="target17010" type="checkbox" value="17010" class="form-check-input" checked><label for="target17010" class="form-check-label">法人</label></div>
+                              <div class="form-check"><input id="target17020" type="checkbox" value="17020" class="form-check-input"><label for="target17020" class="form-check-label">個人事業主</label></div>
+                              <div class="form-check"><input id="target17030" type="checkbox" value="17030" class="form-check-input"><label for="target17030" class="form-check-label">アドバイザー(FA)</label></div>
+                            </div>
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">株主状況</dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <div class="form__item-input--flex-wrap form_stockholders mb-3"></div>
-                            <div>
-                              <input type="text" class="form-control" placeholder="その他を選択した場合のみ入力してください。">
+                            <div class="form__item-input--flex-wrap form_stockholders mb-3"><div class="form-check">
+                              <input id="stockholders18010" type="checkbox" value="18010" class="form-check-input"><label for="stockholders18010" class="form-check-label">外部株主なし</label></div>
+                              <div class="form-check"><input id="stockholders18020" type="checkbox" value="18020" class="form-check-input"><label for="stockholders18020" class="form-check-label">個人投資家あり</label></div>
+                              <div class="form-check"><input id="stockholders18030" type="checkbox" value="18030" class="form-check-input"><label for="stockholders18030" class="form-check-label">ベンチャーキャピタル（VC）あり</label></div>
+                              <div class="form-check"><input id="stockholders18040" type="checkbox" value="18040" class="form-check-input"><label for="stockholders18040" class="form-check-label">事業会社あり</label></div>
+                              <div class="form-check"><input id="stockholders18050" type="checkbox" value="18050" class="form-check-input" checked><label for="stockholders18050" class="form-check-label">その他</label></div>
                             </div>
+                            <div>訳あり<!--
+                              <input type="text" class="form-control w-75" placeholder="その他を選択した場合のみ入力してください。">
+                            --></div>
                           </dd>
                         </div>
                         <div class="form__item form__item--border">
                           <dt class="form__item-title regist-seller__item-title">仲介手数料</dt>
-                          <dd class="form__item-input regist-seller__item-input">
+                          <dd class="form__item-input regist-seller__item-input">仲介手数料は以下の通りです。<br>・○○○○○<br>・×××××<br>・△△△△△<br>
                               <textarea class="form-control" placeholder="アドバイザー（FA）の方はご入力してください。" rows="3"></textarea>
                           </dd>
                         </div>
                       </dl>
-                      <div class="form__action form__action--center">
-                        <button type="button" class="btn btn-warning ma-btn-section-back temporary-save">一時保存する</button>
-                      </div>
+                      <div class="form__action form__action--center"><!--
+                        <button class="btn btn-warning ma-btn-section-back">一時保存する</button>
+                      --></div>
                     </div>
                   </div>
                 </section>
@@ -455,10 +498,10 @@
                     <h3 class="section__title section__title-h3">財務情報</h3>
                     <section class="section__content ms-3">
 
-                      <!-- 貸借対照表 -->
+                      <!-- 賃貸貸借表 -->
                       <section class="section">
                         <div class="section__inner mb-5">
-                          <h4 class="section__title section__title-h4">貸借対照表</h4>
+                          <h4 class="section__title section__title-h4">賃貸貸借表</h4>
                           <div class="section__content">
                             <dl class="">
                               <div class="form__item form__item--header form__item--border">
@@ -470,7 +513,7 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">現金預金</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-center">
@@ -482,14 +525,14 @@
                                     <div class="w-50">&nbsp;</div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">総資産<!--
                                   <img src="./img/icon/icon-question-circle.svg">
                                   --><span class="form__required">必須</span>
                                 </dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-center">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <select class="form-select asset">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
@@ -498,13 +541,13 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">有利子負債
                                   <span class="form__required">必須</span>
                                 </dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-center">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <select class="form-select interest-bearing-liability">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
@@ -513,7 +556,7 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">総負債</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-center">
@@ -526,13 +569,13 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">純資産
                                   <span class="form__required">必須</span>
                                 </dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-center">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <select class="form-select net-worth">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
@@ -541,43 +584,11 @@
                                   </div>
                                 </dd>
                               </div>
-                              <!-- 事業譲渡時使用する -->
-                              <div class="form__item form__item--border item__asset-purchase">
-                                <dt class="form__item-title regist-seller__item-title">事業資産
-                                  <span class="form__required">必須</span>
-                                </dt>
-                                <dd class="form__item-input regist-seller__item-input">
-                                  <div class="form__item-input--flex-center">
-                                    <div class="w-50">
-                                      <select class="form-select asset">
-                                        <option selected disabled value="">＋選択してください</option>
-                                      </select>
-                                    </div>
-                                    <div class="w-50">&nbsp;</div>
-                                  </div>
-                                </dd>
-                              </div>
-                              <div class="form__item form__item--border item__asset-purchase">
-                                <dt class="form__item-title regist-seller__item-title">事業負債<!--
-                                  <span class="form__required">必須</span>
-                                --></dt>
-                                <dd class="form__item-input regist-seller__item-input">
-                                  <div class="form__item-input--flex-center">
-                                    <div class="w-50">
-                                      <select class="form-select liability">
-                                        <option selected disabled value="">＋選択してください</option>
-                                      </select>
-                                    </div>
-                                    <div class="w-50">&nbsp;</div>
-                                  </div>
-                                </dd>
-                              </div>
-                              <!-- //事業譲渡時使用する -->
                             </dl>
                           </div>
                         </div>
                       </section>
-                      <!-- //貸借対照表 -->
+                      <!-- //賃貸貸借表 -->
 
                       <!-- 損益計算書 -->
                       <section class="section">
@@ -594,17 +605,17 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">売上高</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50">
+                                    <div class="w-50">2億5,000万～5億
                                       <span class="form__required">必須</span>
                                       <select class="form-select sales">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
                                     </div>
-                                    <div class="w-50">
+                                    <div class="w-50">4,000～5,000万円
                                       <select class="form-select sales">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -612,17 +623,17 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">営業利益</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50  w-50">
+                                    <div class="w-50  w-50">5,000万円～1億円
                                       <span class="form__required">必須</span>
                                       <select class="form-select profit">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
                                     </div>
-                                    <div class="w-50  w-50">
+                                    <div class="w-50  w-50">4,000～5,000万円
                                       <select class="form-select profit">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -630,11 +641,11 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">経常利益</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <select class="form-select profit">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -647,17 +658,17 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">当期純利益</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <span class="form__required">必須</span>
                                       <select class="form-select profit">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
                                     </div>
-                                    <div class="w-50">
+                                    <div class="w-50">4,000～5,000万円
                                       <select class="form-select profit">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -665,11 +676,11 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">EBITDA</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <select class="form-select profit">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -682,11 +693,11 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">減価償却費</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50">
+                                    <div class="w-50">5,000万円～1億円
                                       <select class="form-select depreciation">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -699,17 +710,17 @@
                                   </div>
                                 </dd>
                               </div>
-                              <div class="form__item form__item--border item__stock-purchase">
+                              <div class="form__item form__item--border">
                                 <dt class="form__item-title regist-seller__item-title">役員報酬</dt>
                                 <dd class="form__item-input regist-seller__item-input">
                                   <div class="form__item-input--flex-end">
-                                    <div class="w-50">
+                                    <div class="w-50">4,000～5,000万円
                                       <span class="form__required">必須</span>
                                       <select class="form-select officer-fee">
                                         <option selected disabled value="">＋選択してください</option>
                                       </select>
                                     </div>
-                                    <div class="w-50">
+                                    <div class="w-50">4,000～5,000万円
                                       <select class="form-select officer-fee">
                                         <option selected>＋選択してください</option>
                                       </select>
@@ -717,44 +728,6 @@
                                   </div>
                                 </dd>
                               </div>
-                              <!-- 事業譲渡時使用する -->
-                              <div class="form__item form__item--border item__asset-purchase">
-                                <dt class="form__item-title regist-seller__item-title">事業売上</dt>
-                                <dd class="form__item-input regist-seller__item-input">
-                                  <div class="form__item-input--flex-end">
-                                    <div class="w-50">
-                                      <span class="form__required">必須</span>
-                                      <select class="form-select sales">
-                                        <option selected disabled value="">＋選択してください</option>
-                                      </select>
-                                    </div>
-                                    <div class="w-50">
-                                      <select class="form-select sales">
-                                        <option selected>＋選択してください</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </dd>
-                              </div>
-                              <div class="form__item form__item--border item__asset-purchase">
-                                <dt class="form__item-title regist-seller__item-title">事業利益</dt>
-                                <dd class="form__item-input regist-seller__item-input">
-                                  <div class="form__item-input--flex-end">
-                                    <div class="w-50">
-                                      <span class="form__required">必須</span>
-                                      <select class="form-select profit">
-                                        <option selected disabled value="">＋選択してください</option>
-                                      </select>
-                                    </div>
-                                    <div class="w-50">
-                                      <select class="form-select profit">
-                                        <option selected>＋選択してください</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </dd>
-                              </div>
-                              <!-- //事業譲渡時使用する -->
                             </dl>
                           </div>
                         </div>
@@ -763,8 +736,10 @@
                     </section>
                   </div>
                 </section>
-                <div class="form__action form__action--center">
-                  <button type="button" class="btn btn-warning ma-btn-section-back temporary-save">一時保存する</button>
+                <div class="tmp-regist__section-agreement mb-4">上記内容で登録します。よろしいですか？</div>
+                <div class="form__action form__action--center"><!--
+                  <button class="btn btn-warning ma-btn-section-back">一時保存する</button>
+                  --><button id="btn-back" class="btn btn-secondary ma-btn-back" type="submit">戻る</button>
                   <button id="btn-regist" class="btn btn-corp ma-btn-section">登録する</button>
                 </div>
               </form>
@@ -788,49 +763,35 @@
     </div>
   </div>
   <!-- //div.loader -->
-  <!-- div.modal -->
-  <div class="modal fade" id="temporary-save-complete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body">
-          <p>一時保存しました。</p>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- //div.modal -->
 </body>
 <script>
 var ma = new Ma();
 $(function() {
   // 既存値の設定
-  ma.setOptions('./json/master-industory.json', '.form-industory'); // 業種（大項目）
-  ma.setOptions('./json/master_sales.json', '.sales'); // 前年度売上高、売上高、事業売上
-  ma.setOptions('./json/master-prefecture.json', '.form-prefecture'); // 地域
-  ma.setOptions('./json/master_number-of-employees.json', '.form_number-of-employees'); // 従業員数
-  ma.setOptions('./json/master_term2contract.json', '.form_term2contract'); // 譲渡希望時期
-  ma.setOptions('./json/master_transfar-price.json', '.form_transfar-price'); // 譲渡希望価格
-  ma.setOptions('./json/master_cash-funds.json', '.cash-funds'); // 現金預金
-  ma.setOptions('./json/master_asset.json', '.asset'); // 総資産、事業資産
-  ma.setOptions('./json/master_interest-bearing-liability.json', '.interest-bearing-liability'); // 有利子負債
-  ma.setOptions('./json/master_liability.json', '.liability'); // 総負債、事業負債
-  ma.setOptions('./json/master_net-worth.json', '.net-worth'); // 純資産
-  ma.setOptions('./json/master_profit.json', '.profit'); // 営業利益、経常利益、当期純利益、DBITDA、事業利益
-  ma.setOptions('./json/master_depreciation.json', '.depreciation'); // 原価償却費
-  ma.setOptions('./json/master_officer-fee.json', '.officer-fee'); // 役員報酬
+  // ma.setOptions('./json/master-industory.json', '.form-industory'); // 業種（大項目）
+  // ma.setOptions('./json/master_sales.json', '.sales'); // 前年度売上高、売上高
+  // ma.setOptions('./json/master-prefecture.json', '.form-prefecture'); // 地域
+  // ma.setOptions('./json/master_number-of-employees.json', '.form_number-of-employees'); // 従業員数
+  // ma.setOptions('./json/master_term2contract.json', '.form_term2contract'); // 譲渡希望時期
+  // ma.setOptions('./json/master_transfar-price.json', '.form_transfar-price'); // 譲渡希望価格
+  // ma.setOptions('./json/master_cash-funds.json', '.cash-funds'); // 現金預金
+  // ma.setOptions('./json/master_asset.json', '.asset'); // 総資産
+  // ma.setOptions('./json/master_interest-bearing-liability.json', '.interest-bearing-liability'); // 有利子負債
+  // ma.setOptions('./json/master_liability.json', '.liability'); // 総負債
+  // ma.setOptions('./json/master_net-worth.json', '.net-worth'); // 純資産
+  // ma.setOptions('./json/master_profit.json', '.profit'); // 営業利益、経常利益、当期純利益、DBITDA
+  // ma.setOptions('./json/master_depreciation.json', '.depreciation'); // 原価償却費
+  // ma.setOptions('./json/master_officer-fee.json', '.officer-fee'); // 役員報酬
 
-  ma.setRadio('./json/master_transfar-form.json', '.form_transfar-form', 'transfar-form');  // 譲渡形式
-  ma.setRadio('./json/master_mgmt-part.json', '.form_mgmt-part', 'mgmt-part');  // 経営参画
+  // ma.setRadio('./json/master_transfar-form.json', '.form_transfar-form', 'transfar-form');  // 譲渡形式
+  // ma.setRadio('./json/master_mgmt-part.json', '.form_mgmt-part', 'mgmt-part');  // 経営参画
 
-  ma.setCheckbox('./json/master_transfar-class.json', '.form_transfar-class', 'transfar-class'); // 譲渡形式種別
-  ma.setCheckbox('./json/master_transfar-reason.json', '.form_transfar-reason', 'transfar-reason'); // 譲渡理由
-  ma.setCheckbox('./json/master_value-point.json', '.form_value-point', 'value-point');  // 譲渡で重視するポイント
-  ma.setCheckbox('./json/master_strengths.json', '.form_strengths', 'strengths');  // アピールポイント
-  ma.setCheckbox('./json/master_target.json', '.form_target', 'target');  // 交渉希望相手
-  ma.setCheckbox('./json/master_stockholders.json', '.form_stockholders', 'stockholders');  // 株主状況
+  // ma.setCheckbox('./json/master_transfar-class.json', '.form_transfar-class', 'transfar-class'); // 譲渡形式種別
+  // ma.setCheckbox('./json/master_transfar-reason.json', '.form_transfar-reason', 'transfar-reason'); // 譲渡理由
+  // ma.setCheckbox('./json/master_value-point.json', '.form_value-point', 'value-point');  // 譲渡で重視するポイント
+  // ma.setCheckbox('./json/master_strengths.json', '.form_strengths', 'strengths');  // アピールポイント
+  // ma.setCheckbox('./json/master_target.json', '.form_target', 'target');  // 交渉希望相手
+  // ma.setCheckbox('./json/master_stockholders.json', '.form_stockholders', 'stockholders');  // 株主状況
 
   // 大区分変更時の処理を追加
   $('.form-industory').change(function() {
@@ -874,50 +835,19 @@ $(function() {
     });
   });
 
-  // 一時保存処理
-  let $modalSaveComplete = new bootstrap.Modal($('#temporary-save-complete'));
-  $('.temporary-save').click(function() {
-    // 一時保存ボタン押下時、確認ダイアログを表示せず登録処理を行う
-    ma.loadScreen();
-
-    // sendRequest後に、モーダルを起動して終了させる。
-//    ma.sendRequest().done(function() {
-//      ...
-//      $modalSaveComplete.show();
-//    });
-    $modalSaveComplete.show();  // 動作イメージのために書いてるだけで、上記が実装できたら不要
-    ma.offScreen();             // 動作イメージのために書いてるだけで、上記が実装できたら不要
-  });
-
-  // 譲渡形式選択時に、項目の入れ替えを行う。
-  // 本来なら、$('input[name="transfar-form"]').change…でよい。
-  // 今回は、対象項目をjson経由で取得しているため、そのままだと動かない可能性もあったので
-  // onで処理を追加している。
-  $(document).on('change', 'input[name="transfar-form"]', function() {
-    let selectedValue = $('input:radio[name="transfar-form"]:checked').val();
-    if (CONST.TRANSFAR_FORMAT_ASSET === selectedValue) {
-      // 事業譲渡が選択されていた場合
-      $('.item__stock-purchase').hide();
-      $('.item__asset-purchase').show();
-      return;
-    }
-
-    // 以下株式譲渡が選択されていた場合
-    $('.item__stock-purchase').show();
-    $('.item__asset-purchase').hide();
-  });
-
-  // 最初から選択されている状態にするため、「譲渡形式」を選択した状態にする
-  // ただし、モックでは json 呼び出し等あるため、本来は setTimeout 関数は不要。
-  setTimeout(function(){
-    let $transfarForm = $('input[name="transfar-form"]');
-    $transfarForm.val([CONST.TRANSFAR_FORMAT_STOCK]);
-    // 選択しただけじゃ発火しないので、意図的に発動させる
-    $transfarForm.change();
-  }, 2000);
-
   $('#btn-regist').click(function() {
-    $(this).parents("form").attr('method', 'GET').attr('action', './screen_regist-seller_confirm.html').submit();
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-transfer_complete.html').submit();
+  });
+  $('#btn-back').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-transfer_update.html').submit();
+  });
+  // 確認画面用に、各項目を非表示に
+  $('.form__required').css('display', 'none');
+  $('.form-select').css('display', 'none');
+  $('textarea').css('display', 'none');
+//  $('input:not(.form-check-input)').css('display', 'none');
+  $('.form-check-input').click(function() {
+    return false;
   });
 });
 </script>

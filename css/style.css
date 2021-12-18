@@ -12668,6 +12668,48 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.service__content {
+  text-align: center;
+}
+.service__content--mt3 {
+  margin-top: 3rem;
+}
+.service__content--mt5 {
+  margin-top: 5rem;
+}
+.service__subtitle {
+  font-size: 2.4rem;
+  font-weight: bold;
+  border-bottom: 1px solid #c8161d;
+}
+.service__image {
+  max-width: 768px;
+}
+.service__strong {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.price__content {
+  text-align: center;
+}
+.price__content--mt3 {
+  margin-top: 3rem;
+}
+.price__content--mt5 {
+  margin-top: 5rem;
+}
+.price__image {
+  max-width: 1024px;
+}
+.price__strong {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.price__strong--underline {
+  border-bottom: 1px solid #c8161d;
+}
+
 .material-icons-outlined.md-48 {
   font-size: 4.8rem;
 }

@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as var;
+
+.service {
+  &__content {
+    text-align: center;
+    &--mt3 {
+      margin-top: 3.0rem;
+    }
+    &--mt5 {
+      margin-top: 5.0rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: var.$FONT-SIZE-24;
+    font-weight: bold;
+    border-bottom: 1px solid var.$COLOR-CORP;
+  }
+
+  &__image {
+    max-width: var.$WIDTH-768;
+  }
+
+   &__strong {
+     font-size: var.$FONT-SIZE-24;
+     font-weight: bold;
+   }
+}

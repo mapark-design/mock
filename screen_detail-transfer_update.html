@@ -262,7 +262,7 @@
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <input type="text" class="form-control w-75" placeholder="30文字以内で入力してください">
+                            <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください">
                             <a class="form__ex" data-bs-toggle="collapse" href="#project-title" role="button" aria-expanded="false" aria-controls="project-title">
                               ＋ 記入例を見る
                             </a>
@@ -331,7 +331,7 @@
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
-                            <select class="form-select w-25 form-prefecture" required>
+                            <select class="form-select w-50 form-prefecture" required>
                               <option selected disabled value="">＋選択してください</option>
                             </select>
                           </dd>
@@ -452,10 +452,10 @@
                     <h3 class="section__title section__title-h3">財務情報</h3>
                     <section class="section__content ms-3">
 
-                      <!-- 賃貸貸借表 -->
+                      <!-- 貸借対照表 -->
                       <section class="section">
                         <div class="section__inner mb-5">
-                          <h4 class="section__title section__title-h4">賃貸貸借表</h4>
+                          <h4 class="section__title section__title-h4">貸借対照表</h4>
                           <div class="section__content">
                             <dl class="">
                               <div class="form__item form__item--header form__item--border">
@@ -574,7 +574,7 @@
                           </div>
                         </div>
                       </section>
-                      <!-- //賃貸貸借表 -->
+                      <!-- //貸借対照表 -->
 
                       <!-- 損益計算書 -->
                       <section class="section">
@@ -760,7 +760,8 @@
                     </section>
                   </div>
                 </section>
-                <div class="form__action form__action--center"><!--
+                <div class="form__action form__action--center">
+                  <button id="btn-back" class="btn btn-secondary ma-btn-back">戻る</button><!--
                   <button type="button" class="btn btn-warning ma-btn-section-back temporary-save">一時保存する</button>
                   --><button id="btn-regist" class="btn btn-corp ma-btn-section">登録する</button>
                 </div>
@@ -914,8 +915,11 @@ $(function() {
     $transfarForm.change();
   }, 2000);
 
+  $('#btn-back').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-transfer.html').submit();
+  });
   $('#btn-regist').click(function() {
-    $(this).parents("form").attr('method', 'GET').attr('action', './screen_regist-seller_confirm.html').submit();
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-transfer_confirm.html').submit();
   });
 });
 </script>

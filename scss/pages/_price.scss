@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as var;
+
+.price {
+  &__content {
+    text-align: center;
+
+    &--mt3 {
+      margin-top: 3.0rem;
+    }
+    &--mt5 {
+      margin-top: 5.0rem;
+    }
+  }
+
+  &__image {
+    max-width: var.$WIDTH-1024;
+  }
+
+  &__strong {
+     font-size: var.$FONT-SIZE-24;
+     font-weight: bold;
+
+     &--underline {
+      border-bottom: 1px solid var.$COLOR-CORP;
+    }
+  }
+}

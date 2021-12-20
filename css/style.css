@@ -11513,6 +11513,12 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-weight: bold;
 }
+.contract-plan__title--light {
+  background-color: #E46F74;
+}
+.contract-plan__title--normal {
+  background-color: #DC464C;
+}
 .contract-plan__body {
   padding: 0 1rem;
 }

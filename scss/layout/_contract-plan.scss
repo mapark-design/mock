@@ -34,6 +34,13 @@
     text-align: center;
     color: white;
     font-weight: bold;
+    &--light {
+//      opacity: 0.5;
+      background-color: #E46F74;
+    }
+    &--normal {
+      background-color: #DC464C;
+    }
   }
   &__body {
     padding: 0 1rem;

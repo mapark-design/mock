@@ -12637,7 +12637,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nego-message__message-area {
-  height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 200px);
+  height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 220px);
   overflow: hidden;
   overflow-y: scroll;
   border: 1px solid lightgray;

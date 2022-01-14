@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>買収ニーズ詳細</title>
+</head>
+<body>
+  <div class="layout">
+    <!-- header.header -->
+    <header class="header">
+      <div class="header__inner header__inner--login">
+        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg"></h1>
+        <nav class="header__nav"><!--
+          <div class="header__global-nav">
+            <ul class="header__nav-list header__nav-list--global-nav">
+              <li><a href="" class="">サービス概要</a></li>
+              <li><a href="" class="">よくあるご質問</a></li>
+              <li><a href="" class="">お問い合わせ</a></li>
+            </ul>
+          </div>
+          --><div class="header__user-nav">
+            <ul class="header__nav-list header__nav-list--user-nav"><!--
+              <li><a href="" class="">会員登録</a></li>
+              --><li><button class="btn btn-outline-corp ma-btn-logout">ログアウト</button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- //header.header -->
+
+    <!-- nav.ma-nav -->
+    <nav class="ma-nav">
+      <div class="ma-nav__inner">
+        <div class="ma-nav__button">
+          <button class="btn btn-light ma-btn-nav">マイページTOP</button>
+        </div><!--
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">売り手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">買い手を探す</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買い手を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">提案中の買い手一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">譲渡案件管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の譲渡案件一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+        </div>
+        --><div class="ma-nav__classification"><!--
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          --><ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div><!--
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        --><div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-userinfo.svg">
+              <a href="" class="ma-nav__item-category">会員情報</a>
+            </li>
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-plan.svg">
+              <a href="" class="ma-nav__item-category">契約プラン</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-manual.svg">
+              <a href="" class="ma-nav__item-category">ご利用方法</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-compass.svg">
+              <a href="" class="ma-nav__item-category">お役立ち資料</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-consult.svg">
+              <a href="" class="ma-nav__item-category">専門家に相談する</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-finale.svg">
+              <a href="" class="ma-nav__item-category">成約報告</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qa.svg">
+              <a href="" class="ma-nav__item-category">よくあるご質問</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qaform.svg">
+              <a href="" class="ma-nav__item-category">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- //nav.ma-nav -->
+
+    <!-- main.main -->
+    <main class="main" >
+      <div class="main__inner">
+        <!-- breadcrumb__nav -->
+        <nav class="breadcrumb__nav">
+          <ul class="breadcrumb__list">
+            <li><a href="">マイページ</a></li>
+            <li><a href="">登録済の買収ニーズ一覧</a></li>
+            <li>買収ニーズ詳細</li>
+          </ul>
+        </nav>
+        <!-- //breadcrumb__nav -->
+
+        <section class="section">
+          <div class="section__inner regist-seller">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">買収ニーズ詳細</h2>
+            <div class="section__content">
+              <div class="form__action form__action--right"><!--
+                <button class="btn btn-corp ma-btn-section">編集する</button>
+              --></div>
+
+              <form id="maform" class="needs-validation" novalidate>
+                <section class="section">
+                  <h3 class="section__title section__title-h3"></h3>
+                  <div class="section__content">
+                    <table class="detail-transfar__header-table">
+                      <tr class="detail-transfar__header-table-row">
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">買収ニーズステータス</th>
+                        <td class="detail-transfar__header-table-col" colspan="3"><!--公開中
+                          --><select class="form-select w-25 form_previous-year-sales buyer-status">
+                            <option selected disabled value="">＋選択してください</option>
+                          </select>
+                      </td>
+                      </tr>
+                      <tr class="detail-transfar__header-table-row">
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">公開日</th>
+                        <td class="detail-transfar__header-table-col">2021/11/13</td>
+                        <th class="detail-transfar__header-table-col detail-transfar__header-table-col-title">更新日</th>
+                        <td class="detail-transfar__header-table-col">2021/11/13</td>
+                      </tr>
+                    </table> 
+                  </div>
+                </section>
+
+                <!-- M&Aの方針 -->
+                <section class="section">
+                  <div class="section__inner">
+                    <div class="form__action form__action--right"><!--
+                      <button type="button" class="btn btn-warning ma-btn-section-back temporary-save">一時保存する</button>
+                    --></div>
+                    <h3 class="section__title section__title-h3">M&amp;Aの方針</h3>
+                    <div class="section__content">
+                      <dl class="">
+                        <!-- タイトル -->
+                        <div class="form__item form__item--border form__item--top-border">
+                          <dt class="form__item-title regist-seller__item-title">タイトル
+                            <span class="form__required">必須</span>
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <input type="text" class="form-control w-75" placeholder="60文字以内で入力してください">
+                            <a class="form__ex" data-bs-toggle="collapse" href="#project-title" role="button" aria-expanded="false" aria-controls="project-title">
+                              ＋ 記入例を見る
+                            </a>
+                            <div class="collapse" id="project-title">
+                              <div class="card form__ex-body">
+                                <ul class="entry-example__disc-list">
+                                  <li>【関東・九州を優先検討】ITサービスの成長を目指す企業様を募集</li>
+                                  <li>【首都圏】WEBマーケティング、デザインに強みを持った企業様を募集</li>
+                                  <li>ホテル、旅館、民泊事業の譲渡を希望</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <!-- // タイトル -->
+                        <!-- M&Aの目的 -->
+                        <div class="form__item form__item--border item__stock-purchase">
+                          <dt class="form__item-title regist-seller__item-title">M&Aの目的
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_purpose"></div>
+                          </dd>
+                        </div>
+                        <!-- //M&Aの目的 -->
+                        <!-- M&Aの目的の詳細 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">M&Aの目的の詳細</dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <textarea class="form-control" placeholder="M&Aの目的を詳しく記入してください。" rows="5"></textarea>
+                            <div class="form__caution">※修飾文字や記号マークといった機種依存文字はエラーになる可能性がございますのでご注意ください。</div>
+                            <a class="form__ex" data-bs-toggle="collapse" href="#purpose-detail" role="button" aria-expanded="false" aria-controls="purpose-detail">
+                              ＋ 記入例を見る
+                            </a>
+                            <div class="collapse" id="purpose-detail">
+                              <div class="card form__ex-body">
+                                当社は、創業５０周年を超えるシステム開発会社です。<br>
+                                本社が大阪にあり、東京、名古屋、ベトナムに支社がございます。<br>
+                                <br>
+                                会社のさらなる成長を目的に事業の多角化を行うための選択肢の一つとしてM&Aを検討しております。<br>
+                                直近でSES・システム開発を行う企業や出版事業を営む企業の２社の事業承継の実績があります。<br>
+                                M&Aの方法については、100％の株式譲渡を希望しますが、マイナー出資、一部事業の譲受など<br>
+                                状況に応じて最適なやり方をご相談できればと考えております。<br>
+                                <br>
+                                経営理念が一致する会社様と一緒になり、互いに成長できる関係性を作っていきたいと考えております。<br>
+                                どうぞよろしくお願いいたします。<br>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <!-- //M&Aの目的の詳細 -->
+                        <!-- 会社の特徴  -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">会社の特長
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_company-features"></div>
+                          </dd>
+                        </div>
+                        <!-- //会社の特徴  -->
+                        <!-- 募集業種 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">募集業種</dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <ul>
+                              <li class="form__item-input--flex-center mb-3">
+                                <div class="w-50">
+                                  <span class="form__required">必須</span>
+                                  <select class="form-select form-industory">
+                                    <option selected disabled value="">＋大区分を選ぶ</option>
+                                  </select>
+                                </div>
+                              </li>
+                              <li class="form__item-input--flex-center mb-3">
+                                <div class="w-50">
+                                  <select class="form-select form-industory">
+                                    <option selected value="">＋大区分を選ぶ</option>
+                                  </select>
+                                </div>
+                              </li>
+                              <li class="form__item-input--flex-center">
+                                <div class="w-50">
+                                  <select class="form-select form-industory">
+                                    <option selected value="">＋大区分を選ぶ</option>
+                                  </select>
+                                </div>
+                              </li>
+                            </ul>
+                          </dd>
+                        </div>
+                        <!-- //募集業種 -->
+                        <!-- 募集エリア -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">募集エリア
+                            <span class="form__required">必須</span>
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_area"></div>
+                          </dd>
+                        </div>
+                        <!-- //募集エリア -->
+                        <!-- 投資予算（下限） -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">投資予算（下限）
+                            <span class="form__required">必須</span>
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <select class="form-select form-investment-budget-fr w-25">
+                              <option selected>＋選択してください</option>
+                            </select>
+                          </dd>
+                        </div>
+                        <!-- //投資予算（下限） -->
+                        <!-- 投資予算（上限） -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">投資予算（上限）
+                            <span class="form__required">必須</span>
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <select class="form-select form-investment-budget-to w-25">
+                              <option selected>＋選択してください</option>
+                            </select>
+                          </dd>
+                        </div>
+                        <!-- //投資予算（上限） -->
+                        <!-- 対象領域の詳細 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">対象領域の詳細
+                            <span class="form__required">必須</span>
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <textarea class="form-control" placeholder="希望している具体的な事業内容・エリアなどを記入してください。" rows="5"></textarea>
+                            <div class="form__caution">※修飾文字や記号マークといった機種依存文字はエラーになる可能性がございますのでご注意ください。</div>
+                            <a class="form__ex" data-bs-toggle="collapse" href="#target-detail" role="button" aria-expanded="false" aria-controls="target-detail">
+                              ＋ 記入例を見る
+                            </a>
+                            <div class="collapse" id="target-detail">
+                              <div class="card form__ex-body">
+                                ▼業種<br>
+                                ・WEBマーケティング、デザイン、システムに強みを持った企業様を探しております。<br>
+                                <br>
+                                ▼エリア<br>
+                                ・全国<br>
+                                <br>
+                                ▼その他<br>
+                                ・少なくとも数年間は、経営者の方の継続を希望します。<br>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <!-- //対象領域の詳細 -->
+                        <!-- 再生案件の検討 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">再生案件の検討
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_review-reproject"></div>
+                          </dd>
+                        </div>
+                        <!-- //再生案件の検討 -->
+                        <!-- 赤字の許容 -->
+                        <div class="form__item form__item--border item__stock-purchase">
+                          <dt class="form__item-title regist-seller__item-title">赤字の許容
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_deficit-tolerance"></div>
+                          </dd>
+                        </div>
+                        <!-- //赤字の許容 -->
+                        <!-- 検討除外対象 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">検討除外対象
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <textarea class="form-control" placeholder="例）飲食は、居酒屋は検討対象外" rows="5"></textarea>
+                          </dd>
+                        </div>
+                        <!-- //検討除外対象 -->
+                        <!-- 譲受スキーム -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">譲受スキーム
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_scheme"></div>
+                          </dd>
+                        </div>
+                        <!-- //譲受スキーム -->
+                        <!-- 想定投資回収期間 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">想定投資回収期間
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <select class="form-select w-25 form-recovery-period">
+                              <option selected>＋選択してください</option>
+                            </select>
+                          </dd>
+                        </div>
+                        <!-- //想定投資回収期間 -->
+                        <!-- 対象領域のM&Aの実績 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">対象領域のM&Aの実績
+
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <textarea class="form-control" placeholder="例）直近１年間で３件のM&A実績" rows="3"></textarea>
+                          </dd>
+                        </div>
+                        <!-- //対象領域のM&Aの実績 -->
+                        <!-- 実名公開 -->
+                        <div class="form__item form__item--border">
+                          <dt class="form__item-title regist-seller__item-title">実名公開
+                            <span class="form__required">必須</span>
+                          </dt>
+                          <dd class="form__item-input regist-seller__item-input">
+                            <div class="form__item-input--flex-wrap form_disclosure"></div>
+                          </dd>
+                        </div>
+                        <!-- //実名公開 -->
+                      </dl>
+                    </div>
+                  </div>
+                </section>
+                <!-- //M&Aの方針 -->
+
+                <div class="form__action form__action--center">
+                  <button id="btn-back" class="btn btn-secondary ma-btn-back">戻る</button>
+                  <button id="btn-regist" class="btn btn-corp ma-btn-section">登録する</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- //main.main -->
+  </div>
+  <!-- div.loader -->
+  <div id="loader" class="loading">
+    <div class="loading__msg">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- //div.loader -->
+</body>
+<script>
+var ma = new Ma();
+$(function() {
+  // 既存値の設定
+  ma.setOptions('./json/master-industory.json', '.form-industory'); // 業種（大項目）
+  ma.setCheckbox('./json/master_purpose.json', '.form_purpose', 'purpose'); // M&Aの目的
+  ma.setCheckbox('./json/master_company-features.json', '.form_company-features', 'company-features'); // 会社の特徴
+  ma.setCheckbox('./json/master_scheme.json', '.form_scheme', 'scheme'); // 譲受scheme
+  ma.setCheckbox('./json/master_area.json', '.form_area', 'area'); // 募集エリア
+  ma.setOptions('./json/master_buyer-status.json', '.buyer-status'); // 案件情報ステータス
+
+  ma.setOptions('./json/master_investment-budget-fr.json', '.form-investment-budget-fr');// 投資予算
+  ma.setOptions('./json/master_investment-budget-to.json', '.form-investment-budget-to');// 投資予算
+  ma.setOptions('./json/master_recovery-period.json', '.form-recovery-period');// 想定投資回収期間
+
+  ma.setRadio('./json/master_review-reproject.json', '.form_review-reproject', 'review-reproject');  // 再生案件の検討
+  ma.setRadio('./json/master_deficit-tolerance.json', '.form_deficit-tolerance', 'deficit-tolerance');  // 赤字の許容
+  ma.setRadio('./json/master_full-name-disclosure.json', '.form_disclosure', 'disclosure');  // 実名公開
+
+  $('#btn-back').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-buyer-needs.html').submit();
+  });
+  $('#btn-regist').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-buyer-needs_confirm.html').submit();
+  });
+});
+</script>
+</html>

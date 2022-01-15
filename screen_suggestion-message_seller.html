@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>交渉</title>
+</head>
+<body>
+  <div class="layout">
+    <!-- header.header -->
+    <header class="header">
+      <div class="header__inner header__inner--login">
+        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg"></h1>
+        <nav class="header__nav"><!--
+          <div class="header__global-nav">
+            <ul class="header__nav-list header__nav-list--global-nav">
+              <li><a href="" class="">サービス概要</a></li>
+              <li><a href="" class="">よくあるご質問</a></li>
+              <li><a href="" class="">お問い合わせ</a></li>
+            </ul>
+          </div>
+          --><div class="header__user-nav">
+            <ul class="header__nav-list header__nav-list--user-nav"><!--
+              <li><a href="" class="">会員登録</a></li>
+              --><li><button class="btn btn-outline-corp ma-btn-logout">ログアウト</button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- //header.header -->
+
+    <!-- nav.ma-nav -->
+    <nav class="ma-nav">
+      <div class="ma-nav__inner">
+        <div class="ma-nav__button">
+          <button class="btn btn-light ma-btn-nav">マイページTOP</button>
+        </div>
+        <div class="ma-nav__classification"><!--
+          <div class="ma-nav__classification-title">売り手メニュー</div>
+          --><ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">買い手を探す</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買い手を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">提案中の買い手一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">譲渡案件管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の譲渡案件一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+        </div><!--
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        --><div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-userinfo.svg">
+              <a href="" class="ma-nav__item-category">会員情報</a>
+            </li><!--
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-plan.svg">
+              <a href="" class="ma-nav__item-category">契約プラン</a>
+            </li>
+          --></ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-manual.svg">
+              <a href="" class="ma-nav__item-category">ご利用方法</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-compass.svg">
+              <a href="" class="ma-nav__item-category">お役立ち資料</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-consult.svg">
+              <a href="" class="ma-nav__item-category">専門家に相談する</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-finale.svg">
+              <a href="" class="ma-nav__item-category">成約報告</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qa.svg">
+              <a href="" class="ma-nav__item-category">よくあるご質問</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qaform.svg">
+              <a href="" class="ma-nav__item-category">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- //nav.ma-nav -->
+
+    <!-- main.main -->
+    <main class="main" >
+      <div class="main__inner">
+        <!-- breadcrumb__nav -->
+        <nav class="breadcrumb__nav">
+          <ul class="breadcrumb__list">
+            <li><a href="">マイページ</a></li>
+            <li><a href="">提案中の買い手一覧</a></li>
+            <li>交渉</li>
+          </ul>
+        </nav>
+        <!-- //breadcrumb__nav -->
+
+        <section class="section">
+          <div class="section__inner regist-seller">
+            <h2 class="section__title section__title-h2">【EC】特徴的な商品を扱うEC事業の譲り受けを希望</h2>
+            <div class="section__content">
+              <div class="text-end">
+                <button class="btn btn-secondary ma-btn-ps ma-btn-back">提案中の買い手一覧に戻る</button>
+              </div>
+
+              <div class="message-area nego-message__message-area">
+                <div class="message-area__inner nego-message__message-area-inner">
+                  <!-- システムが出力するメッセージ -->
+                  <div class="direct-message direct-message--system">
+                    <div class="direct-message__body direct-message__body--system">
+                      <div class="direct-message__content direct-message__content--system">
+                        <div class="direct-message__content-inner direct-message__content-inner--system">
+                          <div class="d-flex justify-content-center">
+                            <span class="material-icons-outlined md-28">info</span>
+                            <div class="ms-1">交渉を開始しました。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //システムが出力するメッセージ -->
+
+                  <!-- 自分のメッセージ -->
+                  <div class="direct-message direct-message--self"><!--
+                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
+                    --><div class="direct-message__body direct-message__body--self">
+                      <div class="direct-message__status direct-message__status--self">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 自分の添付ファイル -->
+                    <div class="direct-message__attachment direct-message__attachment--self">
+                      <div class="direct-message__attachment-body">
+                        <div class="direct-message__attachment-inner">
+                          <a class="d-flex align-items-center" href="">
+                            <span class="material-icons-outlined md-28">attach_file</span>
+                            <span>添付ファイル名</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //自分の添付ファイル -->
+                  </div>  
+                  <!-- //自分のメッセージ -->
+
+                  <!-- 相手のメッセージ -->
+                  <div class="direct-message direct-message--others">
+                    <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
+                    <div class="direct-message__body direct-message__body--others">
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="direct-message__status direct-message__status--others">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //相手のメッセージ -->
+
+                  <!-- 自分のメッセージ -->
+                  <div class="direct-message direct-message--self"><!--
+                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
+                    --><div class="direct-message__body direct-message__body--self">
+                      <div class="direct-message__status direct-message__status--self">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 自分の添付ファイル -->
+                    <div class="direct-message__attachment direct-message__attachment--self">
+                      <div class="direct-message__attachment-body">
+                        <div class="direct-message__attachment-inner">
+                          <a class="d-flex align-items-center" href="">
+                            <span class="material-icons-outlined md-28">attach_file</span>
+                            <span>添付ファイル名</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //自分の添付ファイル -->
+                  </div>  
+                  <!-- //自分のメッセージ -->
+
+                  <!-- 相手のメッセージ -->
+                  <div class="direct-message direct-message--others">
+                    <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
+                    <div class="direct-message__body direct-message__body--others">
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="direct-message__status direct-message__status--others">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                    </div>
+                    <!-- 相手の添付ファイル -->
+                    <div class="direct-message__attachment  direct-message__attachment--others">
+                      <div class="direct-message__attachment-body">
+                        <div class="direct-message__attachment-inner">
+                          <a class="d-flex align-items-center" href="">
+                            <span class="material-icons-outlined md-28">attach_file</span>
+                            <span>添付ファイル名</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //相手の添付ファイル -->
+                  </div>
+                  <!-- //相手のメッセージ -->
+
+                  <!-- 自分のメッセージ -->
+                  <div class="direct-message direct-message--self"><!--
+                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
+                    --><div class="direct-message__body direct-message__body--self">
+                      <div class="direct-message__status direct-message__status--self">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                  <!-- //自分のメッセージ -->
+
+                  <!-- 相手のメッセージ -->
+                  <div class="direct-message direct-message--others">
+                    <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
+                    <div class="direct-message__body direct-message__body--others">
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="direct-message__status direct-message__status--others">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //相手のメッセージ -->
+                </div>
+              </div>
+
+              <div class="send" style="padding-top: 1.0rem; height: 22.0rem;">
+                <div class="send__inner" style="padding-right: 1.0rem;">
+                  <div class="form" style="">
+                    <textarea class="form-control" placeholder="メッセージを記載してください。なお、１回のメッセージ送信につき、１つのファイルのみ添付できます。" rows="5"></textarea>
+                  </div>
+                  <div class="text" style="display: flex; align-items: center; margin-top: 1.0rem;">
+                    <div class="" style="width: 100%;">
+                      <input class="form-control" type="file" id="formFile1" accept=".jpg,.jpeg,.png,.bmp,.pdf" required>
+                    </div>
+                    <div class="" style="min-width: 12.0rem;text-align: right;">
+                      <button class="btn btn-corp ma-btn-section">送信</button>
+                    </div>
+                  </div>
+                  <div class="text">
+                    ※4MB以内の画像ファイル(jpg/png/bmp)またはPDFファイルのみ添付できます。
+                  </div><!--
+                  <div class="" style="display: flex; justify-content: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 1.0rem;">
+                    <button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button>
+                    <button class="btn btn-warning ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal">社名・氏名を公開する</button>
+                  </div>
+                --></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- //main.main -->
+  </div>
+  <!-- div.loader -->
+  <div id="loader" class="loading">
+    <div class="loading__msg">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- //div.loader -->
+  <!-- dialog confirm -->
+  <div class="modal fade" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="h5 modal-title">確認ダイアログ</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mt-3 mb-3">
+            社名・氏名を公開します。よろしいですか？
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">キャンセル</button>
+          <button type="button" class="btn btn-corp ma-modal-btn-fw">公開する</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dialog cancelling nego -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">交渉を辞退する</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <p class="mb-3">
+              交渉の相手先に送信するメッセージを記入後<br>
+              送信を押してください。
+            </p>
+            <div class="mt-3 mb-0">
+              <textarea class="form-control" id="message-text" rows="5"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">キャンセル</button>
+          <button type="button" class="btn btn-corp ma-modal-btn-fw" data-bs-toggle="modal" data-bs-target="#exampleModal">辞退する</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+var ma = new Ma();
+$(function() {
+  $('.message-area').animate({
+    scrollTop: $('.message-area').get(0).scrollHeight
+  }, 'fast', 'swing');
+
+  $('.ma-btn-back').click(function() {
+    location.href = "./screen_suggestion_seller.html";
+  });
+});
+</script>
+</html>

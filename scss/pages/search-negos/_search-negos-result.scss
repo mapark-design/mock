@@ -22,6 +22,28 @@ $COLUMN-WIDTH-ICON: 5.0rem;
     padding: 0.5rem 0 0.5rem 1.0rem;
     margin-right: 1.0rem;
     font-size: var.$FONT-SIZE-24;
+
+    a {
+      &:not([class*="btn"]) {
+        position: relative;
+        display: inline-block;
+      }
+      &:not([class*="btn"])::after {
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 0.2rem;
+        background: #0d6efd;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+      }
+      &:not([class*="btn"]):hover::after {
+        transform: scale(1, 1);
+      }    }
+
   }
 
   &__status {

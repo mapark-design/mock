@@ -11,6 +11,8 @@
 
     &--border {
       border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
     }
     &--top-border {
       border-top: 1px solid lightgray;
@@ -21,6 +23,7 @@
       max-width: 28.0rem;
       background-color: #eaeaea;
       padding: 1.5rem;
+      border-right: 1px solid lightgray;
     }
     &-value {
       padding: 1.5rem;

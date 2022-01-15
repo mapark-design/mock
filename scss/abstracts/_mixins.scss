@@ -23,7 +23,10 @@
 
 @mixin createAnchor() {
 
+  color: white;
+
   &:hover {
+    color: white;
   }
 
   &:not([class*="btn"]) {

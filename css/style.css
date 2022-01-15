@@ -9940,6 +9940,12 @@ h1, h2, h3, h4, h5, h6 {
 .header__nav-list--global-nav, .header__nav-list--user-nav {
   gap: 2rem;
 }
+.header__nav-list a {
+  color: white;
+}
+.header__nav-list a:hover {
+  color: white;
+}
 .header__nav-list a:not([class*=btn]) {
   position: relative;
   display: inline-block;
@@ -9992,6 +9998,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__nav-item {
   margin-bottom: 0.5rem;
+}
+.footer__nav-item a {
+  color: white;
+}
+.footer__nav-item a:hover {
+  color: white;
 }
 .footer__nav-item a:not([class*=btn]) {
   position: relative;
@@ -10113,6 +10125,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .ma-nav__item img {
   width: 3rem;
+}
+.ma-nav__item a {
+  color: white;
+}
+.ma-nav__item a:hover {
+  color: white;
 }
 .ma-nav__item a:not([class*=btn]) {
   position: relative;
@@ -11237,11 +11255,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 1rem;
   font-size: 2.4rem;
 }
-.search-negos-result__title a:not([class*=btn]) {
+.search-negos-result__title a {
   position: relative;
   display: inline-block;
 }
-.search-negos-result__title a:not([class*=btn])::after {
+.search-negos-result__title a::after {
   position: absolute;
   bottom: -0.2rem;
   left: 0;
@@ -11253,7 +11271,7 @@ h1, h2, h3, h4, h5, h6 {
   transform-origin: left top;
   transition: transform 0.3s;
 }
-.search-negos-result__title a:not([class*=btn]):hover::after {
+.search-negos-result__title a:hover::after {
   transform: scale(1, 1);
 }
 .search-negos-result__status {

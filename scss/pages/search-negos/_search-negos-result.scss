@@ -24,11 +24,10 @@ $COLUMN-WIDTH-ICON: 5.0rem;
     font-size: var.$FONT-SIZE-24;
 
     a {
-      &:not([class*="btn"]) {
-        position: relative;
-        display: inline-block;
-      }
-      &:not([class*="btn"])::after {
+      position: relative;
+      display: inline-block;
+
+      &::after {
         position: absolute;
         bottom: -0.2rem;
         left: 0;
@@ -40,10 +39,10 @@ $COLUMN-WIDTH-ICON: 5.0rem;
         transform-origin: left top;
         transition: transform .3s;
       }
-      &:not([class*="btn"]):hover::after {
+      &:hover::after {
         transform: scale(1, 1);
-      }    }
-
+      }
+    }
   }
 
   &__status {

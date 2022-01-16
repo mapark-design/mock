@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/style-custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -218,7 +219,7 @@
                         <div class="direct-message__content-inner direct-message__content-inner--system">
                           <div class="d-flex justify-content-center">
                             <span class="material-icons-outlined md-28">info</span>
-                            <div class="ms-1">交渉を開始しました。</div>
+                            <div class="ms-1">譲渡案件が提案されました。</div>
                           </div>
                         </div>
                       </div>
@@ -335,11 +336,11 @@
         <div class="modal-body">
           <form>
             <p class="mb-3">
-              案件掲載者へ送信するメッセージを任意で記入後、「辞退」してください。貴社名は案件掲載者に開示されません。<br>
+              案件掲載者へ送信するメッセージを任意で記入後、「辞退」してください。<br>
             </p>
             <div class="mt-3 mb-0">
               <textarea class="form-control" id="message-text" rows="5">
-こちらの都合で大変恐縮ですが、このたびに、社内方針に変更があり、交渉を辞退させていただきたくご連絡しました。
+こちらの都合で大変恐縮ですが、社内方針に変更があり、交渉を辞退させていただきたくご連絡しました。
 何卒宜しくお願いいたします。</textarea>
             </div>
           </form>
@@ -369,7 +370,7 @@ $(function() {
   });
 
   $('.ma-modal-btn-fw').click(function() {
-    location.href = "./screen_suggestion-message_buyer-noauth.html";
+    location.href = "./screen_suggestion-message_buyer-noauth-refuged.html";
   });
 });
 </script>

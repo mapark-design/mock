@@ -16,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
-  <title>買収ニーズ詳細</title>
+  <title>交渉</title>
 </head>
 <body>
   <div class="layout">
@@ -196,30 +196,117 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li><a href="">登録済の買収ニーズ一覧</a></li>
-            <li>買収ニーズ詳細</li>
+            <li><a href="">交渉中の買収ニーズ一覧</a></li>
+            <li>交渉</li>
           </ul>
         </nav>
         <!-- //breadcrumb__nav -->
 
         <section class="section">
           <div class="section__inner regist-seller">
-            <h2 class="section__title section__title-h2 section__title-h2--ul">買収ニーズ詳細</h2>
+            <h2 class="section__title section__title-h2">【EC】特徴的な商品を扱うEC事業の譲り受けを希望</h2>
             <div class="section__content">
-              <div class="complete complete__panel">
-                <div class="complete__inner">
-                  <h2 class="section__title section__title-h2 complete__title">登録が完了しました。</h2>
-                  <div class="complete__content">
-                    買収ニーズを登録しました。<br>
-                    ※ご入力いただいた内容について、事務局よりご連絡する場合がございます。<br>
+              <div class="text-end">
+                <button class="btn btn-secondary ma-btn-ps ma-btn-back back-to-before">交渉中の買収ニーズ一覧に戻る</button>
+              </div>
+
+              <div class="message-area nego-message__message-area">
+                <div class="message-area__inner nego-message__message-area-inner">
+                  <!-- システムが出力するメッセージ -->
+                  <div class="direct-message direct-message--system">
+                    <div class="direct-message__body direct-message__body--system">
+                      <div class="direct-message__content direct-message__content--system">
+                        <div class="direct-message__content-inner direct-message__content-inner--system">
+                          <div class="d-flex justify-content-center">
+                            <span class="material-icons-outlined md-28">info</span>
+                            <div class="ms-1">譲渡案件が提案されました。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="complete__buttons">
-                    <form>
-                      <button id="btn-regist" class="btn btn-corp ma-btn-section">登録済の買収ニーズ一覧を確認する</button>
-                    </form>
+                  <!-- //システムが出力するメッセージ -->
+
+                  <!-- 相手のメッセージ -->
+                  <div class="direct-message direct-message--others">
+                    <div class="direct-message__name direct-message__name--others">○○株式会社　覆面</div>
+                    <div class="direct-message__body direct-message__body--others">
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="direct-message__status direct-message__status--others">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                    </div>
                   </div>
+                  <!-- //相手のメッセージ -->
+
+                  <!-- 自分のメッセージ -->
+                  <div class="direct-message direct-message--self"><!--
+                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
+                    --><div class="direct-message__body direct-message__body--self">
+                      <div class="direct-message__status direct-message__status--self">
+                        <div>既読</div>
+                        <div>11/12 13:59</div>
+                      </div>
+                      <div class="direct-message__content">
+                        <div class="direct-message__content-inner">
+                          <p>
+                            ご担当者様<br>
+                            <br>
+                            こちらの都合で大変恐縮ですが、社内方針に変更があり、交渉を辞退させていただきたくご連絡しました。<br>
+                            何卒宜しくお願いいたします。<br>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                  <!-- //自分のメッセージ -->
+
                 </div>
               </div>
+
+              <div class="send" style="padding-top: 1.0rem; height: 22.0rem;">
+                <div class="send__inner" style="border: 1px solid lightgray; height: 100%; text-align: center;padding-top: 5rem;">
+                  契約プランをアップグレードすると、この譲渡案件に対して、交渉を進めていただくことが出来ます。
+                  <div class="mt-5" style="display: flex; justify-content: center; align-items: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 1.0rem;"><!--
+                    <div>
+                      <button class="btn btn-secondary ma-btn-back" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button>
+                    </div>
+                    --><div>
+                      <button class="btn btn-corp ma-btn-section">契約プランについてお問い合わせする</button>
+                    </div>
+                  </div>
+                </div>
+                <!--
+                <div class="send__inner" style="padding-right: 1.0rem;">
+                  <div class="form" style="">
+                    <textarea class="form-control" placeholder="メッセージを記載してください。なお、１回のメッセージ送信につき、１つのファイルのみ添付できます。" rows="5"></textarea>
+                  </div>
+                  <div class="text" style="display: flex; align-items: center; margin-top: 1.0rem;">
+                    <div class="" style="width: 100%;">
+                      <input class="form-control" type="file" id="formFile1" accept=".jpg,.jpeg,.png,.bmp,.pdf" required>
+                    </div>
+                    <div class="" style="min-width: 12.0rem;text-align: right;">
+                      <button class="btn btn-corp ma-btn-section">送信</button>
+                    </div>
+                  </div>
+                  <div class="text">
+                    ※4MB以内の画像ファイル(jpg/png/bmp)またはPDFファイルのみ添付できます。
+                  </div>
+                  <div class="" style="display: flex; justify-content: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 1.0rem;">
+                    <button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button>
+                    <button class="btn btn-warning ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal">社名・氏名を公開する</button>
+                  </div>
+                </div>
+              --></div>
             </div>
           </div>
         </section>
@@ -244,8 +331,16 @@
 <script>
 var ma = new Ma();
 $(function() {
-  $('#btn-regist').click(function() {
-    $(this).parents("form").attr('method', 'GET').attr('action', './screen_list-buyer-needs.html').submit();
+  $('.message-area').animate({
+    scrollTop: $('.message-area').get(0).scrollHeight
+  }, 'fast', 'swing');
+
+  $('.ma-btn-section').click(function() {
+    location.href = "./screen_contact_with-menu.html";
+  });
+
+  $('.back-to-before').click(function() {
+    location.href = "./screen_suggestion_buyer.html";
   });
 });
 </script>

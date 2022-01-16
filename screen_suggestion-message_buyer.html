@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/style-custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -209,8 +210,8 @@
                 <button class="btn btn-secondary ma-btn-ps ma-btn-back">交渉中の買収ニーズ一覧に戻る</button>
               </div>
 
-              <div class="message-area nego-message__message-area">
-                <div class="message-area__inner nego-message__message-area-inner">
+              <div class="message-area suggestion-message__message-area">
+                <div class="message-area__inner suggestion-message__message-area-inner">
                   <!-- システムが出力するメッセージ -->
                   <div class="direct-message direct-message--system">
                     <div class="direct-message__body direct-message__body--system">
@@ -218,7 +219,7 @@
                         <div class="direct-message__content-inner direct-message__content-inner--system">
                           <div class="d-flex justify-content-center">
                             <span class="material-icons-outlined md-28">info</span>
-                            <div class="ms-1">交渉を開始しました。</div>
+                            <div class="ms-1">譲渡案件が提案されました。</div>
                           </div>
                         </div>
                       </div>
@@ -354,30 +355,10 @@
                     </div>
                   </div>
                   <!-- //相手のメッセージ -->
-                  <!-- 自分のメッセージ -->
-                  <div class="direct-message direct-message--self"><!--
-                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
-                    --><div class="direct-message__body direct-message__body--self">
-                      <div class="direct-message__status direct-message__status--self">
-                        <div>既読</div>
-                        <div>11/12 13:59</div>
-                      </div>
-                      <div class="direct-message__content">
-                        <div class="direct-message__content-inner">
-                          <p>
-                            ご担当者様<br>
-                            <br>
-                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>  
-                  <!-- //自分のメッセージ -->
                 </div>
               </div>
 
-              <div class="send" style="padding-top: 1.0rem; height: 22.0rem;">
+              <div class="send" style="padding-top: 1.0rem; height: 30.0rem;">
                 <div class="send__inner" style="padding-right: 1.0rem;">
                   <div class="form" style="">
                     <textarea class="form-control" placeholder="メッセージを記載してください。なお、１回のメッセージ送信につき、１つのファイルのみ添付できます。" rows="5"></textarea>
@@ -392,12 +373,12 @@
                   </div>
                   <div class="text">
                     ※4MB以内の画像ファイル(jpg/png/bmp)またはPDFファイルのみ添付できます。
-                  </div><!--
-                  <div class="" style="display: flex; justify-content: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 1.0rem;">
-                    <button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button>
-                    <button class="btn btn-warning ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal">社名・氏名を公開する</button>
                   </div>
-                --></div>
+                  <div class="" style="display: flex; justify-content: center; align-items: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 3.0rem;">
+                    <div><button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button></div>
+                    <div><button class="btn btn-corp ma-btn-section" data-bs-toggle="modal" data-bs-target="#exampleModal">社名・氏名を公開する</button></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -450,17 +431,18 @@
         <div class="modal-body">
           <form>
             <p class="mb-3">
-              交渉の相手先に送信するメッセージを記入後<br>
-              送信を押してください。
+              案件掲載者へ送信するメッセージを任意で記入後、「辞退」してください。<br>
             </p>
             <div class="mt-3 mb-0">
-              <textarea class="form-control" id="message-text" rows="5"></textarea>
+              <textarea class="form-control" id="message-text" rows="5">
+こちらの都合で大変恐縮ですが、社内方針に変更があり、交渉を辞退させていただきたくご連絡しました。
+何卒宜しくお願いいたします。</textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">キャンセル</button>
-          <button type="button" class="btn btn-corp ma-modal-btn-fw" data-bs-toggle="modal" data-bs-target="#exampleModal">辞退する</button>
+          <button type="button" class="btn btn-corp ma-modal-btn-fw modal-refused" data-bs-toggle="modal" data-bs-target="#exampleModal">辞退する</button>
         </div>
       </div>
     </div>
@@ -476,6 +458,10 @@ $(function() {
   $('.ma-btn-back').click(function() {
     location.href = "./screen_suggestion_buyer.html";
   });
+  
+  $('.modal-refused').click(function() {
+    location.href = "./screen_suggestion-message_buyer-refused.html";
+  });
 });
-</script>
+  </script>
 </html>

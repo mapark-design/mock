@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/style-custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -456,16 +457,16 @@
                           </dd>
                         </div>
                         <!-- //対象領域のM&Aの実績 -->
-                        <!-- 実名公開 -->
+                        <!-- 社名公開 -->
                         <div class="form__item form__item--border">
-                          <dt class="form__item-title regist-seller__item-title">実名公開
+                          <dt class="form__item-title regist-seller__item-title">社名公開
                             <span class="form__required">必須</span>
                           </dt>
                           <dd class="form__item-input regist-seller__item-input">
                             <div class="form__item-input--flex-wrap form_disclosure"></div>
                           </dd>
                         </div>
-                        <!-- //実名公開 -->
+                        <!-- //社名公開 -->
                       </dl>
                     </div>
                   </div>
@@ -515,7 +516,7 @@ $(function() {
 
   ma.setRadio('./json/master_review-reproject.json', '.form_review-reproject', 'review-reproject');  // 再生案件の検討
   ma.setRadio('./json/master_deficit-tolerance.json', '.form_deficit-tolerance', 'deficit-tolerance');  // 赤字の許容
-  ma.setRadio('./json/master_full-name-disclosure.json', '.form_disclosure', 'disclosure');  // 実名公開
+  ma.setRadio('./json/master_full-name-disclosure.json', '.form_disclosure', 'disclosure');  // 社名公開
 
   $('#btn-back').click(function() {
     $(this).parents("form").attr('method', 'GET').attr('action', './screen_detail-buyer-needs.html').submit();

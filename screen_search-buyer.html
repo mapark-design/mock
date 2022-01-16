@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/style-custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -213,20 +214,19 @@
                       <div class="form__item-input--flex-wrap">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                          <label class="form-check-label" for="inlineCheckbox1">オーナー直接</label>
+                          <label class="form-check-label" for="inlineCheckbox1">買い手企業</label>
                         </div><div class="form-check">
                           <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
-                          <label class="form-check-label" for="inlineCheckbox2">アドバイザー</label>
+                          <label class="form-check-label" for="inlineCheckbox2">買い手アドバイザー</label>
                         </div>
                       </div>
                     </dd>
                   </div>
                   <div class="col-12 form__item form__item--border search-form__item">
                     <dt class="form__item-title search-form__item-title search-buyer-form__item-title">募集業種</dt>
-                    <dd class="form__item-input search-form__item-input search-buyer-form__item-input" style="font-size: 1.4rem;">
-                      <ul id="form-sector" class="check-list check-list--wrap mb-3" style="display: none;">
-                      </ul>
-                      <a class="btn selectSector ma-btn-modal search-form__modal">＋選択してください</a>
+                    <dd class="form__item-input search-form__item-input search-buyer-form__item-input">
+                      <div class="form__item-input--flex-wrap form_industory">
+                      </div>
                     </dd>
                   </div>
                   <div class="col-12 form__item form__item--border search-form__item">
@@ -285,7 +285,7 @@
                   <h3 class="search-buyer-result__title"><a href="./screen_detail-buyer.html">【EC】特徴的な商品を扱うEC事業の譲り受けを希望</a></h3>
                   <div class="search-buyer-result__purchase-info">
                     <ul class="check-list">
-                      <li class="check-list__item check-list__item--owner">オーナー</li>
+                      <li class="check-list__item check-list__item--owner">買い手企業</li>
                     </ul>
                   </div>
                 </div>
@@ -336,7 +336,7 @@
                   <h3 class="search-buyer-result__title"><a href="./screen_detail-buyer.html">飲食店の譲渡案件を募集しております。</a></h3>
                   <div class="search-buyer-result__purchase-info">
                     <ul class="check-list">
-                      <li class="check-list__item check-list__item--fa">アドバイザー</li>
+                      <li class="check-list__item check-list__item--fa">買い手アドバイザー</li>
                     </ul>
                   </div>
                 </div>
@@ -436,6 +436,8 @@
   $(function() {
     // エリア設定
     ma.setOptions('./json/master-area.json', '.form-area');
+    // 大区分
+    ma.setCheckbox('./json/master-industory.json', '.form_industory', 'industory'); // M&Aの目的
 
   /**
    * modal項目選択時に、hidden値を生成する

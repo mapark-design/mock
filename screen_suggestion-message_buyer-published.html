@@ -48,10 +48,10 @@
       <div class="ma-nav__inner">
         <div class="ma-nav__button">
           <button class="btn btn-light ma-btn-nav">マイページTOP</button>
-        </div>
-        <div class="ma-nav__classification"><!--
+        </div><!--
+        <div class="ma-nav__classification">
           <div class="ma-nav__classification-title">売り手メニュー</div>
-          --><ul class="ma-nav__item-list">
+          <ul class="ma-nav__item-list">
             <li class="ma-nav__item">
               <img src="./img/icon/icon-search.svg">
               <span class="ma-nav__item-category">買い手を探す</span>
@@ -78,10 +78,10 @@
               <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
             </li>
           </ul>
-        </div><!--
-        <div class="ma-nav__classification">
+        </div>
+        --><div class="ma-nav__classification"><!--
           <div class="ma-nav__classification-title">買い手メニュー</div>
-          <ul class="ma-nav__item-list">
+          --><ul class="ma-nav__item-list">
             <li class="ma-nav__item">
               <img src="./img/icon/icon-search.svg">
               <span class="ma-nav__item-category">譲渡案件を探す</a>
@@ -111,7 +111,7 @@
               <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
             </li>
           </ul>
-        </div>
+        </div><!--
         <div class="ma-nav__classification">
           <div class="ma-nav__classification-title">買い手メニュー</div>
           <ul class="ma-nav__item-list">
@@ -150,12 +150,12 @@
             <li class="ma-nav__item ma-nav__item-common">
               <img src="./img/icon/icon-userinfo.svg">
               <a href="" class="ma-nav__item-category">会員情報</a>
-            </li><!--
+            </li>
             <li class="ma-nav__item">
               <img src="./img/icon/icon-plan.svg">
               <a href="" class="ma-nav__item-category">契約プラン</a>
             </li>
-          --></ul>
+          </ul>
         </div>
         <div class="ma-nav__classification">
           <ul class="ma-nav__item-list">
@@ -196,7 +196,7 @@
         <nav class="breadcrumb__nav">
           <ul class="breadcrumb__list">
             <li><a href="">マイページ</a></li>
-            <li><a href="">提案中の買い手一覧</a></li>
+            <li><a href="">交渉中の買収ニーズ一覧</a></li>
             <li>交渉</li>
           </ul>
         </nav>
@@ -204,10 +204,10 @@
 
         <section class="section">
           <div class="section__inner regist-seller">
-            <h2 class="section__title section__title-h2">【EC】特徴的な商品を扱うEC事業の譲り受けを希望</h2>
+            <h2 class="section__title section__title-h2">飲食店の譲渡案件を募集しております。</h2>
             <div class="section__content">
               <div class="text-end">
-                <button class="btn btn-secondary ma-btn-ps ma-btn-back">提案中の買い手一覧に戻る</button>
+                <button class="btn btn-secondary ma-btn-ps ma-btn-back">交渉中の買収ニーズ一覧に戻る</button>
               </div>
 
               <div class="message-area suggestion-message__message-area">
@@ -219,46 +219,13 @@
                         <div class="direct-message__content-inner direct-message__content-inner--system">
                           <div class="d-flex justify-content-center">
                             <span class="material-icons-outlined md-28">info</span>
-                            <div class="ms-1">譲渡案件を提案しました。</div>
+                            <div class="ms-1">譲渡案件が提案されました。</div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <!-- //システムが出力するメッセージ -->
-
-                  <!-- 自分のメッセージ -->
-                  <div class="direct-message direct-message--self"><!--
-                    <div class="direct-message__name direct-message__name--self">○○株式会社　覆面</div>
-                    --><div class="direct-message__body direct-message__body--self">
-                      <div class="direct-message__status direct-message__status--self">
-                        <div>既読</div>
-                        <div>11/12 13:59</div>
-                      </div>
-                      <div class="direct-message__content">
-                        <div class="direct-message__content-inner">
-                          <p>
-                            ご担当者様<br>
-                            <br>
-                            はじめまして、あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- 自分の添付ファイル -->
-                    <div class="direct-message__attachment direct-message__attachment--self">
-                      <div class="direct-message__attachment-body">
-                        <div class="direct-message__attachment-inner">
-                          <a class="d-flex align-items-center" href="">
-                            <span class="material-icons-outlined md-28">attach_file</span>
-                            <span>添付ファイル名</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- //自分の添付ファイル -->
-                  </div>  
-                  <!-- //自分のメッセージ -->
 
                   <!-- 相手のメッセージ -->
                   <div class="direct-message direct-message--others">
@@ -388,10 +355,25 @@
                     </div>
                   </div>
                   <!-- //相手のメッセージ -->
+
+                  <!-- システムが出力するメッセージ -->
+                  <div class="direct-message direct-message--system">
+                    <div class="direct-message__body direct-message__body--system">
+                      <div class="direct-message__content direct-message__content--system">
+                        <div class="direct-message__content-inner direct-message__content-inner--system">
+                          <div class="d-flex justify-content-center">
+                            <span class="material-icons-outlined md-28">info</span>
+                            <div class="ms-1">社名・氏名を公開しました。</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //システムが出力するメッセージ -->
                 </div>
               </div>
 
-              <div class="send" style="padding-top: 1.0rem; height: 22.0rem;">
+              <div class="send" style="padding-top: 1.0rem; height: 30.0rem;">
                 <div class="send__inner" style="padding-right: 1.0rem;">
                   <div class="form" style="">
                     <textarea class="form-control" placeholder="メッセージを記載してください。なお、１回のメッセージ送信につき、１つのファイルのみ添付できます。" rows="5"></textarea>
@@ -408,9 +390,9 @@
                     ※4MB以内の画像ファイル(jpg/png/bmp)またはPDFファイルのみ添付できます。
                   </div>
                   <div class="" style="display: flex; justify-content: center; align-items: center; column-gap: 1.0rem; width: 100%; text-align: center; margin-top: 3.0rem;">
-                    <div><button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button></div>
+                    <div><button class="btn btn-secondary ma-btn-fs16 ma-btn-ps" data-bs-toggle="modal" data-bs-target="#exampleModal2">交渉を辞退する</button></div><!--
                     <div><button class="btn btn-corp ma-btn-section" data-bs-toggle="modal" data-bs-target="#exampleModal">社名・氏名を公開する</button></div>
-                  </div>
+                  --></div>
                 </div>
               </div>
             </div>
@@ -464,10 +446,11 @@
         <div class="modal-body">
           <form>
             <p class="mb-3">
-              買い手企業へ送信するメッセージを記入後、「辞退」してください。<br>
+              案件掲載者へ送信するメッセージを記入後、「辞退」してください。<br>
             </p>
             <div class="mt-3 mb-0">
-              <textarea class="form-control" id="message-text" rows="5">こちらの都合で大変恐縮ですが、社内方針に変更があり、交渉を辞退させていただきたくご連絡しました。
+              <textarea class="form-control" id="message-text" rows="5">
+こちらの都合で大変恐縮ですが、社内方針に変更があり、交渉を辞退させていただきたくご連絡しました。
 何卒宜しくお願いいたします。</textarea>
             </div>
           </form>
@@ -488,14 +471,14 @@ $(function() {
   }, 'fast', 'swing');
 
   $('.ma-btn-back').click(function() {
-    location.href = "./screen_suggestion_seller.html";
+    location.href = "./screen_suggestion_buyer.html";
   });
   $('.modal-refused').click(function() {
-    location.href = "./screen_suggestion-message_seller-refused.html";
+    location.href = "./screen_suggestion-message_buyer-refused.html";
   });
   $('.modal-published').click(function() {
-    location.href = "./screen_suggestion-message_seller-published.html";
+    location.href = "./screen_suggestion-message_buyer-published.html";
   });
 });
-</script>
+  </script>
 </html>

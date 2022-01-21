@@ -73,6 +73,67 @@
                   </dd>
                 </div>
                 <div class="form__item form__item--border">
+                  <dt class="form__item-title contact__item-title">資料請求</dt>
+                  <dd class="form__item-input contact__item-input">
+                    <div class="form-check">
+                      <input class="form-check-input" id="is_request_document" type="checkbox" value="1" checked>
+                      <label class="form-check-label" for="is_request_document">資料請求を依頼する</label><!--
+                      <div class="form__caution">郵送をご希望の場合は、送付先をご入力ください。</div>
+                    --></div>
+                  </dd>
+                </div>
+                <div class="request_document">
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">会社名</dt>
+                    <dd class="form__item-input contact__item-input">株式会社エムアンドエーパーク
+                      <input type="text" class="form-control w-50" placeholder="例：株式会社エムアンドエーパーク">
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">部署名</dt>
+                    <dd class="form__item-input contact__item-input">経営企画部
+                      <input type="text" class="form-control w-50" placeholder="例：経営企画部">
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">郵便番号
+                    </dt>
+                    <dd class="form__item-input contact__item-input">1070052
+                      <input type="text" class="form-control w-25" placeholder="例：1070052" required>
+                      <div class="form__caution">ハイフンなしで入力してください。</div>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">都道府県
+                    </dt>
+                    <dd class="form__item-input contact__item-input">東京都<!--
+                      <select class="form-select w-25 form-prefecture" required>
+                        <option selected disabled value="">＋選択してください</option>
+                      </select>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">市区町村
+                    </dt>
+                    <dd class="form__item-input contact__item-input">港区赤坂
+                      <input type="text" class="form-control w-50" placeholder="例：港区赤坂" required>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">番地
+                    </dt>
+                    <dd class="form__item-input contact__item-input">２丁目２３−１
+                      <input type="text" class="form-control w-50" placeholder="例：２丁目２３−１" required>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">建物名</dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control w-50" placeholder="例：アークヒルズフロントタワー　１７Ｆ">
+                    </dd>
+                  </div>
+                </div>
+                <div class="form__item form__item--border">
                   <dt class="form__item-title contact__item-title">問い合わせ内容
                     <div class="form__required">必須</div>
                   </dt>
@@ -99,6 +160,7 @@
 <script>
   $(function() {
     $('.form__required').css('display', 'none');
+    $('.form__caution').css('display', 'none');
     $('input:not(.form-check-input)').css('display', 'none');
     $('textarea').css('display', 'none');
     $('.form-check-input').click(function() {

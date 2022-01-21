@@ -405,7 +405,7 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <div class="h5 modal-title">確認ダイアログ</div>
+          <div class="h5 modal-title">確認</div>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -415,7 +415,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">キャンセル</button>
-          <button type="button" class="btn btn-corp ma-modal-btn-fw">公開する</button>
+          <button type="button" class="btn btn-corp ma-modal-btn-fw modal-published">公開する</button>
         </div>
       </div>
     </div>
@@ -431,7 +431,7 @@
         <div class="modal-body">
           <form>
             <p class="mb-3">
-              案件掲載者へ送信するメッセージを任意で記入後、「辞退」してください。<br>
+              案件掲載者へ送信するメッセージを記入後、「辞退」してください。<br>
             </p>
             <div class="mt-3 mb-0">
               <textarea class="form-control" id="message-text" rows="5">
@@ -442,7 +442,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">キャンセル</button>
-          <button type="button" class="btn btn-corp ma-modal-btn-fw modal-refused" data-bs-toggle="modal" data-bs-target="#exampleModal">辞退する</button>
+          <button type="button" class="btn btn-corp ma-modal-btn-fw modal-refused">辞退する</button>
         </div>
       </div>
     </div>
@@ -461,6 +461,9 @@ $(function() {
   
   $('.modal-refused').click(function() {
     location.href = "./screen_suggestion-message_buyer-refused.html";
+  });
+  $('.modal-published').click(function() {
+    location.href = "./screen_suggestion-message_buyer-published.html";
   });
 });
   </script>

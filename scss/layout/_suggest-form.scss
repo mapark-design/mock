@@ -28,6 +28,16 @@
     }
   }
 
+  &__merit {
+    line-height: 180%;
+
+    &-item {
+      border-left: 0.5rem var.$COLOR-CORP solid;
+      padding-left: 1.0rem;
+      margin-bottom: 1.0rem;
+    }
+  }
+
   &__action {
 
   }

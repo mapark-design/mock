@@ -23,7 +23,12 @@
     display: flex;
     padding-left: 0;
     padding-right: 0;
-    border-top: 1px solid darkgray;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+
+    &--noborder {
+      border-right: none;
+    }
   }
   @at-root {
     %__item {
@@ -37,6 +42,7 @@
       font-weight: normal;
       min-width: 18.0rem;
       max-width: 18.0rem;
+      border-right: 1px solid lightgray;
     }
     &__item-value {
       @extend %__item;

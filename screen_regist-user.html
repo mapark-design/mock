@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="./css/style-custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
@@ -58,8 +58,15 @@
                   <div class="form__required">必須</div>
                 </dt>
                 <dd class="form__item-input regist-user__item-input">
-                  <input type="text" class="form-control w-25" placeholder="例：00000000000" required>
-                  <div class="form__caution">海外法人や組合等、法人番号をお持ちでない場合は、固定値として "9999999999999" を入力ください。</div>
+                  <div class="d-flex align-items-center">
+                    <input type="text" class="form-control w-25" placeholder="例：00000000000" required>
+                    <div class="ms-3" style="font-size: 1.6rem;">
+                      <a href="https://www.houjin-bangou.nta.go.jp/" class="d-flex align-items-center" target="_blank">
+                        法人番号を調べる<span class="material-icons-outlined ms-2">open_in_new</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="form__caution mt-2">海外法人や組合等、法人番号をお持ちでない場合は、固定値として "9999999999999" を入力ください。</div>
                 </dd>
               </div>
               <div class="form__item form__item--border">
@@ -275,6 +282,7 @@
 
     var div = document.createElement('div');
     div.classList.add('form-check');
+    div.classList.add('form__checkbox-list--cols-2');
     div.appendChild(input);
     div.appendChild(label);
     return div;
@@ -308,6 +316,7 @@
         dt.appendChild(divIndustory);
         var dd = document.createElement('dd');
         dd.classList.add('ma-modal-dialog__input');
+        dd.classList.add('w-100');
         dd.appendChild(fragment);
         var div = document.createElement('div');
         div.classList.add('ma-modal-dialog__item');

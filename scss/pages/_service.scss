@@ -16,6 +16,17 @@
     font-weight: bold;
     border-bottom: 1px solid var.$COLOR-CORP;
   }
+  &__subtitle--new {
+    font-size: var.$FONT-SIZE-28;
+    font-weight: bold;
+    border-top: 5px solid var.$COLOR-CORP;
+    border-bottom: 5px solid var.$COLOR-CORP;
+  }
+  &__subtitle--middle {
+    font-size: var.$FONT-SIZE-28;
+    font-weight: bold;
+    border-bottom: 5px solid var.$COLOR-CORP;
+  }
 
   &__image {
     max-width: var.$WIDTH-768;

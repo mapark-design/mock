@@ -10,6 +10,19 @@
     &--mt5 {
       margin-top: 5.0rem;
     }
+    &--mt10 {
+      margin-top: 10.0rem;
+    }
+  }
+
+  &__content {
+    &-subject {
+      font-weight: bold;
+      font-size: var.$FONT-SIZE-36;
+    }
+    &-subject-sub {
+      font-size: var.$FONT-SIZE-24;
+    }
   }
 
   &__image {

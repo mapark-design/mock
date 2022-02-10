@@ -16,6 +16,11 @@
 
     &--border {
       border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+    }
+    &--noborder {
+      border-bottom: 1px solid lightgray;
     }
     &--top-border {
       border-top: 1px solid lightgray;
@@ -24,6 +29,11 @@
     &-title {
       display: flex;
       align-items: center;
+      border-right: 1px solid lightgray;
+
+      &--noborder {
+        border-right: none;
+      }
     }
 
     &-input {
@@ -120,6 +130,12 @@
 
     &-search {
       margin-top: 1.0rem;
+    }
+  }
+
+  &__checkbox-list {
+    &--cols-2 {
+      min-width: 47%;
     }
   }
 }

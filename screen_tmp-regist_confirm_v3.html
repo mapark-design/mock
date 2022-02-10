@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  --><link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>ユーザ仮登録</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1><!--
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="" class="">サービス概要</a></li>
+            <li><a href="" class="">よくあるご質問</a></li>
+            <li><a href="" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><a href="./screen_regist-user-pre.html" class="">会員登録</a></li>
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+          </ul>
+        </div>
+      </nav>
+    --></div>
+  </header>
+  <!-- //header.header -->
+
+  <!-- main.sitetop-main -->
+  <main>
+    <section class="section-nolog">
+      <div class="section-nolog__inner tmp-regist__inner"><!--
+        <ul class="nav nav-tabs nav-justified invisible" id="myTab" role="tablist" style="height: 0.1rem;">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tmp-regist__type-tab" data-bs-toggle="tab" data-bs-target="#tmp-regist__type" type="button" role="tab" aria-controls="tmp-regist__type" aria-selected="true">&nbsp;</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tmp-regist__input-tab" data-bs-toggle="tab" data-bs-target="#tmp-regist__input" type="button" role="tab" aria-controls="tmp-regist__input" aria-selected="false">&nbsp;</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="tmp-regist__type" role="tabpanel" aria-labelledby="tmp-regist__type-tab">
+            <h2 class="section-nolog__title">会員種別を選択してください。</h2>
+            <ul class="tmp-regist__type-list">
+              <li class="tmp-regist__type-item">
+                <button class="btn btn-outline-corp tmp-regist__type-btn">売りたい方</button>
+              </li>
+              <li class="tmp-regist__type-item">
+                <button class="btn btn-outline-corp tmp-regist__type-btn">買いたい方</button>
+              </li>
+              <li class="tmp-regist__type-item">
+                <button class="btn btn-outline-corp tmp-regist__type-btn">
+                  アドバイザー
+                  <p class="tmp-regist__type-explain">買い手企業・売り手企業を<br>お探しのアドバイザーの方</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="tmp-regist__input" role="tabpanel" aria-labelledby="tmp-regist__input-tab">
+            --><form id="maform" class="needs-validation" novalidate>
+              <h2 class="section-nolog__title">新規会員登録（売りたい方）</h2>
+              <div class="ms-4 me-4 mb-4">
+                <div style="background-color: lightyellow; text-align: center; padding: 1.0rem; margin-bottom: 3.0rem; border: 1px solid firebrick; color: firebrick;">
+                  まだ登録は完了していません。入力内容をご確認ください。<br>
+                  この内容で登録する場合は、画面下部の登録するボタンを押してください。
+                </div>
+                <dl>
+                  <div class="form__item form__item--border form__item--top-border">
+                    <dt class="form__item-title tmp-regist__item-title">会員区分<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input--flex-center regist-user__item-input">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          法人
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          個人事業主
+                        </label>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">会社名<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input regist-user__item-input">株式会社エムアンドエーパーク<!--
+                      <input type="text" class="form-control font-size-14 width-45" placeholder="60文字以内で入力してください" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">役職<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input regist-user__item-input">部長（M&A関連）<!--
+                      <select class="form-select font-size-14 width-30" required>
+                        <option selected disabled value="">＋選択してください</option>
+                      </select>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">氏名<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input--flex-center regist-user__item-input">田中　太郎<!--
+                      <input type="text" class="form-control font-size-14 width-15" placeholder="姓" required>
+                      <input type="text" class="form-control font-size-14 width-15" placeholder="名" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">氏名(カナ)<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input--flex-center regist-user__item-input">タナカ　タロウ<!--
+                      <input type="text" class="form-control font-size-14 width-15" placeholder="セイ" required>
+                      <input type="text" class="form-control font-size-14 width-15" placeholder="メイ" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">電話番号<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input regist-user__item-input">00000000000<!--
+                      <input type="text" class="form-control font-size-14 width-15" placeholder="例：00-0000-0000" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">メールアドレス<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input regist-user__item-input">mapark&#064;ma-park.com<!--
+                      <input type="email" class="form-control font-size-14 width-45" placeholder="60文字以内で入力してください" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">パスワード<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input regist-user__item-input">********<!--
+                      <input type="password" class="form-control font-size-14 width-45" placeholder="60文字以内で入力してください" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">パスワード(再確認)<!--
+                      <div class="form__required">必須</div>
+                    --></dt>
+                    <dd class="form__item-input regist-user__item-input">********<!--
+                      <input type="password" class="form-control font-size-14 width-45" placeholder="60文字以内で入力してください" required>
+                    --></dd>
+                  </div>
+                  <div class="form__item form__item--border regist-user__item">
+                    <dt class="form__item-title tmp-regist__item-title">無料メールマガジン
+                    </dt>
+                    <dd class="form__item-input regist-user__item-input">
+                      <div class="form-check">
+                        <input class="form-check-input" id="form-ml-recieved" type="checkbox" value="1">
+                        <label class="form-check-label" for="form-ml-recieved">受信する</label>
+                      </div>
+                    </dd>
+                  </div>
+                </dl>
+              </div><!--
+              <div class="tmp-regist__section-agreement mb-4">上記内容で登録します。よろしいですか？--><!--
+                <div class="form-check">
+                  <input class="form-check-input" id="form-regist-agree" type="checkbox" value="1">
+                  <label class="form-check-label" for="form-regist-agree"><a href="./screen_agreement.html" target="_blank">利用規約</a>、<a href="./screen_privacy-policy.html" target="_blank">個人情報保護方針</a>に同意する</label>
+                </div>
+              --><!--</div>-->
+              <div class="form__action form__action--center mb-4">
+                <button id="btn-back" class="btn btn-secondary ma-btn-back" type="submit">戻る</button>
+                <button id="btn-regist" class="btn btn-corp ma-btn-fw" type="submit">登録する</button>
+              </div>
+            </form><!--
+          </div>
+        </div>
+      --></div>
+    </section>
+  </main>
+  <!-- //main.sitetop-main -->
+
+</body>
+<script>
+  $(function () {
+    $('.form-check-input').click(function() {
+      return false;
+    });
+  });
+  $('#btn-regist').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_tmp-regist_complete.html').submit();
+  });
+
+  $('#btn-back').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_tmp-regist.html').submit();
+  });
+</script>
+</html>

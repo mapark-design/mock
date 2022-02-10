@@ -73,13 +73,13 @@
                   </dd>
                 </div>
                 <div class="form__item form__item--border">
-                  <dt class="form__item-title contact__item-title">資料請求</dt>
-                  <dd class="form__item-input contact__item-input">
+                  <dt class="form__item-title contact__item-title">お問い合わせ</dt>
+                  <dd class="form__item-input contact__item-input category">
                     <div class="form-check">
                       <input class="form-check-input" id="is_request_document" type="checkbox" value="1" checked>
-                      <label class="form-check-label" for="is_request_document">資料請求を依頼する</label><!--
+                      <label class="form-check-label" for="is_request_document">資料請求を依頼する</label>
                       <div class="form__caution">郵送をご希望の場合は、送付先をご入力ください。</div>
-                    --></div>
+                    </div>
                   </dd>
                 </div>
                 <div class="request_document">
@@ -158,7 +158,36 @@
   </main>
 </body>
 <script>
+  let ma = new Ma();
+  /**
+   * チェックボックス設定処理。
+   * @param {*} path JSONファイルパス
+   * @param {*} querySelector チェックボックス設定先セレクタ
+   * @param {*} prefix 接頭辞
+   */
+   setCheckbox = function(path, querySelector, prefix) {
+    ma.sendRequest(ma.createGetArgs({
+      url: path
+    })).done(function(data, statusText, jqXHR) {
+      var options = [];
+      data.forEach(function(el, idx) {
+        var input = $("<input>", {
+          id: prefix + el.value,
+          type: 'checkbox',
+          value: el.value
+        }).addClass('form-check-input');
+        var label = $("<label>", {
+          for: prefix + el.value,
+        }).addClass('form-check-label').text(el.name);
+        var div = $("<div>").addClass('form-check').append(input, label);
+        options.push(div);
+      });
+      $(querySelector).prepend(options);
+    });
+  }
   $(function() {
+    // 対応可能な専門業務領域、専門家への相談依頼
+    setCheckbox('./json/master_contact-category.json', '.category', 'form-category');
     $('.form__required').css('display', 'none');
     $('.form__caution').css('display', 'none');
     $('input:not(.form-check-input)').css('display', 'none');

@@ -43,4 +43,19 @@
       max-width: 84.0rem;
     }
   }
+  &__detail-repletion {
+    background-color: var.$COLOR-CORP;
+    width: 78.0rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 1.0rem 1.0rem 1.5rem;
+    font-size: var.$FONT-SIZE-24;
+  }
+  &__detail-repletion-strong {
+    font-size: var.$FONT-SIZE-40;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+  }
 }

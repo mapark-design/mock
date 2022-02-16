@@ -5558,8 +5558,8 @@ textarea.form-control-lg {
   width: auto !important;
 }
 
-.w-10 {
-  width: 10% !important;
+.w-35 {
+  width: 35% !important;
 }
 
 .mw-100 {
@@ -11074,10 +11074,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 1rem 1.5rem;
   font-size: 2.4rem;
 }
+.sitetop-feature__detail-repletion--v3 {
+  background-color: mistyrose;
+  color: black;
+}
 .sitetop-feature__detail-repletion-strong {
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
+}
+.sitetop-feature__detail-repletion-strong--v3 {
+  color: #c8161d;
 }
 
 .sitetop-newarrival {
@@ -12316,7 +12323,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   margin-left: auto;
   padding: 1rem;
-  max-width: 65rem;
+  max-width: 46rem;
 }
 .ma-service__support-others-list {
   line-height: 180%;

@@ -52,10 +52,19 @@
     border-radius: 1.5rem;
     padding: 1.0rem 1.0rem 1.5rem;
     font-size: var.$FONT-SIZE-24;
+
+    &--v3 {
+      background-color: mistyrose;
+      color: black;
+    }
   }
   &__detail-repletion-strong {
     font-size: var.$FONT-SIZE-40;
     font-weight: bold;
     letter-spacing: 0.25rem;
+
+    &--v3 {
+      color: var.$COLOR-CORP;
+    }
   }
 }

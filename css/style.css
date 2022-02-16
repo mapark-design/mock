@@ -11065,26 +11065,34 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 84rem;
 }
 .sitetop-feature__detail-repletion {
-  background-color: #c8161d;
+  background-color: mistyrose;
   width: 78rem;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  border: 5px solid #c8161d;
   border-radius: 1.5rem;
   padding: 1rem 1rem 1.5rem;
   font-size: 2.4rem;
-}
-.sitetop-feature__detail-repletion--v3 {
-  background-color: mistyrose;
-  color: black;
 }
 .sitetop-feature__detail-repletion-strong {
   font-size: 4rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
-}
-.sitetop-feature__detail-repletion-strong--v3 {
   color: #c8161d;
+}
+.sitetop-feature__detail-repletion-example {
+  font-size: 1.8rem;
+}
+.sitetop-feature__detail-repletion-example-list {
+  text-align: left;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.sitetop-feature__detail-repletion-example-list li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
 }
 
 .sitetop-newarrival {

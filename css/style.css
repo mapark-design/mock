@@ -11065,11 +11065,9 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 84rem;
 }
 .sitetop-feature__detail-repletion {
-  background-color: mistyrose;
   width: 78rem;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid #c8161d;
   border-radius: 1.5rem;
   padding: 1rem 1rem 1.5rem;
   font-size: 2.4rem;
@@ -11134,6 +11132,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 1024px;
   margin: 0 auto;
 }
+.sitetop-flowtouse__list--v4 {
+  width: 800px;
+}
 .sitetop-flowtouse__item {
   display: flex;
   justify-content: flex-start;
@@ -11141,10 +11142,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   background-color: #e6e6e6;
-}
-.sitetop-flowtouse__item:last-child {
-  background-color: #c8161d;
-  justify-content: center;
 }
 .sitetop-flowtouse__step {
   position: relative;
@@ -11167,12 +11164,21 @@ h1, h2, h3, h4, h5, h6 {
   border-width: 25px 25px 0 25px;
   z-index: 1;
 }
+.sitetop-flowtouse__step--v4 {
+  padding: 1.5rem 5rem;
+}
+.sitetop-flowtouse__step--v4-end::after {
+  content: none;
+}
 .sitetop-flowtouse__text {
   padding: 1rem 2.5rem;
   border-radius: 0 0.5rem 0.5rem 0;
 }
-.sitetop-flowtouse__text:nth-child(1) {
-  color: white;
+.sitetop-flowtouse__text--v4 {
+  padding: 1.5rem 2.5rem;
+}
+.sitetop-flowtouse__text--v4-finish {
+  color: #c8161d;
   font-weight: bold;
 }
 

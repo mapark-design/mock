@@ -466,9 +466,49 @@
             </div>
             <!-- // 案件カード -->
             <!-- 案件カード -->
+            <style>
+              .sample {
+                position: relative;
+              }
+               .sample::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                content: '';
+                border-bottom: 7.5rem solid transparent;
+                border-left: 7.5rem solid #c8161d;
+              }
+              .sample::after {
+                position: absolute;
+                top: 10px;
+                left: 6px;
+                z-index: 20;
+                display: block;
+                font-size: 1.8rem;
+                color: #fff;
+                content: "独占";
+                transform: rotate(-45deg);
+              } 
+/*              .sample::before {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                bottom: 5px;
+                right: 5px;
+                content: '独占';
+                background-color: #c8161d;
+                padding: 0.5rem 1.0rem;
+                color: white;
+                border-radius: 3px;
+                z-index: 10;
+              }*/
+            </style>
             <div class="col">
               <div class="card h-100 sitetop-newarrival__card">
-                <img src="./img/recommend/recom_0090.jpg" class="card-img-top sitetop-newarrival__card-image" alt="集客ノウハウ力のある水道資材等のＥＣ事業">
+                <div class="sample">
+                  <img src="./img/recommend/recom_0090.jpg" class="card-img-top sitetop-newarrival__card-image" alt="集客ノウハウ力のある水道資材等のＥＣ事業">
+                </div>
                 <div class="card-body">
                   <div class="d-table">
                     <div class="d-table-row">
@@ -623,29 +663,30 @@
       <div class="section-nolog__inner">
         <h2 class="section-nolog__title">ご利用までの流れ</h2>
         <div class="section-nolog__content sitetop-flowtouse">
-          <ul class="sitetop-flowtouse__list">
+          <ul class="sitetop-flowtouse__list sitetop-flowtouse__list--v4">
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__step">STEP&#9312;</div>
-              <div class="sitetop-flowtouse__text">会員登録をクリック</div>
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step--v4">STEP&#9312;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text--v4">会員登録をクリック</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__step">STEP&#9313;</div>
-              <div class="sitetop-flowtouse__text">お名前、メールアドレスなどを入力</div>
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step--v4">STEP&#9313;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text--v4">お名前、メールアドレスなどを入力</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__step">STEP&#9314;</div>
-              <div class="sitetop-flowtouse__text">利用規約、個人情報保護方針を確認し、登録</div>
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step--v4">STEP&#9314;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text--v4">利用規約、個人情報保護方針を確認し、登録</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__step">STEP&#9315;</div>
-              <div class="sitetop-flowtouse__text">M&A PARKから届くメールを確認、URLをクリック</div>
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step--v4">STEP&#9315;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text--v4">M&A PARKから届くメールを確認、URLをクリック</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__step">STEP&#9316;</div>
-              <div class="sitetop-flowtouse__text">自社情報や事業内容を入力</div>
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step--v4">STEP&#9316;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text--v4">自社情報や事業内容を入力</div>
             </li>
             <li class="sitetop-flowtouse__item">
-              <div class="sitetop-flowtouse__text">会員登録完了</div>
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step--v4 sitetop-flowtouse__step--v4-end">STEP&#9317;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text--v4 sitetop-flowtouse__text--v4-finish">会員登録完了</div>
             </li>
           </ul>
         </div>

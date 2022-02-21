@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/**
+ * 変数定義
+ *
+ * SCSSで利用する変数を定義する。
+ */
+.article-sect__title {
+  padding-left: 0.5rem;
+  font-size: 2.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid #c8161d;
+}
+.article-sect__update {
+  text-align: right;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+/*# sourceMappingURL=article-sect.css.map */

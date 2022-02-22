@@ -10288,6 +10288,51 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
+.cm-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 3px rgba(106, 131, 152, 0.2);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.cm-card__image {
+  width: 100%;
+  height: 24rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cm-card__item {
+  padding: 1rem 1rem 0 1rem;
+}
+.cm-card__item--head {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.cm-card__ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.cm-card__ellipsis--head {
+  -webkit-line-clamp: 2;
+}
+.cm-card__anchor {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+}
+.cm-card__anchor:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+}
+.cm-card__time {
+  color: #888888;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
 /**
  * ヘッダコンポーネント。
  * システム共通とし、独自に必要なものは Modifier を利用して設定している。

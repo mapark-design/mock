@@ -47,4 +47,29 @@
       padding-bottom: 0.5rem;
     }
   }
+
+  &__monopoly {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      content: '';
+      border-bottom: 7.5rem solid transparent;
+      border-left: 7.5rem solid var.$COLOR-CORP;
+    }
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: 6px;
+      z-index: 20;
+      display: block;
+      font-size: 1.8rem;
+      color: #fff;
+      content: "独占";
+      transform: rotate(-45deg);
+    }
+  }
 }

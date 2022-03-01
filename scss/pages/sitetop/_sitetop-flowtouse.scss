@@ -4,12 +4,8 @@
 .sitetop-flowtouse {
 
   &__list {
-    width: var.$WIDTH-1024;
+    width: var.$WIDTH-800;
     margin: 0 auto;
-
-    &--v4 {
-      width: var.$WIDTH-800;
-    }
   }
 
   &__item {
@@ -19,17 +15,12 @@
     margin-bottom: 2.0rem;
     border-radius: 0.5rem;
     background-color: var.$COLOR-GRAY-DARK;
-
-//    &:last-child {
-//      background-color: var.$COLOR-CORP;
-//      justify-content: center;
-//    }
   }
 
   &__step {
     position: relative;
     width: 15.0rem;
-    padding: 1.0rem 5.0rem;
+    padding: 1.5rem 5.0rem;
     border-radius: 0.5rem 0 0 0.5rem;
     background-color: var.$COLOR-CORP;
     color: white;
@@ -48,10 +39,7 @@
       z-index: 1;
     }
 
-    &--v4 {
-      padding: 1.5rem 5.0rem;
-    }
-    &--v4-end {
+    &--last {
       &::after {
         content: none;
       }
@@ -59,22 +47,13 @@
   }
 
   &__text {
-    padding: 1.0rem 2.5rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 0 0.5rem 0.5rem 0;
 
-    &--v4 {
-      padding: 1.5rem 2.5rem;
+    &--last {
+      color: black;
+      font-weight: normal;
     }
-
-    &--v4-finish {
-      color: var.$COLOR-CORP;
-      font-weight: bold;
-    }
-
-    // &:nth-child(1) {
-    //   color: white;
-    //   font-weight: bold;
-    // }
   }
 
 }

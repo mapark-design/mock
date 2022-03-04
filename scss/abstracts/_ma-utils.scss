@@ -1,0 +1,15 @@
+@use "./variables" as var;
+@use "./mixins";
+
+input {
+  &.ma-utils {
+    &__md-100 {
+      @include mixins.mq-down('md') {
+        width: 100% !important;
+      }
+    }
+    &__zip-no {
+      width: 16.5rem;
+    }
+  }
+}

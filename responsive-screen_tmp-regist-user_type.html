@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="https://dev.staging-ma-park.com/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>ユーザ仮登録</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1><!--
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="" class="">サービス概要</a></li>
+            <li><a href="" class="">よくあるご質問</a></li>
+            <li><a href="" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><a href="./screen_regist-user-pre.html" class="">会員登録</a></li>
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+          </ul>
+        </div>
+      </nav>
+    --></div>
+  </header>
+  <!-- //header.header -->
+
+  <!-- main.sitetop-main -->
+  <main>
+    <section class="section-nolog">
+      <div class="section-nolog__inner tmp-regist__inner">
+        <ul class="nav nav-tabs nav-justified invisible" id="myTab" role="tablist" style="height: 0.1rem;">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tmp-regist__type-tab" data-bs-toggle="tab" data-bs-target="#tmp-regist__type" type="button" role="tab" aria-controls="tmp-regist__type" aria-selected="true">&nbsp;</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tmp-regist__input-tab" data-bs-toggle="tab" data-bs-target="#tmp-regist__input" type="button" role="tab" aria-controls="tmp-regist__input" aria-selected="false">&nbsp;</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="tmp-regist__type" role="tabpanel" aria-labelledby="tmp-regist__type-tab">
+            <h2 class="section-nolog__title">会員種別を選択してください。</h2>
+            <ul class="tmp-regist__type-list">
+              <li class="tmp-regist__type-item">
+                <button class="btn btn-outline-corp tmp-regist__type-btn">売りたい方</button>
+              </li>
+              <li class="tmp-regist__type-item">
+                <button class="btn btn-outline-corp tmp-regist__type-btn">買いたい方</button>
+              </li>
+              <li class="tmp-regist__type-item">
+                <button class="btn btn-outline-corp tmp-regist__type-btn">
+                  アドバイザー
+                  <p class="tmp-regist__type-explain">買い手企業・売り手企業を<br>お探しのアドバイザーの方</p>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- //main.sitetop-main -->
+</body>
+<script>
+  var ma = new Ma();
+  $(function() {
+    ma.setOptions('./json/master-post.json', '.form-post');
+
+    $('.tmp-regist__type-btn').click(function() {
+      new bootstrap.Tab(document.getElementById("tmp-regist__input-tab")).show();
+    });
+
+    $('#btn-back').click(function() {
+      new bootstrap.Tab(document.getElementById("tmp-regist__type-tab")).show();
+    });
+
+    $('#btn-regist').click(function() {
+      $('#maform').attr('method', 'GET').attr('action', './screen_tmp-regist_confirm.html').submit();
+    });
+
+    $('#form-regist-agree').click(function() {
+      $button = $('#btn-regist');
+      $button.prop('disabled', !this.checked);
+    });
+  });
+</script>
+</html>

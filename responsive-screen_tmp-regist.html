@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/style-custom.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="https://dev.staging-ma-park.com/favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -54,24 +55,7 @@
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="tmp-regist__type" role="tabpanel" aria-labelledby="tmp-regist__type-tab">
-            <h2 class="section-nolog__title">会員種別を選択してください。</h2>
-            <ul class="tmp-regist__type-list">
-              <li class="tmp-regist__type-item">
-                <button class="btn btn-outline-corp tmp-regist__type-btn">売りたい方</button>
-              </li>
-              <li class="tmp-regist__type-item">
-                <button class="btn btn-outline-corp tmp-regist__type-btn">買いたい方</button>
-              </li>
-              <li class="tmp-regist__type-item">
-                <button class="btn btn-outline-corp tmp-regist__type-btn">
-                  アドバイザー
-                  <p class="tmp-regist__type-explain">買い手企業・売り手企業を<br>お探しのアドバイザーの方</p>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="tab-pane fade" id="tmp-regist__input" role="tabpanel" aria-labelledby="tmp-regist__input-tab">
+          <div>
             <form id="maform" class="needs-validation" novalidate>
               <h2 class="section-nolog__title">新規会員登録（売りたい方）</h2>
               <div class="ms-4 me-4 mb-4">
@@ -80,7 +64,7 @@
                     <dt class="form__item-title tmp-regist__item-title">会員区分
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input--flex-center regist-user__item-input">
+                    <dd class="form__item-input--flex-center tmp-regist__item-input">
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
@@ -95,81 +79,89 @@
                       </div>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">会社名
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input regist-user__item-input">
-                      <input type="text" class="form-control w-75" placeholder="例：株式会社エムアンドエーパーク" required>
+                    <dd class="form__item-input tmp-regist__item-input">
+                      <input type="text" class="form-control w-75 ma-utils__md-100" placeholder="例：株式会社エムアンドエーパーク" required>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">役職
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input regist-user__item-input">
+                    <dd class="form__item-input tmp-regist__item-input">
                       <select class="form-select form-post w-50" required>
                         <option selected disabled value="">＋選択してください</option>
                       </select>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">氏名
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input--flex-center regist-user__item-input">
-                      <input type="text" class="form-control w-50" placeholder="例：山田" required>
-                      <input type="text" class="form-control w-50" placeholder="例：太郎" required>
+                    <dd class="form__item-input--flex-center form__item-input--flex-center-md tmp-regist__item-input">
+                      <div class="w-100">
+                        <input type="text" class="form-control" placeholder="例：山田" required>
+                      </div>
+                      <div class="w-100">
+                          <input type="text" class="form-control" placeholder="例：太郎" required>
+                        </div>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">氏名(カナ)
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input--flex-center regist-user__item-input">
-                      <input type="text" class="form-control w-50" placeholder="例：ヤマダ" required>
-                      <input type="text" class="form-control w-50" placeholder="例：タロウ" required>
+                    <dd class="form__item-input--flex-center form__item-input--flex-center-md tmp-regist__item-input">
+                      <div class="w-100">
+                        <input type="text" class="form-control w-100" placeholder="例：ヤマダ" required>
+                      </div>
+                      <div class="w-100">
+                        <input type="text" class="form-control w-100" placeholder="例：タロウ" required>
+                      </div>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">電話番号
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input regist-user__item-input">
-                      <input type="text" class="form-control w-25" placeholder="例：00000000000" required>
+                    <dd class="form__item-input tmp-regist__item-input">
+                      <input type="text" class="form-control ma-utils__zip-no" placeholder="例：00000000000" required>
                       <div class="form__caution">ハイフンなしで入力してください。</div>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">メールアドレス
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input regist-user__item-input">
-                      <input type="email" class="form-control w-50" placeholder="mapark@ma-park.com" required>
+                    <dd class="form__item-input tmp-regist__item-input">
+                      <input type="email" class="form-control w-50 ma-utils__md-100" placeholder="mapark@ma-park.com" required>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">パスワード
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input form__item-input--password regist-user__item-input">
-                      <input type="password" class="form-control w-50" placeholder="英数混在8文字以上で入力してください" required>
+                    <dd class="form__item-input form__item-input--password tmp-regist__item-input">
+                      <input type="password" class="form-control w-50 ma-utils__md-100" placeholder="英数混在8文字以上で入力してください" required>
                       <span class="material-icons-outlined password-eye" role="button">visibility</span>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">パスワード(再確認)
                       <div class="form__required">必須</div>
                     </dt>
-                    <dd class="form__item-input form__item-input--password regist-user__item-input">
-                      <input type="password" class="form-control w-50" placeholder="もう一度パスワードを入力してください" required>
+                    <dd class="form__item-input form__item-input--password tmp-regist__item-input">
+                      <input type="password" class="form-control w-50 ma-utils__md-100" placeholder="もう一度パスワードを入力してください" required>
                       <span class="material-icons-outlined password-eye" role="button">visibility</span>
                     </dd>
                   </div>
-                  <div class="form__item form__item--border regist-user__item">
+                  <div class="form__item form__item--border">
                     <dt class="form__item-title tmp-regist__item-title">無料メールマガジン
                     </dt>
-                    <dd class="form__item-input regist-user__item-input">
+                    <dd class="form__item-input tmp-regist__item-input">
                       <div class="form-check">
                         <input class="form-check-input" id="form-ml-recieved" type="checkbox" value="1" checked>
                         <label class="form-check-label" for="form-ml-recieved">受信する</label>

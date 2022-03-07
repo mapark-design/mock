@@ -241,7 +241,7 @@ class Ma {
         var label = $("<label>", {
           for: prefix + el.value,
         }).addClass('form-check-label').text(el.name);
-        var div = $("<div>").addClass('form-check').append(input, label);
+        var div = $("<div>").addClass('form-check').addClass('maform-check__item').append(input, label);
         options.push(div);
       });
 

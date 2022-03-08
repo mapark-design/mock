@@ -12,14 +12,13 @@
 
   &__content {
     position: absolute;
-    top: 8.0rem;
-    left: 9.5rem;
+    top: 7.5rem;
+    left: 9.7rem;
     z-index: 1;
   }
 
   &__copy {
-    font-size: 2.5rem;
-//    font-family: 'Roboto', sans-serif;
+    font-size: 3.2rem;
     font-weight: bold;
     color: var.$COLOR-CORP;
     margin-bottom: 2.0rem;
@@ -41,5 +40,12 @@
     padding: 0.8rem 3.0rem;
     position: absolute;
     top: 32.0rem;
+  }
+
+  &__caution {
+    position: absolute;
+    top: 38.5rem;
+    font-weight: bold;
+    font-size: 1.8rem;
   }
 }

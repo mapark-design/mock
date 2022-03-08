@@ -11050,12 +11050,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sitetop-keyvisual__content {
   position: absolute;
-  top: 8rem;
-  left: 9.5rem;
+  top: 7.5rem;
+  left: 9.7rem;
   z-index: 1;
 }
 .sitetop-keyvisual__copy {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-weight: bold;
   color: #c8161d;
   margin-bottom: 2rem;
@@ -11074,6 +11074,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.8rem 3rem;
   position: absolute;
   top: 32rem;
+}
+.sitetop-keyvisual__caution {
+  position: absolute;
+  top: 38.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 .sitetop-feature__list {

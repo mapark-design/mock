@@ -1,0 +1,21 @@
+@use "../../abstracts/variables" as var;
+
+.sitetop-article {
+  &__anchor {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out 0s;
+
+    &:hover {
+      color: black;
+      > div.cm-card {
+        box-shadow: 0.4rem 0.4rem 1.3rem 0.2rem rgb(0 0 0 / 50%);
+        transition: 0.25s;
+      }
+      img {
+        opacity: .7;
+        transition: 0.25s;
+      }
+    }
+  }
+}

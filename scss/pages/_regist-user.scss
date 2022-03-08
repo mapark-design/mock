@@ -4,31 +4,19 @@
 .regist-user {
 
   &__inner {
-    width: 100%;
-
-    @include mixins.mq-up('md') {
-      max-width: var.$WIDTH-1024;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    width: var.$WIDTH-1024;
   }
 
   &__explanation {
     margin-bottom: 1.0rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
   }
 
   &__item {
     &-title {
-      width: 100%;
+      min-width: 28.0rem;
+      max-width: 28.0rem;
       background-color: #eaeaea;
       padding: 1.5rem;
-
-      @include mixins.mq-up('md') {
-        min-width: 25.0rem;
-        max-width: 25.0rem;
-      }
     }
     &-input {
       padding: 1.5rem;

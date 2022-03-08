@@ -47,29 +47,29 @@ $FONT-SIZE-36: 3.6rem;
 $FONT-SIZE-40: 4.0rem;
 $FONT-SIZE-44: 4.4rem;
 
-$breakpoint-up: (
-  'sm': 'screen and (min-width: 576px)',
-  'md': 'screen and (min-width: 768px)',
-  'lg': 'screen and (min-width: 992px)',
-  'xl': 'screen and (min-width: 1200px)',
-  'xxl': 'screen and (min-width: 1400px)',
-) !default;
+// $breakpoint-up: (
+//   'sm': 'screen and (min-width: 576px)',
+//   'md': 'screen and (min-width: 768px)',
+//   'lg': 'screen and (min-width: 992px)',
+//   'xl': 'screen and (min-width: 1200px)',
+//   'xxl': 'screen and (min-width: 1400px)',
+// ) !default;
 
-$breakpoint-down: (
-  'sm': 'screen and (max-width: 575px)',
-  'md': 'screen and (max-width: 767px)',
-  'lg': 'screen and (max-width: 991px)',
-  'xl': 'screen and (max-width: 1199px)',
-  'xxl': 'screen and (max-width: 1399px)',
-) !default;
+// $breakpoint-down: (
+//   'sm': 'screen and (max-width: 575px)',
+//   'md': 'screen and (max-width: 767px)',
+//   'lg': 'screen and (max-width: 991px)',
+//   'xl': 'screen and (max-width: 1199px)',
+//   'xxl': 'screen and (max-width: 1399px)',
+// ) !default;
 
-$breakpoint-range: (
-  'xs': 'screen and (min-width: 0px) and (max-width: 575px)',
-  'sm': 'screen and (min-width: 576px) and (max-width: 767px)',
-  'md': 'screen and (min-width: 768px) and (max-width: 991px)',
-  'lg': 'screen and (min-width: 992px) and (max-width: 1199px)',
-  'xl': 'screen and (min-width: 1200px) and (max-width: 1399px)',
-) !default;
+// $breakpoint-range: (
+//   'xs': 'screen and (min-width: 0px) and (max-width: 575px)',
+//   'sm': 'screen and (min-width: 576px) and (max-width: 767px)',
+//   'md': 'screen and (min-width: 768px) and (max-width: 991px)',
+//   'lg': 'screen and (min-width: 992px) and (max-width: 1199px)',
+//   'xl': 'screen and (min-width: 1200px) and (max-width: 1399px)',
+// ) !default;
 
 
 // $COLOR-GRAY-DARK: #e6e6e6;

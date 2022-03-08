@@ -4,36 +4,6 @@
  *
  * SCSSで利用する変数を定義する。
  */
-@media screen and (max-width: 767px) {
-  input.ma-utils__md-100 {
-    width: 100% !important;
-  }
-}
-input.ma-utils__zip {
-  width: 15rem;
-}
-input.ma-utils__tel {
-  width: 16.5rem;
-}
-input.ma-utils__corp-no {
-  width: 16.5rem;
-}
-input.ma-utils__achievement {
-  width: 8rem;
-}
-input.ma-utils__capital {
-  width: 16.5rem;
-}
-input.ma-utils__est-year {
-  width: 12rem;
-}
-
-@media screen and (max-width: 767px) {
-  select.ma-utils__md-100 {
-    width: 100% !important;
-  }
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10364,22 +10334,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 767px) {
-  .maform-check__list {
-    gap: 0 !important;
-  }
-}
-.maform-check__item {
-  min-width: 50%;
-  padding-right: 1rem;
-}
-@media screen and (max-width: 575px) {
-  .maform-check__item {
-    min-width: 100%;
-    padding-right: 1rem;
-  }
-}
-
 /**
  * ヘッダコンポーネント。
  * システム共通とし、独自に必要なものは Modifier を利用して設定している。
@@ -10397,7 +10351,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
-  max-width: 1346px;
+  width: 1346px;
   height: 72px;
 }
 .header__inner--login {
@@ -10705,12 +10659,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form__item {
   display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .form__item {
-    flex-direction: row;
-  }
 }
 .form__item--border {
   border-bottom: 1px solid lightgray;
@@ -10726,12 +10674,7 @@ h1, h2, h3, h4, h5, h6 {
 .form__item-title {
   display: flex;
   align-items: center;
-  border-right: none;
-}
-@media screen and (min-width: 768px) {
-  .form__item-title {
-    border-right: 1px solid lightgray;
-  }
+  border-right: 1px solid lightgray;
 }
 .form__item-title--noborder {
   border-right: none;
@@ -10763,13 +10706,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
-  .form__item-input--flex-center-md {
-    flex-direction: column;
-    row-gap: 1.5rem;
-  }
-}
-
 .form__item--header {
   color: gray;
 }
@@ -10782,14 +10718,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem 0.7rem;
   border-radius: 0.3rem;
   line-height: 1;
-  margin-right: auto;
-  margin-left: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .form__required {
-    margin-right: 0;
-    margin-left: auto;
-  }
+  margin-right: 0;
+  margin-left: auto;
 }
 .form__ex {
   /** 記入例の表示 */
@@ -10946,26 +10876,16 @@ h1, h2, h3, h4, h5, h6 {
  * モーダルコンポーネント。
  * 今のところ共通としている。
  */
-@media screen and (min-width: 768px) {
-  .ma-modal-dialog {
-    max-width: 768px;
-    min-width: 768px;
-  }
+.ma-modal-dialog {
+  max-width: 768px;
+  min-width: 768px;
 }
 .ma-modal-dialog__item {
   display: flex;
-  flex-direction: column;
   border-bottom: 0.1rem solid gray;
-  border-left: 0.1rem solid gray;
-  border-right: 0.1rem solid gray;
 }
 .ma-modal-dialog__item:first-of-type {
   border-top: 0.1rem solid gray;
-}
-@media screen and (min-width: 768px) {
-  .ma-modal-dialog__item {
-    flex-direction: row;
-  }
 }
 .ma-modal-dialog__title {
   background-color: lightgray;
@@ -10978,16 +10898,9 @@ h1, h2, h3, h4, h5, h6 {
 .ma-modal-dialog__input {
   display: flex;
   align-items: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  grid-column-gap: 2rem;
   flex-wrap: wrap;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
-}
-@media screen and (max-width: 767px) {
-  .ma-modal-dialog__input {
-    -moz-column-gap: 0;
-         column-gap: 0;
-  }
 }
 
 .matter-list tr {
@@ -11173,6 +11086,17 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   text-align: center;
 }
+.sitetop-feature__item a {
+  text-decoration: none;
+  color: black;
+}
+.sitetop-feature__item a:hover {
+  color: black;
+}
+.sitetop-feature__item a:hover img {
+  transform: scale(1.05);
+  transition-duration: 0.25s;
+}
 .sitetop-feature__title {
   font-weight: bold;
   font-size: 2.4rem;
@@ -11183,6 +11107,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 26rem;
   height: 26rem;
   margin-bottom: 1rem;
+  transition-duration: 0.25s;
 }
 .sitetop-feature__detail {
   margin-top: 5rem;
@@ -11401,17 +11326,29 @@ h1, h2, h3, h4, h5, h6 {
   width: 16.5rem;
 }
 
+.sitetop-article__anchor {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+}
+.sitetop-article__anchor:hover {
+  color: black;
+}
+.sitetop-article__anchor:hover > div.cm-card {
+  box-shadow: 0.4rem 0.4rem 1.3rem 0.2rem rgba(0, 0, 0, 0.5);
+  transition: 0.25s;
+}
+.sitetop-article__anchor:hover img {
+  opacity: 0.7;
+  transition: 0.25s;
+}
+
 /** 仮登録画面用SCSS */
 .tmp-regist__inner {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .tmp-regist__inner {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.8rem;
-  }
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8rem;
 }
 .tmp-regist__title {
   text-align: center;
@@ -11420,32 +11357,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 .tmp-regist__type-list {
   display: flex;
-  flex-direction: row;
-  row-gap: 1rem;
   justify-content: space-evenly;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) {
-  .tmp-regist__type-list {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+  padding-bottom: 4rem;
 }
 .tmp-regist__type-item {
   display: flex;
   justify-content: center;
 }
 .tmp-regist__type-btn {
-  width: 90%;
+  width: 24rem;
+  padding: 5rem 0.5rem;
   border-radius: 0.5rem;
   font-size: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .tmp-regist__type-btn {
-    width: 24rem;
-    padding: 5rem 0.5rem;
-  }
 }
 .tmp-regist__type-explain {
   font-size: 1.6rem;
@@ -11456,17 +11379,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 2rem;
 }
 .tmp-regist__item-title {
-  width: 100%;
+  min-width: 25rem;
+  max-width: 25rem;
   background-color: #eaeaea;
-  padding: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .tmp-regist__item-title {
-    min-width: 25rem;
-    max-width: 25rem;
-  }
-}
-.tmp-regist__item-input {
   padding: 1.5rem;
 }
 .tmp-regist__section-agreement {
@@ -11491,30 +11406,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .regist-user__inner {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .regist-user__inner {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  width: 1024px;
 }
 .regist-user__explanation {
   margin-bottom: 1rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
 }
 .regist-user__item-title {
-  width: 100%;
+  min-width: 28rem;
+  max-width: 28rem;
   background-color: #eaeaea;
   padding: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  .regist-user__item-title {
-    min-width: 25rem;
-    max-width: 25rem;
-  }
 }
 .regist-user__item-input {
   padding: 1.5rem;
@@ -12829,6 +12730,23 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid lightgray;
   border-radius: 0.5rem;
   background-color: #f2f2f2;
+}
+
+.article-index__anchor {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out 0s;
+}
+.article-index__anchor:hover {
+  color: black;
+}
+.article-index__anchor:hover > div.cm-card {
+  box-shadow: 0.4rem 0.4rem 1.3rem 0.2rem rgba(0, 0, 0, 0.5);
+  transition: 0.25s;
+}
+.article-index__anchor:hover img {
+  opacity: 0.7;
+  transition: 0.25s;
 }
 
 .material-icons-outlined.md-48 {

@@ -1,0 +1,105 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.sitetop-feature {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__list {
+    max-width: var.$WIDTH-1024;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+//    width: 100%;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: black;
+
+        img {
+          transform: scale(1.05);
+          transition-duration: 0.25s;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 2.4rem; 
+    color: var.$COLOR-CORP;
+    margin-bottom: 1rem;
+  }
+
+  &__image {
+    width: 26.0rem;
+    height: 26.0rem;
+    margin-bottom: 1rem;
+    transition-duration: 0.25s;
+  }
+
+  &__detail {
+    margin-top: 5.0rem;
+    text-align: center;
+
+    li {
+      margin-bottom: 3.0rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    img {
+      max-width: 84.0rem;
+    }
+  }
+  &__detail-repletion {
+    max-width: 78.0rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.5rem;
+    padding: 1.0rem 1.0rem 1.5rem;
+    font-size: var.$FONT-SIZE-24;
+
+    &-strong {
+      font-size: var.$FONT-SIZE-40;
+      font-weight: bold;
+      letter-spacing: 0.25rem;
+      color: var.$COLOR-CORP;
+    }
+
+    &-example {
+      font-size: var.$FONT-SIZE-18;
+
+      &-list {
+        text-align: left;
+        margin: 0 auto;
+        width: fit-content;
+
+        li {
+          margin-bottom: 0.5rem;
+          list-style: disc;
+        }
+      }
+    }
+  }
+}

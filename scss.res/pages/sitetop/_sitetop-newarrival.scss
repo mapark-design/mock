@@ -1,0 +1,80 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+%__text {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.sitetop-newarrival {
+
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__card {
+    border-bottom-left-radius: 1.0rem;
+    border-bottom-right-radius: 1.0rem;
+  }
+
+  &__card-image {
+    height: 20.0rem;
+    object-fit: cover;
+  }
+
+  &__cell-title {
+    min-width: 12.0rem;
+    padding-bottom: 1.0rem;
+    font-size: 1.6rem;
+
+    &--last {
+      padding-bottom: 0;
+    }
+
+    &--multi {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__cell-value {
+    padding-bottom: 1.0rem;
+
+    &--multi {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__monopoly {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      content: '';
+      border-bottom: 7.5rem solid transparent;
+      border-left: 7.5rem solid var.$COLOR-CORP;
+    }
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: 6px;
+      z-index: 20;
+      display: block;
+      font-size: 1.8rem;
+      color: #fff;
+      content: "独占";
+      transform: rotate(-45deg);
+    }
+  }
+}

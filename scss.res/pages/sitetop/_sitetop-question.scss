@@ -1,0 +1,32 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.sitetop-question {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__list {
+  }
+
+  dt {
+    @include mixins.questionItemEl(var.$COLOR-GRAY-DARK, "icon-question.svg");
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  dd {
+    @include mixins.questionItemEl(var.$COLOR-GRAY-THIN, "icon-answer.svg");
+    margin-bottom: 2.0rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}

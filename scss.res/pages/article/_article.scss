@@ -1,0 +1,19 @@
+@use "../../abstracts/variables" as var;
+
+.article {
+  &__inner {
+    width: var.$WIDTH-1024;
+  }
+
+  &__title {
+    padding-left: 0.5rem;
+    font-size: var.$FONT-SIZE-32;
+    border-bottom: 1px solid var.$COLOR-CORP;
+  }
+
+  &__update {
+    text-align: right;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

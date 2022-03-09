@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as var;
+
+.search-result {
+  border: 1px solid lightgray;
+  margin-bottom: 2.0rem;
+
+  &:last-of-type {
+    margin-bottom: 1.0rem;
+  }
+
+  &__check-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  &__check {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    font-weight: normal;
+    font-size: var.$FONT-SIZE-16;
+  }
+}

@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+/**
+ * フッタコンポーネント。
+ * サイトトップおよびLPで利用を想定している。
+ */
+.footer {
+  $footer: &;
+
+  font-size: var.$FONT-SIZE-18;
+
+  &--top {
+    /** サイトトップ用 */
+    background-color: var.$COLOR-CORP;
+    padding-top: 5.0rem 0 3.0rem 0;
+  }
+
+  &__inner {
+    width: 100%;
+    padding: 5.0rem 0;
+    color: white;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 4.0rem;
+    row-gap: 2.0rem;
+    text-align: center;
+
+    @include mixins.mq-up('md') {
+      flex-flow: row;
+      justify-content: center;
+      column-gap: 10.0rem;
+      text-align: inherit;
+    }
+
+    &-category {
+      font-size: var.$FONT-SIZE-20;
+      margin-bottom: 1.5rem;
+    }
+    &-item {
+      margin-bottom: 0.5rem;
+
+      a {
+        @include mixins.createAnchor();
+      }
+    }
+  }
+
+  &__logo {
+    text-align: center;
+
+    img {
+      max-width: 36.0rem;
+      margin-bottom: 1.0rem;
+    }
+  }
+  &__copyright {
+    display: block;
+    color: white;
+    font-size: var.$FONT-SIZE-12;
+  }
+}

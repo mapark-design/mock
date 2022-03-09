@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as var;
+
+.information {
+
+  &__inner {
+    width: var.$WIDTH-1024;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    padding-left: 0.5rem;
+    font-size: var.$FONT-SIZE-32;
+    border-bottom: 1px solid var.$COLOR-CORP;
+  }
+  &__date {
+    text-align: right;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  &__text {
+    line-height: 1.6;
+    margin-top: 5.0rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  &__back {
+    margin-top: 6.0rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,22 @@
+.move-top {
+  display: none;
+  opacity: 0.5;
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    bottom: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67), 0 2px 6px 2px rgb(60 64 67 / 50%);
+    position: fixed;
+    cursor: pointer;
+    transition: .8s;
+    z-index: 99;
+  }
+}

@@ -1,0 +1,33 @@
+.entry-example {
+
+  &__disc-list {
+    li {
+      list-style-type: disc;
+      margin-left: 3.0rem
+    }
+  }
+
+  &__def-list {
+
+    dt {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    dd {
+      margin-top: 0.5rem;
+      margin-left: 0.5rem;
+      padding-bottom: 1.0rem;
+      border-bottom: 1px solid darkgray;
+
+      &:last-of-type {
+        padding-bottom: 0rem;
+        border-bottom: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as var;
+
+.corporate {
+
+  &__inner {
+    width: var.$WIDTH-1024;
+  }
+
+  &__item {
+    display: flex;
+
+    &--border {
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+    }
+    &--top-border {
+      border-top: 1px solid lightgray;
+    }
+
+    &-title {
+      min-width: 28.0rem;
+      max-width: 28.0rem;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+      border-right: 1px solid lightgray;
+    }
+    &-value {
+      padding: 1.5rem;
+    }
+  }
+}

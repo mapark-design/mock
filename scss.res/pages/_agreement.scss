@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.agreement {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2.0rem;
+
+    &-title {
+      background-color: #eaeaea;
+      padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+      font-size: var.$FONT-SIZE-20;
+    }
+    &-supplementary-provisions {
+      margin-top: 5.0rem;
+    }
+    &-value {
+      padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+      text-align: justify;
+      text-justify: inter-ideograph;
+
+      .collect-and-use {
+        &__item {
+          margin-bottom: 0.75rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          dd {
+            padding-left: 1.5rem;
+          }
+        }
+      }
+
+      .list-type__decimal {
+        padding-left: 2.0rem;
+
+        li {
+          margin-bottom: 0.75rem;
+          
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        .list-type__hyphen {
+          padding-left: 1.0rem;
+        }
+      }
+
+      .list-parentheses {
+        margin-top: 0.5rem;
+        margin-left: 3.5rem;
+        list-style-type: none;
+
+        & li {
+          list-style: none;
+          counter-increment: cnt;
+          position: relative;
+        }
+        & li::before {
+          content: "(" counter(cnt) ") ";
+          margin-left: -4.5rem;
+          width: 4.0rem;
+          text-align: right;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.6;      
+  }
+}

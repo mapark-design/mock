@@ -1,0 +1,68 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.sitetop-flowtouse {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-800;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2.0rem;
+    border-radius: 0.5rem;
+    background-color: var.$COLOR-GRAY-DARK;
+  }
+
+  &__step {
+    position: relative;
+    width: 15.0rem;
+    padding: 1.5rem 5.0rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: var.$COLOR-CORP;
+    color: white;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -15px;
+      left: 5.0rem;
+      border-style: solid;
+      border-color: var.$COLOR-CORP transparent transparent transparent;
+      border-width: 25px 25px 0 25px;
+      z-index: 1;
+    }
+
+    &--last {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__text {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    &--last {
+      color: black;
+      font-weight: normal;
+    }
+  }
+
+}

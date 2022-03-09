@@ -1,0 +1,17 @@
+.suggestion-message {
+  
+  &__message-area {
+//    height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 220px);
+    height: calc(100vh - 72px - 40px - 31px - 43px - 36px - 10px - 300px);
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 1px solid lightgray;
+    margin-top: 1.0rem;
+  }
+
+  &__message-area-inner {
+    padding-top: 1.0rem;
+    padding-right: 1.0rem;
+    padding-left: 1.0rem;
+  }
+}

@@ -1,0 +1,56 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.sitetop-notify {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.0rem;
+  }
+
+  &__item {
+    background-color: var.$COLOR-GRAY-THIN;
+    border-radius: 0.5rem;
+
+    @include mixins.mq-up('lg') {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__date {
+    width: 100%;
+    padding: 1.0rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    background-color: var.$COLOR-GRAY-DARK;
+
+    @include mixins.mq-up('lg') {
+      width: 16.0rem;
+      padding: 1.5rem 0;
+      border-radius: 0.5rem 0 0 0.5rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    padding: 1.0rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    @include mixins.mq-up('lg') {
+      padding: 1.5rem 2.5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+  }
+}

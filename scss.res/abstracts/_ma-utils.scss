@@ -1,0 +1,39 @@
+@use "./variables" as var;
+@use "./mixins";
+
+input {
+  &.ma-utils {
+    &__md-100 {
+      @include mixins.mq-down('md') {
+        width: 100% !important;
+      }
+    }
+    &__zip {
+      width: 15.0rem;
+    }
+    &__tel {
+      width: 16.5rem;
+    }
+    &__corp-no {
+      width: 16.5rem;
+    }
+    &__achievement {
+      width: 8.0rem;
+    }
+    &__capital {
+      width: 16.5rem;
+    }
+    &__est-year {
+      width: 12.0rem;
+    }
+  }
+}
+select {
+  &.ma-utils {
+    &__md-100 {
+      @include mixins.mq-down('md') {
+        width: 100% !important;
+      }
+    }
+  }
+}

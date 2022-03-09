@@ -1,0 +1,162 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+/**
+ * フォームコンポーネント。
+ * 基本的なフォームの実装はこれを利用する。
+ * ヘッダの幅や細かい調整は、画面毎のクラスで設定するとよい。
+ */
+.form {
+
+  &--search {
+    font-size: 1.6rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.mq-up('md') {
+      flex-direction: row;
+    }
+
+    &--border {
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+    }
+    &--noborder {
+      border-bottom: 1px solid lightgray;
+    }
+    &--top-border {
+      border-top: 1px solid lightgray;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      border-right: none;
+
+      @include mixins.mq-up('md') {
+        border-right: 1px solid lightgray;
+      }
+    
+      &--noborder {
+        border-right: none;
+      }
+    }
+
+    &-input {
+      width: 100%;
+
+      .form-control,
+      .form-select {
+        font-size: var.$FONT-SIZE-16;
+      }
+
+      &--password {
+        display: flex;
+        align-items: center;
+        column-gap: 1.0rem;
+      }
+
+      @at-root {
+        %--flex {
+          display: flex;
+          align-items: center;
+          gap: 0rem 2.5rem;
+        }
+        &--flex-center {
+          @extend %--flex;
+        }
+        &--flex-end {
+          @extend %--flex;
+          align-items: flex-end;
+        }
+        &--flex-wrap {
+          @extend %--flex;
+          flex-wrap: wrap;
+        }
+        &--flex-center-md {
+          @include mixins.mq-down('md') {
+            flex-direction: column;
+            row-gap: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &--header {
+      color: gray;
+    }
+  }
+  
+  &__required {
+    /** 必須マーク */
+    display: inline-block;
+    background: var.$COLOR-CORP;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.3rem;
+    line-height: 1;
+    margin-right: auto;
+    margin-left: 1.0rem;
+
+    @include mixins.mq-up('md') {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__ex {
+    /** 記入例の表示 */
+    /** 基本は bootstrap.collapsed を利用するが、そのままではうまく利用できないので追加で設定を行う */
+    display: inline-block;
+    width: 100%;
+    line-height: 1.5;
+    transition: all 0.5s;
+    padding: 0.5rem 0.5rem 0 0;
+    font-size: var.$FONT-SIZE-16;
+  }
+
+  &__ex-body {
+    padding: 0.5rem 0.5rem;
+    background-color: #eeeeee;
+    border-radius: 0 0 0.5rem 0;
+    font-size: var.$FONT-SIZE-16;
+  }
+
+  &__caution {
+    /** 注意書き */
+    font-size: var.$FONT-SIZE-14;
+  }
+
+  &__action {
+    /** アクションボタン */
+    display: flex;
+    align-items: center;
+    margin-top: 3.0rem;
+    gap: 3.0rem;
+
+    &--left {
+      justify-content: flex-start;
+    }
+    &--center {
+      justify-content: center;
+    }
+    &--right {
+      justify-content: flex-end;
+    }
+
+    &-search {
+      margin-top: 1.0rem;
+    }
+  }
+
+  &__checkbox-list {
+    &--cols-2 {
+      min-width: 47%;
+    }
+  }
+}

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/style-map.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="https://dev.staging-ma-park.com/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>M&amp;A PARK</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1>
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="./screen_service.html" class="">サービス概要</a></li>
+            <li><a href="./screen_price.html" class="">利用料金</a></li>
+            <li><a href="./screen_faq.html" class="">よくあるご質問</a></li>
+            <li><a href="./screen_contact_without-menu.html" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav"><!--
+            <li><a href="./screen_tmp-regist.html" class="">会員登録</a></li>-->
+            <li><button class="btn btn-light ma-btn-login">無料で会員登録する</button></li><!--
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>-->
+            <li><a href="./screen_tmp-regist.html" class="">ログイン</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- //header.header -->
+  <main>
+    <!-- key-visual -->
+    <div class="sitetop-keyvisual">
+      <div id="carouselOption1" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./img/kv01.jpg" alt="第1スライド">
+          </div>
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="./img/kv02.jpg" alt="第2スライド">
+          </div>
+        </div>
+        <div class="sitetop-keyvisual__content">
+          <p class="sitetop-keyvisual__copy">
+            アジア最大級の<br>
+            海外譲渡案件・投資家も集まる<br>
+            会員制オンラインマッチングサービス<br>
+          </p>
+          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
+          <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
+          <div class="sitetop-keyvisual__caution">
+            売り手企業様は完全無料でご利用いただけます
+          </div>
+        </div>
+        <div style="position: absolute;
+        bottom: 1%;
+        right: 1%;
+        z-index: 99;
+        width: 36%;
+        height: 46%;">
+          <img src="./img/0101.svg" style="position: absolute;
+          width: 220px;
+          left: calc((100% / 2) - 110px);">
+          <img src="./img/0102.svg" style="    position: absolute;
+          width: 220px;
+          bottom: 0;">
+          <img src="./img/0103.svg" style="    position: absolute;
+          width: 220px;
+          bottom: 0;
+          right: 0;">
+        </div>
+<!--
+        <div style="position: absolute;
+        bottom: 1%;
+        right: 1%;
+        z-index: 99;
+        width: 35%;
+        height: 45%;">
+          <img src="./img/0201.svg" style="position: absolute;
+          width: 200px;
+          left: calc((100% / 2) - 100px);">
+          <img src="./img/0202.svg" style="    position: absolute;
+          width: 200px;
+          bottom: 0;">
+          <img src="./img/0203.svg" style="    position: absolute;
+          width: 200px;
+          bottom: 0;
+          right: 0;">
+        </div>-->
+      </div>
+    </div>
+    <!-- //key-visual -->
+
+
+    <!-- 特長 -->
+    <section class="section-nolog sitetop-feature">
+      <div class="section-nolog__inner sitetop-feature__inner">
+        <h2 class="section-nolog__title">特徴</h2>
+        <div class="section-nolog__content ">
+          <ul class="sitetop-feature__list">
+            <li class="sitetop-feature__item">
+              <a href="">
+                <div>
+                  <h3 class="sitetop-feature__title">業界最低水準の<br>利用料金<br></h3>
+                  <img src="./img/feature01.svg" alt="" class="sitetop-feature__image">
+                  <p class="sitetop-feature__text">売り手企業様は完全無料<br>買い手企業様は<br>シンプルで分かりやすい料金体系<br></p>
+                </div>
+              </a>
+            </li>
+            <li class="sitetop-feature__item">
+              <a href="">
+                <div>
+                  <h3 class="sitetop-feature__title">世界中の経営者と<br>マッチング<br></h3>
+                  <img src="./img/feature02.svg" alt="" class="sitetop-feature__image">
+                  <p class="sitetop-feature__text">国内の経営者<br>世界中の経営者と<br>マッチングが可能<br></p>    
+                </div>
+              </a>
+            </li>
+            <li class="sitetop-feature__item">
+              <a href="">
+                <div>
+                  <h3 class="sitetop-feature__title">安心の<br>サポート体制<br></h3>
+                  <img src="./img/feature03.svg" alt="" class="sitetop-feature__image">
+                  <p class="sitetop-feature__text">M&Aの成約をサポートする<br>M&Aの成功を実現する<br>専門家をご紹介<br></p>  
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="section-nolog__button">
+            <button class="btn btn-corp ma-btn-section service">サービスについて詳しく見る</button>
+          </div>
+          <div class="sitetop-feature__detail">
+            <ul>
+              <li><img src="./img/feature-subtitle.svg"></li>
+              <li>
+                <div>
+                  <img src="./img/feature04.svg">
+                </div>
+                <div class="sitetop-feature__detail-repletion">
+                  <span class="sitetop-feature__detail-repletion-strong">M&amp;A PARK</span> なら、<br>
+                    匿名で譲渡先を探したり、資金調達・出資の募集など<br>
+                    あなたのお悩みにお応え出来ます。<br>
+                    <div class="mt-5 sitetop-feature__detail-repletion-example">
+                      <ul class="sitetop-feature__detail-repletion-example-list">
+                        <li>事業・会社の譲渡について相談したい</li>
+                        <li>おおまかな自社の譲渡価格を知りたい</li>
+                        <li>譲渡するかまだ迷っているが相談したい</li>
+                        <li style="list-style: none;">など、お気軽にご相談ください（相談無料）</li>
+                      </ul>
+                    </div>
+                    <div class="mt-5">
+                      <button class="btn btn-primary ma-btn-section">まずは相談してみる</button>
+                    </div>
+                </div>
+              </li><!--
+              <li><img src="./img/_feature04.svg"></li>
+              --><li>
+                <div>
+                  <img src="./img/feature05.svg">
+                </div>
+                <div class="sitetop-feature__detail-repletion">
+                  <span class="sitetop-feature__detail-repletion-strong">M&amp;A PARK</span> なら、<br>
+                    自社のニーズに合う譲渡案件や海外企業の譲渡案件を探したり、<br>
+                    あなたの目的に合った使い方が出来ます。<br>
+                    <div class="mt-5 sitetop-feature__detail-repletion-example">
+                      <ul class="sitetop-feature__detail-repletion-example-list">
+                        <li>無料会員登録で、譲渡案件の検索・閲覧ができます</li>
+                        <li>自社の使い方に合ったさまざまなプランから選択できます</li>
+                        <li>非公開譲渡案件をご紹介するプランもございます</li>
+                      </ul>
+                    </div>
+                    <div class="mt-5">
+                      <button class="btn btn-corp ma-btn-section">さっそく会員登録する</button>
+                    </div>
+                </div>
+              </li><!--
+              <li><img src="./img/_feature05.svg"></li>
+              --></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //特長 -->
+
+    <!-- おすすめの案件 -->
+    <section class="section-nolog sitetop-newarrival">
+      <div class="section-nolog__inner sitetop-newarrival__inner">
+        <h2 class="section-nolog__title">おすすめの譲渡案件</h2>
+        <div class="section-nolog__content ">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4 sitetop-newarrival">
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0040.jpg" class="card-img-top sitetop-newarrival__card-image" alt="【設立10年以上】医療ツーリズムに関する事業" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">旅行・観光</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">南関東地方</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">500万円以下</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000万円以下</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0020.jpg" class="card-img-top sitetop-newarrival__card-image" alt="バリ島商材小売＆輸入ルート譲渡 在庫リスク無し 未経験者・副業・起業・事業拡大に" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">アパレル・雑貨</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">福岡県</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">500万円以下</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000万円以下</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0030.jpg" class="card-img-top sitetop-newarrival__card-image" alt="創業46年・従業員12名・設備充実の加工業の譲渡" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">金属製品</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">埼玉県</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">500万円以下</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1～2億5,000万円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0010.jpg" class="card-img-top sitetop-newarrival__card-image" alt="求職者と企業をプロフィール動画でマッチングさせるサービス" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">WEBサイト・アプリ</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">東京都</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">500万円以下</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1～2億5,000万円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0050.jpg" class="card-img-top sitetop-newarrival__card-image" alt="雇用も定着。技術もしっかりとあり！" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">その他製造</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">広島県</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">500～1,000万円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000～5,000万円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0060.jpg" class="card-img-top sitetop-newarrival__card-image" alt="【プロテイン部門7冠達成】ビューティープロテイン会社の事業譲渡" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">化粧品・健康食品</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">東京都</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">1,000～3,000万円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000万円以下</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0080.jpg" class="card-img-top sitetop-newarrival__card-image" alt="【事業譲渡】モンドセレクション金賞受賞：美容化粧品EC事業" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">その他情報通信</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">東京都</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">1,000～3,000万円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000万円以下</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0070.jpg" class="card-img-top sitetop-newarrival__card-image" alt="100年以上地域医療に貢献！" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">病院・クリニック</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">福岡県</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">1,000～3,000万円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">5,000万円～1億円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0090.jpg" class="card-img-top sitetop-newarrival__card-image" alt="集客ノウハウ力のある水道資材等のＥＣ事業" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">ECサイト・通販</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">宮城県</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">3,000～5,000万円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000～5,000万円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="">
+                  <img src="./img/recommend/recom_0100.jpg" class="card-img-top sitetop-newarrival__card-image" alt="泉質良好・固定客多数！" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">ホテル・旅館</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">熊本県</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">5,000万円～1億円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">1,000～5,000万円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="sitetop-newarrival__monopoly">
+                  <img src="./img/recommend/recom_0110.jpg" class="card-img-top sitetop-newarrival__card-image" alt="半導体設計、組み込みシステム等に特化したIT会社" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">半導体・精密機器</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">インド</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">3～5億円</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">2億5,000万円～5億円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+            <!-- 案件カード -->
+            <div class="col">
+              <div class="card h-100 sitetop-newarrival__card">
+                <div class="sitetop-newarrival__monopoly">
+                  <img src="./img/recommend/recom_0120.jpg" class="card-img-top sitetop-newarrival__card-image" alt="【インド】 設立14年以上　E2Eに特化したソフトウェア・IoT" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <div class="d-table">
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">業種</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list check-list--wrap">
+                          <span class="check-list__item check-list__item--search">ソフトウェア</span>
+                          <span class="check-list__item check-list__item--search">IoT</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title sitetop-newarrival__cell-title--multi">地域</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value sitetop-newarrival__cell-title--value">
+                        <div class="sitetop-newarrival__item-value check-list--wrap">
+                          <span class="check-list__item check-list__item--search">インド</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">譲渡希望価格</div>
+                      <div class="d-table-cell sitetop-newarrival__cell-value">5億円以上</div>
+                    </div>
+                    <div class="d-table-row">
+                      <div class="d-table-cell sitetop-newarrival__cell-title">売上高</div>
+                      <div class="d-table-cell">2億5,000万円～5億円</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- // 案件カード -->
+          </div>
+          <div class="section-nolog__button" style="font-size: 2.0rem; font-weight: bold;">
+            日本国内だけではなく、アジアを中心とした海外の譲渡案件も豊富に掲載中です。
+          </div>
+          <div class="section-nolog__button">
+            <a href="https://dev.staging-ma-park.com/tmp-regist-user_type"><button class="btn btn-corp ma-btn-section succession">会員登録して案件を更に見る</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //おすすめの案件 -->
+
+    <!-- ご利用までの流れ -->
+    <section class="section-nolog sitetop-flowtouse">
+      <div class="section-nolog__inner sitetop-flowtouse__inner">
+        <h2 class="section-nolog__title">ご利用までの流れ</h2>
+        <div class="section-nolog__content ">
+          <ul class="sitetop-flowtouse__list sitetop-flowtouse__list">
+            <li class="sitetop-flowtouse__item">
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step">STEP&#9312;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text">会員登録をクリック</div>
+            </li>
+            <li class="sitetop-flowtouse__item">
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step">STEP&#9313;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text">お名前、メールアドレスなどを入力</div>
+            </li>
+            <li class="sitetop-flowtouse__item">
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step">STEP&#9314;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text">利用規約、個人情報保護方針を確認し、登録</div>
+            </li>
+            <li class="sitetop-flowtouse__item">
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step">STEP&#9315;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text">M&A PARKから届くメールを確認、URLをクリック</div>
+            </li>
+            <li class="sitetop-flowtouse__item">
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step">STEP&#9316;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text">自社情報や事業内容を入力</div>
+            </li>
+            <li class="sitetop-flowtouse__item">
+              <div class="sitetop-flowtouse__step sitetop-flowtouse__step sitetop-flowtouse__step--last">STEP&#9317;</div>
+              <div class="sitetop-flowtouse__text sitetop-flowtouse__text sitetop-flowtouse__text--last">会員登録完了</div>
+            </li>
+          </ul>
+        </div>
+        <div class="section-nolog__button">
+          <button class="btn btn-corp ma-btn-section succession">無料で会員登録する</button>
+        </div>
+      </div>
+    </section>
+    <!-- //ご利用までの流れ -->
+
+    <!-- よくあるご質問 -->
+    <section class="section-nolog sitetop-question">
+      <div class="section-nolog__inner sitetop-question__inner">
+        <h2 class="section-nolog__title">よくあるご質問</h2>
+        <div class="section-nolog__content ">
+          <dl class="sitetop-question__list">
+            <dt>初めてのM&Aで不安です。どんなサポートが受けられますか？</dt>
+            <dd>
+              M&A PARKでは、初めての事業承継・M&Aをサポートするための支援体制を完備しており、M&A PARKを通じて、必要な時に必要な専門家をご紹介することができます。会員登録後の画面は、オンラインサービスを普段利用しない方でも分かりやすいシンプルな機能となっております。また、専門家監修の交渉を進める際のお役立ち資料もご用意しております。なにかご不明点や困ったことがございましたら、専門スタッフが随時サポートさせていただいております。<br>
+            </dd>
+            <dt>M&A PARKとはどんなサービスですか？</dt>
+            <dd>
+              M&A PARKは、経営者のための会員制ハイブリッド総合支援型M&Aサービスです。<br>
+              事業や会社を譲りたい企業の方は、自社もしくは代理人であるFA（ファイナンシャルアドバイザー）が、譲りたい事業情報を登録することで、譲り受けたい企業の方から直接オファーを受け取ることができます。<br>
+              インターネットならではの、国や地域、業種の垣根を超えた出会いの場を提供すると同時に、出会った企業様同時のM&Aを進める為の支援体制を備えた総合支援型のサービスです。<br>
+            </dd>
+            <dt>M&A PARKの利用料金はいくらですか？会員登録は無料ですか？手数料はいくらですか？</dt>
+            <dd>会員登録は無料です。また、売り手企業様は、完全無料でご利用いただけます。買い手企業様は月額料金のみで、ご成約時の手数料は０円です。<br></dd>
+          </dl>
+          <div class="section-nolog__button">
+            <button class="btn btn-corp ma-btn-section faq">すべてを見る</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //よくあるご質問 -->
+
+    <!-- M&amp;A記事・コラム -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner sitetop-article__inner">
+        <h2 class="section-nolog__title">M&amp;A記事・コラム</h2>
+        <div class="section-nolog__content">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="col">
+              <a href="https://dev.staging-ma-park.com/article/2022001" class="sitetop-article__anchor">
+                <div class="cm-card h-100" style="transition: 0.25s;">
+                  <figure>
+                      <img src="https://dev.staging-ma-park.com/img/page/article/2022001/202200101.jpg" class="cm-card__image">
+                  </figure>
+                  <h3 class="cm-card__item cm-card__item--head cm-card__ellipsis cm-card__ellipsis--head flex-grow-1">
+                    M&amp;A[エムアンドエー]の意味を知ろう
+                  </h3>
+                  <p class="cm-card__item cm-card__ellipsis">
+                    テレビなどのメディアでよく耳にするM&amp;A[エムアンドエー]という言葉ですが、その意味をご存知でしょうか。M&amp;A[エムアンドエー]とは、Mergers（合併）and Acquisitions（買収）を略したものであり、その頭文字をとってM&amp;A[エムアンドエー]と呼ばれています。
+                  </p>
+                  <time class="cm-card__time cm-card__item" datetime="2022/03/04">
+                    2022/03/04
+                  </time>
+                </div><!-- //div.cm-card -->
+              </a><!-- //a.cm-card__anchor -->
+            </div><!-- //div.col -->
+            <div class="col">
+              <a href="https://dev.staging-ma-park.com/article/2022002" class="sitetop-article__anchor">
+                <div class="cm-card h-100">
+                  <figure>
+                    <img src="https://dev.staging-ma-park.com/img/page/article/2022002/202200201.jpg" class="cm-card__image">
+                  </figure>
+                  <h3 class="cm-card__item cm-card__item--head cm-card__ellipsis cm-card__ellipsis--head flex-grow-1">M&amp;A[エムアンドエー]が必要とされる理由</h3>
+                  <p class="cm-card__item cm-card__ellipsis">
+                    資本主義における”良い会社”とはどういった会社でしょうか。それは、社会貢献が多い会社ではなく、多くの利益を生み続ける会社が良い会社となります。資本主義において、会社が多くの利益を生み出すということは、投資をした人がたくさんの分け前を得られるということです。
+                  </p>
+                  <time class="cm-card__time cm-card__item" datetime="2022/03/04">
+                    2022/03/04
+                  </time>
+                </div><!-- //div.cm-card -->
+              </a><!-- //a.cm-card__anchor -->
+            </div><!-- //div.col -->
+            <div class="col">
+              <a href="https://dev.staging-ma-park.com/article/2022003" class="sitetop-article__anchor">
+                <div class="cm-card h-100">
+                  <figure>
+                    <img src="https://dev.staging-ma-park.com/img/page/article/2022003/202200301.jpg" class="cm-card__image">
+                  </figure>
+                  <h3 class="cm-card__item cm-card__item--head cm-card__ellipsis cm-card__ellipsis--head flex-grow-1">売り手にとってのM&amp;A[エムアンドエー]を知る</h3>
+                  <p class="cm-card__item cm-card__ellipsis">
+                    M&amp;Aとは会社やビジネスを売買するので、当然ながら買い手と売り手が存在します。買い手が買う（欲しい）理由があるように、売り手には売り手である理由が存在するからこそ、M&amp;Aという選択を選んでいるのです。
+                  </p>
+                  <time class="cm-card__time cm-card__item" datetime="2022/03/04">
+                    2022/03/04
+                  </time>
+                </div><!-- //div.cm-card -->
+              </a><!-- //a.cm-card__anchor -->
+            </div><!-- //div.col -->
+          </div>
+          <div class="section-nolog__button">
+            <a href="https://dev.staging-ma-park.com/article/index"><button class="btn btn-corp ma-btn-section">その他のM&amp;A記事・コラムを見てみる</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //M&amp;A記事・コラム -->
+
+    <!-- お知らせ -->
+    <section class="section-nolog sitetop-notify">
+      <div class="section-nolog__inner sitetop-notify__inner">
+        <h2 class="section-nolog__title">お知らせ</h2>
+        <div class="section-nolog__content">
+          <ul class="sitetop-notify__list">
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">2021/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">2021/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">2021/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">2021/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+            <li class="sitetop-notify__item">
+              <div class="sitetop-notify__date">2021/07/27</div>
+              <div class="sitetop-notify__text"><a href="">M&A PARK リニューアルのお知らせ</a></div>
+            </li>
+          </ul>
+          <div class="section-nolog__button">
+            <button class="btn btn-corp ma-btn-section information">すべてを見る</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //お知らせ -->
+  </main>
+
+  <!-- footer.footer -->
+  <footer class="footer footer--top">
+    <div class="footer__inner">
+      <div class="footer__nav">
+        <dl class="footer__nav-list">
+          <dt class="footer__nav-category">M&Aパークガイド</dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_service.html">サービス概要</a></dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_price.html">利用料金</a></dt>
+          <dd class="footer__nav-item"><a class="" href="././screen_faq.html">よくあるご質問</a></dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_contact_without-menu.html">お問い合わせ</a></dt>
+        </dl>
+        <dl class="footer__nav-list">
+          <dt class="footer__nav-category">お知らせ</dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_informations.html">お知らせ一覧</a></dt>
+        </dl>
+        <dl class="footer__nav-list">
+          <dt class="footer__nav-category">M&Aパークについて</dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_corporate.html">運営会社情報</a></dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_agreement.html">利用規約</a></dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_privacy-policy.html">個人情報保護方針</a></dt>
+          <dd class="footer__nav-item"><a class="" href="./screen_transactions.html">特定商取引法に基づく表示</a></dt>
+        </dl>
+      </div>
+      <div class="footer__logo">
+        <img src="./img/logo/footer-logo.png" alt="">
+        <small class="footer__copyright">
+          Copyright 2021 M&A PARK Inc. All rights reserved.
+        </small>
+      </div>
+    </div>
+  </footer>
+  <!-- //footer.footer -->
+
+  <!-- 無料登録アイコン -->
+  <div id="icon-regist" class="sitetop-fixed-icon">
+    <a href="./screen_tmp-regist.html"><img src="./img/icon/icon-free2contact.svg"></a>
+  </div>
+</body>
+<script>
+  var ma = new Ma();
+  $(function() {
+    $(window).scroll(ma.scrollIcon);
+
+    $('.faq').click(function () {
+      location.href = './screen_faq.html';
+    });
+    $('.information').click(function () {
+      location.href = './screen_informations.html';
+    });
+    $('.service').click(function () {
+      location.href = './screen_service.html';
+    });
+    $('.succession').click(function() {
+      location.href = './screen_tmp-regist.html';
+    });
+  });
+</script>
+</html>

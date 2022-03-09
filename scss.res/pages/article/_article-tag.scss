@@ -1,0 +1,29 @@
+@use "../../abstracts/variables" as var;
+
+.article-tag {
+  margin-left: 2rem;
+  margin-top: 5rem;
+
+  &__title {
+    font-size: var.$FONT-SIZE-16;
+    font-weight: normal;
+  }
+
+  &__item {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: #941015;
+    color: white;
+    font-size: var.$FONT-SIZE-14;
+    column-gap: 0.5rem;
+
+  }
+
+  &__list {
+    &-item {
+      &-value {
+        margin-left: 1.0rem;
+      }
+    }
+  }
+}

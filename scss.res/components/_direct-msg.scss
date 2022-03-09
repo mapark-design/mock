@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as var;
+
+.direct-message {
+
+  margin-bottom: 1.0rem;
+
+  &--others {
+    width: 75%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  &--self {
+    width: 75%;
+    margin-top: 3.0rem;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  &--system {
+  }
+
+  &__name {
+    font-size: var.$FONT-SIZE-16;
+    &--others {
+      text-align: left;
+    }
+    &--self {
+      text-align: right;
+    }
+  }
+
+  &__body {
+    display: flex;
+    &--others {
+      justify-content: flex-start;
+    }
+    &--self {
+      justify-content: flex-end;
+    }
+    &--system {
+      justify-content: center;
+    }
+  }
+
+  &__status {
+    align-self: end;
+    font-size: var.$FONT-SIZE-16;
+    min-width: 10.0rem;
+    &--others {
+      margin-left: 1.0rem;
+      text-align: left;
+    }
+    &--self {
+      margin-right: 1.0rem;
+      text-align: right;
+    }
+  }
+
+  &__content {
+    &-inner {
+      background-color: #eaeaea;
+      border-radius: 0.5rem;
+      padding: 1.0rem;
+
+      &--system {
+        background-color: rgba(200, 22, 29, 0.3);
+        padding: 1.0rem 3.0rem;
+      }
+    }
+
+    &--system {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__attachment {
+    &-body {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+    &-inner {
+      border: 1px solid #eaeaea;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    }
+
+    &--others {
+      text-align: left;
+    }
+    &--self {
+      text-align: right;
+    }
+  }
+}

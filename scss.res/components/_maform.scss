@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.maform {
+  &-check {
+    &__list {
+      @include mixins.mq-down('md') {
+        gap: 0 !important;
+      }
+    }
+    &__item {
+      min-width: 50%;
+      padding-right: 1.0rem;
+
+      @include mixins.mq-down('sm') {
+        min-width: 100%;
+        padding-right: 1.0rem;
+      }
+    }
+  }
+}

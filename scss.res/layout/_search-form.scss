@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as var;
+
+/**
+ * 検索フォームコンポーネント。
+ * form コンポーネントと併用することを前提とする。
+ * また、全体的にフォントは一回り小さいことにも注意する。
+ * 
+ */
+.search-form {
+  font-size: var.$FONT-SIZE-16;
+
+  &__item {
+    padding-left: 0;
+    padding-right: 0;
+
+    &-title {
+      padding: 1.0rem;
+      font-weight: normal;
+      background-color: #eaeaea;
+    }
+    &-input {
+      padding: 1.0rem;
+
+      .form-control,
+      .form-select {
+        font-size: var.$FONT-SIZE-14;
+      }
+    }
+  }
+  &__modal {
+    font-size: var.$FONT-SIZE-14;
+  }
+}

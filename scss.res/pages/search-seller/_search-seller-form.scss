@@ -1,0 +1,14 @@
+@use "../../abstracts/variables" as var;
+
+.search-seller-form {
+  &__item {
+
+    &-title {
+      max-width: 18.0rem;
+      min-width: 18.0rem;
+    }
+    &-input {
+      border-right: none;
+    }
+  }
+}

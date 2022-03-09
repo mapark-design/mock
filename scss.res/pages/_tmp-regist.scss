@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+/** 仮登録画面用SCSS */
+.tmp-regist {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    padding: 2.0rem;
+    font-size: 2.4rem;
+  }
+
+  &__type {
+    &-list {
+      display: flex;
+      flex-direction: row;
+      row-gap: 1.0rem;
+      justify-content: space-evenly;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      @include mixins.mq-up('md') {
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+    }
+    &-item {
+      display: flex;
+      justify-content: center;
+    }
+    &-btn {
+      width: 90%;
+      border-radius: 0.5rem;
+      font-size: var.$FONT-SIZE-20;
+
+      @include mixins.mq-up('md') {
+        width: 24.0rem;
+        padding: 5.0rem 0.5rem;
+      }
+    }
+
+    &-explain {
+      font-size: var.$FONT-SIZE-16;
+    }
+  }
+
+  &__input-content {
+    padding-right: 2.0rem;
+    padding-bottom: 1.0rem;
+    padding-left: 2.0rem;
+  }
+
+  &__item {
+    &-title {
+      width: 100%;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+  
+      @include mixins.mq-up('md') {
+        min-width: 25.0rem;
+        max-width: 25.0rem;
+      }
+    }
+  
+    &-input {
+      padding: 1.5rem;
+    }
+  }
+
+  &__section-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__section-buttons {
+    gap: 3.0rem;
+  }
+  &__section-button-regist {
+    padding: 0.5rem 1.0rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  &__section-button-back {
+    padding: 0.5rem 1.0rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+}

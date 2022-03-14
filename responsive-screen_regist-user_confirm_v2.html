@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/style-map.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="stylesheet" href="./css/modaal.min.css" class="rel">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/modaal.min.js"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>ユーザ登録</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1><!--
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="" class="">サービス概要</a></li>
+            <li><a href="" class="">よくあるご質問</a></li>
+            <li><a href="" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><a href="./screen_regist-user-pre.html" class="">会員登録</a></li>
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+          </ul>
+        </div>
+      </nav>
+    --></div>
+  </header>
+  <!-- //header.header -->
+
+  
+  <main>
+    <!-- section.section-nolog -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner regist-user__inner">
+        <h2 class="section-nolog__title">会員情報登録(買いたい方)</h2>
+        <div class="section-nolog__content"><!--
+          <div class="regist-user__explanation">
+            会員情報は、正確な情報をご登録ください。<br>
+            登録内容の確認のため、後日事務局からご連絡させていただく場合がございます旨、ご了承ください。
+          </div>
+          -->
+          <div class="ms-4 me-4">
+            <div class="form__action form__action--center mb-4">下記内容で登録します。よろしいですか？</div>
+            <div class="form__action form__action--center mb-4 mt-0">
+              <button id="btn-back" class="btn btn-secondary ma-btn-back" type="submit">戻る</button>
+              <button id="btn-regist" class="btn btn-corp ma-btn-section" type="submit">登録する</button>
+            </div>  
+          </div>
+          <form id="maform" class="needs-validation" novalidate>
+            <div class="ms-4 me-4 mb-4">
+              <dl>
+                <div class="form__item form__item--border form__item--top-border regist-user__item">
+                  <dt class="form__item-title regist-user__item-title">法人番号<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">00000000000<!--
+                    <input type="text" class="form-control w-25" placeholder="例：00123456789" required>
+                    <div class="form__caution">海外法人や組合等、法人番号をお持ちでない場合は、固定値として "9999999999999" を入力ください。</div>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">郵便番号<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">1070052<!--
+                    <input type="text" class="form-control w-25" placeholder="例：000-0000" required>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">都道府県<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">東京都<!--
+                    <select class="form-select w-25 form-prefecture" required>
+                      <option selected disabled value="">＋選択してください</option>
+                    </select>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">市区町村<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">港区赤坂<!--
+                    <input type="text" class="form-control w-50" placeholder="60文字以内で入力してください" required>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">番地<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">２丁目２３−１<!--
+                    <input type="text" class="form-control w-50" placeholder="60文字以内で入力してください" required>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">建物名</dt>
+                  <dd class="form__item-input regist-user__item-input">アークヒルズフロントタワー　１７Ｆ<!--
+                    <input type="text" class="form-control w-50" placeholder="60文字以内で入力してください">
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">所属部署</dt>
+                  <dd class="form__item-input regist-user__item-input">経営企画部<!--
+                    <input type="text" class="form-control w-50" placeholder="60文字以内で入力してください">
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">対応可能な専門業務領域</dt>
+                  <dd class="form__item-input--flex-wrap regist-user__item-input specialty gap-0">
+                    <div class="form-check maform-check__item"><input id="form-specialty04010" type="checkbox" value="04010" class="form-check-input" checked><label for="form-specialty04010" class="form-check-label">M&amp;A相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04020" type="checkbox" value="04020" class="form-check-input"><label for="form-specialty04020" class="form-check-label">法務相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04030" type="checkbox" value="04030" class="form-check-input"><label for="form-specialty04030" class="form-check-label">会計・税務相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04040" type="checkbox" value="04040" class="form-check-input"><label for="form-specialty04040" class="form-check-label">労務相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04050" type="checkbox" value="04050" class="form-check-input"><label for="form-specialty04050" class="form-check-label">金融相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04060" type="checkbox" value="04060" class="form-check-input" checked><label for="form-specialty04060" class="form-check-label">不動産相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04070" type="checkbox" value="04070" class="form-check-input" checked><label for="form-specialty04070" class="form-check-label">知財・特許相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04080" type="checkbox" value="04080" class="form-check-input"><label for="form-specialty04080" class="form-check-label">事業再生相談</label></div>
+                    <div class="form-check maform-check__item"><input id="form-specialty04090" type="checkbox" value="04090" class="form-check-input"><label for="form-specialty04090" class="form-check-label">その他</label></div>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">M&Aの経験<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input--flex-wrap regist-user__item-input">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        経験あり
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        経験なし
+                      </label>
+                    </div>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">M&A実績件数<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input--flex-center regist-user__item-input">3&nbsp;件<!--
+                    <input type="number" class="form-control w-25" placeholder="例：3">件
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">自社サイトURL</dt>
+                  <dd class="form__item-input regist-user__item-input">https://m.ma-park.com/<!--
+                    <input type="text" class="form-control w-50" placeholder="60文字以内で入力してください">
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">資本金</dt>
+                  <dd class="form__item-input form__item-input--flex-center regist-user__item-input">2,000,000&nbsp;円<!--
+                    <input type="text" class="form-control w-25" placeholder="例：2000万">円
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">設立年<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input form__item-input--flex-center regist-user__item-input">2021&nbsp;年<!--
+                    <input type="text" class="form-control w-25" placeholder="例：2000">年
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">業種(複数選択可)<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">
+                    <div class="form__item-modal regist-user__item-input--sectors">
+                      <ul id="form-sector" class="check-list check-list--wrap" style="display: flex;">
+                        <li class="check-list__item">ソフトウェア</li><input type="hidden" name="sectorLabel" value="ソフトウェア"><input type="hidden" name="sectorValue" value="08020">
+                        <li class="check-list__item">ハードウェア</li><input type="hidden" name="sectorLabel" value="ハードウェア"><input type="hidden" name="sectorValue" value="08030">
+                        <li class="check-list__item">IT技術サービス(SES)</li><input type="hidden" name="sectorLabel" value="IT技術サービス(SES)"><input type="hidden" name="sectorValue" value="08040">
+                        <li class="check-list__item">受託開発・制作</li><input type="hidden" name="sectorLabel" value="受託開発・制作"><input type="hidden" name="sectorValue" value="08050">
+                        <li class="check-list__item">WEBサイト・アプリ</li><input type="hidden" name="sectorLabel" value="WEBサイト・アプリ"><input type="hidden" name="sectorValue" value="08060">
+                        <li class="check-list__item">システム運用・保守</li><input type="hidden" name="sectorLabel" value="システム運用・保守"><input type="hidden" name="sectorValue" value="08090">
+                      </ul>
+                    </div>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">上場区分<!--
+                    <div class="form__required">必須</div>
+                  --></dt>
+                  <dd class="form__item-input regist-user__item-input">東証1部<!--
+                    <select class="form-select w-25">
+                      <option selected disabled value="">＋選択してください</option>
+                    </select>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">前年度売上高</dt>
+                  <dd class="form__item-input regist-user__item-input">2億5,000万円～5億円<!--
+                    <select class="form-select w-25">
+                      <option selected disabled value="">＋選択してください</option>
+                    </select>
+                  --></dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">専門家への相談依頼</dt>
+                  <dd class="form__item-input--flex-wrap regist-user__item-input">
+                    <div class="form-check">
+                      <input class="form-check-input" id="form-is-consult" type="checkbox" value="1">
+                      <label class="form-check-label" for="form-is-consult">専門家に相談する</label>
+                    </div>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title regist-user__item-title">本人証明書提出書類</dt>
+                  <dd class="form__item-input regist-user__item-input">
+                    <dl>
+                      <div>
+                        <dt>開業届</dt>
+                        <dd>
+                          <a href="./img/sample.pdf" class="pdf">改行届.pdf</a>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>保険証またはパスポート</dt>
+                        <dd>
+                          <a href="./img/kv02.jpg" class="image">20210101_保険証.jpg</a>
+                        </dd>
+                      </div>
+                    </dl><!--
+                    <div class="form__item-section mb-3">
+                      個人事業主の方はご本人確認のため、下記2種類の書類をアップロードしてください。
+                    </div>
+                    <div class="form__item-section">
+                      <label for="formFile1" class="form-label">開業届</label>
+                      <input class="form-control width-60" type="file" id="formFile1" required>
+                    </div>
+                    <div class="form__item-section">
+                      <label for="formFile2" class="form-label">保険証またはパスポート</label>
+                      <input class="form-control width-60" type="file" id="formFile2" required>
+                    </div>
+                  --></dd>
+                </div>
+              </dl><!--
+              <div class="form__action form__action--center">
+                上記内容で登録します。よろしいですか？
+              </div>
+              --><div class="form__action form__action--center">
+                <button id="btn-back" class="btn btn-secondary ma-btn-back" type="submit">戻る</button>
+                <button id="btn-regist" class="btn btn-corp ma-btn-section" type="submit">登録する</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- //section.section-nolog -->
+
+    <!-- modal.sector -->
+    <div class="modal fade" id="modal-select-sector" tabindex="-1" aria-labelledby="modalSelectSector" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable ma-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #c8161d">
+            <h5 class="modal-title font-size-16" id="modalSelectSector" style="color: white;">業種選択</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <dl id="modal-list">
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary ma-modal-btn-back" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-corp ma-modal-btn-fw" id="sector-selected">選択する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //modal.sector -->
+  </main>
+</body>
+<script>
+  let ma = new Ma();
+  $(function() {
+    // PDF表示用モーダル処理
+    ma.createModalPdf('.pdf');
+    // Image表示用モーダル処理
+    ma.createModalImage('.image');
+
+    $('.form-check-input').click(function() {
+      return false;
+    });
+
+    $('#btn-back').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_regist-user.html').submit();
+    });
+    $('#btn-regist').click(function() {
+      $(this).parents("form").attr('method', 'GET').attr('action', './screen_regist-user_complete-seller.html').submit();
+    });
+  });
+</script>
+</html>

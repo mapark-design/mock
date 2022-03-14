@@ -14,16 +14,26 @@
     }
   }
 
+  &__list {
+    padding: 0 1.0rem;
+  }
+
   &__item {
     margin-bottom: 2.0rem;
 
     &-title {
       background-color: #eaeaea;
       padding: 1.5rem 0.5rem 1.5rem 1.5rem;
-      font-size: var.$FONT-SIZE-20;
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-20;
+      }
     }
+
     &-supplementary-provisions {
-      margin-top: 5.0rem;
+      @include mixins.mq-up('md') {
+        margin-top: 5.0rem;
+      }
     }
     &-value {
       padding: 1.5rem 0.5rem 1.5rem 1.5rem;

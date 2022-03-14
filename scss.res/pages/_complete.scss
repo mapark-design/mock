@@ -1,8 +1,21 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 .complete {
+  &__inner {
+    width: 100%;
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
+
+    @include mixins.mq-up('md') {
+      width: var.$WIDTH-768;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
   &__caution {
-    width: var.$WIDTH-768;
     color: red;
     text-align: center;
     margin-top: 5.0rem;

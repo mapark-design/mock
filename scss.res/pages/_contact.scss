@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 /**
  * 問い合わせ画面
@@ -6,15 +7,27 @@
 .contact {
 
   &__inner {
-    width: var.$WIDTH-1024;
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
   }
 
   &__item {
     &-title {
-      min-width: 25.0rem;
-      max-width: 25.0rem;
+      width: 100%;
       background-color: #eaeaea;
       padding: 1.5rem;
+
+
+      @include mixins.mq-up('md') {
+        min-width: 25.0rem;
+        max-width: 25.0rem;
+      }
     }
 
     &-input {

@@ -19,6 +19,13 @@
     text-align: center;
     padding: 2.0rem;
     font-size: 2.4rem;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
   }
 
   &__type {
@@ -40,9 +47,9 @@
       justify-content: center;
     }
     &-btn {
-      width: 90%;
+      width: 95%;
       border-radius: 0.5rem;
-      font-size: var.$FONT-SIZE-20;
+      font-size: larger;
 
       @include mixins.mq-up('md') {
         width: 24.0rem;
@@ -51,7 +58,7 @@
     }
 
     &-explain {
-      font-size: var.$FONT-SIZE-16;
+      font-size: medium;
     }
   }
 

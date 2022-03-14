@@ -51,7 +51,9 @@
 
       .form-control,
       .form-select {
-        font-size: var.$FONT-SIZE-16;
+        @include mixins.mq-up('md') {
+          font-size: var.$FONT-SIZE-16;
+        }
       }
 
       &--password {
@@ -129,15 +131,24 @@
 
   &__caution {
     /** 注意書き */
-    font-size: var.$FONT-SIZE-14;
+    font-size: smaller;
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-14;
+    }
   }
 
   &__action {
-    /** アクションボタン */
     display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
+    row-gap: 1.0rem;
     margin-top: 3.0rem;
-    gap: 3.0rem;
+
+    @include mixins.mq-up('md') {
+      flex-direction: row;
+      column-gap: 3.0rem;
+      align-items: center;
+    }
+
 
     &--left {
       justify-content: flex-start;

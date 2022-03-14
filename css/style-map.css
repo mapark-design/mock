@@ -10535,8 +10535,14 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .footer__logo img {
-  max-width: 36rem;
+  max-width: 30rem;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo img {
+    max-width: 36rem;
+    width: 100%;
+  }
 }
 .footer__copyright {
   display: block;
@@ -10752,9 +10758,11 @@ h1, h2, h3, h4, h5, h6 {
 .form__item-input {
   width: 100%;
 }
-.form__item-input .form-control,
+@media screen and (min-width: 768px) {
+  .form__item-input .form-control,
 .form__item-input .form-select {
-  font-size: 1.6rem;
+    font-size: 1.6rem;
+  }
 }
 .form__item-input--password {
   display: flex;
@@ -10822,14 +10830,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form__caution {
   /** 注意書き */
-  font-size: 1.4rem;
+  font-size: smaller;
+}
+@media screen and (min-width: 768px) {
+  .form__caution {
+    font-size: 1.4rem;
+  }
 }
 .form__action {
-  /** アクションボタン */
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
+  row-gap: 1rem;
   margin-top: 3rem;
-  gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .form__action {
+    flex-direction: row;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    align-items: center;
+  }
 }
 .form__action--left {
   justify-content: flex-start;
@@ -11105,13 +11125,21 @@ h1, h2, h3, h4, h5, h6 {
   width: 1346px;
   margin: 0 auto;
   padding: 5rem 0;
-  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .section-nolog__inner {
+    font-size: 1.8rem;
+  }
 }
 .section-nolog__title {
-  font-size: 3.2rem;
-  font-weight: bold;
   margin-bottom: 3rem;
   text-align: center;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .section-nolog__title {
+    font-size: 3.2rem;
+  }
 }
 .section-nolog__title-h2 {
   font-size: 2.8rem;
@@ -11528,6 +11556,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem;
   font-size: 2.4rem;
 }
+@media screen and (min-width: 768px) {
+  .tmp-regist__title {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+  }
+}
 .tmp-regist__type-list {
   display: flex;
   flex-direction: row;
@@ -11547,9 +11583,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 .tmp-regist__type-btn {
-  width: 90%;
+  width: 95%;
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: larger;
 }
 @media screen and (min-width: 768px) {
   .tmp-regist__type-btn {
@@ -11558,7 +11594,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .tmp-regist__type-explain {
-  font-size: 1.6rem;
+  font-size: medium;
 }
 .tmp-regist__input-content {
   padding-right: 2rem;
@@ -11629,9 +11665,25 @@ h1, h2, h3, h4, h5, h6 {
 .regist-user__item-input {
   padding: 1.5rem;
 }
+.regist-user__search-corp-no {
+  font-size: smaller;
+}
+@media screen and (min-width: 768px) {
+  .regist-user__search-corp-no {
+    font-size: 1.6rem;
+  }
+}
 
 .regist-user-seller__inner {
-  width: 1024px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .regist-user-seller__inner {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+  }
 }
 .regist-user-seller__inner--no-padding-top {
   padding-top: 0;
@@ -11642,12 +11694,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 25rem;
   background-color: #eaeaea;
   padding: 1.5rem;
-}
-.regist-user-seller__item-title--header {
-  min-width: 25rem;
-  max-width: 25rem;
-  background-color: white;
-  padding: 0.5rem 1.5rem;
 }
 .regist-user-seller__item-input {
   padding: 1.5rem;
@@ -11899,16 +11945,27 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 .regist-seller__item-title {
-  min-width: 25rem;
-  max-width: 25rem;
+  width: 100%;
   background-color: #eaeaea;
   padding: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .regist-seller__item-title {
+    min-width: 25rem;
+    max-width: 25rem;
+  }
+}
 .regist-seller__item-title--header {
-  min-width: 25rem;
-  max-width: 25rem;
-  background-color: white;
-  padding: 0.5rem 1.5rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .regist-seller__item-title--header {
+    display: flex;
+    min-width: 25rem;
+    max-width: 25rem;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+  }
 }
 .regist-seller__item-input {
   padding: 1.5rem;
@@ -12078,13 +12135,26 @@ h1, h2, h3, h4, h5, h6 {
  * 問い合わせ画面
  */
 .contact__inner {
-  width: 1024px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .contact__inner {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+  }
 }
 .contact__item-title {
-  min-width: 25rem;
-  max-width: 25rem;
+  width: 100%;
   background-color: #eaeaea;
   padding: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__item-title {
+    min-width: 25rem;
+    max-width: 25rem;
+  }
 }
 .contact__item-input {
   padding: 1.5rem;
@@ -12122,8 +12192,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
+.complete__inner {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .complete__inner {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+  }
+}
 .complete__caution {
-  width: 768px;
   color: red;
   text-align: center;
   margin-top: 5rem;
@@ -12209,16 +12291,25 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.8rem;
   }
 }
+.agreement__list {
+  padding: 0 1rem;
+}
 .agreement__item {
   margin-bottom: 2rem;
 }
 .agreement__item-title {
   background-color: #eaeaea;
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;
-  font-size: 2rem;
 }
-.agreement__item-supplementary-provisions {
-  margin-top: 5rem;
+@media screen and (min-width: 768px) {
+  .agreement__item-title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .agreement__item-supplementary-provisions {
+    margin-top: 5rem;
+  }
 }
 .agreement__item-value {
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;
@@ -12280,13 +12371,20 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.8rem;
   }
 }
+.privacy-policy__list {
+  padding: 0 1rem;
+}
 .privacy-policy__item {
   margin-bottom: 2rem;
 }
 .privacy-policy__item-title {
   background-color: #eaeaea;
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;
-  font-size: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .privacy-policy__item-title {
+    font-size: 2rem;
+  }
 }
 .privacy-policy__item-value {
   padding: 1.5rem 0.5rem 1.5rem 1.5rem;

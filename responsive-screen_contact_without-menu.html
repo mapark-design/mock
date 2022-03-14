@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/style-map.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>お問い合わせ</title>
+</head>
+<body>
+  <!-- header.header -->
+  <header class="header header--top">
+    <div class="header__inner">
+      <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1><!--
+      <nav class="header__nav">
+        <div class="header__global-nav">
+          <ul class="header__nav-list header__nav-list--global-nav">
+            <li><a href="" class="">サービス概要</a></li>
+            <li><a href="" class="">よくあるご質問</a></li>
+            <li><a href="" class="">お問い合わせ</a></li>
+          </ul>
+        </div>
+        <div class="header__user-nav">
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><a href="./screen_regist-user-pre.html" class="">会員登録</a></li>
+            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>
+          </ul>
+        </div>
+      </nav>
+    --></div>
+  </header>
+  <!-- //header.header -->
+
+  <main>
+    <!-- section.section-nolog -->
+    <section class="section-nolog">
+      <div class="section-nolog__inner contact__inner">
+        <h2 class="section-nolog__title">お問い合わせ</h2>
+        <div class="section-nolog__content">
+          <form id="maform" class="needs-validation" novalidate>
+            <div class="ms-4 me-4 mb-4">
+              <div class="mb-3">
+                お問い合わせ内容をご記入ください。<br>
+              </div>
+              <dl>
+                <div class="form__item form__item--border form__item--top-border">
+                  <dt class="form__item-title contact__item-title">お名前
+                    <div class="form__required">必須</div>
+                  </dt>
+                  <dd class="form__item-input contact__item-input">
+                    <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：田中　太郎" required>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title contact__item-title">メールアドレス
+                    <div class="form__required">必須</div>
+                  </dt>
+                  <dd class="form__item-input contact__item-input">
+                    <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：mapark@ma-park.com" required>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title contact__item-title">電話番号</dt>
+                  <dd class="form__item-input contact__item-input">
+                    <input type="text" class="form-control ma-utils__tel" placeholder="例：00000000000">
+                    <div class="form__caution">ハイフンなしで入力してください。</div>
+                  </dd>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title contact__item-title">お問い合わせ</dt>
+                  <dd class="form__item-input contact__item-input category">
+                    <div class="form-check">
+                      <input class="form-check-input" id="is_request_document" type="checkbox" value="1">
+                      <label class="form-check-label" for="is_request_document">資料請求を依頼する</label>
+                      <div class="form__caution">郵送をご希望の場合は、送付先をご入力ください。</div>
+                    </div>
+                  </dd>
+                </div>
+                <div class="request_document" style="display: none;">
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">会社名</dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：株式会社エムアンドエーパーク">
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">部署名</dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：経営企画部">
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">郵便番号
+                    </dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control ma-utils__zip" placeholder="例：1070052" required>
+                      <div class="form__caution">ハイフンなしで入力してください。</div>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">都道府県
+                    </dt>
+                    <dd class="form__item-input contact__item-input">
+                      <select class="form-select w-25 form-prefecture ma-utils__md-100" required>
+                        <option selected disabled value="">＋選択してください</option>
+                      </select>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">市区町村
+                    </dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：港区赤坂" required>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">番地
+                    </dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：２丁目２３−１" required>
+                    </dd>
+                  </div>
+                  <div class="form__item form__item--border">
+                    <dt class="form__item-title contact__item-title">建物名</dt>
+                    <dd class="form__item-input contact__item-input">
+                      <input type="text" class="form-control w-50 ma-utils__md-100" placeholder="例：アークヒルズフロントタワー　１７Ｆ">
+                    </dd>
+                  </div>
+                </div>
+                <div class="form__item form__item--border">
+                  <dt class="form__item-title contact__item-title">問い合わせ内容
+                    <div class="form__required">必須</div>
+                  </dt>
+                  <dd class="form__item-input contact__item-input">
+                    <textarea class="form-control" placeholder="具体的な内容をお書きください。" rows="5"></textarea>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="d-flex align-items-center justify-content-center ms-4 me-4 mb-4">
+              <div class="form-check">
+                <input class="form-check-input" id="form-regist-agree" type="checkbox" value="1">
+                <label class="form-check-label" for="form-regist-agree"><a href="./responsive-screen_privacy-policy_pop.html" target="_blank">個人情報保護方針</a>に同意する</label>
+              </div>
+            </div>
+            <div class="form__action form__action--center ms-4 me-4">
+              <button id="btn-regist" class="btn btn-corp ma-btn-section" disabled>送信する</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- //section.section-nolog -->
+  </main>
+</body>
+<script>
+  let ma = new Ma();
+  /**
+   * チェックボックス設定処理。
+   * @param {*} path JSONファイルパス
+   * @param {*} querySelector チェックボックス設定先セレクタ
+   * @param {*} prefix 接頭辞
+   */
+   setCheckbox = function(path, querySelector, prefix) {
+    ma.sendRequest(ma.createGetArgs({
+      url: path
+    })).done(function(data, statusText, jqXHR) {
+      var options = [];
+      data.forEach(function(el, idx) {
+        var input = $("<input>", {
+          id: prefix + el.value,
+          type: 'checkbox',
+          value: el.value
+        }).addClass('form-check-input');
+        var label = $("<label>", {
+          for: prefix + el.value,
+        }).addClass('form-check-label').text(el.name);
+        var div = $("<div>").addClass('form-check').append(input, label);
+        options.push(div);
+      });
+      $(querySelector).prepend(options);
+    });
+  }
+  $(function() {
+    // 対応可能な専門業務領域、専門家への相談依頼
+    setCheckbox('./json/master_contact-category.json', '.category', 'form-category');
+
+    $('#form-regist-agree').click(function() {
+      $button = $('#btn-regist');
+      $button.prop('disabled', !this.checked);
+    });
+    $('#btn-regist').click(function() {
+      $(this).parents('form').attr('method', 'GET').attr('action', './responsive-screen_contact_without-menu_confirm.html').submit();
+    });
+    $('#is_request_document').change(function() {
+      if ($(this).prop('checked')) {
+        $('.request_document').show(500);
+      } else {
+        $('.request_document').hide(500);
+      }
+    });
+  });
+</script>
+</html>

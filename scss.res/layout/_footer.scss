@@ -59,8 +59,13 @@
     text-align: center;
 
     img {
-      max-width: 36.0rem;
+      max-width: 30.0rem;
       margin-bottom: 1.0rem;
+
+      @include mixins.mq-up('md') {
+        max-width: 36.0rem;
+        width: 100%;
+      }
     }
   }
   &__copyright {

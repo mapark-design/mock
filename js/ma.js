@@ -349,12 +349,12 @@ $(function () {
   // パスワードの目を押下して項目の表示/非表示を切り替える
   $('.password-eye').click(function() {
     if (CONST.ICON_TEXT_VISIBILITY === $(this).text()) {
-      $(this).parent('.form__item-input--password').children('.form-control').attr('type', 'text');
+      $(this).parent('.form__item-input--password').children('.form-control').attr('type', 'password');
       $(this).text(CONST.ICON_TEXT_VISIBILITY_OFF);
       return;
     }
+    $(this).parent('.form__item-input--password').children('.form-control').attr('type', 'text');
     $(this).text(CONST.ICON_TEXT_VISIBILITY);
-    $(this).parent('.form__item-input--password').children('.form-control').attr('type', 'password');
   });
 
   // カンマ編集を設定する

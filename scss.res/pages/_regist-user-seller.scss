@@ -1,14 +1,23 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 .regist-user-seller {
 
   &__inner {
-    width: var.$WIDTH-1024;
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
 
     &--no-padding-top {
       padding-top: 0;
       padding-bottom: 0;
     }
+
   }
   &__item {
     &-title {
@@ -16,13 +25,6 @@
       max-width: 25.0rem;
       background-color: #eaeaea;
       padding: 1.5rem;
-
-      &--header {
-        min-width: 25.0rem;
-        max-width: 25.0rem;
-        background-color: white;
-        padding: 0.5rem 1.5rem;
-      }
     }
     &-input {
       padding: 1.5rem;

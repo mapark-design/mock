@@ -11081,6 +11081,31 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-size: 1.8rem;
 }
+.sitetop-keyvisual__appeal {
+  position: absolute;
+  bottom: 1.6%;
+  right: 0.9%;
+  z-index: 10;
+  width: 30%;
+  height: 38%;
+}
+.sitetop-keyvisual__appeal-01, .sitetop-keyvisual__appeal-02, .sitetop-keyvisual__appeal-03 {
+  position: absolute;
+  width: 18rem;
+}
+.sitetop-keyvisual__appeal-01 {
+  left: calc(50% - 9rem);
+  z-index: 2;
+}
+.sitetop-keyvisual__appeal-02 {
+  bottom: 0;
+  z-index: 1;
+}
+.sitetop-keyvisual__appeal-03 {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
 
 .sitetop-feature__list {
   width: 1024px;

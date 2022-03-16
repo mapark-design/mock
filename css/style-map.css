@@ -10398,7 +10398,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   padding: 0 1.5rem;
   max-width: 1346px;
-  height: 72px;
+  height: 56px;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    height: 72px;
+  }
 }
 .header__inner--login {
   /** ログイン後 */
@@ -10409,8 +10414,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 3rem;
 }
 .header__logo {
-  max-width: 8rem;
-  min-width: 8rem;
+  max-height: 49px;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    max-height: 63px;
+  }
 }
 .header__nav {
   /** ヘッダーナビ部 */
@@ -11203,6 +11212,31 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-size: 1.8rem;
 }
+.sitetop-keyvisual__appeal {
+  position: absolute;
+  bottom: 1.6%;
+  right: 0.9%;
+  z-index: 10;
+  width: 30%;
+  height: 38%;
+}
+.sitetop-keyvisual__appeal-01, .sitetop-keyvisual__appeal-02, .sitetop-keyvisual__appeal-03 {
+  position: absolute;
+  width: 18rem;
+}
+.sitetop-keyvisual__appeal-01 {
+  left: calc(50% - 9rem);
+  z-index: 2;
+}
+.sitetop-keyvisual__appeal-02 {
+  bottom: 0;
+  z-index: 1;
+}
+.sitetop-keyvisual__appeal-03 {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
 
 .sitetop-feature__inner {
   width: 100%;
@@ -11703,16 +11737,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .login__inner {
-  width: 768px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .login__inner {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 .login__item-title {
-  width: 24rem;
   background-color: #eaeaea;
   padding: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .login__item-title {
+    width: 24rem;
+  }
 }
 .login__item-input {
   padding: 1.5rem;
@@ -11766,12 +11812,27 @@ h1, h2, h3, h4, h5, h6 {
   left: 100%;
   margin-left: 1.5rem;
 }
+.login__actions {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .login__actions {
+    width: 75%;
+  }
+}
 
 .pwd-reset__item-title {
-  min-width: 20rem;
-  max-width: 20rem;
   background-color: #eaeaea;
   padding: 1.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pwd-reset__item-title {
+    min-width: 20rem;
+    max-width: 20rem;
+  }
 }
 .pwd-reset__item-input {
   padding: 1.5rem;

@@ -22,15 +22,11 @@
     margin-right: auto;
     padding: 0 1.5rem;
     max-width: var.$WIDTH-DEFAULT;
-//    height: var.$HEIGHT-HEADER-SM;
+    height: var.$HEIGHT-HEADER-MD;
 
-//    @include mixins.mq-up('sm') {
-//      height: var.$HEIGHT-HEADER-MD;
-//    }
-
-//    @include mixins.mq-up('md') {
+    @include mixins.mq-up('md') {
       height: var.$HEIGHT-HEADER;
-//    }
+    }
 
     &--login {
       /** ログイン後 */
@@ -43,8 +39,11 @@
     margin-right: 3.0rem;
   }
   &__logo {
-    max-width: 8rem;
-    min-width: 8rem;
+    max-height: calc(var.$HEIGHT-HEADER-MD / 8 * 7);
+
+    @include mixins.mq-up('md') {
+      max-height: calc(var.$HEIGHT-HEADER / 8 * 7);
+    }
   }
 
   &__nav {

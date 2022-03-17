@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 $mabutton: ".ma-btn";
 $mabutton-modal: ".ma-modal-btn";
@@ -26,9 +27,11 @@ $mabutton-modal: ".ma-modal-btn";
   padding: 1.0rem 2.0rem;
 }
 #{$mabutton}-section {
-  font-size: 2.0rem;
   padding: 0.5rem 3.0rem;
   border-radius: 0.5rem;
+  @include mixins.mq-up('md') {
+    font-size: 2.0rem;
+  }
 }
 #{$mabutton}-section-back {
   font-size: 1.8rem;

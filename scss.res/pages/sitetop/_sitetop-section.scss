@@ -52,5 +52,11 @@
   &__button {
     margin-top: 3.0rem;
     text-align: center;
+
+    button {
+      @include mixins.mq-down('md') {
+        width: 100%;
+      }
+    }
   }
 }

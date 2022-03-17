@@ -1,14 +1,19 @@
 @use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
 
 .sitetop-keyvisual {
 
-  width: var.$WIDTH-DEFAULT;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background-position: center;
   background-size: cover;
+
+  @include mixins.mq-up('md') {
+    width: var.$WIDTH-DEFAULT;
+  }
 
   &__content {
     position: absolute;

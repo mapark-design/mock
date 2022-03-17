@@ -1,9 +1,19 @@
+@use "../../abstracts/mixins";
+
 .sitetop-fixed-icon {
   position: fixed;
   display: none;
   right: 1.0rem;
   bottom: 1.0rem;
   z-index: 99999;
+
+  a {
+    display: none;
+
+    @include mixins.mq-up('md') {
+      display: inline-block;
+    }
+  }
 
   img {
     width: 16.5rem;

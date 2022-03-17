@@ -9991,9 +9991,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .ma-btn-section {
-  font-size: 2rem;
   padding: 0.5rem 3rem;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .ma-btn-section {
+    font-size: 2rem;
+  }
 }
 
 .ma-btn-section-back {
@@ -10336,8 +10340,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .cm-card__item--head {
   margin-bottom: 1.5rem;
-  font-size: 2.4rem;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .cm-card__item--head {
+    font-size: 2.4rem;
+  }
 }
 .cm-card__ellipsis {
   display: -webkit-box;
@@ -10472,13 +10480,14 @@ h1, h2, h3, h4, h5, h6 {
  * フッタコンポーネント。
  * サイトトップおよびLPで利用を想定している。
  */
-.footer {
-  font-size: 1.8rem;
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.8rem;
+  }
 }
 .footer--top {
   /** サイトトップ用 */
   background-color: #c8161d;
-  padding-top: 5rem 0 3rem 0;
 }
 .footer__inner {
   width: 100%;
@@ -10494,23 +10503,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__nav {
   display: flex;
-  flex-flow: column;
-  margin-bottom: 4rem;
-  row-gap: 2rem;
-  text-align: center;
+  justify-content: center;
 }
-@media screen and (min-width: 768px) {
-  .footer__nav {
-    flex-flow: row;
-    justify-content: center;
-    -moz-column-gap: 10rem;
-         column-gap: 10rem;
-    text-align: inherit;
-  }
+.footer__nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  margin-bottom: 4rem;
+}
+.footer__nav-list {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 .footer__nav-category {
-  font-size: 2rem;
+  font-size: larger;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__nav-category {
+    font-size: 2rem;
+  }
 }
 .footer__nav-item {
   margin-bottom: 0.5rem;
@@ -11169,15 +11181,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3rem;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  .section-nolog__button button {
+    width: 100%;
+  }
+}
 
 .sitetop-keyvisual {
-  width: 1346px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background-position: center;
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .sitetop-keyvisual {
+    width: 1346px;
+  }
 }
 .sitetop-keyvisual__content {
   position: absolute;
@@ -11273,15 +11295,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sitetop-feature__title {
   font-weight: bold;
-  font-size: 2.4rem;
   color: #c8161d;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .sitetop-feature__title {
+    font-size: 2.4rem;
+  }
+}
 .sitetop-feature__image {
-  width: 26rem;
-  height: 26rem;
-  margin-bottom: 1rem;
-  transition-duration: 0.25s;
+  width: 16rem;
+  height: 16rem;
+}
+@media screen and (min-width: 768px) {
+  .sitetop-feature__image {
+    width: 26rem;
+    height: 26rem;
+  }
 }
 .sitetop-feature__detail {
   margin-top: 5rem;
@@ -11302,7 +11332,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
   border-radius: 1.5rem;
   padding: 1rem 1rem 1.5rem;
-  font-size: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .sitetop-feature__detail-repletion {
+    font-size: 2.4rem;
+  }
 }
 .sitetop-feature__detail-repletion-strong {
   font-size: 4rem;
@@ -11310,8 +11344,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.25rem;
   color: #c8161d;
 }
-.sitetop-feature__detail-repletion-example {
-  font-size: 1.8rem;
+@media screen and (min-width: 768px) {
+  .sitetop-feature__detail-repletion-example {
+    font-size: 1.8rem;
+  }
 }
 .sitetop-feature__detail-repletion-example-list {
   text-align: left;
@@ -11402,39 +11438,64 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sitetop-flowtouse__item {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
   background-color: #e6e6e6;
 }
+@media screen and (min-width: 768px) {
+  .sitetop-flowtouse__item {
+    flex-direction: row;
+  }
+}
 .sitetop-flowtouse__step {
-  position: relative;
-  width: 15rem;
-  padding: 1.5rem 5rem;
-  border-radius: 0.5rem 0 0 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem 0;
   background-color: #c8161d;
   color: white;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.sitetop-flowtouse__step::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: -15px;
-  left: 5rem;
-  border-style: solid;
-  border-color: #c8161d transparent transparent transparent;
-  border-width: 25px 25px 0 25px;
-  z-index: 1;
+@media screen and (min-width: 768px) {
+  .sitetop-flowtouse__step {
+    position: relative;
+    width: 15rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sitetop-flowtouse__step::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -15px;
+    border-style: solid;
+    border-color: #c8161d transparent transparent transparent;
+    border-width: 25px 25px 0 25px;
+    z-index: 1;
+  }
 }
 .sitetop-flowtouse__step--last::after {
   content: none;
 }
 .sitetop-flowtouse__text {
-  padding: 1.5rem 2.5rem;
-  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .sitetop-flowtouse__text {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    justify-content: flex-start;
+  }
 }
 .sitetop-flowtouse__text--last {
   color: black;
@@ -11504,7 +11565,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f2f2f2;
   border-radius: 0.5rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .sitetop-notify__item {
     display: flex;
     align-items: center;
@@ -11516,7 +11577,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem 0.5rem 0 0;
   background-color: #e6e6e6;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .sitetop-notify__date {
     width: 16rem;
     padding: 1.5rem 0;
@@ -11528,7 +11589,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem;
   border-radius: 0 0.5rem 0.5rem 0;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .sitetop-notify__text {
     padding: 1.5rem 2.5rem;
     border-radius: 0 0 0.5rem 0.5rem;
@@ -11541,6 +11602,14 @@ h1, h2, h3, h4, h5, h6 {
   right: 1rem;
   bottom: 1rem;
   z-index: 99999;
+}
+.sitetop-fixed-icon a {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .sitetop-fixed-icon a {
+    display: inline-block;
+  }
 }
 .sitetop-fixed-icon img {
   width: 16.5rem;

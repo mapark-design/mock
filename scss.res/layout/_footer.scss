@@ -6,14 +6,13 @@
  * サイトトップおよびLPで利用を想定している。
  */
 .footer {
-  $footer: &;
-
-  font-size: var.$FONT-SIZE-18;
+  @include mixins.mq-up('md') {
+    font-size: var.$FONT-SIZE-18;
+  }
 
   &--top {
     /** サイトトップ用 */
     background-color: var.$COLOR-CORP;
-    padding-top: 5.0rem 0 3.0rem 0;
   }
 
   &__inner {
@@ -30,21 +29,27 @@
 
   &__nav {
     display: flex;
-    flex-flow: column;
-    margin-bottom: 4.0rem;
-    row-gap: 2.0rem;
-    text-align: center;
+    justify-content: center;
 
-    @include mixins.mq-up('md') {
-      flex-flow: row;
-      justify-content: center;
-      column-gap: 10.0rem;
-      text-align: inherit;
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 2.0rem;
+      margin-bottom: 4.0rem;  
+    }
+
+    &-list {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
     }
 
     &-category {
-      font-size: var.$FONT-SIZE-20;
+      font-size: larger;
       margin-bottom: 1.5rem;
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-20;
+      }
     }
     &-item {
       margin-bottom: 0.5rem;

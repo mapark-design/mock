@@ -24,7 +24,7 @@
     background-color: var.$COLOR-GRAY-THIN;
     border-radius: 0.5rem;
 
-    @include mixins.mq-up('lg') {
+    @include mixins.mq-up('md') {
       display: flex;
       align-items: center;
     }
@@ -36,7 +36,7 @@
     border-radius: 0.5rem 0.5rem 0 0;
     background-color: var.$COLOR-GRAY-DARK;
 
-    @include mixins.mq-up('lg') {
+    @include mixins.mq-up('md') {
       width: 16.0rem;
       padding: 1.5rem 0;
       border-radius: 0.5rem 0 0 0.5rem;
@@ -48,7 +48,7 @@
     padding: 1.0rem;
     border-radius: 0 0.5rem 0.5rem 0;
 
-    @include mixins.mq-up('lg') {
+    @include mixins.mq-up('md') {
       padding: 1.5rem 2.5rem;
       border-radius: 0 0 0.5rem 0.5rem;
     }

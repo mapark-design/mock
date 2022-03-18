@@ -19,46 +19,6 @@
   <title>M&amp;A PARK</title>
 </head>
 <body>
-<style>
-.header__nav--sp {
-  /* position: relative; */
-}
-.header__nav-list--sp {
-  /* display: block;
-  align-content: center; */
-}
-.header__humberger-menu {
-  /* position: absolute;
-  right: 15px;
-  top: 8px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 300; */
-}
-.map-hamburger__border {
-    /* position: absolute;
-    left: 11px;
-    width: 18px;
-    height: 2px;
-    background-color: #333;
-    transition: all .6s; */
-  }
-  .nav-open .black_bg {
-    /* opacity: .8;
-    visibility: visible; */
-  }</style>
-<script>
-$(function() {
-  $('#map-hamburger').click(function() {
-    $(this).toggleClass('map-hamburger__border--open');
-
-    $('.header__global-nav').toggleClass('header__global-nav--active');
-    $('.header__humberger-menu').toggleClass('nav-open')
-    $('.header__nav').toggleClass('nav-open');
-  });
-});
-</script>
   <!-- header.header -->
   <header class="header header--top">
     <div class="header__inner">
@@ -902,6 +862,10 @@ $(function() {
     });
     $('.succession').click(function() {
       location.href = './screen_tmp-regist.html';
+    });
+    $('#map-hamburger').click(function() {
+      $(this).toggleClass('map-hamburger__border--open');
+      $('.header__global-nav').toggleClass('header__global-nav--active');
     });
   });
 </script>

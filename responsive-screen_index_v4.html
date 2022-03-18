@@ -19,13 +19,53 @@
   <title>M&amp;A PARK</title>
 </head>
 <body>
+<style>
+.header__nav--sp {
+  /* position: relative; */
+}
+.header__nav-list--sp {
+  /* display: block;
+  align-content: center; */
+}
+.header__humberger-menu {
+  /* position: absolute;
+  right: 15px;
+  top: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 300; */
+}
+.map-hamburger__border {
+    /* position: absolute;
+    left: 11px;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    transition: all .6s; */
+  }
+  .nav-open .black_bg {
+    /* opacity: .8;
+    visibility: visible; */
+  }</style>
+<script>
+$(function() {
+  $('#map-hamburger').click(function() {
+    $(this).toggleClass('map-hamburger__border--open');
+
+    $('.header__global-nav').toggleClass('header__global-nav--active');
+    $('.header__humberger-menu').toggleClass('nav-open')
+    $('.header__nav').toggleClass('nav-open');
+  });
+});
+</script>
   <!-- header.header -->
   <header class="header header--top">
     <div class="header__inner">
       <h1 class="header__title"><img class="header__logo" src="./img/logo/top-logo.png"></h1>
-      <nav class="header__nav">
-        <div class="header__global-nav">
-          <ul class="header__nav-list header__nav-list--global-nav">
+      <nav class="header__nav header__nav--sp">
+        <div class="header__global-nav header__global-nav--sp">
+          <ul class="header__nav-list header__nav-list--global-nav header__nav-list--sp">
             <li><a href="./screen_service.html" class="">サービス概要</a></li>
             <li><a href="./screen_price.html" class="">利用料金</a></li>
             <li><a href="./screen_faq.html" class="">よくあるご質問</a></li>
@@ -33,15 +73,21 @@
           </ul>
         </div>
         <div class="header__user-nav">
-          <ul class="header__nav-list header__nav-list--user-nav"><!--
-            <li><a href="./screen_tmp-regist.html" class="">会員登録</a></li>-->
-            <li><button class="btn btn-light ma-btn-login">無料で会員登録する</button></li><!--
-            <li><button class="btn btn-light ma-btn-login">ログイン</button></li>-->
-            <li><a href="./screen_tmp-regist.html" class="">ログイン</a></li>
+          <ul class="header__nav-list header__nav-list--user-nav">
+            <li><button class="btn btn-light ma-btn-login header__nav-list--user-nav-btn-reg">無料で会員登録する</button></li>
+            <li><a href="./screen_tmp-regist.html" class="header__nav-list--user-nav-btn-login">ログイン</a></li>
           </ul>
         </div>
       </nav>
-    </div>
+      <div class="header__hamburger">
+        <div class="map-hamburger" id="map-hamburger">
+          <span class="map-hamburger__border"></span>
+          <span class="map-hamburger__border"></span>
+          <span class="map-hamburger__border"></span>
+        </div>
+      </div>
+      <div class="header__hamburger-bg"></div>
+  </div>
   </header>
   <!-- //header.header -->
   <main>

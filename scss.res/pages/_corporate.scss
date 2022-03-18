@@ -1,13 +1,26 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 .corporate {
 
   &__inner {
-    width: var.$WIDTH-1024;
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__item {
     display: flex;
+    flex-direction: column;
+
+    @include mixins.mq-up('md') {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
 
     &--border {
       border-bottom: 1px solid lightgray;
@@ -19,11 +32,15 @@
     }
 
     &-title {
-      min-width: 28.0rem;
-      max-width: 28.0rem;
+      width: 100%;
       background-color: #eaeaea;
       padding: 1.5rem;
       border-right: 1px solid lightgray;
+
+      @include mixins.mq-up('md') {
+        min-width: 28.0rem;
+        max-width: 28.0rem;
+      }
     }
     &-value {
       padding: 1.5rem;

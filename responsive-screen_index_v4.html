@@ -45,9 +45,9 @@
           <span class="map-hamburger__border"></span>
           <span class="map-hamburger__border"></span>
         </div>
+        <div class="map-hamburger__background"></div>
       </div>
-      <div class="header__hamburger-bg"></div>
-  </div>
+    </div>
   </header>
   <!-- //header.header -->
   <main>
@@ -866,6 +866,12 @@
     $('#map-hamburger').click(function() {
       $(this).toggleClass('map-hamburger__border--open');
       $('.header__global-nav').toggleClass('header__global-nav--active');
+      $('.map-hamburger__background').toggleClass('map-hamburger__background--open');
+    });
+    $('.map-hamburger__background').click(function() {
+      $('#map-hamburger').removeClass('map-hamburger__border--open');
+      $('.header__global-nav').removeClass('header__global-nav--active');
+      $('.map-hamburger__background').removeClass('map-hamburger__background--open');
     });
   });
 </script>

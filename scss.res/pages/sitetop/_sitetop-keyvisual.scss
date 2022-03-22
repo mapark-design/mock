@@ -12,7 +12,8 @@
   background-size: cover;
 
   @include mixins.mq-up('md') {
-    width: var.$WIDTH-DEFAULT;
+    max-width: var.$WIDTH-DEFAULT;
+    height: 702px;
   }
 
   &__content {

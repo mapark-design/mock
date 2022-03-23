@@ -11344,19 +11344,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .sitetop-keyvisual__figure-01 {
-  background-image: url("/img/kv02s.jpg");
+  background-image: url("/mock/img/kv02s.jpg");
 }
 @media screen and (min-width: 768px) {
   .sitetop-keyvisual__figure-01 {
-    background-image: url("/img/kv02.jpg");
+    background-image: url("/mock/img/kv02.jpg");
   }
 }
 .sitetop-keyvisual__figure-02 {
-  background-image: url("/img/kv01s.jpg");
+  background-image: url("/mock/img/kv01s.jpg");
 }
 @media screen and (min-width: 768px) {
   .sitetop-keyvisual__figure-02 {
-    background-image: url("/img/kv01.jpg");
+    background-image: url("/mock/img/kv01.jpg");
   }
 }
 .sitetop-keyvisual__overlay {
@@ -11489,7 +11489,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 17.6rem;
   left: 50%;
   transform: translate(-50%, 0);
-  bottom: 17%;
+  bottom: calc(13rem - 10vw);
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sitetop-keyvisual__overlay-appeal {

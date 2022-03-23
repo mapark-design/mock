@@ -54,173 +54,35 @@
   <!-- //header.header -->
   <main>
 
-    <style>
-      .sitetop-kv {
-        max-width: 1366px;
-        position: relative;
-        margin: 0 auto;
-      }
-      .background-image {
-        max-width: 1366px;
-        margin: 0 auto;
-      }
-      .background-image figure {
-        width: 100%;
-        height: 702px;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    .sitetop-keyvisual__appeal-01,
-      .sitetop-keyvisual__appeal-02,
-      .sitetop-keyvisual__appeal-03 {
-        width: calc(18.0rem * 0.95);
-      }
-      .sitetop-keyvisual__appeal-01 {
-        left: calc(50% - (18rem * 0.95) * 0.5);
-      }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-      .background-image figure {
-        height: 447px;
-      }
-    }
-    .background-image figure.figure-slide-01 {
-      background-image: url('./img/kv02.jpg');
-    }
-    .background-image figure.figure-slide-02 {
-      background-image: url('./img/kv01.jpg');
-    }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-      .overlay {
-        position: absolute;
-        top: 7.5rem;
-        z-index: 1;
-        left: calc(1.5rem + (100vw - 1200px) * 0.5);
-      }
-    }
-    @media screen and (min-width:1200px) and (max-width:1366px) {
-      .overlay {
-        position: absolute;
-        top: 7.5rem;
-        z-index: 1;
-        left: calc(1.5rem + (100vw - 1200px) * 0.5);
-      }
-      .sitetop-keyvisual__appeal {
-        width: 30%;
-      }
-    }
-    @media screen and (min-width:1367px) {
-      .overlay {
-        position: absolute;
-        top: 7.5rem;
-        z-index: 1;
-        left: 9.7rem;
-      }
-    }
-    .sitetop-keyvisual__appeal {
-      bottom: 10.6%;
-      right: 1.9%;
-      width: 28%;
-      height: 36%;      
-    }
-    @media screen and (min-width:1200px) and (max-width:1366px) {
-      .sitetop-keyvisual__appeal {
-        width: 30%;
-      }
-    }
-    @media screen and (min-width:768px) and (max-width:1199px) {
-      .overlay {
-        top: 4.5rem;
-        left: calc(1rem + (100vw - 768px) * 0.175);
-      }
-      .sitetop-keyvisual__copy {
-        font-size: 2.08rem;
-      }
-      .sitetop-keyvisual__logo {
-        max-width: 27.62rem;
-        top: 11.05rem;
-      }
-      .sitetop-keyvisual__button {
-        top: 20.5rem;
-        font-size: inherit;
-      }
-      .sitetop-keyvisual__caution {
-        top: 25.0rem;
-        font-size: small;
-      }
-      .sitetop-keyvisual__appeal {
-        width: 30%;
-        bottom: 3.6rem;
-        height: 40.0%;
-      }
-      .sitetop-keyvisual__appeal-01,
-      .sitetop-keyvisual__appeal-02,
-      .sitetop-keyvisual__appeal-03 {
-        width: calc(18.0rem * 0.7);
-      }
-      .sitetop-keyvisual__appeal-01 {
-        left: calc(50% - (18rem * 0.7) * 0.5);
-      }
-    }
-    </style>
-
     <!-- key-visual -->
-    <div class="sitetop-kv">
-      <div class="background-image">
-        <figure class="figure-slide-01"></figure>
-        <figure class="figure-slide-02"></figure>
+    <div class="sitetop-keyvisual">
+      <div class="sitetop-keyvisual__figure-list">
+        <figure class="sitetop-keyvisual__figure-01"></figure>
+        <figure class="sitetop-keyvisual__figure-02"></figure>
       </div>
-      <div class="overlay">
-        <p class="sitetop-keyvisual__copy">
+      <div class="sitetop-keyvisual__overlay">
+        <div class="sitetop-keyvisual__overlay-copy">
           アジア最大級の<br>
           海外譲渡案件・投資家も集まる<br>
           会員制オンラインマッチングサービス<br>
-        </p>
-        <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
-        <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
-        <div class="sitetop-keyvisual__caution">
+        </div>
+        <div class="sitetop-keyvisual__overlay-logo">
+          <img src="./img/kv-logo.svg">
+        </div>
+        <div class="">
+          <button class="btn btn-corp sitetop-keyvisual__overlay-button">無料で始める</button>
+        </div>
+        <div class="sitetop-keyvisual__overlay-caution">
           売り手企業様は完全無料でご利用いただけます
         </div>
       </div>
-      <div class="sitetop-keyvisual__appeal">
-        <img src="./img/kv_appeal_01.png" class="sitetop-keyvisual__appeal-01">
-        <img src="./img/kv_appeal_02.png" class="sitetop-keyvisual__appeal-02">
-        <img src="./img/kv_appeal_03.png" class="sitetop-keyvisual__appeal-03">
+      <div class="sitetop-keyvisual__overlay-appeal">
+        <img src="./img/kv_appeal_01.png" alt="" class="sitetop-keyvisual__overlay-appeal-01">
+        <img src="./img/kv_appeal_02.png" alt="" class="sitetop-keyvisual__overlay-appeal-02">
+        <img src="./img/kv_appeal_03.png" alt="" class="sitetop-keyvisual__overlay-appeal-03">
       </div>
     </div>
-  </div>
-  <!--
-    <div class="sitetop-keyvisual">
-      <div id="carouselOption1" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <img class="d-block w-100" src="./img/kv01.jpg" alt="第1スライド">
-          </div>
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="./img/kv02.jpg" alt="第2スライド">
-          </div>
-        </div>
-        <div class="sitetop-keyvisual__content">
-          <p class="sitetop-keyvisual__copy">
-            アジア最大級の<br>
-            海外譲渡案件・投資家も集まる<br>
-            会員制オンラインマッチングサービス<br>
-          </p>
-          <img class="sitetop-keyvisual__logo" src="./img/kv-logo.svg">
-          <button class="btn btn-corp sitetop-keyvisual__button">無料で始める</button>
-          <div class="sitetop-keyvisual__caution">
-            売り手企業様は完全無料でご利用いただけます
-          </div>
-        </div>
-        <div class="sitetop-keyvisual__appeal" style="bottom: 10.6%; right: 1.9%; width: 28%; height: 36%;">
-          <img src="./img/kv_appeal_01.png" class="sitetop-keyvisual__appeal-01" style="width: calc(18.0rem * 0.95); left: calc(50% - (18rem * 0.95) * 0.5);">
-          <img src="./img/kv_appeal_02.png" class="sitetop-keyvisual__appeal-02">
-          <img src="./img/kv_appeal_03.png" class="sitetop-keyvisual__appeal-03">
-        </div>
-      </div>
-    </div>-->
-    <!-- //key-visual -->
+  <!-- //key-visual -->
 
     <!-- 特長 -->
     <section class="section-nolog sitetop-feature">
@@ -988,13 +850,27 @@
   $(function() {
     $(window).scroll(ma.scrollIcon);
 
-    $('.background-image').slick({
+    $('.sitetop-keyvisual__figure-list').slick({
       autoplay: true,
+      autoplaySpeed: 10000,
       dots: false,
       arrows: false,
       slidesToShow: 1,
     slidesToScroll: 1,
-  speed: 1000
+  speed: 1000,
+  fade: true
+
+});
+$('.background-image').slick({
+      autoplay: true,
+      autoplaySpeed: 10000,
+      dots: false,
+      arrows: false,
+      slidesToShow: 1,
+    slidesToScroll: 1,
+  speed: 1000,
+  fade: true
+
 });
     
     $('.faq').click(function () {

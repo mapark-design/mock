@@ -55,31 +55,98 @@
   <main>
 
     <!-- key-visual -->
-    <div class="sitetop-keyvisual">
-      <div class="sitetop-keyvisual__figure-list">
+    <style>
+    @media screen and (max-width:767px) {
+      .sitetop-keyvisual--v5 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sitetop-keyvisual__overlay--v5 {
+        position: inherit;
+        order: 10;
+        margin-bottom: 1.0rem;
+      }
+      .sitetop-keyvisual__overlay-copy--v5 {
+        order: 11;
+      }
+      .sitetop-keyvisual__overlay-logo--v5 {
+        position: inherit;
+        order: 12;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+      }
+      .sitetop-keyvisual__overlay-button--v5 {
+        position: inherit;
+        order: 13;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 1.0rem auto;
+        width: 100%;
+      }
+      .sitetop-keyvisual__overlay-caution--v5 {
+        position: inherit;
+        order: 14;
+      }
+      .sitetop-keyvisual__figure-list--v5 {
+        order: 20;
+      }
+      .sitetop-keyvisual__figure-list--v5 figure {
+        height: calc(100vw / 2);
+      }
+      .sitetop-keyvisual__figure-list--v5 figure.sitetop-keyvisual__figure-01 {
+        background-image: url('./img/kv02.jpg');
+      }
+      .sitetop-keyvisual__figure-list--v5 figure.sitetop-keyvisual__figure-02 {
+        background-image: url('./img/kv01.jpg');
+      }
+      .sitetop-keyvisual__overlay-appeal--v5 {
+        position: relative;
+        order: 30;
+        transform: none;
+        left: auto;
+        bottom: auto;
+        margin: 0 auto;
+        height: 8.6rem;
+        width: calc(100vw / 3 * 2);
+        min-width: 35.0rem;
+      }
+      .sitetop-keyvisual__overlay-appeal-01--v5,
+      .sitetop-keyvisual__overlay-appeal-02--v5,
+      .sitetop-keyvisual__overlay-appeal-03--v5 {
+        width: calc(12.6rem + 1vw);
+      }
+    }
+    </style>
+
+    <div class="sitetop-keyvisual sitetop-keyvisual--v5">
+      <div class="sitetop-keyvisual__figure-list sitetop-keyvisual__figure-list--v5">
         <figure class="sitetop-keyvisual__figure-01"></figure>
         <figure class="sitetop-keyvisual__figure-02"></figure>
       </div>
-      <div class="sitetop-keyvisual__overlay">
-        <div class="sitetop-keyvisual__overlay-copy">
+      <div class="sitetop-keyvisual__overlay sitetop-keyvisual__overlay--v5">
+        <div class="sitetop-keyvisual__overlay-copy sitetop-keyvisual__overlay-copy--v5">
           アジア最大級の<br>
           海外譲渡案件・投資家も集まる<br>
           会員制オンラインマッチングサービス<br>
         </div>
-        <div class="sitetop-keyvisual__overlay-logo">
+        <div class="sitetop-keyvisual__overlay-logo sitetop-keyvisual__overlay-logo--v5">
           <img src="./img/kv-logo.svg">
         </div>
         <div class="">
-          <button class="btn btn-corp sitetop-keyvisual__overlay-button">無料で始める</button>
+          <button class="btn btn-corp sitetop-keyvisual__overlay-button sitetop-keyvisual__overlay-button--v5">無料で始める</button>
         </div>
-        <div class="sitetop-keyvisual__overlay-caution">
+        <div class="sitetop-keyvisual__overlay-caution sitetop-keyvisual__overlay-caution--v5">
           売り手企業様は完全無料でご利用いただけます
         </div>
       </div>
-      <div class="sitetop-keyvisual__overlay-appeal">
-        <img src="./img/kv_appeal_01.png" alt="" class="sitetop-keyvisual__overlay-appeal-01">
-        <img src="./img/kv_appeal_02.png" alt="" class="sitetop-keyvisual__overlay-appeal-02">
-        <img src="./img/kv_appeal_03.png" alt="" class="sitetop-keyvisual__overlay-appeal-03">
+      <div class="sitetop-keyvisual__overlay-appeal sitetop-keyvisual__overlay-appeal--v5">
+        <img src="./img/kv_appeal_01.png" alt="" class="sitetop-keyvisual__overlay-appeal-01 sitetop-keyvisual__overlay-appeal-01--v5">
+        <img src="./img/kv_appeal_02.png" alt="" class="sitetop-keyvisual__overlay-appeal-02 sitetop-keyvisual__overlay-appeal-02--v5">
+        <img src="./img/kv_appeal_03.png" alt="" class="sitetop-keyvisual__overlay-appeal-03 sitetop-keyvisual__overlay-appeal-03--v5">
       </div>
     </div>
   <!-- //key-visual -->

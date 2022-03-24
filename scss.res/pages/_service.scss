@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 .service {
   &__content {
@@ -39,86 +40,35 @@
 }
 
 .ma-service {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+    }
+  }
+
   &__intro,
   &__outro {
     text-align: center;
-    font-size: var.$FONT-SIZE-24;
+    font-size: calc(1.365rem + 1.38vw);
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-24;
+    }
   }
 
   &__online,
   &__offline {
-    font-size: var.$FONT-SIZE-32;
     font-weight: bold;
-/*    position: relative;
+    font-size: calc(1.405rem + 1.86vw);
 
-    &::after {
-      content: '';
-      display: block;
-      width: 14.0rem;
-      height: 0.5rem;
-      background-color: yellow;
-      position: absolute;
-      bottom: 0.5rem;
-      left: 0;
-      z-index: -1;
-    }*/
-  }
-
-/*  &__online-v3 {
-    font-size: var.$FONT-SIZE-32;
-    font-weight: bold;
-    position: relative;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 16.0rem;
-      height: 0.5rem;
-      background-color: yellow;
-      position: absolute;
-      bottom: 0.5rem;
-      left: 0;
-      z-index: -1;
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-32;
     }
   }
-*/
-/*  &__offline {
-    font-size: var.$FONT-SIZE-32;
-    font-weight: bold;
-    position: relative;
 
-    &::after {
-      content: '';
-      display: block;
-      width: 14.0rem;
-      height: 0.5rem;
-      background-color: orange;
-      position: absolute;
-      bottom: 0.5rem;
-      left: 0;
-      z-index: -1;
-    }
-  }
-*/
-/*
-  &__offline-v3 {
-    font-size: var.$FONT-SIZE-32;
-    font-weight: bold;
-    position: relative;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 16.0rem;
-      height: 0.5rem;
-      background-color: orange;
-      position: absolute;
-      bottom: 0.5rem;
-      left: 0;
-      z-index: -1;
-    }
-  }
-*/
   &__section {
     margin-top: 5.0rem;
     text-align: center;
@@ -127,7 +77,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: var.$FONT-SIZE-44;
 
       &::before,
       &::after {
@@ -139,99 +88,39 @@
         margin-left: 1.0rem;
       }
 
+      &--char {
+        font-size: calc(1.525rem + 3.3vw);
+
+        @include mixins.mq-up('md') {
+          font-size: var.$FONT-SIZE-44;
+        }
+      }
+
       &--online,
       &--offline {
         position: relative;
         font-weight: bold;
-
-/*        &::after {
-          content: '';
-          display: block;
-          width: 22.0rem;
-          height: 0.5rem;
-          background-color: yellow;
-          position: absolute;
-          bottom: 1.0rem;
-          left: 0;
-          z-index: -1;
-        }*/
-      }
-/*
-      &--online-v3 {
-        position: relative;
-        font-weight: bold;
-
-        &::after {
-          content: '';
-          display: block;
-          width: 22.0rem;
-          height: 0.5rem;
-          background-color: yellow;
-          position: absolute;
-          bottom: 1.0rem;
-          left: 0;
-          z-index: -1;
-        }
-      }
-*/
-/*
-      &--offline {
-        position: relative;
-        font-weight: bold;
-
-        &::after {
-          content: '';
-          display: block;
-          width: 22.0rem;
-          height: 0.5rem;
-          background-color: orange;
-          position: absolute;
-          bottom: 1.0rem;
-          left: 0;
-          z-index: -1;
-        }
-      }*/
-    }
-/*
-    &--offline-v3 {
-      position: relative;
-      font-weight: bold;
-
-        &::after {
-        content: '';
-        display: block;
-        width: 22.0rem;
-        height: 0.5rem;
-        background-color: orange;
-        position: absolute;
-        bottom: 1.0rem;
-        left: 0;
-        z-index: -1;
       }
     }
-  }
-*/
-  &-subtitle {
-      font-size: var.$FONT-SIZE-28;
+
+    &-subtitle,
+    &-support-title {
       font-weight: bold;
-      border-top: 0.5rem solid var.$COLOR-CORP;
       border-bottom: 0.5rem solid var.$COLOR-CORP;
+      font-size: calc(1.405rem + 1.86vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-28;
+      }
+    }
+
+    &-subtitle {
+      border-top: 0.5rem solid var.$COLOR-CORP;
 
       &::before,
       &::after {
         content: '　';
       }
-    }
-
-    &-support-title {
-      font-size: var.$FONT-SIZE-28;
-      font-weight: bold;
-      border-bottom: 0.5rem solid var.$COLOR-CORP;
-
-/*      &::before,
-      &::after {
-        content: '　';
-      }*/
     }
   }
 
@@ -250,16 +139,27 @@
 
     &-item-title {
       border: 1px solid var.$COLOR-CORP;
-      border-radius: 1.0rem;
-      padding: 2rem 3rem;
-      width: 22.0rem;
+      padding: 1.0rem 1.5rem;
+      text-align: left;
+
+      @include mixins.mq-up('lg') {
+        border-radius: 1.0rem;
+        padding: 2rem 3rem;
+        text-align: center;
+      }
     }
     &-item-explain {
+      border: 1px  solid var.$COLOR-CORP;
+      border-top: none;
       text-align: left;
       background-color: #fadadc;
-      padding: 1.5rem 1.5rem;
-      border-top-right-radius: 1rem;
-      border-bottom-right-radius: 1rem;
+      padding: 1.0rem 1.5rem;
+
+      @include mixins.mq-up('lg') {
+        border: none;
+        border-radius: 0 1.0rem 1.0rem 0;
+        padding: 1.5rem 1.5rem;
+      }
     }
   }
 
@@ -286,7 +186,11 @@
       }
 
       dd {
-        padding-left: 28.0rem;
+        padding-left: 0;
+
+        @include mixins.mq-up('md') {
+          padding-left: 28.0rem;
+        }
 
         span {
            color: var.$COLOR-CORP;
@@ -312,7 +216,11 @@
     &-list {
       line-height: 180%;
       margin-left: 3.0rem;
-      font-size: var.$FONT-SIZE-22;
+      font-size: calc(1.325rem + 0.9vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-22;
+      }
 
       li {
         list-style-type: disc;
@@ -331,7 +239,11 @@
   }
 
   &__mt-10 {
-    margin-top: 10.0rem;
+    margin-top: 12vw;
+
+    @include mixins.mq-up('md') {
+      margin-top: 10.0rem;
+    }
   }
 
   &__mt-5 {
@@ -349,7 +261,11 @@
       color: var.$COLOR-CORP;
     }
     &--fs-32 {
-      font-size: var.$FONT-SIZE-32;
+      font-size: calc(1.405rem + 1.86vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-32;
+      }
     }
   }
 }

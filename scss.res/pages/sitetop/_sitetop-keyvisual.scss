@@ -153,34 +153,34 @@
 
     &-appeal {
       position: absolute;
-      width: 36.0rem;
-      height: 17.6rem;
+      width: calc((10rem + 5vw) * 2.5);
+      height: calc((10rem + 5vw) * 1.5);
       left: 50%;
       transform: translate(-50%, 0);
-      bottom: calc(13rem - 10vw);
+      bottom: calc(20rem - 20vw);
 
       @media screen and (min-width:768px) and (max-width:1199px) {
-        width: 30%;
-        bottom: 3.6rem;
-        right: 0.9%;
-        height: 40.0%;
+        width: calc(26rem + (100vw - 768px) * 0.125);
+        height: calc(20rem + (100vw - 768px) * 0.025);
         left: auto;
+        right: calc((100vw - 768px) * 0.12);
+        bottom: calc(2.4rem - (100vw - 768px) * 0.0175);
         transform: none;
       }
       @media screen and (min-width:1200px) and (max-width:1366px) {
-        bottom: 10.6%;
-        right: 1.9%;
-        width: 30%;
+        width: 31%;
         height: 36%;    
         left: auto;
+        right: 1.9%;
+        bottom: 10.6%;
         transform: none;
       }
       @media screen and (min-width:1367px) {
-        bottom: 10.6%;
-        right: 1.9%;
-        width: 28%;
+        width: 31%;
         height: 36%;      
         left: auto;
+        right: 1.9%;
+        bottom: 10.6%;
         transform: none;
       }
 
@@ -188,10 +188,10 @@
       &-02,
       &-03 {
         position: absolute;
-        width: calc(18.0rem * 0.7);
+        width: calc(10rem + 5vw);
 
         @media screen and (min-width:768px) and (max-width:1199px) {
-          width: calc(18.0rem * 0.7);
+          width: calc(12.6rem + (100vw - 768px) * 0.025);
         }
         @media screen and (min-width:1200px) {
           width: 18.0rem;
@@ -199,11 +199,11 @@
       }
 
       &-01 {
-        left: calc(50% - (18rem * 0.7) * 0.5);
+        left: calc(50% - (10rem + 5vw) / 2);
         z-index: 2;
 
         @media screen and (min-width:768px) and (max-width:1199px) {
-          left: calc(50% - (18rem * 0.7) * 0.5);
+          left: calc(50% - (12.6rem + (100vw - 768px) * 0.025) * 0.5);
         }
         @media screen and (min-width:1200px) {
           left: calc((100% / 2) - 9.0rem);
@@ -211,19 +211,13 @@
       }
       &-02 {
         z-index: 1;
-
-        @media screen and (min-width:768px) {
-          bottom: 0;
-        }
+        bottom: 0;
       }
 
       &-03 {
         right: 0;
         z-index: 1;
-
-        @media screen and (min-width:768px) {
-          bottom: 0;
-        }
+        bottom: 0;
       }
     }
   }

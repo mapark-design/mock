@@ -1,6 +1,16 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
 
 .article-index {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+    }
+  }
+
   &__anchor {
     text-decoration: none;
     color: black;

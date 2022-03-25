@@ -1,8 +1,13 @@
 @use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
 
 .article {
   &__inner {
-    width: var.$WIDTH-1024;
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+    }
   }
 
   &__title {

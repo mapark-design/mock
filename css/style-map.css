@@ -34,6 +34,27 @@ input.ma-utils__est-year {
   }
 }
 
+@media screen and (min-width: 576px) {
+  br.up-sm {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  br.down-sm {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  br.up-md {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  br.down-md {
+    display: none;
+  }
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10039,6 +10060,23 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #ced4da;
 }
 
+.ma-btn-kv {
+  padding: 1.125vw 2.5vw;
+}
+@media screen and (min-width: 768px) {
+  .ma-btn-kv {
+    border-radius: 0.5rem;
+    padding: 0.8rem 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ma-btn-kv {
+    border-radius: 0.5rem;
+    font-size: 2.4rem;
+    padding: 0.8rem 3rem;
+  }
+}
+
 /**
  * モーダル画面で利用するボタン群。
  * フォントサイズは少し小さめにしている。
@@ -11344,19 +11382,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .sitetop-keyvisual__figure-01 {
-  background-image: url("/mock/img/kv02s.jpg");
+  background-image: url("/img/kv02s.jpg");
 }
 @media screen and (min-width: 768px) {
   .sitetop-keyvisual__figure-01 {
-    background-image: url("/mock/img/kv02.jpg");
+    background-image: url("/img/kv02.jpg");
   }
 }
 .sitetop-keyvisual__figure-02 {
-  background-image: url("/mock/img/kv01s.jpg");
+  background-image: url("/img/kv01s.jpg");
 }
 @media screen and (min-width: 768px) {
   .sitetop-keyvisual__figure-02 {
-    background-image: url("/mock/img/kv01.jpg");
+    background-image: url("/img/kv01.jpg");
   }
 }
 .sitetop-keyvisual__overlay {
@@ -11368,7 +11406,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sitetop-keyvisual__overlay {
     position: absolute;
-    top: 4.5rem;
+    top: calc(4.5rem - (100vw - 768px) * 0.01);
     left: calc(1rem + (100vw - 768px) * 0.175);
   }
 }
@@ -11433,10 +11471,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sitetop-keyvisual__overlay-button {
   position: absolute;
-  top: 170%;
+  top: 158%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: inherit;
+}
+@media screen and (min-width: 576px) {
+  .sitetop-keyvisual__overlay-button {
+    top: 170%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sitetop-keyvisual__overlay-button {
@@ -11448,9 +11491,6 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 1200px) {
   .sitetop-keyvisual__overlay-button {
     top: 32rem;
-    border-radius: 0.5rem;
-    font-size: 2.4rem;
-    padding: 0.8rem 3rem;
     left: auto;
     transform: none;
   }
@@ -11458,16 +11498,21 @@ h1, h2, h3, h4, h5, h6 {
 .sitetop-keyvisual__overlay-caution {
   position: absolute;
   width: 90%;
-  top: 208%;
+  top: 185%;
   font-size: calc(1rem + 1vw);
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-weight: bold;
 }
+@media screen and (min-width: 576px) {
+  .sitetop-keyvisual__overlay-caution {
+    top: 208%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sitetop-keyvisual__overlay-caution {
-    top: 25rem;
+    top: calc(25rem + (100vw - 768px) * 0.015);
     left: auto;
     transform: none;
     text-align: inherit;
@@ -11489,7 +11534,12 @@ h1, h2, h3, h4, h5, h6 {
   height: calc((10rem + 5vw) * 1.5);
   left: 50%;
   transform: translate(-50%, 0);
-  bottom: calc(20rem - 20vw);
+  bottom: calc(16rem - 20vw);
+}
+@media screen and (min-width: 576px) {
+  .sitetop-keyvisual__overlay-appeal {
+    bottom: calc(20rem - 20vw);
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sitetop-keyvisual__overlay-appeal {
@@ -11596,6 +11646,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 33.3333333333%;
   }
 }
+.sitetop-feature__item-dtl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .sitetop-feature__item:first-of-type {
   border-top: none;
 }
@@ -11623,6 +11678,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) {
   .sitetop-feature__title {
     font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .sitetop-feature__title {
+    order: 1;
   }
 }
 .sitetop-feature__image {

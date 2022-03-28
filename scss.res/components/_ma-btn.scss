@@ -64,6 +64,20 @@ $mabutton-modal: ".ma-modal-btn";
   color: black;
   border: 1px solid #ced4da;
 }
+#{$mabutton}-kv {
+  padding: 1.125vw 2.5vw;
+
+  @include mixins.mq-up('md') {
+    border-radius: 0.5rem;
+    padding: 0.8rem 3.0rem;
+  }
+
+  @include mixins.mq-up('xl') {
+    border-radius: 0.5rem;
+    font-size: 2.4rem;
+    padding: 0.8rem 3.0rem;
+  }
+}
 
 /**
  * モーダル画面で利用するボタン群。

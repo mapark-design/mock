@@ -20,23 +20,23 @@
       @media screen and (min-width:768px) and (max-width:1199px) {
         height: 447px;
       }
-      @media screen and (min-width:1200px) {
+      @include mixins.mq-up('xl') {
         height: 702px;
       }
     }
   }
   &__figure-01 {
-    background-image: url('/mock/img/kv02s.jpg');
+    background-image: url('/img/kv02s.jpg');
 
-    @media screen and (min-width:768px) {
-      background-image: url('/mock/img/kv02.jpg');
+    @include mixins.mq-up('md') {
+      background-image: url('/img/kv02.jpg');
     }
   }
   &__figure-02 {
-    background-image: url('/mock/img/kv01s.jpg');
+    background-image: url('/img/kv01s.jpg');
 
-    @media screen and (min-width:768px) {
-      background-image: url('/mock/img/kv01.jpg');
+    @include mixins.mq-up('md') {
+      background-image: url('/img/kv01.jpg');
     }
   }
 
@@ -48,7 +48,7 @@
 
     @media screen and (min-width:768px) and (max-width:1199px) {
       position: absolute;
-      top: 4.5rem;
+      top: calc(4.5rem - (100vw - 768px) * 0.01);
       left: calc(1rem + (100vw - 768px) * 0.175);
     }
     @media screen and (min-width:1200px) and (max-width:1366px) {
@@ -73,7 +73,7 @@
         font-size: 2.08rem;
         text-align: inherit;
       }
-      @media screen and (min-width:1200px) {
+      @include mixins.mq-up('xl') {
         font-size: 3.2rem;
         text-align: inherit;
       }
@@ -94,7 +94,7 @@
         transform: none;
         max-width: 27.62rem;
       }
-      @media screen and (min-width:1200px) {
+      @include mixins.mq-up('xl') {
         position: absolute;
         top: 17.0rem;
         left: auto;
@@ -105,21 +105,22 @@
 
     &-button {
       position: absolute;
-      top: 170%;
+      top: 158%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: inherit;
+
+      @include mixins.mq-up('sm') {
+        top: 170%;
+      }
 
       @media screen and (min-width:768px) and (max-width:1199px) {
         top: 20.5rem;
         left: auto;
         transform: none;
       }
-      @media screen and (min-width:1200px) {
+      @include mixins.mq-up('xl') {
         top: 32.0rem;
-        border-radius: 0.5rem;
-        font-size: 2.4rem;
-        padding: 0.8rem 3.0rem;
         left: auto;
         transform: none;
       }
@@ -128,21 +129,25 @@
     &-caution {
       position: absolute;
       width: 90%;
-      top: 208%;
+      top: 185%;
       font-size: calc(1rem + 1.0vw);
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       font-weight: bold;
 
+      @include mixins.mq-up('sm') {
+        top: 208%;
+      }
+
       @media screen and (min-width:768px) and (max-width:1199px) {
-        top: 25.0rem;
+        top: calc(25rem + (100vw - 768px) * 0.015);
         left: auto;
         transform: none;
         text-align: inherit;
         font-size: small;
       }
-      @media screen and (min-width:1200px) {
+      @include mixins.mq-up('xl') {
         top: 38.5rem;
         left: auto;
         transform: none;
@@ -157,7 +162,11 @@
       height: calc((10rem + 5vw) * 1.5);
       left: 50%;
       transform: translate(-50%, 0);
-      bottom: calc(20rem - 20vw);
+      bottom: calc(16rem - 20vw);
+
+      @include mixins.mq-up('sm') {
+        bottom: calc(20rem - 20vw);
+      }
 
       @media screen and (min-width:768px) and (max-width:1199px) {
         width: calc(26rem + (100vw - 768px) * 0.125);
@@ -193,7 +202,7 @@
         @media screen and (min-width:768px) and (max-width:1199px) {
           width: calc(12.6rem + (100vw - 768px) * 0.025);
         }
-        @media screen and (min-width:1200px) {
+        @include mixins.mq-up('xl') {
           width: 18.0rem;
         }
       }
@@ -205,7 +214,7 @@
         @media screen and (min-width:768px) and (max-width:1199px) {
           left: calc(50% - (12.6rem + (100vw - 768px) * 0.025) * 0.5);
         }
-        @media screen and (min-width:1200px) {
+        @include mixins.mq-up('xl') {
           left: calc((100% / 2) - 9.0rem);
         }
       }
@@ -222,89 +231,3 @@
     }
   }
 }
-// .sitetop-keyvisual {
-
-//   width: 100%;
-//   margin: 0 auto;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-position: center;
-//   background-size: cover;
-
-//   @include mixins.mq-up('md') {
-//     max-width: var.$WIDTH-DEFAULT;
-//     height: 702px;
-//   }
-
-//   &__content {
-//     position: absolute;
-//     top: 7.5rem;
-//     left: 9.7rem;
-//     z-index: 1;
-//   }
-
-//   &__copy {
-//     font-size: 3.2rem;
-//     font-weight: bold;
-//     color: var.$COLOR-CORP;
-//     margin-bottom: 2.0rem;
-
-//     &--title {
-//       font-size: 3.6rem;
-//     }
-//   }
-
-//   &__logo {
-//     position: absolute;
-//     top: 17.0rem;
-//     max-width: 42.5rem;
-//   }
-
-//   &__button {
-//     border-radius: 0.5rem;
-//     font-size: 2.4rem;
-//     padding: 0.8rem 3.0rem;
-//     position: absolute;
-//     top: 32.0rem;
-//   }
-
-//   &__caution {
-//     position: absolute;
-//     top: 38.5rem;
-//     font-weight: bold;
-//     font-size: 1.8rem;
-//   }
-
-//   &__appeal {
-//     position: absolute;
-//     bottom: 1.6%;
-//     right: 0.9%;
-//     z-index: 10;
-//     width: 30.0%;
-//     height: 38.0%;
-
-//     &-01,
-//     &-02,
-//     &-03 {
-//       position: absolute;
-//       width: 18.0rem;
-//     }
-
-//     &-01 {
-//       left: calc((100% / 2) - 9.0rem);
-//       z-index: 2;
-//     }
-
-//     &-02 {
-//       bottom: 0;
-//       z-index: 1;
-//     }
-
-//     &-03 {
-//       bottom: 0;
-//       right: 0;
-//       z-index: 1;
-//     }
-//   }
-// }

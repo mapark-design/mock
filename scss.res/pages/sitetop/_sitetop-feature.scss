@@ -39,6 +39,12 @@
       width: calc(100% / 3);
     }
 
+    &-dtl {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &:first-of-type {
       border-top: none;
 
@@ -70,6 +76,10 @@
     @include mixins.mq-up('md') {
       font-size: 2.4rem; 
     }
+
+    @include mixins.mq-up('lg') {
+      order: 1;
+    }
   }
 
   &__image {
@@ -80,7 +90,6 @@
       max-width: 26.0rem;
     }
   }
-
   &__detail {
     margin-top: 5.0rem;
     text-align: center;

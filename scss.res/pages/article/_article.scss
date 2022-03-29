@@ -12,8 +12,11 @@
 
   &__title {
     padding-left: 0.5rem;
-    font-size: var.$FONT-SIZE-32;
     border-bottom: 1px solid var.$COLOR-CORP;
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-32;
+    }
   }
 
   &__update {

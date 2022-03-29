@@ -2,23 +2,27 @@
 
 br {
   &.up-sm {
+    display: none;
     @include mixins.mq-up('sm') {
-      display: none;
+      display: block;
     }
   }
   &.down-sm {
+    display: none;
     @include mixins.mq-down('sm') {
-      display: none;
+      display: block;
     }
   }
   &.up-md {
+    display: none;
     @include mixins.mq-up('md') {
-      display: none;
+      display: block;
     }
   }
   &.down-md {
+    display: none;
     @include mixins.mq-down('md') {
-      display: none;
+      display: block;
     }
   }
 }

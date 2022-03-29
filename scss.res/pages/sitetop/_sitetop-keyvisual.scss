@@ -26,17 +26,17 @@
     }
   }
   &__figure-01 {
-    background-image: url('/mock/img/kv02s.jpg');
+    background-image: url('/img/kv02s.jpg');
 
     @include mixins.mq-up('md') {
-      background-image: url('/mock/img/kv02.jpg');
+      background-image: url('/img/kv02.jpg');
     }
   }
   &__figure-02 {
-    background-image: url('/mock/img/kv01s.jpg');
+    background-image: url('/img/kv01s.jpg');
 
     @include mixins.mq-up('md') {
-      background-image: url('/mock/img/kv01.jpg');
+      background-image: url('/img/kv01.jpg');
     }
   }
 

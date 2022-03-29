@@ -11382,19 +11382,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .sitetop-keyvisual__figure-01 {
-  background-image: url("/img/kv02s.jpg");
+  background-image: url("/mock/img/kv02s.jpg");
 }
 @media screen and (min-width: 768px) {
   .sitetop-keyvisual__figure-01 {
-    background-image: url("/img/kv02.jpg");
+    background-image: url("/mock/img/kv02.jpg");
   }
 }
 .sitetop-keyvisual__figure-02 {
-  background-image: url("/img/kv01s.jpg");
+  background-image: url("/mock/img/kv01s.jpg");
 }
 @media screen and (min-width: 768px) {
   .sitetop-keyvisual__figure-02 {
-    background-image: url("/img/kv01.jpg");
+    background-image: url("/mock/img/kv01.jpg");
   }
 }
 .sitetop-keyvisual__overlay {

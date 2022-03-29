@@ -10,7 +10,7 @@
   a {
     display: none;
 
-    @include mixins.mq-up('md') {
+    @include mixins.mq-up('lg') {
       display: inline-block;
     }
   }

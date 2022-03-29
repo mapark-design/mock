@@ -109,11 +109,9 @@
       }
 
       &-btn-reg {
-        font-size: small;
-        @include mixins.mq-up('sm') {
-          font-size: smaller;
-        }
+        display: none;
         @include mixins.mq-up('md') {
+          display: inline-block;
           font-size: inherit;
         }
       }

@@ -10585,15 +10585,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .header__nav-list--user-nav-btn-reg {
-  font-size: small;
-}
-@media screen and (min-width: 576px) {
-  .header__nav-list--user-nav-btn-reg {
-    font-size: smaller;
-  }
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .header__nav-list--user-nav-btn-reg {
+    display: inline-block;
     font-size: inherit;
   }
 }
@@ -11406,6 +11402,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .sitetop-keyvisual__overlay {
     position: absolute;
+    width: auto;
     top: calc(4.5rem - (100vw - 768px) * 0.01);
     left: calc(1rem + (100vw - 768px) * 0.175);
   }
@@ -11413,6 +11410,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 1200px) and (max-width: 1366px) {
   .sitetop-keyvisual__overlay {
     position: absolute;
+    width: auto;
     top: 7.5rem;
     left: calc(1.5rem + (100vw - 1200px) * 0.5);
   }
@@ -11420,6 +11418,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (min-width: 1367px) {
   .sitetop-keyvisual__overlay {
     position: absolute;
+    width: auto;
     left: 9.7rem;
     top: 7.5rem;
   }
@@ -11987,7 +11986,7 @@ h1, h2, h3, h4, h5, h6 {
 .sitetop-fixed-icon a {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .sitetop-fixed-icon a {
     display: inline-block;
   }

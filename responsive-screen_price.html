@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3cd0f12cd2.js" crossorigin="anonymous"></script>
   <script src="./js/ma.js"></script>
   <script src="./js/ma-custom.js"></script>
   <title>利用料金</title>
@@ -52,7 +53,7 @@
           <div class="ms-4 me-4">
 
             <!-- 売り手企業向け -->
-            <div class="price__content price__content">
+            <div class="price__content">
               <div class="price__content-subject">売り手企業様のご利用料金</div>
               <div class="price__content-subject-sub">
                 売り手企業様は従来のM&Aサービスでは一般的な着手金や成功報酬費用もかからず<br>
@@ -64,12 +65,251 @@
             </div>
             <!-- // 売り手企業向け -->
             <!-- 買い手企業向けプラン一覧 -->
-            <div class="price__content price__content price__content price__content--mt10">
+            <div class="price__content price__content--mt10" style="max-width: 115.0rem;width: 100%; margin-left: auto; margin-right: auto;">
               <div class="price__content-subject">買い手企業様のご利用料金</div>
               <div class="price__content-subject-sub">自社のニーズに合わせてプランをお選びいただけます</div>
-            </div>
-            <div class="mt-4">
-              <img src="./img/page/price_20220304.svg" class="" alt="買い手企業様のご利用料金">
+              <div class="price" style="text-align: left">
+                <div class="start-plan">
+                  <h2><span>まずは試してみる</span>スタートプラン</h2>
+                  <div class="start-plan-price">
+                    価格<br>
+                    <strong>0<small>円</small></strong>
+                  </div>
+                  <div class="t-blk">
+                    <ul>
+                      <li class="lb">ご利用いただける方</li>
+                      <li>法人の方、個人事業主の方</li>
+                    </ul>
+                    <ul>
+                      <li class="lb">機能</li>
+                      <li class="func-list">
+                        <span>譲渡案件の検索</span>
+                        <span>案件情報の閲覧</span>
+                        <span>自社のニーズ登録</span>
+                      </li>
+                    </ul>
+                    <p>
+                      会員登録のみでご利用開始いただけます
+                    </p>
+                  </div>
+                </div><!-- //.start-plan -->
+                <div class="price-tb-wrap">
+                  <p class="upgrade" style="text-align: center;">
+                    アップグレードは契約期間中いつでも可能です!<small>（ダウングレード・解約は契約更新月のみ）</small>
+                  </p>
+                  <table class="price-tb">
+                    <tbody><tr class="plan-name">
+                      <th>プラン名</th>
+                      <td>
+                        エントリー<br class="br-sp">プラン
+                      </td>
+                      <td>
+                        スタンダード<br class="br-sp">プラン
+                      </td>
+                      <td>
+                        プレミアム<br class="br-sp">プラン
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>価格</th>
+                      <td>
+                        月額<strong class="p-t1 red">2,980</strong>円（税抜）<br>
+                        年間39,336円（税込）
+                      </td>
+                      <td>
+                        月額<strong class="p-t1 red">7,980</strong>円（税抜）<br>
+                        年間105,336円（税込）
+                      </td>
+                      <td>
+                        月額<strong class="p-t1 red">14,800</strong>円（税抜）<br>
+                        年間195,360円（税込）
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>お支払い方法</th>
+                      <td colspan="3">
+                        クレジット決済
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>契約期間</th>
+                      <td colspan="3">
+                        12か月<small class="note-info">年額一括前払い</small>
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>ご利用いただける方</th>
+                      <td colspan="3">
+                        法人の方・個人事業主の方
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>交渉可能な譲渡案件</th>
+                      <td>
+                        <strong class="p-t2 red">500万円</strong>以内の<br>譲渡案件
+                      </td>
+                      <td>
+                        <strong class="p-t2 red">3,000万円</strong>以内の<br class="br-pc">譲渡案件
+                      </td>
+                      <td>
+                        <strong class="p-t2 red">すべて</strong>の<br>譲渡案件
+                      </td>
+                    </tr>
+        
+                    <tr class="func func-1">
+                      <th>
+                        機能
+                        <span class="sub">譲渡案件の検索</span>
+                      </th>
+                      <td>
+                        &nbsp;<br>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        &nbsp;<br>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        &nbsp;<br>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func">
+                      <th>
+                        <span class="sub">案件情報の閲覧</span>
+                      </th>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func">
+                      <th>
+                        <span class="sub">交渉申込</span>
+                      </th>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func">
+                      <th>
+                        <span class="sub">売り手企業様とのメッセージ交換</span>
+                      </th>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func">
+                      <th>
+                        <span class="sub">自社のニーズ登録</span>
+                      </th>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func">
+                      <th>
+                        <span class="sub">売り手企業様からの案件提案<small class="note">※</small></span>
+                      </th>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i><small class="note">※</small></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i><small class="note">※</small></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i><small class="note">※</small></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func">
+                      <th>
+                        <span class="sub">専門家への支援依頼</span>
+                      </th>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr class="func func-2">
+                      <th>
+                        <span class="sub">非公開の譲渡案件のご紹介</span>
+                      </th>
+                      <td>
+                        ー
+                      </td>
+                      <td>
+                        ー
+                      </td>
+                      <td>
+                        <span class="ico"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>サポート</th>
+                      <td colspan="2">
+                        メールでのサポート
+                      </td>
+                      <td>
+                        メール・オンライン面談<br class="br-pc">でのサポート
+                      </td>
+                    </tr>
+        
+                    <tr>
+                      <th>ご利用方法</th>
+                      <td colspan="3">
+                        会員登録後、マイページよりプラン申込いただくとご利用開始いただけます。
+                      </td>
+                    </tr>
+                  </tbody></table>
+                </div><!-- //.price-tb-wrap -->  
+                <span class="note-info">
+                  リリース予定
+                </span><!-- //.note-info -->
+                <p class="other-plan">
+                  必要な時に使用できる<strong class="red">成功報酬型プラン</strong>もご用意しております。お気軽にお問い合わせください。
+                </p><!-- //.other-plan -->
+              </div>
             </div>
             <!-- // 買い手企業向けプラン一覧 -->
             <!-- 料金比較 -->
@@ -130,5 +370,126 @@
     </div>
   </footer>
   <!-- //footer.footer -->
+<style>
+  .br-sp { display: none; }
+  .br-pc { display: block; }
+  .br-tb { display: none; }
+  .red { color: #c8161d; }
+  @media screen and (max-width: 767px) {
+    .br-pc { display: none; }
+    .br-tb { display: none; }
+    .br-sp { display: block; }
+  }
+  /* ================================================================== */
+  /* PRICE */
+  /* ================================================================== */
+  .price { padding: 0 0 0px; }
+  .price h1 { display: table; margin: 0 auto; padding-bottom: 25px; font-size: 3.2rem; font-weight: 500; position: relative; text-align: center; line-height: 1.3; }
+  @media screen and (max-width: 767px) { .price h1 { padding-bottom: 20px; font-size: 2.1rem; } }
+  .price h1 small { display: block; font-size: 1.4rem; font-weight: normal; }
+  @media screen and (max-width: 767px) { .price h1 small { font-size: 1.2rem; } }
+  .price h1::after { content: ""; display: inline-block; width: 80px; height: 7px; background-color: #c8161d; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+  .price .copy { text-align: center; font-size: 2.8rem; font-weight: 700; color: #c8161d; }
+  @media screen and (max-width: 767px) { .price .copy { font-size: 2rem; line-height: 1.3; } }
+  .price .start-plan { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; margin-top: 50px; border: 4px solid #70ad47; }
+  @media screen and (max-width: 767px) { .price .start-plan { -webkit-flex-direction: column; flex-direction: column; } }
+  .price .start-plan h2 { width: 300px; display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; background-color: #70ad47; color: white; font-size: 2.4rem; font-weight: 700; line-height: 1.4; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .start-plan h2 { width: 200px; font-size: 2rem; } }
+  @media screen and (max-width: 767px) { .price .start-plan h2 { width: 100%; padding: 0.75em 0; font-size: 2rem; } }
+  .price .start-plan h2 span { font-size: 1.7rem; font-weight: 500; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .start-plan h2 span { font-size: 1.5rem; } }
+  @media screen and (max-width: 767px) { .price .start-plan h2 span { font-size: 1.5rem; } }
+  .price .start-plan-price { display: -webkit-flex; display: flex; -webkit-flex-direction: column; flex-direction: column; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; width: 180px; line-height: 1; font-size: 1.8rem; color: #c8161d; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .start-plan-price { width: 120px; } }
+  @media screen and (max-width: 767px) { .price .start-plan-price { margin-top: 30px; width: 100%; font-size: 2.1rem; } }
+  .price .start-plan-price strong { font-size: 6rem; font-weight: 900; }
+  @media screen and (max-width: 767px) { .price .start-plan-price strong { font-size: 7.2rem; } }
+  .price .start-plan-price strong small { font-size: 2.8rem; }
+  @media screen and (max-width: 767px) { .price .start-plan-price strong small { font-size: 3.2rem; } }
+  .price .start-plan .t-blk { width: calc(100% - 300px - 180px); max-width: calc(100% - 300px - 180px); box-sizing: border-box; padding: 25px; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .start-plan .t-blk { width: calc(100% - 200px - 120px); max-width: calc(100% - 200px - 120px); } }
+  @media screen and (max-width: 767px) { .price .start-plan .t-blk { width: auto; max-width: initial; } }
+  .price .start-plan .t-blk ul { margin: 10px 0 0; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; }
+  @media screen and (max-width: 767px) { .price .start-plan .t-blk ul { -webkit-flex-direction: column; flex-direction: column; -webkit-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: center; justify-content: center; -webkit-align-items: center; align-items: center; } }
+  .price .start-plan .t-blk ul:first-child { margin-top: 0; }
+  .price .start-plan .t-blk ul li { margin-right: 10px; }
+  @media screen and (max-width: 767px) { .price .start-plan .t-blk ul li { text-align: center; } }
+  .price .start-plan .t-blk ul li.lb { font-weight: bold; position: relative; }
+  @media screen and (max-width: 767px) { .price .start-plan .t-blk ul li.lb { display: block; } }
+  .price .start-plan .t-blk ul li.lb::after { content: "："; }
+  .price .start-plan .t-blk ul li span { display: inline-block; padding: 0 1em; border: 2px solid #70ad47; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; color: #70ad47; font-weight: bold; }
+  .price .start-plan .t-blk ul li.func-list { display: -webkit-flex; display: flex; }
+  @media screen and (max-width: 767px) { .price .start-plan .t-blk ul li.func-list { -webkit-justify-content: space-between; justify-content: space-between; width: 100%; } }
+  .price .start-plan .t-blk ul li.func-list span { margin-right: 10px; }
+  @media screen and (max-width: 767px) { .price .start-plan .t-blk ul li.func-list span { width: calc(100%/3 - 5px); max-width: calc(100%/3 - 5px); padding: .5em; box-sizing: border-box; line-height: 1.2; } }
+  .price .start-plan .t-blk ul li.func-list span:last-child { margin-right: 0; }
+  .price .start-plan .t-blk p { margin-top: 10px; }
+  .price .price-tb-wrap { margin-top: 70px; position: relative; }
+  .price .price-tb-wrap .upgrade { width: calc(280px * 3 - 50px); max-width: calc(280px * 3 - 50px); margin: 0; padding: 0.5em 1em; background-color: white; border: 2px solid #c8161d; position: absolute; top: -25px; right: 25px; font-size: 1.6rem; color: #c8161d; font-weight: 700; box-sizing: border-box; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb-wrap .upgrade { width: 100%; max-width: 100%; font-size: 1.3rem; z-index: 15; line-height: 1.3; right: 0; top: -15px; } }
+  @media screen and (max-width: 767px) { .price .price-tb-wrap .upgrade { width: 100%; max-width: 100%; font-size: 1.3rem; z-index: 15; line-height: 1.3; right: 0; top: -35px; } }
+  .price .price-tb-wrap .upgrade small { font-size: 1.3rem; }
+  @media screen and (max-width: 767px) { .price .price-tb-wrap .upgrade small { font-size: 1.1rem; } }
+  .price .price-tb { width: 100%; }
+  .price .price-tb th, .price .price-tb td { border: 1px solid #ccc; padding: 0.75em; line-height: 1.5; vertical-align: middle; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb th, .price .price-tb td { padding: 0.5em; font-size: 1.4rem; } }
+  @media screen and (max-width: 767px) { .price .price-tb th, .price .price-tb td { padding: 0.5em; font-size: 1.2rem; } }
+  .price .price-tb th .note, .price .price-tb td .note { font-size: 1.2rem; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb th .note, .price .price-tb td .note { font-size: 1.1rem; } }
+  @media screen and (max-width: 767px) { .price .price-tb th .note, .price .price-tb td .note { font-size: 1rem; } }
+  .price .price-tb th { font-weight: bold; background-color: #f3f3f3; }
+  .price .price-tb th .sub { display: block; padding-left: 2em; position: relative; font-size: 1.4rem; }
+  @media screen and (max-width: 767px) { .price .price-tb th .sub { font-size: 1.2rem; } }
+  .price .price-tb th .sub::before { content: ""; display: inline-block; width: 10px; height: 1px; background-color: #323232; position: absolute; top: 12px; left: 10px; }
+  .price .price-tb td { width: 280px; max-width: 280px; text-align: center; box-sizing: border-box; }
+  .price .price-tb td .cp-price { margin-top: 10px; padding-top: 30px; position: relative; }
+  .price .price-tb td .cp-price::before { content: "▼"; position: absolute; top: 0; left: 50%; transform: translateX(-50%); color: #c8161d; }
+  .price .price-tb td strong.p-t1 { font-size: 2.8rem; font-weight: bold; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb td strong.p-t1 { font-size: 2.2rem; } }
+  @media screen and (max-width: 767px) { .price .price-tb td strong.p-t1 { font-size: 1.8rem; } }
+  .price .price-tb td strong.p-t2 { font-size: 2.1rem; font-weight: bold; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb td strong.p-t2 { font-size: 1.7rem; } }
+  @media screen and (max-width: 767px) { .price .price-tb td strong.p-t2 { font-size: 1.4rem; } }
+  .price .price-tb td .ico { position: relative; }
+  .price .price-tb td .ico .note { position: absolute; }
+  .price .price-tb td i { color: #e99c43; font-size: 2.2rem; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb td i { font-size: 2rem; } }
+  @media screen and (max-width: 767px) { .price .price-tb td i { font-size: 1.7rem; } }
+  .price .price-tb .note-info { margin-left: 1em; display: inline-block; padding-left: 1em; font-size: 1.3rem; position: relative; vertical-align: middle; }
+  @media screen and (max-width: 767px) { .price .price-tb .note-info { font-size: 1rem; vertical-align: 0.1em; } }
+  .price .price-tb .note-info::before { content: "※"; position: absolute; top: 0; left: 0; }
+  .price .price-tb .plan-name th, .price .price-tb .plan-name td { padding: 2em 1em 1em; }
+  .price .price-tb .plan-name th { background-color: rgba(242, 223, 223, 0.6); }
+  .price .price-tb .plan-name td { font-size: 2rem; font-weight: 700; background-color: #c8161d; color: white; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb .plan-name td { line-height: 1.2; position: relative; z-index: 10; } }
+  @media screen and (max-width: 767px) { .price .price-tb .plan-name td { font-size: 1.3rem; line-height: 1.2; position: relative; z-index: 10; } }
+  .price .price-tb .func th, .price .price-tb .func td { padding: 0.5em 0.75em; border-top: none; border-bottom: none; vertical-align: middle; }
+  .price .price-tb .func-1 { padding-top: 0.75em; }
+  .price .price-tb .func-2 { padding-bottom: 0.75em; border-bottom: 1px solid #ccc; }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb .func td { padding-top: 50px; padding-bottom: 20px; } }
+  @media screen and (max-width: 767px) { .price .price-tb .func td { padding-top: 50px; padding-bottom: 20px; } }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb tr { position: relative; } }
+  @media screen and (max-width: 767px) { .price .price-tb tr { position: relative; } }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb tr th { width: 100%; max-width: 100%; position: absolute; z-index: 10; box-sizing: border-box; border-top: none; } }
+  @media screen and (max-width: 767px) { .price .price-tb tr th { width: 100%; max-width: 100%; position: absolute; z-index: 10; box-sizing: border-box; border-top: none; } }
+  @media screen and (max-width: 1023px) and (min-width: 768px) { .price .price-tb tr td { padding-top: 50px; padding-bottom: 20px; position: relative; } }
+  @media screen and (max-width: 767px) { .price .price-tb tr td { padding-top: 50px; padding-bottom: 20px; position: relative; } }
+  .price .note-info { display: table; margin: 15px 0 0 auto; padding-left: 1em; position: relative; font-size: 1.3rem; }
+  @media screen and (max-width: 767px) { .price .note-info { font-size: 1.1rem; } }
+  .price .note-info::before { content: "※"; position: absolute; top: 0; left: 0; }
+  .price .other-plan { margin: 0; text-align: center; }
+  @media screen and (max-width: 767px) { .price .other-plan { margin-top: 20px; } }
+  .price .lead-txt { margin-top: 70px; font-size: 2.1rem; line-height: 2; text-align: center; }
+  @media screen and (max-width: 767px) { .price .lead-txt { font-size: 1.6rem; } }
+  .price .lead-txt .row { display: block; padding-bottom: 15px; }
+  @media screen and (max-width: 767px) { .price .lead-txt .row { padding-bottom: 10px; } }
+  .price .lead-txt img { display: inline-block; margin-right: 10px; height: 40px; vertical-align: middle; }
+  @media screen and (max-width: 767px) { .price .lead-txt img { height: 24px; } }
+  .price .f-list { display: table; margin: 50px auto 0; }
+  .price .f-list li { padding-left: 30px; font-size: 1.8rem; font-weight: 500; text-align: left; position: relative; }
+  @media screen and (max-width: 767px) { .price .f-list li { margin-bottom: 15px; font-size: 1.5rem; line-height: 1.5; } }
+  .price .f-list li::before { content: ""; display: inline-block; width: 12px; height: 12px; background-color: #c8161d; position: absolute; top: 10px; left: 0; }
+  @media screen and (max-width: 767px) { .price .f-list li::before { width: 10px; height: 10px; top: 7px; left: 5px; } }
+</style>
 </body>
 </html>

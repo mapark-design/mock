@@ -26,17 +26,17 @@
     }
   }
   &__figure-01 {
-    background-image: url('/img/kv02s.jpg');
+    background-image: url('/mock/img/kv02s.jpg');
 
     @include mixins.mq-up('md') {
-      background-image: url('/img/kv02.jpg');
+      background-image: url('/mock/img/kv02.jpg');
     }
   }
   &__figure-02 {
-    background-image: url('/img/kv01s.jpg');
+    background-image: url('/mock/img/kv02s.jpg');
 
     @include mixins.mq-up('md') {
-      background-image: url('/img/kv01.jpg');
+      background-image: url('/mock/img/kv01.jpg');
     }
   }
 
@@ -165,9 +165,11 @@
       height: calc((10rem + 5vw) * 1.5);
       left: 50%;
       transform: translate(-50%, 0);
+      top: calc(26.0rem + (9vw * 1.8));
       bottom: calc(16rem - 20vw);
 
       @include mixins.mq-up('sm') {
+        top: calc(24.0rem + (9vw * 1.8));
         bottom: calc(20rem - 20vw);
       }
 
@@ -176,6 +178,7 @@
         height: calc(20rem + (100vw - 768px) * 0.025);
         left: auto;
         right: calc((100vw - 768px) * 0.12);
+        top: auto;
         bottom: calc(2.4rem - (100vw - 768px) * 0.0175);
         transform: none;
       }
@@ -184,6 +187,7 @@
         height: 36%;    
         left: auto;
         right: 1.9%;
+        top: auto;
         bottom: 10.6%;
         transform: none;
       }
@@ -192,6 +196,7 @@
         height: 36%;      
         left: auto;
         right: 1.9%;
+        top: auto;
         bottom: 10.6%;
         transform: none;
       }

@@ -21,7 +21,6 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.5rem;
-    max-width: var.$WIDTH-DEFAULT;
     height: var.$HEIGHT-HEADER-MD;
 
     @include mixins.mq-up('md') {

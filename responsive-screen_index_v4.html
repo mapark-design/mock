@@ -517,6 +517,7 @@
               <div class="card h-100 sitetop-newarrival__card">
                 <div class="">
                   <img src="./img/recommend/recom_0090.jpg" class="card-img-top sitetop-newarrival__card-image" alt="集客ノウハウ力のある水道資材等のＥＣ事業" loading="lazy">
+                  <input type="hidden" name="matter" value="123" class="matter">
                 </div>
                 <div class="card-body">
                   <div class="d-table">
@@ -930,6 +931,10 @@ $('.background-image').slick({
       $('#map-hamburger').removeClass('map-hamburger__border--open');
       $('.header__global-nav').removeClass('header__global-nav--active');
       $('.map-hamburger__background').removeClass('map-hamburger__background--open');
+    });
+    $('.sitetop-newarrival__card').css('cursor', 'pointer');
+    $('.sitetop-newarrival__card').click(function() {
+      alert($(this).find('.matter').val());
     });
   });
 </script>

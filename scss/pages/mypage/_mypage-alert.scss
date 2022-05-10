@@ -9,12 +9,10 @@
 
   &__item {
     background-color: #f8d7da;
-//    background-image: url('../img/icon/icon-megaphone.svg');
     background-size: 5.0rem;
     background-repeat: no-repeat;
     background-position-x: 1.0rem;
     background-position-y: center;
-//    border: 0.1rem solid  #f5c2c7;
     border: 0.1rem solid  var.$COLOR-CORP;
     margin-bottom: 1.0rem;
     border-radius: 0.5rem;
@@ -29,10 +27,18 @@
     color: var.$COLOR-CORP;
   }
 
-  &__text {
-    display: block;
+  &__text-area {
     padding: 1.0rem 0;
     font-size: 2.4rem;
+    color: var.$COLOR-CORP;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    display: block;
 
     &-area {
       width: 100%;

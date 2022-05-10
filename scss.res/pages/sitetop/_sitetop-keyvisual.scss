@@ -2,7 +2,6 @@
 @use "../../abstracts/mixins";
 
 .sitetop-keyvisual {
-  max-width: var.$WIDTH-DEFAULT;
   width: 100%;
   position: relative;
   margin: 0 auto;
@@ -26,43 +25,37 @@
     }
   }
   &__figure-01 {
-    background-image: url('/mock/img/kv02s.jpg');
+    background-image: url('/img/kv02s.jpg');
 
     @include mixins.mq-up('md') {
-      background-image: url('/mock/img/kv02.jpg');
+      background-image: url('/img/kv02.jpg');
     }
   }
   &__figure-02 {
-    background-image: url('/mock/img/kv02s.jpg');
+    background-image: url('/img/kv02s.jpg');
 
     @include mixins.mq-up('md') {
-      background-image: url('/mock/img/kv01.jpg');
+      background-image: url('/img/kv01.jpg');
     }
   }
 
   &__overlay {
     position: absolute;
-    top: 1.0rem;
-    width: 100%;
+    left: calc(9.7rem + (100vw - 1367px) * 0.05);
+    top: 7.5rem;
     z-index: 1;
 
+    @media screen and (min-width:1200px) and (max-width:1366px) {
+      left: calc(1.5rem + (100vw - 1200px) * 0.5);
+    }
     @media screen and (min-width:768px) and (max-width:1199px) {
-      position: absolute;
-      width: auto;
       top: calc(4.5rem - (100vw - 768px) * 0.01);
       left: calc(1rem + (100vw - 768px) * 0.175);
     }
-    @media screen and (min-width:1200px) and (max-width:1366px) {
-      position: absolute;
-      width: auto;
-      top: 7.5rem;
-      left: calc(1.5rem + (100vw - 1200px) * 0.5);
-    }
-    @media screen and (min-width:1367px) {
-      position: absolute;
-      width: auto;
-      left: 9.7rem;
-      top: 7.5rem;
+    @include mixins.mq-down('md') {
+      top: 1.0rem;
+      left: auto;
+      width: 100%;
     }
 
     &-copy {
@@ -184,6 +177,7 @@
       }
       @media screen and (min-width:1200px) and (max-width:1366px) {
         width: 31%;
+        max-width: 42.0rem;
         height: 36%;    
         left: auto;
         right: 1.9%;
@@ -193,9 +187,10 @@
       }
       @media screen and (min-width:1367px) {
         width: 31%;
+        max-width: 42.0rem;
         height: 36%;      
         left: auto;
-        right: 1.9%;
+        right: calc(1.9% + (100vw - 1367px) * 0.175);
         top: auto;
         bottom: 10.6%;
         transform: none;

@@ -10801,8 +10801,8 @@ h1, h2, h3, h4, h5, h6 {
  */
 .layout {
   display: grid;
-  width: 1346px;
-  grid-template-columns: 280px calc(1346px - 280px);
+  max-width: 1346px;
+  grid-template-columns: 280px 1fr;
   grid-template-rows: 72px auto;
   margin-left: auto;
   margin-right: auto;
@@ -14006,6 +14006,13 @@ h1, h2, h3, h4, h5, h6 {
 .glossary-word__inner {
   max-width: 1024px;
   width: 100%;
+}
+.glossary-word__title-area {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.glossary-word__title {
+  margin-bottom: 0.5rem;
 }
 .glossary-word__related-keyword {
   margin-top: 5rem;

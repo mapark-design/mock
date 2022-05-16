@@ -7,8 +7,8 @@
  */
 .layout {
   display: grid;
-  width: var.$WIDTH-DEFAULT;
-  grid-template-columns: var.$WIDTH-NAV calc(#{var.$WIDTH-DEFAULT} - #{var.$WIDTH-NAV});
+  max-width: var.$WIDTH-DEFAULT;
+  grid-template-columns: var.$WIDTH-NAV 1fr;
   grid-template-rows: var.$HEIGHT-HEADER auto;
   margin-left: auto;
   margin-right: auto;

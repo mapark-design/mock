@@ -22,7 +22,7 @@
     <!-- header.header -->
     <header class="header">
       <div class="header__inner header__inner--login">
-        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg"></h1>
+        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg" style="max-width: 8.0rem;min-width: 8.0rem;"></h1>
         <nav class="header__nav"><!--
           <div class="header__global-nav">
             <ul class="header__nav-list header__nav-list--global-nav">
@@ -38,11 +38,20 @@
             </ul>
           </div>
         </nav>
+        <div class="header__hamburger">
+          <div class="map-hamburger" id="map-hamburger">
+            <span class="map-hamburger__border"></span>
+            <span class="map-hamburger__border"></span>
+            <span class="map-hamburger__border"></span>
+          </div>
+          <div class="map-hamburger__background"></div>
+        </div>
       </div>
     </header>
     <!-- //header.header -->
 
     <!-- nav.ma-nav -->
+    <div class="layout__body">
     <nav class="ma-nav">
       <div class="ma-nav__inner">
         <div class="ma-nav__button">
@@ -267,7 +276,7 @@
       </div>
     </main>
     <!-- //main.main -->
-
+  </div>
   </div>
 </body>
 </html>

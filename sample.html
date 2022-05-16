@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+    display: flex;
+    flex-direction: column;
+}
+.grovalNavigation{
+    height: 70px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+main{
+    min-height: calc(100vh - 70px - 10px - 10px);
+    display: flex;
+    margin-top: 10px;
+}
+.content{
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.localNavigation{
+    width: 300px;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+  </style>
+</head>
+<body>
+  <header class="grovalNavigation">
+    <p>グローバルナビゲーション</p>
+ </header>
+ <main>
+     <div class="localNavigation">
+         <p>ローカルナビゲーション</p>
+     </div>
+     <div class="content">
+         <p>コンテンツ</p>
+     </div>
+ </main>
+</body>
+</html>

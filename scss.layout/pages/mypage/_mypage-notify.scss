@@ -1,0 +1,28 @@
+/**
+ * マイページ：お知らせ部分
+ */
+.mypage-notify {
+  
+  &__inner {
+    margin-top: 5.0rem;
+  }
+
+  &__list {
+//    padding-left: 1.0rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid lightgray;
+      
+    &-date {
+      min-width: 12.0rem;
+      max-width: 12.0rem;
+    }
+    &-text {
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.glossary-word {
+  &__inner {
+    max-width: var.$WIDTH-1024;
+    width: 100%;
+  }
+
+  &__title-area {
+    text-align: center;
+    margin-bottom: 3.0rem;
+  }
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
+  &__explanation {
+
+  }
+
+  &__related-keyword {
+    margin-top: 5.0rem;
+
+    @include mixins.mq-down('lg') {
+      margin-top: 4.0rem;
+    }
+
+    @include mixins.mq-down('md') {
+      margin-top: 3.0rem;
+    }
+
+    &-title {
+      dt {
+        margin-bottom: 1.0rem;
+  
+        h4 {
+          border-bottom: 3px solid var.$COLOR-CORP;
+        }
+      }
+    }
+
+    &-word-list {
+      display: flex;
+      flex-wrap: wrap;
+  
+      li {
+        position: relative;
+        padding-left: 1.0rem;
+        margin-bottom: 1.0rem;
+        min-width: calc(100% / 3);
+        align-self: stretch;
+
+        @include mixins.mq-down('lg') {
+          min-width: calc(100% / 2);
+        }
+
+        @include mixins.mq-down('md') {
+          min-width: 100%;
+        }
+    
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: var.$COLOR-CORP;
+          left: 0;
+          top: 0.7em;
+        }
+      }
+    }
+  }
+}

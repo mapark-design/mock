@@ -1,0 +1,271 @@
+/* ================================================================== */
+/* General */
+/* ================================================================== */
+
+$c_black: rgb(0, 0, 0);
+$c_white: rgb(255, 255, 255);
+$c_red: #c8161d;
+$c_gray: rgb(180, 180, 180);
+$c_blue: #0761ad;
+$c_navy: rgb(0, 0, 90);
+$c_pink: rgb(210, 55, 85);
+$c_green: rgb(24, 181, 155);
+$c_orange: rgb(233, 156, 67);
+$c_yellow: #e3d8b6;
+
+$c_base: rgb(50, 50, 50);
+
+$mtop: 50px;
+$smp_mtop: 30px;
+
+$break-pointPC: 1200px;
+$break-pointTB: 1023px;
+$break-pointSP: 767px;
+
+@mixin ct() {
+  @extend .cnt;
+  @extend .mauto;
+}
+
+@mixin rl() {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+
+@mixin mediaSP {
+  @media screen and (max-width: $break-pointSP) {
+    @content;
+  }
+}
+
+@mixin mediaTB-n {
+  @media screen and (max-width: $break-pointTB) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaTB {
+  @media screen and (max-width: $break-pointPC) and (min-width: 768px) {
+    @content;
+  }
+}
+
+
+@mixin mediaPC {
+  @media screen and (min-width: $break-pointPC) {
+    @content;
+  }
+}
+
+.cnt {
+  width: 100%;
+  max-width: 1150px;
+  box-sizing: border-box;
+}
+
+/* ========================================================= */
+/* フォントタイプ */
+/* ========================================================= */
+.f_base {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, メイリオ,
+    Meiryo, "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500&display=swap');
+
+.f_noto {
+  // 300,400,500,700,800
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.f_notos {
+  // 300,500
+  font-family: 'Noto Serif JP', serif;
+}
+
+
+.f_ar {
+  font-family: Arial, sans-serif;
+}
+
+/* ========================================================= */
+/* カラー */
+/* ========================================================= */
+
+.red{
+  color: $c_red;
+}
+
+/* ========================================================= */
+/* 装飾 */
+/* ========================================================= */
+b,
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+em {
+  font-weight: bold;
+  font-weight: 900;
+}
+strong {
+  font-weight: bold;
+}
+
+.under-border{
+  border-bottom: 1px dashed $c_base;
+}
+
+.under-border-w{
+  border-bottom: 1px dashed white;
+}
+
+.line-through{
+  text-decoration: line-through;
+}
+
+.marker_btm {
+  background: linear-gradient(transparent 80%, #ffff00 0%);
+}
+
+/* ========================================================= */
+/* 表示 */
+/* ========================================================= */
+.nodisp {
+  text-indent: -9999px;
+}
+.disp_none {
+  display: none;
+}
+
+.br-pc {
+  display: block;
+}
+.br-tb {
+  display: none;
+}
+.br-sp {
+  display: none;
+}
+
+.ani {
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.ani_05 {
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.ani_10 {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+@keyframes ani01 {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-6px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================= */
+/* レイアウト調整 */
+/* ========================================================= */
+.al-r {
+  text-align: right;
+}
+.al-l {
+  text-align: left;
+}
+.al-c {
+  text-align: center;
+}
+
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+
+.i_left {
+  margin: 50px 50px 50px 0;
+  float: left;
+}
+
+.valign-t {
+  vertical-align: top;
+}
+.valign-b {
+  vertical-align: bottom;
+}
+.valign-m {
+  vertical-align: middle;
+}
+
+.mauto,
+article .mauto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scrollbox {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  scrollbar-base-color: #fff;
+  scrollbar-3dlight-color: #ffffff;
+  scrollbar-arrow-color: #ffffff;
+  scrollbar-darkshadow-color: #ffffff;
+  scrollbar-face-color: #f1f1f1;
+  scrollbar-highlight-color: #f1f1f1;
+  scrollbar-shadow-color: #f1f1f1;
+  scrollbar-track-color: #ffffff;
+}
+
+/*スクロールバー全体*/
+.scrollbox::-webkit-scrollbar {
+  width: 10px;
+}
+
+/*横スクロールバー全体*/
+.scrollbox::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+/*スクロールバー上下左右末端のボタン*/
+.scrollbox::-webkit-scrollbar-button {
+  width: 10px;
+  height: 10px;
+}
+
+/*ドラッグするツマミ部分*/
+.scrollbox::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+}
+
+/*右下角部分*/
+.scrollbox::-webkit-scrollbar-corner {
+  background-color: transparent;
+}

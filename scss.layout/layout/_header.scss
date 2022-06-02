@@ -1,0 +1,139 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+/**
+ * ヘッダコンポーネント。
+ * システム共通とし、独自に必要なものは Modifier を利用して設定している。
+ */
+.header {
+  $header: &;
+
+  font-size: var.$FONT-SIZE-18;
+
+  &--top {
+    /** サイトトップ用 */
+    background-color: var.$COLOR-CORP;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+    height: var.$HEIGHT-HEADER;
+
+    &--login {
+      /** ログイン後 */
+      box-shadow: 0 0 1rem gray;
+    }
+  }
+
+  &__title {
+    margin-right: 1.5rem;
+
+    @include mixins.mq-up('md') {
+      font-size: 3.2rem;
+      margin-right: 3.0rem;
+    }
+  }
+  &__logo {
+    max-height: calc(var.$HEIGHT-HEADER / 8 * 7);
+
+    &--login {
+      max-width: 8.0rem;
+      min-width: 8.0rem;
+    }
+  }
+
+  &__nav {
+    /** ヘッダーナビ部 */
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    #{$header}__global-nav {
+      margin-left: 0;
+      margin-right: auto;
+
+      @include mixins.mq-down('lg') {
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        width: 25.0rem;
+        height: 100vh;
+        padding-top: 60px;
+        background-color: var.$COLOR-CORP;
+        transition: 500ms cubic-bezier(0.85, 0, 0.15, 1);
+        z-index: 200;
+        overflow-y: auto;
+      }
+
+      &--active {
+        transform: translateX(0);
+      }
+    }
+    #{$header}__user-nav {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+
+    &--global-nav {
+      gap: 2.0rem;
+
+      @include mixins.mq-down('lg') {
+        display: block;
+        text-align: center;
+
+        li {
+          padding: 1.25rem 1.0rem;
+        }
+      }
+    }
+
+    &--user-nav {
+      column-gap: 2.0rem;
+
+      @include mixins.mq-down('sm') {
+        column-gap: 1.0rem;
+      }
+
+      &-btn-reg {
+        display: none;
+        @include mixins.mq-up('md') {
+          display: inline-block;
+          font-size: inherit;
+        }
+      }
+      &-btn-login {
+        font-size: smaller;
+        @include mixins.mq-up('sm') {
+          font-size: medium;
+        }
+        @include mixins.mq-up('md') {
+          font-size: inherit;
+        }
+      }
+    }
+
+    a {
+      @include mixins.createAnchor();
+    }
+  }
+
+  &__hamburger {
+    display: block;
+    margin-left: 1.5rem;
+    margin-right: 0;
+
+    @include mixins.mq-up('lg') {
+      display: none;
+    }
+  }
+}

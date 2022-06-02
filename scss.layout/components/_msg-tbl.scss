@@ -1,0 +1,31 @@
+.msg-tbl {
+
+  tr {
+    font-size: 1.8rem;
+  }
+
+  th {
+    vertical-align: middle;
+    padding: 1.0rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 1.0rem 0.5rem;
+
+    &.icon {
+      padding: 0.5rem;
+
+      img {
+        min-width: 3.5rem;
+        max-width: 3.5rem;
+      }
+
+      .badge-unread {
+        padding: 0.7rem;
+        top: -0.4rem;
+        left: 95%;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.complete {
+  &__inner {
+    width: 100%;
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var.$FONT-SIZE-18;
+  }
+
+  &__caution {
+    color: red;
+    text-align: center;
+    margin-top: 5.0rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-title {
+      font-size: var.$FONT-SIZE-24;
+      font-weight: bold;
+    }
+    &-text {
+      font-size: var.$FONT-SIZE-16;
+    }
+  }
+}

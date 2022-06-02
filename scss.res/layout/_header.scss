@@ -47,6 +47,16 @@
     @include mixins.mq-up('md') {
       max-height: calc(var.$HEIGHT-HEADER / 8 * 7);
     }
+
+    &--login {
+      max-width: 8.0rem;
+      min-width: 8.0rem;
+
+      @include mixins.mq-down('md') {
+        max-width: 7.5rem;
+        min-width: 7.5rem;
+      }
+    }
   }
 
   &__nav {

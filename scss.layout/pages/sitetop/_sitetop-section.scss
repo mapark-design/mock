@@ -1,0 +1,62 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.section-nolog {
+
+  &:nth-of-type(even) {
+    background-color: var.$COLOR-CORP-MIDDLE;
+  }
+
+  &--reset-bgcolor {
+    background-color: white !important;
+  }
+
+  &__inner {
+    width: var.$WIDTH-DEFAULT;
+    margin: 0 auto;
+    padding: 5.0rem 0;
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3.0rem;
+    text-align: center;
+    font-weight: bold;
+  
+    @include mixins.mq-up('md') {
+      font-size: 3.2rem;
+    }
+
+    &-h2 {
+      font-size: var.$FONT-SIZE-28;
+      margin-bottom: 1.0rem;
+
+      &--ul {
+        border-bottom: 0.5rem solid var.$COLOR-CORP;
+      }
+
+    }
+    &-h3 {
+      font-size: var.$FONT-SIZE-24;
+      margin-bottom: 1.0rem;
+    }
+    &-h4 {
+      font-size: var.$FONT-SIZE-20;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__button {
+    margin-top: 3.0rem;
+    text-align: center;
+
+    button {
+      @include mixins.mq-down('md') {
+        width: 100%;
+      }
+    }
+  }
+}

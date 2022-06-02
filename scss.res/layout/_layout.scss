@@ -7,37 +7,34 @@
  */
 .layout {
   display: grid;
-  max-width: var.$WIDTH-DEFAULT;
+  width: var.$WIDTH-DEFAULT;
+//  max-width: var.$WIDTH-DEFAULT;
   grid-template-columns: var.$WIDTH-NAV 1fr;
   grid-template-rows: var.$HEIGHT-HEADER auto;
+  @media screen and (max-width: 1366px) {
+    transform: scale(100vw / 1366);
+    transform-origin: top left;
+  }
+  // @include mixins.mq-down('md') {
+  //   grid-template-rows: var.$HEIGHT-HEADER-MD auto;
+  // }
+
   margin-left: auto;
   margin-right: auto;
 
   header {
-    @include mixins.gridArea(1, 3, 1, 2);
+    @include mixins.gridArea(1, 4, 1, 2);
   }
   nav {
     @include mixins.gridArea(1, 2, 2, 3);
-    @include mixins.mq-down('lg') {
-      @include mixins.gridArea(1, 2, 1, 3);
-    }
+    // @include mixins.mq-down('lg') {
+    //   @include mixins.gridArea(1, 2, 1, 3);
+    // }
   }
   main {
     @include mixins.gridArea(2, 3, 2, 3);
-    @include mixins.mq-down('lg') {
-      @include mixins.gridArea(1, 3, 2, 3);
-    }
+    // @include mixins.mq-down('lg') {
+    //   @include mixins.gridArea(1, 3, 2, 3);
+    // }
   }
 }
-// .layout {
-//   display: flex;
-//   flex-direction: column;
-//   max-width: var.$WIDTH-DEFAULT;
-//   margin-left: auto;
-//   margin-right: auto;
-
-//   &__body {
-//     min-height: 100vh;
-//     display: flex;
-//   }
-// }

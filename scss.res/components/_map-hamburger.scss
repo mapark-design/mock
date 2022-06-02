@@ -15,10 +15,6 @@
     background-color: white;
     transition: all .6s;
 
-    &--login {
-      background-color: black;
-    }
-
     &--open & {
       &:nth-of-type(1) {
         transform: rotate(45deg);

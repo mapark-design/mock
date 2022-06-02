@@ -1,4 +1,22 @@
 @charset "UTF-8";
+/* noto-sans-jp-regular - japanese */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""), url("/fonts/noto-sans-jp-v42-japanese-regular.woff2") format("woff2"), url("/fonts/noto-sans-jp-v42-japanese-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-jp-700 - japanese */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("/fonts/noto-sans-jp-v42-japanese-700.woff2") format("woff2"), url("/fonts/noto-sans-jp-v42-japanese-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /**
  * 変数定義
  *

@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as var;
+
+.check-list {
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    font-weight: normal;
+    font-size: 1.6rem;
+
+    &--search {
+      font-size: var.$FONT-SIZE-14;
+    }
+    &--owner {
+      border-color: var.$COLOR-CORP;
+      color: var.$COLOR-CORP;
+    }
+    &--fa {
+      border-color: blue;
+      color: blue;
+    }
+  }
+}

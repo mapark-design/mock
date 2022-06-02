@@ -1,0 +1,27 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.article {
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+    }
+  }
+
+  &__title {
+    padding-left: 0.5rem;
+    border-bottom: 1px solid var.$COLOR-CORP;
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-32;
+    }
+  }
+
+  &__update {
+    text-align: right;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

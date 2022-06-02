@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.download {
+  &__inner {
+    width: 100%;
+    padding-bottom: 0;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+    }
+
+    &--pd50 {
+      padding-bottom: 5.0rem;
+    }
+  }
+
+  &__title {
+    color: var.$COLOR-CORP;
+    font-size: var.$FONT-SIZE-28;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  &__subtitle {
+    span {
+      font-size: var.$FONT-SIZE-24;
+      font-weight: bold;
+      border-bottom: 1px solid black;
+    }
+  }
+  &__auther {
+    font-size: var.$FONT-SIZE-20;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 1.0rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.0rem;
+    border-radius: 0.5rem;
+  }
+
+}

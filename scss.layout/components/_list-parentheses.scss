@@ -1,0 +1,20 @@
+.list-parentheses {
+  margin-left: 3.5rem;
+  list-style-type: none;
+
+  & li {
+    list-style: none;
+    counter-increment: cnt;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+  & li::before {
+    content: "(" counter(cnt) ") ";
+    margin-left: -4.5rem;
+    width: 4.0rem;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

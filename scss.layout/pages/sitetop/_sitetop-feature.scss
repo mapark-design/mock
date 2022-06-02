@@ -1,0 +1,95 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.sitetop-feature {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mixins.mq-up('sm') {
+      flex-direction: row;
+      max-width: var.$WIDTH-1024;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    border-top: 1px solid var.$COLOR-CORP;
+    padding: 1.5rem 0;
+
+    @include mixins.mq-up('sm') {
+      border-top: none;
+      border-left: 1px solid var.$COLOR-CORP;
+      width: calc(100% / 3);
+    }
+
+    &-dtl {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:first-of-type {
+      border-top: none;
+
+      @include mixins.mq-up('sm') {
+        border-left: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: black;
+
+        img {
+          transform: scale(1.05);
+          transition-duration: 0.25s;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    color: var.$COLOR-CORP;
+    margin-bottom: 1rem;
+
+    @include mixins.mq-up('md') {
+      font-size: 2.4rem; 
+    }
+  }
+
+  &__image {
+    width: 76%;
+    max-width: 20.0rem;
+    margin-bottom: 1.0rem;
+
+    @include mixins.mq-up('md') {
+      max-width: 26.0rem;
+    }
+  }
+
+  &__example {
+    margin-top: 5.0rem;
+    text-align: center;
+  }
+}

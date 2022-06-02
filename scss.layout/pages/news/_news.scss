@@ -1,0 +1,46 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.news {
+  &__inner {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+    }
+  }
+
+  &__title {
+    padding-left: 0.5rem;
+    border-bottom: 1px solid var.$COLOR-CORP;
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-32;
+    }
+  }
+  &__date {
+    text-align: right;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  &__text {
+    line-height: 1.6;
+    margin-top: 5.0rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  &__back {
+    margin-top: 6.0rem;
+    text-align: center;
+
+    button {
+      width: 100%;
+
+      @include mixins.mq-up('md') {
+        width: auto;
+      }
+    }
+  }
+}

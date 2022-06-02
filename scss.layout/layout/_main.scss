@@ -1,0 +1,21 @@
+@use "../abstracts/mixins";
+
+/**
+ * メインコンポーネント。
+ * ログイン後のメインコンポーネントを指す。
+ */
+.main {
+  &__inner {
+    padding-top: 1.0rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.8rem;
+    padding-bottom: 3.0rem;
+  }
+
+  &__body-content {
+    @include mixins.mq-down('lg') {
+      grid-column: 1 / 3;
+    }
+  }
+}

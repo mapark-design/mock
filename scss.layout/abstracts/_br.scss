@@ -1,0 +1,28 @@
+@use "./mixins";
+
+br {
+  &.up-sm {
+    display: none;
+    @include mixins.mq-up('sm') {
+      display: block;
+    }
+  }
+  &.down-sm {
+    display: none;
+    @include mixins.mq-down('sm') {
+      display: block;
+    }
+  }
+  &.up-md {
+    display: none;
+    @include mixins.mq-up('md') {
+      display: block;
+    }
+  }
+  &.down-md {
+    display: none;
+    @include mixins.mq-down('md') {
+      display: block;
+    }
+  }
+}

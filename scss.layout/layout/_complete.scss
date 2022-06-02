@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as var;
+
+.complete {
+
+  &__panel {
+    padding-top: 3.2rem;
+  }
+  &__inner {
+    margin: 0.5rem 1.0rem;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__content {
+    margin-top: 3.2rem;
+    text-align: center;
+    font-size: var.$FONT-SIZE-18;
+  }
+  &__buttons {
+    margin-top: 3.2rem;
+    text-align: center;
+  }
+}

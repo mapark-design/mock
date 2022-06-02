@@ -1,0 +1,66 @@
+@use "variables" as var;
+
+@mixin gridArea($colStart, $colEnd, $rowStart, $rowEnd) {
+  grid-column-start: $colStart;
+  grid-column-end: $colEnd;
+  grid-row-start: $rowStart;
+  grid-row-end: $rowEnd;
+}
+
+@mixin questionItemEl($bgColor, $bgImage) {
+  min-height: 6rem;
+  text-align: left;
+  font-weight: normal;
+  background-color: $bgColor;
+  padding: 1rem;
+  background-image: url("../img/icon/" + $bgImage);
+  background-repeat: no-repeat;
+  background-position-x: 1.0rem;
+  background-position-y: 1.0rem;
+  background-size: 4.0rem;
+  padding-left: 6.0rem;
+}
+
+@mixin createAnchor() {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+
+  &:not([class*="btn"]) {
+    position: relative;
+    display: inline-block;
+  }
+  &:not([class*="btn"])::after {
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 0.2rem;
+    background: #fff;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+  }
+  &:not([class*="btn"]):hover::after {
+    transform: scale(1, 1);
+  }
+}  
+
+@mixin mq-up($breakpoint) {
+  @media #{map-get(var.$breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq-down($breakpoint) {
+  @media #{map-get(var.$breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq-range($size) {
+  @media #{map-get(var.$breakpoint-range, $size)} {
+    @content;
+  }
+}

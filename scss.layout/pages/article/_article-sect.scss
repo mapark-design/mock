@@ -1,0 +1,30 @@
+@use "../../abstracts/variables" as var;
+@use "../../abstracts/mixins";
+
+.article-sect {
+  margin-top: 5.0rem;
+
+  &__title {
+    background: linear-gradient(to right, var.$COLOR-CORP, 80%, #941015);
+    padding: 1.0rem 2.0rem;
+    font-weight: bold;
+    color: white;
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-24;
+    }
+  }
+
+  &__content {
+    padding: 1.0rem 0.5rem 1rem 2.0rem;
+
+    p {
+      line-height: 165%;
+    }
+
+    img {
+      max-width: var.$WIDTH-800;
+      width: 100%;
+    }
+  }
+}

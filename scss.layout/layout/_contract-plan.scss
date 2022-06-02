@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as var;
+
+.contract-plan {
+  margin-top: 3.0rem;
+
+  &__header {
+    margin-bottom: 1.0rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: var.$FONT-SIZE-24;
+
+    &--select {
+      margin-bottom: 3.0rem;
+      color: var.$COLOR-CORP;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 3.0rem 2.0rem;
+    flex-wrap: wrap;
+
+    li {
+      width: 30rem;
+    }
+  }
+  &__item {
+    border: 1px solid gray;
+    max-width: 30.0rem;
+  }
+  &__title {
+    background-color: var.$COLOR-CORP;
+    padding: 1.5rem 1.0rem;
+    text-align: center;
+    color: white;
+    font-size: var.$FONT-SIZE-28;
+    font-weight: bold;
+    &--light {
+      background-color: #E46F74;
+    }
+    &--normal {
+      background-color: #DC464C;
+    }
+  }
+  &__body {
+    padding: 0 1rem;
+  }
+  &__content {
+    border-bottom: 1px solid gray;
+    padding: 1.0rem;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  &__price {
+  }
+  &__taxin {
+    
+  }
+  &__price-year {
+    
+  }
+  &__detail {
+    display: table;
+    width: 100%;
+
+    &-row {
+      display: table-row;
+      
+    }
+    &-cell {
+      display: table-cell;      
+
+      &--value {
+        width: 8.0rem;
+      }
+    }
+  }
+}

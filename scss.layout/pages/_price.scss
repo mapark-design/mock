@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.price {
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    &--mt3 {
+      margin-top: 3.0rem;
+    }
+    &--mt5 {
+      margin-top: 5.0rem;
+    }
+    &--mt10 {
+      margin-top: 12vw;
+
+      @include mixins.mq-up('md') {
+        margin-top: 10.0rem;
+      }
+    }
+  }
+
+  &__content {
+    &-subject {
+      font-weight: bold;
+      font-size: calc(1.445rem + 2.34vw);
+
+      &--campaign {
+        font-size: calc(1.525rem + 3.3vw);
+
+        @include mixins.mq-up('md') {
+          font-size: 4.4rem;
+        }
+      }
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-36;
+      }
+    }
+    &-subject-sub {
+      font-size: calc(1.365rem + 1.38vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-24;
+      }
+    }
+  }
+
+  &__image {
+    max-width: var.$WIDTH-1024;
+    width: 100%;
+  }
+
+  &__strong {
+     font-size: var.$FONT-SIZE-24;
+     font-weight: bold;
+
+     &--underline {
+      border-bottom: 1px solid var.$COLOR-CORP;
+    }
+  }
+}

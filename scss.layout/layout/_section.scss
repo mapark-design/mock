@@ -1,0 +1,50 @@
+@use "./../abstracts/variables" as var;
+
+/**
+ * セクションコンポーネント。
+ */
+.section {
+  &__innert {
+  }
+  &__title {
+    /** タイトル関係 */
+    font-weight: bold;
+
+    &-h2 {
+      font-size: var.$FONT-SIZE-28;
+      margin-bottom: 1.0rem;
+
+      &--ul {
+        border-bottom: 0.5rem solid var.$COLOR-CORP;
+      }
+
+    }
+    &-h3 {
+      font-size: var.$FONT-SIZE-24;
+      margin-bottom: 1.0rem;
+    }
+    &-h4 {
+      font-size: var.$FONT-SIZE-20;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__content {
+  }
+  &__button {
+    /** セクションで利用するボタン(要検討) */
+    display: flex;
+    align-items: center;
+    margin-top: 3.0rem;
+    gap: 3.0rem;
+
+    &--left {
+      justify-content: flex-start;
+    }
+    &--center {
+      justify-content: center;
+    }
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+/**
+ * モーダルコンポーネント。
+ * 今のところ共通としている。
+ */
+.ma-modal-dialog {
+  @include mixins.mq-up('md') {
+    max-width: var.$WIDTH-768;
+    min-width: var.$WIDTH-768;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1rem solid gray;
+    border-left: 0.1rem solid gray;
+    border-right: 0.1rem solid gray;
+
+    &:first-of-type {
+      border-top: 0.1rem solid gray;
+    }
+
+    @include mixins.mq-up('md') {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    min-width: 18.0rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.0rem;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    column-gap: 2.0rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0.5rem 0.5rem 1.0rem;
+  }
+}

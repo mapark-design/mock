@@ -1,0 +1,18 @@
+@use "../../abstracts/variables" as var;
+
+.article-act {
+
+  &__back {
+    margin-top: 5.0rem;
+    text-align: center;
+  }
+
+  &__contact {
+    line-height: 165%;
+    margin-top: 10.0rem;
+    padding: 1.0rem 0.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    background-color: #f2f2f2;
+  }
+}

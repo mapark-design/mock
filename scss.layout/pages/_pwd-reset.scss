@@ -1,0 +1,19 @@
+@use "../abstracts/mixins";
+
+.pwd-reset {
+  &__item {
+    &-title {
+      background-color: #eaeaea;
+      padding: 1.5rem;
+      width: 100%;
+
+      @include mixins.mq-up('md') {
+        min-width: 20.0rem;
+        max-width: 20.0rem;
+      }
+    }
+    &-input {
+      padding: 1.5rem;
+    }
+  }
+}

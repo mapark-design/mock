@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.transactions {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-1024;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: var.$FONT-SIZE-18;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.mq-up('md') {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    &--border {
+      border-bottom: 1px solid lightgray;
+      border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray;
+    }
+    &--top-border {
+      border-top: 1px solid lightgray;
+    }
+
+    &-title {
+      width: 100%;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+      border-right: 1px solid lightgray;
+
+      @include mixins.mq-up('md') {
+        min-width: 28.0rem;
+        max-width: 28.0rem;
+      }
+    }
+    &-value {
+      padding: 1.5rem;
+    }
+  }
+}

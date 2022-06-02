@@ -1,0 +1,271 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.service {
+  &__content {
+    text-align: center;
+    &--mt3 {
+      margin-top: 3.0rem;
+    }
+    &--mt5 {
+      margin-top: 5.0rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: var.$FONT-SIZE-24;
+    font-weight: bold;
+    border-bottom: 1px solid var.$COLOR-CORP;
+  }
+  &__subtitle--new {
+    font-size: var.$FONT-SIZE-28;
+    font-weight: bold;
+    border-top: 5px solid var.$COLOR-CORP;
+    border-bottom: 5px solid var.$COLOR-CORP;
+  }
+  &__subtitle--middle {
+    font-size: var.$FONT-SIZE-28;
+    font-weight: bold;
+    border-bottom: 5px solid var.$COLOR-CORP;
+  }
+
+  &__image {
+    max-width: var.$WIDTH-768;
+  }
+
+   &__strong {
+     font-size: var.$FONT-SIZE-24;
+     font-weight: bold;
+   }
+}
+
+.ma-service {
+
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+    }
+  }
+
+  &__intro,
+  &__outro {
+    text-align: center;
+    font-size: calc(1.365rem + 1.38vw);
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-24;
+    }
+  }
+
+  &__online,
+  &__offline {
+    font-weight: bold;
+    font-size: calc(1.405rem + 1.86vw);
+
+    @include mixins.mq-up('md') {
+      font-size: var.$FONT-SIZE-32;
+    }
+  }
+
+  &__section {
+    margin-top: 5.0rem;
+    text-align: center;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before,
+      &::after {
+        content: '';
+        height: 0.25rem;
+        flex-grow: 1;
+        background: black;
+        margin-right: 1.0rem;
+        margin-left: 1.0rem;
+      }
+
+      &--char {
+        font-size: calc(1.525rem + 3.3vw);
+
+        @include mixins.mq-up('md') {
+          font-size: var.$FONT-SIZE-44;
+        }
+      }
+
+      &--online,
+      &--offline {
+        position: relative;
+        font-weight: bold;
+      }
+    }
+
+    &-subtitle,
+    &-support-title {
+      font-weight: bold;
+      border-bottom: 0.5rem solid var.$COLOR-CORP;
+      font-size: calc(1.405rem + 1.86vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-28;
+      }
+    }
+
+    &-subtitle {
+      border-top: 0.5rem solid var.$COLOR-CORP;
+
+      &::before,
+      &::after {
+        content: '　';
+      }
+    }
+  }
+
+  &__dd-expert {
+    max-width: var.$WIDTH-900;
+    margin-left: auto;
+    margin-right: auto;
+
+    li {
+      margin-top: 1.0rem;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &-item-title {
+      border: 1px solid var.$COLOR-CORP;
+      padding: 1.0rem 1.5rem;
+      text-align: left;
+
+      @include mixins.mq-up('lg') {
+        border-radius: 1.0rem;
+        padding: 2rem 3rem;
+        text-align: center;
+      }
+    }
+    &-item-explain {
+      border: 1px  solid var.$COLOR-CORP;
+      border-top: none;
+      text-align: left;
+      background-color: #fadadc;
+      padding: 1.0rem 1.5rem;
+
+      @include mixins.mq-up('lg') {
+        border: none;
+        border-radius: 0 1.0rem 1.0rem 0;
+        padding: 1.5rem 1.5rem;
+      }
+    }
+  }
+
+  &__support-example {
+    &-border {
+      max-width: var.$WIDTH-800;
+      margin-right: auto;
+      margin-left: auto;
+      border: 1px solid var.$COLOR-CORP;
+      border-radius: 1.0rem;
+      padding: 1.0rem 2.0rem;
+    }
+
+    &-list {
+      text-align: left;
+      line-height: 180%;
+
+      &-item {
+        margin-top: 1.0rem;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+
+      dd {
+        padding-left: 0;
+
+        @include mixins.mq-up('md') {
+          padding-left: 28.0rem;
+        }
+
+        span {
+           color: var.$COLOR-CORP;
+        }
+      }
+    }
+
+    &-item-title {
+      width: 55.0rem;
+    }
+    &-item-button {
+      padding: 0.5rem 2.0rem;
+    }
+  }
+
+  &__support-others {
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1.0rem;
+    max-width: 46.0rem;
+
+    &-list {
+      line-height: 180%;
+      margin-left: 3.0rem;
+      font-size: calc(1.325rem + 0.9vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-22;
+      }
+
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
+
+  &__img {
+    max-width: var.$WIDTH-768;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--1280 {
+      max-width: var.$WIDTH-1280;
+    }
+  }
+
+  &__mt-10 {
+    margin-top: 12vw;
+
+    @include mixins.mq-up('md') {
+      margin-top: 10.0rem;
+    }
+  }
+
+  &__mt-5 {
+    margin-top: 5.0rem;
+  }
+
+  &__mb-5 {
+    margin-bottom: 5.0rem;
+  }
+
+  &__strong {
+    font-weight: bold;
+
+    &--color-corp {
+      color: var.$COLOR-CORP;
+    }
+    &--fs-32 {
+      font-size: calc(1.405rem + 1.86vw);
+
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-32;
+      }
+    }
+  }
+}

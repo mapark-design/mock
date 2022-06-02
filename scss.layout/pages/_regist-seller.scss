@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.regist-seller {
+
+  &__inner {
+  }
+
+  &__content {
+    margin-bottom: 2.0rem;
+  }
+
+  &__explanation {
+    margin-bottom: 1.0rem;
+  }
+
+  &__item {
+    &-title {
+      width: 100%;
+      background-color: #eaeaea;
+      padding: 1.5rem;
+      min-width: 25.0rem;
+      max-width: 25.0rem;
+
+      &--header {
+        display: flex;
+        min-width: 25.0rem;
+        max-width: 25.0rem;
+        background-color: white;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+    &-input {
+      padding: 1.5rem;
+
+      &--header {
+        padding: 0.5rem 1.5rem;
+      }
+    }
+  }
+}

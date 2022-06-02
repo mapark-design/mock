@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins";
+
+.howtouse {
+  &__inner {
+    width: 100%;
+
+    @include mixins.mq-up('md') {
+      max-width: var.$WIDTH-DEFAULT;
+    }
+  }
+}

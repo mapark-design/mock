@@ -10659,7 +10659,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
-  height: 72px;
+  height: 56px;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    height: 72px;
+  }
 }
 .header__inner--login {
   /** ログイン後 */
@@ -11056,6 +11061,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 3rem;
 }
 @media screen and (max-width: 991px) {
+  .main__inner {
+    font-size: inherit;
+  }
+}
+@media screen and (max-width: 991px) {
   .main__body-content {
     grid-column: 1/3;
   }
@@ -11069,8 +11079,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 .section__title-h2 {
-  font-size: 2.8rem;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .section__title-h2 {
+    font-size: 2.8rem;
+  }
 }
 .section__title-h2--ul {
   border-bottom: 0.5rem solid #c8161d;
@@ -11110,7 +11124,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form__item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .form__item {
+    flex-direction: row;
+  }
 }
 .form__item--border {
   border-bottom: 1px solid lightgray;
@@ -11184,8 +11203,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5rem 0.7rem;
   border-radius: 0.3rem;
   line-height: 1;
-  margin-right: 0;
-  margin-left: auto;
+  margin-right: auto;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .form__required {
+    margin-right: 0;
+    margin-left: auto;
+  }
 }
 .form__ex {
   /** 記入例の表示 */
@@ -11214,12 +11239,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .form__action {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   row-gap: 1rem;
   margin-top: 3rem;
-  align-items: center;
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .form__action {
+    flex-direction: row;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    align-items: center;
+  }
 }
 .form__action--left {
   justify-content: flex-start;
@@ -11479,6 +11509,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3.2rem;
   text-align: center;
   font-size: 1.8rem;
+}
+@media screen and (max-width: 767px) {
+  .complete__content {
+    font-size: inherit;
+  }
 }
 .complete__buttons {
   margin-top: 3.2rem;
@@ -12795,22 +12830,48 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.6rem;
   padding: 0 0 0.5rem 1rem;
 }
-/**
- * 譲渡案件一覧
- */
-.list-transfar__item-title {
+.list-transfar-form__item-title {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .list-transfar-form__item-title {
+    min-width: 18rem;
+    max-width: 18rem;
+  }
+}
+
+.list-transfar-result tr {
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 767px) {
+  .list-transfar-result tr {
+    font-size: inherit;
+  }
+}
+.list-transfar-result th {
+  vertical-align: middle;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+.list-transfar-result td {
+  vertical-align: middle;
+  padding: 1rem 0.5rem;
+}
+.list-transfar-result td.icon {
+  padding: 0.5rem;
+}
+.list-transfar-result__item-title {
   background-color: white;
 }
-.list-transfar__item-release-date {
+.list-transfar-result__item-release-date {
   width: 12%;
 }
-.list-transfar__item-last-update {
+.list-transfar-result__item-last-update {
   width: 12%;
 }
-.list-transfar__item-status {
+.list-transfar-result__item-status {
   width: 18%;
 }
-.list-transfar__item-detail {
+.list-transfar-result__item-detail {
   width: 6%;
 }
 
@@ -12824,15 +12885,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   background-color: #eaeaea;
   padding: 1.5rem;
-  min-width: 25rem;
-  max-width: 25rem;
+}
+@media screen and (min-width: 768px) {
+  .regist-seller__item-title {
+    min-width: 25rem;
+    max-width: 25rem;
+  }
 }
 .regist-seller__item-title--header {
-  display: flex;
-  min-width: 25rem;
-  max-width: 25rem;
-  background-color: white;
-  padding: 0.5rem 1.5rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .regist-seller__item-title--header {
+    display: flex;
+    min-width: 25rem;
+    max-width: 25rem;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+  }
 }
 .regist-seller__item-input {
   padding: 1.5rem;
@@ -12875,6 +12945,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .detail-transfar__header-table {
   width: 100%;
+  table-layout: fixed;
   margin-bottom: 3rem;
   border-collapse: collapse;
 }
@@ -12882,16 +12953,34 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 1.5rem;
   border: 1px solid lightgray;
 }
+@media screen and (max-width: 767px) {
+  .detail-transfar__header-table-col {
+    width: 100%;
+    display: block;
+    border-top: none;
+  }
+}
 .detail-transfar__header-table-col-title {
   background-color: #eaeaea;
-  width: 25rem;
   font-weight: normal;
+  width: 25rem;
+}
+@media screen and (max-width: 767px) {
+  .detail-transfar__header-table-col-title {
+    width: 100%;
+    border-top: 1px solid lightgray;
+  }
 }
 .detail-transfar__item-title {
-  min-width: 25rem;
-  max-width: 25rem;
+  width: 100%;
   background-color: #eaeaea;
   padding: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .detail-transfar__item-title {
+    min-width: 25rem;
+    max-width: 25rem;
+  }
 }
 .detail-transfar__item-title--header {
   min-width: 25rem;
@@ -13062,9 +13151,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .complete__inner {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.8rem;
+  }
 }
 .complete__caution {
   color: red;
@@ -13317,10 +13411,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .user-info__item-title {
-  min-width: 25rem;
-  max-width: 25rem;
+  width: 100%;
   background-color: #eaeaea;
   padding: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .user-info__item-title {
+    min-width: 25rem;
+    max-width: 25rem;
+  }
 }
 .user-info__item-title--header {
   min-width: 25rem;

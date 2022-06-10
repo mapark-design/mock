@@ -14,11 +14,7 @@
 
   &__item {
     display: flex;
-    flex-direction: column;
-
-    @include mixins.mq-up('md') {
     flex-direction: row;
-    }
 
     &--border {
       border-bottom: 1px solid lightgray;
@@ -102,13 +98,8 @@
     padding: 0.5rem 0.7rem;
     border-radius: 0.3rem;
     line-height: 1;
-    margin-right: auto;
-    margin-left: 1.0rem;
-
-    @include mixins.mq-up('md') {
     margin-right: 0;
     margin-left: auto;
-  }
   }
 
   &__ex {
@@ -139,16 +130,11 @@
 
   &__action {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row;
     row-gap: 1.0rem;
     margin-top: 3.0rem;
-
-    @include mixins.mq-up('md') {
-      flex-direction: row;
+    align-items: center;
     column-gap: 3.0rem;
-      align-items: center;
-    }
-
 
     &--left {
       justify-content: flex-start;

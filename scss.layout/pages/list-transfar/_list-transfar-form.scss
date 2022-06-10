@@ -1,0 +1,14 @@
+@use "../../abstracts/mixins";
+
+.list-transfar-form {
+  &__item {
+    &-title {
+      width: 100%;
+
+      @include mixins.mq-up('md') {
+        min-width: 18.0rem;
+        max-width: 18.0rem;
+      }
+    }
+  }
+}

@@ -21,11 +21,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 1.5rem;
-    height: var.$HEIGHT-HEADER-MD;
-
-    @include mixins.mq-up('md') {
     height: var.$HEIGHT-HEADER;
-    }
 
     &--login {
       /** ログイン後 */

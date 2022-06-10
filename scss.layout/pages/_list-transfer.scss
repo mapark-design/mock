@@ -1,22 +1,2 @@
-/**
- * 譲渡案件一覧
- */
-.list-transfar {
-  &__item {
-    &-title {
-      background-color: white;
-    }
-    &-release-date {
-      width: 12%;
-    }
-    &-last-update {
-      width: 12%;
-    }
-    &-status {
-      width: 18%;
-    }
-    &-detail {
-      width: 6%;
-    }
-  }
-}
+@forward "../pages/list-transfar/list-transfar-form";
+@forward "../pages/list-transfar/list-transfar-result";

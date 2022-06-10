@@ -11,6 +11,10 @@
     padding-right: 1.5rem;
     font-size: 1.8rem;
     padding-bottom: 3.0rem;
+
+    @include mixins.mq-down('lg') {
+      font-size: inherit;
+    }
   }
 
   &__body-content {

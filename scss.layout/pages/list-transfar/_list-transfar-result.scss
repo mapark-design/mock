@@ -1,0 +1,44 @@
+@use "../../abstracts/mixins";
+
+.list-transfar-result {
+
+  tr {
+    font-size: 1.8rem;
+
+    @include mixins.mq-down('md') {
+      font-size: inherit;
+    }
+  }
+
+  th {
+    vertical-align: middle;
+    padding: 1.0rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 1.0rem 0.5rem;
+
+    &.icon {
+      padding: 0.5rem;
+    }
+  }
+
+  &__item {
+    &-title {
+      background-color: white;
+    }
+    &-release-date {
+      width: 12%;
+    }
+    &-last-update {
+      width: 12%;
+    }
+    &-status {
+      width: 18%;
+    }
+    &-detail {
+      width: 6%;
+    }
+  }
+}

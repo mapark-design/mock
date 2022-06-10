@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/style-layout.css">
+  <link rel="stylesheet" href="./css/style-custom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./js/ma.js"></script>
+  <script src="./js/ma-custom.js"></script>
+  <title>譲渡案件登録</title>
+</head>
+<body>
+  <div class="layout">
+    <!-- header.header -->
+    <header class="header">
+      <div class="header__inner header__inner--login">
+        <h1 class="header__title"><img class="header__logo" src="./img/logo/logo.svg"></h1>
+        <nav class="header__nav"><!--
+          <div class="header__global-nav">
+            <ul class="header__nav-list header__nav-list--global-nav">
+              <li><a href="" class="">サービス概要</a></li>
+              <li><a href="" class="">よくあるご質問</a></li>
+              <li><a href="" class="">お問い合わせ</a></li>
+            </ul>
+          </div>
+          --><div class="header__user-nav">
+            <ul class="header__nav-list header__nav-list--user-nav"><!--
+              <li><a href="" class="">会員登録</a></li>
+              --><li><button class="btn btn-outline-corp ma-btn-logout">ログアウト</button></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__hamburger">
+          <div class="map-hamburger" id="map-hamburger">
+            <span class="map-hamburger__border map-hamburger__border--loginned"></span>
+            <span class="map-hamburger__border map-hamburger__border--loginned"></span>
+            <span class="map-hamburger__border map-hamburger__border--loginned"></span>
+          </div>
+          <div class="map-hamburger__background"></div>
+        </div>
+        <script>
+          $(function() {
+            $('#map-hamburger').click(function() {
+              $(this).toggleClass('map-hamburger__border--open');
+              $('.ma-nav').toggleClass('ma-nav--active');
+              $('.map-hamburger__background').toggleClass('map-hamburger__background--open');
+            });
+            $('.map-hamburger__background').click(function() {
+              $('#map-hamburger').removeClass('map-hamburger__border--open');
+              $('.ma-nav').removeClass('ma-nav--active');
+              $('.map-hamburger__background').removeClass('map-hamburger__background--open');
+            });
+          });
+        </script>
+      </div>
+    </header>
+    <!-- //header.header -->
+
+    <!-- nav.ma-nav -->
+    <nav class="ma-nav">
+      <div class="ma-nav__inner">
+        <div class="ma-nav__button">
+          <button class="btn btn-light ma-btn-nav">マイページTOP</button>
+        </div>
+        <div class="ma-nav__classification"><!--
+          <div class="ma-nav__classification-title">売り手メニュー</div>
+          --><ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">買い手を探す</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買い手を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">提案中の買い手一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">譲渡案件管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の譲渡案件一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+        </div><!--
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-nav__classification">
+          <div class="ma-nav__classification-title">買い手メニュー</div>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-search.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">譲渡案件を探す</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">新着案件</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">譲渡案件を検索</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-category--nopay">交渉中の譲渡案件一覧</a>
+            </li>
+          </ul>
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-building.svg">
+              <span class="ma-nav__item-category ma-nav__item-category--nopay">買収ニーズ管理</span>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">買収ニーズを登録</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">登録済の買収ニーズ一覧</a>
+            </li>
+            <li class="ma-nav__item">
+              <a href="" class="ma-nav__item-text ma-nav__item-text--nopay">交渉中の買収ニーズ一覧</a>
+            </li>
+          </ul>
+        </div>
+        --><div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-userinfo.svg">
+              <a href="" class="ma-nav__item-category">会員情報</a>
+            </li><!--
+            <li class="ma-nav__item">
+              <img src="./img/icon/icon-plan.svg">
+              <a href="" class="ma-nav__item-category">契約プラン</a>
+            </li>
+          --></ul>
+        </div>
+        <div class="ma-nav__classification">
+          <ul class="ma-nav__item-list">
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-manual.svg">
+              <a href="" class="ma-nav__item-category">ご利用方法</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-compass.svg">
+              <a href="" class="ma-nav__item-category">お役立ち資料</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-consult.svg">
+              <a href="" class="ma-nav__item-category">専門家に相談する</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-finale.svg">
+              <a href="" class="ma-nav__item-category">成約報告</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qa.svg">
+              <a href="" class="ma-nav__item-category">よくあるご質問</a>
+            </li>
+            <li class="ma-nav__item ma-nav__item-common">
+              <img src="./img/icon/icon-qaform.svg">
+              <a href="" class="ma-nav__item-category">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- //nav.ma-nav -->
+
+    <!-- main.main -->
+    <main class="main" >
+      <div class="main__inner">
+        <!-- breadcrumb__nav -->
+        <nav class="breadcrumb__nav">
+          <ul class="breadcrumb__list">
+            <li>マイページ</li>
+            <li>登録済の譲渡案件一覧</li>
+            <li>譲渡案件詳細</li>
+          </ul>
+        </nav>
+        <!-- //breadcrumb__nav -->
+
+        <section class="section">
+          <div class="section__inner">
+            <h2 class="section__title section__title-h2 section__title-h2--ul">譲渡案件詳細</h2>
+            <div class="section__content">
+              <div class="complete complete__panel">
+                <div class="complete__inner">
+                  <h2 class="section__title section__title-h2 complete__title">登録が完了しました。</h2>
+                  <div class="complete__content">
+                    譲渡案件を登録しました。<br>
+                    ※ご入力いただいた内容について、事務局よりご連絡する場合がございます。<br>
+                  </div>
+                  <div class="complete__buttons">
+                    <form>
+                      <button id="btn-regist" class="btn btn-corp ma-btn-section">登録済の譲渡案件一覧を確認する</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- //main.main -->
+  </div>
+  <!-- div.loader -->
+  <div id="loader" class="loading">
+    <div class="loading__msg">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- //div.loader -->
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
+<script>
+var ma = new Ma();
+$(function() {
+  // 既存値の設定
+  // ma.setOptions('./json/master-industory.json', '.form-industory'); // 業種（大項目）
+  // ma.setOptions('./json/master_sales.json', '.sales'); // 前年度売上高、売上高
+  // ma.setOptions('./json/master-prefecture.json', '.form-prefecture'); // 地域
+  // ma.setOptions('./json/master_number-of-employees.json', '.form_number-of-employees'); // 従業員数
+  // ma.setOptions('./json/master_term2contract.json', '.form_term2contract'); // 譲渡希望時期
+  // ma.setOptions('./json/master_transfar-price.json', '.form_transfar-price'); // 譲渡希望価格
+  // ma.setOptions('./json/master_cash-funds.json', '.cash-funds'); // 現金預金
+  // ma.setOptions('./json/master_asset.json', '.asset'); // 総資産
+  // ma.setOptions('./json/master_interest-bearing-liability.json', '.interest-bearing-liability'); // 有利子負債
+  // ma.setOptions('./json/master_liability.json', '.liability'); // 総負債
+  // ma.setOptions('./json/master_net-worth.json', '.net-worth'); // 純資産
+  // ma.setOptions('./json/master_profit.json', '.profit'); // 営業利益、経常利益、当期純利益、DBITDA
+  // ma.setOptions('./json/master_depreciation.json', '.depreciation'); // 原価償却費
+  // ma.setOptions('./json/master_officer-fee.json', '.officer-fee'); // 役員報酬
+
+  // ma.setRadio('./json/master_transfar-form.json', '.form_transfar-form', 'transfar-form');  // 譲渡形式
+  // ma.setRadio('./json/master_mgmt-part.json', '.form_mgmt-part', 'mgmt-part');  // 経営参画
+
+  // ma.setCheckbox('./json/master_transfar-class.json', '.form_transfar-class', 'transfar-class'); // 譲渡形式種別
+  // ma.setCheckbox('./json/master_transfar-reason.json', '.form_transfar-reason', 'transfar-reason'); // 譲渡理由
+  // ma.setCheckbox('./json/master_value-point.json', '.form_value-point', 'value-point');  // 譲渡で重視するポイント
+  // ma.setCheckbox('./json/master_strengths.json', '.form_strengths', 'strengths');  // アピールポイント
+  // ma.setCheckbox('./json/master_target.json', '.form_target', 'target');  // 交渉希望相手
+  // ma.setCheckbox('./json/master_stockholders.json', '.form_stockholders', 'stockholders');  // 株主状況
+
+  // 大区分変更時の処理を追加
+  $('.form-industory').change(function() {
+    // 処理の頭でfadeInを入れてください。
+    // Insert this at start of function.
+    $("#loader").fadeIn(300).css('display', 'table');
+
+    let $industoryEl = $(this);
+    let value = $industoryEl.val();
+    let $sectorEl = $industoryEl.parent().parent().find('.form-sector');
+    // 子要素のクリア
+    $($sectorEl).find('option').filter(function() {
+      return $(this).val() != ''
+    }).remove();
+
+    // If you want to use ajax to recieve data, use ma#ma#sendAjaxRequest.
+    // Please write success function to done, fail function to fail, function run any result to always.
+    // ajaxで通信、レスポンスを受け取る場合は ma#sendAjaxRequest を利用してください。
+    // doneで正常処理、failで失敗処理、正常/異常に関係なく処理したいものはalwaysを利用してください。
+    ma.sendRequest(ma.createGetArgs({
+      url: './json/master-section.json',
+      data: {}
+    })).done(function(data, statusText, jqXHR) {
+      var $options = [];
+      data.forEach(function(el, idx) {
+        if (el.value !== value) {
+          // javascript.continue
+          return true;
+        }
+
+        $.map(el.option, function(arrOptionItem, index) {
+          $options.push(
+            $("<option>", {
+              value: arrOptionItem.value,
+              text: arrOptionItem.name
+            })
+          );
+        });
+      });
+      $sectorEl.append($options);
+    });
+  });
+
+  $('#btn-regist').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_list-transfer.html').submit();
+  });
+  $('#btn-back').click(function() {
+    $(this).parents("form").attr('method', 'GET').attr('action', './screen_regist-seller.html').submit();
+  });
+  // 確認画面用に、各項目を非表示に
+  $('.form__required').css('display', 'none');
+  $('.form-select').css('display', 'none');
+  $('textarea').css('display', 'none');
+//  $('input:not(.form-check-input)').css('display', 'none');
+  $('.form-check-input').click(function() {
+    console.log('click');
+    return false;
+  });
+});
+</script>
+</html>

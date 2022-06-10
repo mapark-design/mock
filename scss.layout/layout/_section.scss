@@ -1,4 +1,5 @@
 @use "./../abstracts/variables" as var;
+@use "./../abstracts/mixins";
 
 /**
  * セクションコンポーネント。
@@ -11,9 +12,12 @@
     font-weight: bold;
 
     &-h2 {
-      font-size: var.$FONT-SIZE-28;
       margin-bottom: 1.0rem;
 
+      @include mixins.mq-up('md') {
+        font-size: var.$FONT-SIZE-28;
+      }
+  
       &--ul {
         border-bottom: 0.5rem solid var.$COLOR-CORP;
       }
